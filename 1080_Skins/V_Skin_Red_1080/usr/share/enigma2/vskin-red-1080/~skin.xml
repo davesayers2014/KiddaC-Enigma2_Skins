@@ -45,7 +45,8 @@
 		<font name="Console" filename="/usr/share/enigma2/vskin-red-1080/fonts/Inconsolata-Regular.ttf" scale="100" />
 		<font name="Heading" filename="/usr/share/enigma2/vskin-red-1080/fonts/VSkinRedBold.ttf" scale="100" />
 
-                <!-- font sizes -->
+
+                    <!-- font sizes -->
                 <alias name="Body" font="Regular" size="30" height="45" />
 		<alias name="TextNormal" font="Regular" size="30" height="45" />
 		
@@ -58,6 +59,7 @@
 		
                 <!-- help menus -->
 		<alias name="HelpMenuList" font="Regular" size="33" height="45" />
+
 
                 <!-- virtual keyboard -->
                 <alias name="VirtualKeyboard" font="Regular" size="27" height="68" />
@@ -103,12 +105,15 @@
 		<color name="black70"                             value="#49000000" />
 		<color name="black80"                             value="#34000000" />
 		<color name="black90"                             value="#1a000000" />	
+
                 <color name="colour1"                             value="#ffffff" />
 		<color name="colour2"                             value="#00c58d88" />     <!-- pink -->
 		<color name="colour3"                             value="#00a0adae" />     <!-- grey -->
+	
 		<color name="fg1"                                 value="#ffffff" />       <!-- white -->
-		<color name="fg2"                                 value="#00c58d88" />     <!-- pink -->
-		<color name="fg3"                                 value="#00a0adae" />     <!-- grey -->
+		<color name="fg2"                                 value="#00c58d88" />       <!-- pink -->
+		<color name="fg3"                                 value="#00a0adae" />       <!-- grey -->
+		
 		<color name="bg-tl"                               value="#00020000" />
 		<color name="bg-tm"                               value="#00080101" />
 		<color name="bg-tr"                               value="#000a0202" />
@@ -119,39 +124,51 @@
 		<color name="bg-bm"                               value="#00590d0d" />
 		<color name="bg-br"                               value="#00410909" />
 		<color name="bg-mm-dark"                          value="#00240505" />
-                <color name="button-top"                          value="#00a0adae" />     <!-- pink -->
-		<color name="button-bot"                          value="#00a0adae" />     <!-- grey -->
+
+                <color name="button-top"                          value="#00a0adae" />       <!-- pink -->
+		<color name="button-bot"                          value="#00a0adae" />       <!-- grey -->
                 <color name="button-bg"                           value="#00280404" />
                 <color name="button-top-bg"                       value="#00340c0d" />
+
 		<color name="title"                               value="#ffffff" />       <!-- white -->
  	        <color name="tv-label"                            value="#00333333" />     <!--dark grey -->
+ 	        
 		<color name="selected"                            value="#ffffff" />       <!-- white -->
  	        <color name="selected-text-bg"                    value="#00891d1d" />     <!-- dark red -->
  	        <color name="selected-gfx-bg"                     value="#00891d1d" />     <!-- dark red -->
  	        <color name="marked"                              value="#00ff0000" />
  	        <color name="selected-marked"                     value="#00ff0000" />    		
-                <color name="messagebox-bg"                       value="#1a000000" />     <!-- 90% black -->
+
+                <color name="messagebox-bg"                       value="#1a000000" />       <!-- 90% black -->
                 <color name="messagebox-title"                    value="#ffffff" />       <!-- white -->
-                <color name="messagebox-title-bg"                 value="#1a000000" />     <!-- 90% black -->
+                <color name="messagebox-title-bg"                 value="#1a000000" />       <!-- 90% black -->
                 <color name="messagebox-text"                     value="#ffffff" />       <!-- white -->
                 <color name="messagebox-list"                     value="#ffffff" />       <!-- white -->
-                <color name="progress"                            value="#00c58d88" />     <!-- pink -->
-                <color name="progress-selected"                   value="#00c58d88" />     <!-- pink -->
-		<color name="progress-border"                     value="#ffffff" />       <!-- grey -->
-		<color name="progress-border-selected"            value="#ffffff" />       <!-- grey -->
-               	<color name="tvguide"                             value="#00c58d88" />     <!-- pink -->
-                <color name="marked"                              value="#00ff0000" />     <!-- red -->
-		<color name="marked-selected"                     value="#00ff0000" />     <!-- red -->
+                
+                <color name="progress"                            value="#00c58d88" />       <!-- pink -->
+                <color name="progress-selected"                   value="#00c58d88" />       <!-- pink -->
+		<color name="progress-border"                     value="#ffffff" />         <!-- grey -->
+		<color name="progress-border-selected"            value="#ffffff" />         <!-- grey -->
+
+               	<color name="tvguide"                             value="#00c58d88"  />      <!-- pink -->
+                <color name="marked"                              value="#00ff0000" />           <!-- red -->
+		<color name="marked-selected"                     value="#00ff0000" />           <!-- red -->
+
                 <color name="timelineBG"                          value="#000000" />	
-                <color name="timelinetop"                         value="#00c58d88" />     <!-- pink -->
+                <color name="timelinetop"                         value="#00c58d88" />       <!-- pink -->
+               	
                 <color name="epgeventbg"                          value="#00561919" />
 		<color name="epgeventbgnow"                       value="#00451314" />
 		<color name="epgservicebg"                        value="#00321211" />
 		<color name="epgservicebgnow"                     value="#00321211" />
+		
                 <color name="infobarHead"                         value="#00541c1c" />	   <!-- dark purple -->
                 <color name="infobarBlack"                        value="#1a000000"/>
+                
                 <color name="playbar"                             value="#605364" />       <!-- light plum -->
+
                 <color name="reboot"                              value="#008d0b0b" />
+
                 <color name="highlightBG"                         value="#00541c1c" />
 	</colors>
 	
@@ -169,7 +186,9 @@
 		<color name="ListboxMarkedBackground"             color="selected-text-bg" />
                 <color name="ListboxMarkedAndSelectedForeground"  color="selected-marked" />         <!-- message box list marked and selected -->
 		<color name="ListboxMarkedAndSelectedBackground"  color="selected-text-bg" />
-
+		
+		
+		
 		<!-- menu border -->
 		<borderset name="bsWindow">
 			<pixmap pos="bpTopLeft" filename="screens/b_tl.png" />
@@ -240,7 +259,7 @@
 		<parameter name="VirtualKeyBoard" value="68,68"/>
 		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
                 <parameter name="VirtualKeyBoardPadding" value="7,7"/>
-                
+		
 		<parameter name="EPGImportFilterListLockOn" value="15,3,38,36" />
 		<parameter name="EPGImportFilterListLockOff" value="15,3,38,36" />
 		<parameter name="EPGImportFilterListDescr" value="75,3,1125,75" />
