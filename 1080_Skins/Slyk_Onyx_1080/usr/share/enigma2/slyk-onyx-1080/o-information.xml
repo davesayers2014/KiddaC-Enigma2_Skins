@@ -89,9 +89,7 @@
 		<widget name="ScrollLabel" position="546,113" size="918,120" foregroundColor="white" backgroundColor="mid" font="Regular;30" transparent="1" zPosition="1" />
 		<widget name="ScrollLabel2" position="546,350" size="918,539" foregroundColor="white" backgroundColor="mid" font="Regular;30" transparent="1" zPosition="1" />
                 <panel name="New-Buttons" />
-	</screen>
-	
-	
+	</screen>	
 </skin>
 
 

@@ -11,7 +11,6 @@
 		<panel name="ExitButton" />
 	</screen>
 	
-	
 	<!-- movie planner eventview -->
 	<screen name="EventViewSimple" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="transparent">
 		<eLabel position="0,732" size="1920,348" backgroundColor="blackglass" transparent="0" zPosition="-2" />
@@ -20,13 +19,9 @@
 		<widget render="Pixmap" pixmap="o-icons/record.png" source="session.RecordState" position="945,717" size="30,30" alphatest="blend" zPosition="6">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		
-               <!-- picons / xpicons - see picons.xml -->
-	         <panel name="movie-eventview-picons"/>
-		
-		<!-- date -->
+		<!-- picons / xpicons - see picons.xml -->
+		<panel name="movie-eventview-picons" />
 		<panel name="date" />
-		<!-- icons -->
 		<panel name="infobar-icons" />
 		<!-- progress bar -->
 		<ePixmap position="999,1038" size="327,6" pixmap="o-infobars/220-progress-bg.png" alphatest="blend" zPosition="1" />
@@ -34,16 +29,9 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<ePixmap position="998,1037" size="330,9" pixmap="o-infobars/220-progress-border.png" alphatest="blend" zPosition="3" />
-		<!-- channel -->
-		
-		<!--
-		<widget name="channel" position="527,750" size="450,45" font="Bold;35" foregroundColor="white" backgroundColor="blackglass" transparent="1" />
-		-->
-		
-		<widget source="Service" render="Label" position="527,750" size="450,45" font="Bold;35" foregroundColor="white" backgroundColor="blackglass" transparent="1" >
-		     <convert type="MovieInfo">RecordServiceName</convert>
+		<widget source="Service" render="Label" position="527,750" size="450,45" font="Bold;35" foregroundColor="white" backgroundColor="blackglass" transparent="1">
+			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		
 		<!-- programme name -->
 		<widget source="Title" render="Label" position="527,795" size="878,45" font="Bold;35" foregroundColor="white" backgroundColor="blackglass" noWrap="1" transparent="1" />
 		<!-- programme description -->
@@ -63,7 +51,7 @@
 			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
 		</widget>
 	</screen>
-
+	
 	<screen name="EventView" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="transparent">
 		<eLabel position="0,732" size="1920,348" backgroundColor="blackglass" transparent="0" zPosition="-2" />
 		<ePixmap position="0,705" size="1920,375" pixmap="o-infobars/infobar1.png" alphatest="blend" zPosition="-1" />
@@ -71,13 +59,9 @@
 		<widget render="Pixmap" pixmap="o-icons/record.png" source="session.RecordState" position="945,717" size="30,30" alphatest="blend" zPosition="6">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		
-	         <!-- picons / xpicons - see picons.xml -->
-	         <panel name="eventview-picons"/>
-	         
-		<!-- date -->
+		<!-- picons / xpicons - see picons.xml -->
+		<panel name="eventview-picons" />
 		<panel name="date" />
-		<!-- channel -->
 		<widget name="channel" position="527,750" size="450,45" font="Bold;35" foregroundColor="white" backgroundColor="blackglass" transparent="1" />
 		<!-- programme name -->
 		<widget source="Title" render="Label" position="527,795" size="878,45" font="Bold;35" foregroundColor="white" backgroundColor="blackglass" noWrap="1" transparent="1" />
@@ -105,15 +89,11 @@
 			<convert type="EventTime">Duration</convert>
 			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
 		</widget>
-		
 		<panel name="New-Buttons" />
 		<ePixmap pixmap="o-backgrounds/v-divider.png" position="809 ,1005" size="3,75" alphatest="blend" zPosition="5" />
 		<ePixmap pixmap="o-backgrounds/v-divider.png" position="1128,1005" size="3,75" alphatest="blend" zPosition="5" />
 		<ePixmap pixmap="o-backgrounds/v-divider.png" position="1767,1005" size="3,75" alphatest="blend" zPosition="5" />
 		<panel name="MenuButton" />
 	</screen>
-
-
 </skin>
-
 

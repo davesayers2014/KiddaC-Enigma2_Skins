@@ -1,5 +1,5 @@
 <skin>
-    <!-- https://github.com/openatv/enigma2/blob/6.1/lib/python/Screens/TimerEdit.py -->
+    <!-- /lib/python/Screens/TimerEdit.py -->
     <screen name="TimerEditList" title="Timer editor" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
         <panel name="h-separator-tr" />
