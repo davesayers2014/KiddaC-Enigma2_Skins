@@ -1,0 +1,288 @@
+
+<skin>
+	<!-- InfoBar -->
+	<!--  https://github.com/openatv/enigma2/blob/master/lib/python/Screens/InfoBar.py -->
+	<!-- First Info Bar (ok button)-->
+	<screen name="infobar-header">
+		<ePixmap pixmap="v-infobars/header.png" position="0,0" size="1134,105" alphatest="blend" zPosition="1" />
+		<panel position="8,28" size="90,55">
+	               <panel name="main-logo" zPosition="2"/>
+		</panel>
+		<widget source="session.Event_Now" render="Label" position="112,61" size="90,35" font="Regular;26" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="left" transparent="1" zPosition="2">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H.%M -</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="199,61" size="72,35" font="Regular;26" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="center" transparent="1" zPosition="2">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="309,61" size="80,35" halign="left" valign="top" foregroundColor="fg2" backgroundColor="infobarHead" font="Regular;26" noWrap="1" transparent="1" zPosition="2">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">AsLengthHours</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="917,21" size="80,36" font="Regular;26" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="372,61" size="625,35" font="Regular;26" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<!-- current picon -->
+		<widget source="session.CurrentService" render="Slyk18Picon" position="1021,27" size="100,60" alphatest="blend" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+
+	</screen>
+	
+	<screen name="infobar-channel">
+		<widget source="session.Event_Now" render="Label"  position="112,17" size="800,40" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2" >
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+	<screen name="secondinfobar-channel">
+		<widget name="channel" position="112,17" size="800,40" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2" >
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-extras">
+		<widget pixmap="v-infobars/hd.png" source="session.CurrentService" render="Pixmap" position="386,66" size="32,22" alphatest="blend" zPosition="2">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="v-infobars/recording2.png" position="438,66" size="22,22" alphatest="blend" zPosition="3">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<screen name="infobar-main">
+		<!-- <ePixmap pixmap="v-infobars/background.png" position="0,0" size="1134,55" alphatest="blend" zPosition="-1" /> -->
+		<eLabel position="0,0" size="1134,55" backgroundColor="infobarBlack" transparent="0" zPosition="1" />
+		<ePixmap pixmap="v-infobars/up-next.png" position="112,16" size="77,22" alphatest="blend" zPosition="2" />
+		<widget source="session.Event_Next" render="Label" position="199,0" size="794,55" font="Regular;25" foregroundColor="fg3" backgroundColor="infobarBlack" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" >
+			<convert type="EventName">Name</convert>
+		</widget>
+		<ePixmap pixmap="v-buttons/key_info.png" position="1020,14" size="38,30" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1091,14" size="30,30" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<screen name="infobar-main-extended">
+		<ePixmap pixmap="v-infobars/background-extended.png" position="0,0" size="1134,246" alphatest="blend" zPosition="-1" />
+		<widget name="epg_description" position="112,19" size="750,190" font="Regular;24" foregroundColor="fg1" backgroundColor="infobarBlack" transparent="1" zPosition="2" />
+		<widget source="session.CurrentService" render="Label" position="890,19" size="230,40" font="Regular;16" foregroundColor="fg3" backgroundColor="infobarBlack" transparent="1" zPosition="2">
+			<convert type="PliExtraInfo">TransponderInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="890,69" size="230,80" font="Regular;16" foregroundColor="fg3" backgroundColor="infobarBlack" transparent="1" zPosition="2">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<ePixmap pixmap="v-infobars/up-next.png" position="112,207" size="77,22" alphatest="blend" zPosition="2" />
+		<widget source="session.Event_Next" render="Label" position="199,e-55" size="794,55" font="Regular;25" foregroundColor="fg3" backgroundColor="infobarBlack" valign="center" halign="left" noWrap="1" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>
+		<eLabel text="SNR:" position="890,205" size="70,30" font="Regular;14" backgroundColor="infobarBlack" foregroundColor="fg1" valign="center" halign="left" transparent="1" zPosition="2" />
+		<widget source="session.FrontendStatus" render="Label" position="890,205" size="70,30" font="Regular;14" foregroundColor="fg1" backgroundColor="infobarBlack" valign="center" halign="right" noWrap="1" transparent="1" >
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1091,205" size="30,30" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<screen name="infobar-icons">
+		<!-- recordings -->
+		<widget position="0,0" size="104,52" source="session.RecordState" render="Pixmap" pixmap="v-infobars/selectbar.png" alphatest="blend" zPosition="3">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="40,14" size="24,24" source="session.RecordState" render="Pixmap" pixmap="v-infobars/recording.png" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="40,14" size="24,24" source="session.RecordState" render="Pixmap" pixmap="v-infobars/recording-off.png" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<!-- subtitles -->
+		<widget pixmap="v-infobars/subtitles.png" position="40,55" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget pixmap="v-infobars/subtitles-off.png" position="40,55" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<!-- dolby surround sound -->
+		<widget pixmap="v-infobars/dolby.png" position="40,96" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget pixmap="v-infobars/dolby-off.png" position="40,96" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<!-- encrypted -->
+		<widget pixmap="v-infobars/crypt.png" position="40,137" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget pixmap="v-infobars/crypt-off.png" position="40,137" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<!-- tuner icons -->
+		<widget position="26,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-a.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="38,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-b.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="50,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-c.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="62,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-d.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="26,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-a-off.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget position="38,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-b-off.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget position="50,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-c-off.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget position="62,182" size="15,15" source="session.TunerInfo" render="Pixmap" pixmap="v-infobars/tuner-d-off.png" alphatest="blend" zPosition="3">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<!-- streaming -->
+		<widget position="40,219" size="100,24" source="session.CurrentService" render="Pixmap" pixmap="v-infobars/stream.png" alphatest="blend" zPosition="3">
+			<convert type="ServiceInfo">IsStream</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	
+	<screen name="InfoBar" flags="wfNoBorder" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent">
+		<panel position="73,508" size="1134,105">
+			<panel name="infobar-header" />
+			<panel name="infobar-channel" />
+			<panel name="infobar-extras" />
+		</panel>
+		<panel position="73,613" size="1135,55">
+			<panel name="infobar-main" />
+		</panel>
+	</screen>
+	
+	<!-- infoBarGenerics -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/InfoBarGenerics.py -->
+	<screen name="SecondInfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel position="73,317" size="1134,105">
+			<panel name="infobar-header" />
+			<panel name="secondinfobar-channel" />
+			<panel name="infobar-extras" />
+		</panel>
+		<panel position="73,422" size="1135,246">
+			<panel name="infobar-main-extended" />
+		</panel>
+		<panel position="68,417" size="104,251">
+			<panel name="infobar-icons" />
+		</panel>
+	</screen>
+	
+	<!-- not used in this skin so hidden -->
+	<screen name="RadioInfoBar" position="0,0" size="0,0" backgroundColor="black" flags="wfNoBorder" />
+	
+	<!-- quick epg info bar - Infobar Menu option single epg < > -->
+	<screen name="quickepg-header">
+		<ePixmap pixmap="v-infobars/header.png" position="0,0" size="1134,50" alphatest="blend" zPosition="1" />
+		
+		<panel position="8,10" size="48,30">
+		       <panel name="main-logo-sm" />
+                </panel>
+		<widget source="Service" render="Label" position="112,0" size="800,50" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="center" halign="left" noWrap="1" transparent="1"  zPosition="2">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="917,0" size="80,50" font="Regular;26" foregroundColor="white" backgroundColor="infobarHead" valign="center" halign="right" noWrap="1" transparent="1" zPosition="2">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+	</screen>
+	
+	<screen name="quickepg-main">
+		<ePixmap pixmap="v-infobars/quickepg-bg.png" position="0,0" size="1134,160" alphatest="blend" zPosition="-1" />
+		
+		<widget name="list" position="112,19" size="885,90" selectionPixmap="v-selectbars/selectbar-42-1280-square.png" itemHeight="30" EventFontInfobar="Regular;22" foregroundColor="fg1" backgroundColor="infobarBlack" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" valign="center" halign="left" transparent="1" zPosition="2" />
+		<widget source="Service" render="Slyk18Picon" position="1021,19" size="100,60" alphatest="blend" zPosition="2">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<panel position="112,119" size="0,30">
+			<panel name="Red-New-Button" />
+		</panel>
+		<panel position="286,119" size="0,30">
+			<panel name="Green-New-Button" />
+		</panel>
+		<panel position="460,119" size="0,30">
+			<panel name="Yellow-New-Button" />
+		</panel>
+		<panel position="634,119" size="0,30">
+			<panel name="Blue-New-Button" />
+		</panel>
+		<ePixmap pixmap="v-buttons/key_menu.png" position="977,119" size="38,30" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="v-buttons/key_epg.png" position="1035,119" size="30,30" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="v-buttons/key_info.png" position="1083,119" size="38,30" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<screen name="quickepg-icons1">
+		<!-- recordings -->
+		<widget position="0,0" size="104,52" source="session.RecordState" render="Pixmap" pixmap="v-infobars/selectbar.png" alphatest="blend" zPosition="3">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="40,14" size="24,24" source="session.RecordState" render="Pixmap" pixmap="v-infobars/recording.png" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="40,14" size="24,24" source="session.RecordState" render="Pixmap" pixmap="v-infobars/recording-off.png" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<!-- subtitles -->
+		<widget pixmap="v-infobars/subtitles.png" position="40,55" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget pixmap="v-infobars/subtitles-off.png" position="40,55" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<!-- dolby surround sound -->
+		<widget pixmap="v-infobars/dolby.png" position="40,96" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget pixmap="v-infobars/dolby-off.png" position="40,96" size="24,24" source="session.CurrentService" render="Pixmap" alphatest="blend" zPosition="4">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+	</screen>
+	
+	<screen name="QuickEPG" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel position="73,458" size="1134,105">
+			<panel name="quickepg-header" />
+		</panel>
+		<panel position="73,508" size="1135,51">
+			<panel name="quickepg-main" />
+		</panel>
+		<panel position="68,503" size="104,46">
+			<panel name="quickepg-icons1" />
+		</panel>
+		 <applet type="onLayoutFinish">self["list"].instance.setItemHeight(30)</applet>
+	</screen>
+</skin>
+
+

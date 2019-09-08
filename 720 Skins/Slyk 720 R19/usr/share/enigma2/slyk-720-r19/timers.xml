@@ -1,0 +1,129 @@
+
+<skin>
+		<screen name="TimerEditList" title="Timer editor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-tv-guide" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="timerlist" position="70,126" size="780,500" setFont="Regular;16" setEventNameFont="Regular; 20" setServiceNameFont="Regular; 20" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" itemHeight="50" rowSplit="26" iconMargin="10" satPosLeft="480" selectionPixmap="2018-selectbars/bar-75.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+		<widget name="description" position="914,306" size="295,124" font="Regular;18" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="4" />
+		<panel name="New-Buttons-T2" />
+		<panel name="t2-InfoButton-pos2" />
+		<panel name="t2-OKButton" />
+	</screen>
+	
+		<!-- Timer entry -->
+	<screen name="TimerEntry" title="Timer entry" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup" />
+	</screen>
+	
+		<!-- Timer log / timer info button-->
+	<screen name="TimerLog" title="Timer log" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-tv-guide" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="loglist" textOffset="10,4" position="70,126" size="780,504" font="Regular;26" foregroundColor="white" backgroundColor="bgdarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" scrollbarMode="showNever" itemHeight="36" selectionPixmap="2018-selectbars/bar-54.png" transparent="1" />
+		<panel name="New-Buttons-T2" />
+	</screen>
+	
+		<!-- Timer sanity conflict -->
+	<screen name="TimerSanityConflict" title="Timer sanity error" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-tv-guide" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="timer1" position="70,126" size="780,50" setFont="Regular;16" setEventNameFont="Regular; 20" setServiceNameFont="Regular; 20" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" itemHeight="50" rowSplit="26" iconMargin="10" satPosLeft="480" selectionPixmap="2018-selectbars/bar-75.png" scrollbarMode="showOnDemand" enableWrapAround="1" selectionDisabled="1" transparent="1" />
+		<widget name="list" textOffset="10,5" position="70,212" size="780,36" foregroundColor="white" backgroundColor="panelblue" backgroundColorSelected="panelblue" foregroundColorSelected="white" itemHeight="36" font="Regular;26" scrollbarMode="showNever" transparent="1" />
+		<widget name="timer2" position="70,258" size="780,350" setFont="Regular;16" setEventNameFont="Regular; 20" setServiceNameFont="Regular; 20" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" itemHeight="50" rowSplit="26" iconMargin="10" satPosLeft="480" selectionPixmap="2018-selectbars/bar-75.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+		<panel name="New-Buttons-T2" />
+	</screen>
+	
+		<!-- Timer Selection -->
+	<screen name="TimerSelection" title="Timer selection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-tv-guide" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="timerlist" position="70,126" size="780,500" setFont="Regular;16" setEventNameFont="Regular; 20" setServiceNameFont="Regular; 20" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" itemHeight="50" rowSplit="26" iconMargin="10" satPosLeft="480" selectionPixmap="2018-selectbars/bar-75.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+		<panel name="New-Buttons-T2" />
+                <panel name="t2-OKButton" />
+	</screen>
+	
+	<!-- ## Autotimer ## -->
+	<screen name="AutoTimerOverview" position="0,0" size="1280,720" title="AutoTimer Overview" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-tv-guide" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="entries" position="70,126" size="780,490" EventNameFont="Regular; 20" DayNameFont="Regular;16" ServiceNameFont="Regular; 16" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" itemHeight="70" rowSplit1="25" rowSplit2="50" rowHeight="25" iconMargin="10" selectionPixmap="2018-selectbars/bar-105.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+		<panel name="New-Buttons-T2" />
+		<panel name="t2-MenuButton-pos2" />
+		<panel name="t2-OKButton" />
+	</screen>
+	
+	<screen name="AutoTimerImporter" position="0,0" size="1280,720" title="Import AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="list" textOffset="10,4" position="70,126" size="780,504" font="Regular;26" foregroundColor="white" backgroundColor="bgdarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" scrollbarMode="showNever" itemHeight="36" selectionPixmap="2018-selectbars/bar-54.png" transparent="1" />
+		<panel name="New-Buttons-T2" />
+	</screen>
+	
+	<screen name="AutoTimerEditor" position="0,0" size="1280,720" title="Edit AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="60,116" size="800,110" font="Regular;24" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
+	</screen>
+	
+		<screen name="AutoTimerFilterEditor" position="0,0" size="1280,720" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="60,116" size="800,110" font="Regular;24" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
+	</screen>
+	
+		<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+	</screen>
+	
+		<screen name="AutoTimerSettings" position="0,0" size="1280,720" title="AutoTimer Settings" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="60,116" size="800,110" font="Regular;24" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
+		<panel name="HelpWindow" />
+		<panel name="VKeyIcon" />
+	</screen>
+	
+		<screen name="AutoTimerFAQ" position="0,0" size="1280,720" title="AutoTimer FAQ" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="detailtext" position="100,126" size="720,504" font="Regular;22" backgroundColor="darkblue" foregroundColor="white" transparent="1" />
+		<panel name="New-Buttons-T2" />
+	</screen>
+	
+		<screen name="AutoTimerHelp" position="0,0" size="1280,720" title="AutoTimer Help" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-services" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="detailtext" position="100,126" size="720,504" font="Regular;22" backgroundColor="darkblue" foregroundColor="white" transparent="1" />
+		<panel name="New-Buttons-T2" />
+	</screen>
+	
+		<screen name="AutoTimerWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+		<screen name="AutoTimerPreview" position="0,0" size="1280,720" title="Preview AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="main-template-2" />
+		<panel name="v5-tv-guide" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget source="timerlist" render="Listbox" position="70,126" size="780,500" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" selectionPixmap="2018-selectbars/bar-75.png" transparent="1" zPosition="1">
+			<convert type="TemplatedMultiContent">{"template": [
+				                MultiContentEntryText(pos=(10,0), size=(380,24), text = 0, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER), #Event
+				                MultiContentEntryText(pos=(390, 0), size=(380,24), text = 3, font = 0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER), #Service
+				               	MultiContentEntryText(pos=(10,24), size=(380,24), text = 4, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER), #Date
+			
+					],
+				 "fonts": [gFont("Regular",20),gFont("Regular",16)],
+				 "itemHeight": 50
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-T2" />
+	</screen>
+	
+	<!-- CronTimer -->
+	<!-- now in infopanel file -->
+</skin>

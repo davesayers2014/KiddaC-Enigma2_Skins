@@ -1,0 +1,225 @@
+
+<skin>
+	<!-- backgrounds -->
+	<screen name="vbackground">
+		<ePixmap pixmap="v-backgrounds/main-bg.jpg" position="0,0" size="1280,720" zPosition="-2" />
+	</screen>
+	
+	<screen name="fake-tv-screens">
+		<ePixmap pixmap="v-backgrounds/description-box-bg.png" position="0,0" alphatest="blend" size="910,208" zPosition="-1" />
+		
+		<panel position="86,33" size="168,148">
+		       <ePixmap pixmap="/usr/share/enigma2/vskin-gfx/whatson1.jpg" position="0,0" size="168,126" alphatest="blend" zPosition="1" />
+			<ePixmap pixmap="v-icons/tp-trending.png" position="0,127" size="168,17" alphatest="blend" zPosition="1" />
+		
+		</panel>
+		<panel position="274,33" size="168,148">
+			<ePixmap pixmap="/usr/share/enigma2/vskin-gfx/whatson2.jpg" position="0,0" size="168,126" alphatest="blend" zPosition="1" />
+			<ePixmap pixmap="v-icons/tp-new.png" position="0,127" size="168,17" alphatest="blend" zPosition="1" />
+		
+		</panel>
+		<panel position="462,33" size="168,148">
+			<ePixmap pixmap="/usr/share/enigma2/vskin-gfx/whatson3.jpg" position="0,0" size="168,126" alphatest="blend" zPosition="1" />
+			<ePixmap pixmap="v-icons/tp-exclusive.png" position="0,127" size="168,17" alphatest="blend" zPosition="1" />
+		
+		</panel>
+		<panel position="650,33" size="168,148">
+			<ePixmap pixmap="/usr/share/enigma2/vskin-gfx/whatson4.jpg" position="0,0" size="168,126" alphatest="blend" zPosition="1" />
+			<ePixmap pixmap="v-icons/tp-epic.png" position="0,127" size="168,17" alphatest="blend" zPosition="1" />
+		</panel>
+	</screen>
+	
+	<screen name="vpig-bg">
+		<ePixmap pixmap="v-backgrounds/pig-border.png" position="e-387,0" size="387,227" alphatest="blend" zPosition="-1" />
+	</screen>
+	
+	<screen name="vpig">
+		<widget source="session.VideoPicture" render="Pig" position="912 ,0" size="368,206" backgroundColor="transparent" zPosition="1" />
+
+		<ePixmap pixmap="v-backgrounds/pig-label.png" position="912,172" size="368,34" alphatest="blend" zPosition="3" />
+		<widget source="session.CurrentService" render="Label" position="920,173" size="356,34" font="Regular;24" foregroundColor="fg1" backgroundColor="#60000000" transparent="1" valign="center" halign="left" noWrap="1" zPosition="4">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	
+	</screen>
+	
+	<screen name="main-logo1">
+		<ePixmap pixmap="v-icons/vskin-logo.png" position="0,0" size="90,55" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<screen name="main-logo2">
+		<ePixmap pixmap="v-icons/vskin-logo2.png" position="0,0" size="90,55" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<screen name="main-logo3">
+		<ePixmap pixmap="v-icons/vskin-logo3.png" position="0,0" size="90,55" alphatest="blend" zPosition="2" />
+	</screen>
+	
+		<screen name="main-logo-sm1">
+		<ePixmap pixmap="v-icons/vskin-logo-sm.png" position="0,0" size="90,55" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<screen name="main-logo-sm2">
+		<ePixmap pixmap="v-icons/vskin-logo-sm2.png" position="0,0" size="90,55" alphatest="blend" zPosition="2" />
+	</screen>
+	
+	<screen name="main-logo3-sm3">
+		<ePixmap pixmap="v-icons/vskin-logo-sm3.png" position="0,0" size="90,55" alphatest="blend" zPosition="2" />
+	</screen>
+
+	<screen name="title1">
+		<widget source="Title" render="Label" position="200,187" size="694,54" valign="center" halign="left" font="Heading;44" noWrap="0" transparent="1" foregroundColor="title" backgroundColor="bg-tm" />
+	</screen>
+	
+	<screen name="title2">
+		<widget source="Title" render="Label" position="200,50" size="694,54" valign="top" halign="left" font="Heading;44" noWrap="0" transparent="1" foregroundColor="title" backgroundColor="bg-tm" />
+	</screen>
+	
+	<screen name="tv-logo1">
+		<ePixmap pixmap="v-icons/tv-logo1.png" position="914,209" size="82,64" alphatest="blend" />
+	</screen>
+	
+	<screen name="tv-logo2">
+		<ePixmap pixmap="v-icons/tv-logo2.png" position="914,209" size="82,64" alphatest="blend" />
+	</screen>
+	
+	<screen name="tv-logo3">
+		<ePixmap pixmap="v-icons/tv-logo3.png" position="914,209" size="82,64" alphatest="blend" />
+	</screen>
+	
+	<screen name="tv-logo4">
+		<ePixmap pixmap="v-icons/tv-logo4.png" position="914,209" size="82,64" alphatest="blend" />
+	</screen>
+	
+	<screen name="time">
+		<widget source="global.CurrentTime" render="Label" position="1120,228" size="80,30" font="Regular;24" foregroundColor="fg2" backgroundColor="bg-tr" valign="top" halign="right" transparent="1">
+			<convert type="ClockToText">Format:%k:%M</convert>
+		</widget>
+	</screen>
+	
+	<screen name="description">
+		<widget name="description" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+	</screen>
+	<screen name="introduction">
+		<widget source="introduction" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+	</screen>
+	<screen name="HelpWindow">
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="0,0" size="1280,40" alphatest="blend" zPosition="10" />
+	</screen>
+	<screen name="footnote">
+		<widget name="footnote" position="922,e-30" size="278,18" font="Regular;14" foregroundColor="fg2" backgroundColor="bg-br" halign="left" transparent="1" valign="center" />
+	</screen>
+	<screen name="VKeyIcon">
+		<widget source="VKeyIcon" render="Pixmap" pixmap="v-buttons/key_text.png" position="1163,668" size="38,30" alphatest="blend">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	
+	<!-- main template - tv screens at top -->
+	<screen name="v-template1-des-pig">
+		<panel name="vbackground" />
+		<panel name="fake-tv-screens" />
+		<panel name="vpig-bg" />
+		<panel name="vpig" />
+		<panel position="93,202" size="90,55">
+			<panel name="main-logo" />
+		</panel>
+		<panel name="title1" />
+	        <panel name="tv-logo" />
+		<panel name="time" />
+	</screen>
+	
+	<!-- i.e used on softcams -->
+	<screen name="v-template2-pig">
+		<panel name="vbackground" />
+		<panel name="vpig-bg" />
+		<panel name="vpig" />
+		<panel position="83,50" size="90,55">
+			<panel name="main-logo" />
+		</panel>
+		<panel name="title2" />
+	        <panel name="tv-logo" />
+		<panel name="time" />
+		<ePixmap pixmap="v-backgrounds/left-large-bg.png" position="0,e-610" size="914,610" alphatest="blend" zPosition="-1" />
+	</screen>
+	
+	<!-- main epg template -->
+	<screen name="v-epg-template1">
+		<panel name="vbackground" />
+		<panel name="vpig-bg" />
+		<panel name="vpig" />
+		<panel position="83,50" size="90,55">
+			<panel name="main-logo" />
+		</panel>
+		<panel name="tv-logo" />
+		<panel name="time" />
+	</screen>
+	
+	<!-- channel select radio -->
+	<screen name="v-radio-template1">
+		<panel name="vbackground" />
+		<ePixmap pixmap="v-backgrounds/black80.png" position="0,0" size="1280,720" alphatest="blend" zPosition="-1" />
+		<panel name="vpig-bg" />
+		<panel name="vpig" />
+		<panel position="83,50" size="90,55">
+			<panel name="main-logo" />
+		</panel>
+		<panel name="tv-logo" />
+		<panel name="time" />
+	</screen>
+	
+	<!-- no pig i.e help/wizard screens -->
+	<screen name="v-template2-nopig">
+		<panel name="vbackground" />
+		<!-- mini tv to stop transparency issue -->
+		<widget source="session.VideoPicture" render="Pig" position="803,50" size="93,57" backgroundColor="transparent" zPosition="-5" />
+		<panel position="83,50" size="90,55">
+			<panel name="main-logo" />
+		</panel>
+		<panel name="title2" />
+		<widget source="global.CurrentTime" render="Label" position="1120,64" size="80,30" font="Regular;24" foregroundColor="fg2" backgroundColor="bg-tr" valign="top" halign="right" transparent="1">
+			<convert type="ClockToText">Format:%k:%M</convert>
+		</widget>
+		<ePixmap pixmap="v-backgrounds/left-large-bg.png" position="0,e-610" size="914,610" alphatest="blend" zPosition="-1" />
+	</screen>
+	
+	<!-- used mainly on network screens -->
+	<screen name="active-block">	
+                <widget name="lab1" position="86,143" size="200,40" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-tl" valign="center" transparent="1" zPosition="2"/>
+		<widget name="labdisabled" position="266,143" size="120,40" font="Regular;24" foregroundColor="fg1" backgroundColor="red" valign="center" halign="center" transparent="0" zPosition="2" />
+		<widget name="labactive" position="266,143" size="120,40" font="Regular;24" foregroundColor="fg1" backgroundColor="green" valign="center" halign="center" transparent="0" zPosition="2" />
+		
+                <widget name="lab2" position="486,143" size="200,40" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-tm" valign="center" transparent="1" />
+                <widget name="labrun" position="726,143" size="120,40" font="Regular;24" foregroundColor="fg1" backgroundColor="green" valign="center" halign="center" transparent="0" zPosition="2" />
+		<widget name="labstop" position="726,143" size="120,40" font="Regular;24" foregroundColor="fg1" backgroundColor="red" valign="center" halign="center" transparent="0" zPosition="2" />
+	</screen>
+	
+	<screen name="active-block2">
+		<widget name="lab1" position="86,143" size="170,40" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-tl" valign="center" transparent="1" zPosition="2"/>
+		<ePixmap pixmap="v-backgrounds/black80.png" position="266,143" size="120,40"  alphatest="blend" zPosition="1" />
+		<widget name="labactive" position="266,143" size="120,40" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-tl" valign="center" halign="center" transparent="1" zPosition="2" />
+		
+                <widget name="lab2" position="486,143" size="200,40" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-tm" valign="center" transparent="1" />
+                <widget name="labrun" position="726,143" size="120,40" font="Regular;24" foregroundColor="fg1" backgroundColor="green" valign="center" halign="center" transparent="0" zPosition="2" />
+		<widget name="labstop" position="726,143" size="120,40" font="Regular;24" foregroundColor="fg1" backgroundColor="red" valign="center" halign="center" transparent="0" zPosition="2" />
+
+	</screen>
+	
+        <screen name="mini-tv">
+               <widget source="session.VideoPicture" render="Pig" position="1014,32" size="213,120" backgroundColor="transparent" transparent="1" zPosition="-2"/>
+               <eLabel  position="1027,40" size="186,104" backgroundColor="transparent" zPosition="2"/>
+	</screen>
+	
+	<screen name="console-template">
+		<panel name="vbackground" />
+		<panel position="83,50" size="90,55">
+			<panel name="main-logo" />
+		</panel>
+
+		<panel name="mini-tv" />
+                 <widget source="Title" render="Label" position="66,124" size="1146,30" font="Regular;22" foregroundColor="white" backgroundColor="mid" valign="center" noWrap="1" transparent="1" zPosition="1" />
+                 <eLabel position="66,158" size="1146,486" backgroundColor="black" transparent="0" zPosition="-1"/>
+        </screen>
+</skin>
+
+

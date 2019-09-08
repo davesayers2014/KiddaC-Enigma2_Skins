@@ -1,0 +1,97 @@
+
+<skin>
+   <screen name="RemoteControlTemplate">
+      <widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png"  position="1067,80"  size="127,498" alphatest="blend" zPosition="10" />
+      <widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+      <widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+      <widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+      <widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend" />
+   </screen>
+   
+   <screen name="WizardTemplate">
+      <panel name="template1" />
+      <panel name="h-separator-tr" />
+      <panel name="title2" />
+      <widget name="text" position="351,21" size="628,156" font="Regular;19" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+      <widget name="config" textOffset="10,0" position="351,214" size="628,430" font="Regular;21" secondfont="Regular;21" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="48" enableWrapAround="1" scrollbarMode="showNever" transparent="1"  />
+      <widget source="list" render="Listbox" position="351,214" size="628,430" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="48" enableWrapAround="1" scrollbarMode="showNever" transparent="1" >
+         <convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryText(pos = (10, 10), size = (608, 28), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 48
+				}</convert>
+      </widget>
+      <panel name="New-Buttons" />
+      <ePixmap pixmap="o-backgrounds/menu-gradient.png" position="351,600" size="636,50"  alphatest="blend" zPosition="2" />
+      <panel name="RemoteControlTemplate" />
+
+   </screen>
+   
+   <screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="template1" />
+      <panel name="h-separator-tr" />
+      <panel name="title2" />
+      <widget name="list" textOffset="10,11" position="351,214" size="628,432" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="48" font="Regular;23"  enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+      <widget name="long_key" position="980,596" size="300,55" font="Regular;23" halign="center" valign="center" foregroundColor="white" backgroundColor="botright" transparent="1" />
+      <panel name="RemoteControlTemplate" />
+   </screen>
+   
+   <screen name="StartWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+      <panel name="HelpWindow" />
+   </screen>
+   
+   <screen name="ImageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+   </screen>
+   
+   <screen name="DefaultWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+   </screen>
+   
+   <screen name="NetworkWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+      <panel name="HelpWindow" />
+   </screen>
+   
+   <screen name="DefaultSatLists" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+   </screen>
+   
+   <screen name="DreamPackageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+   </screen>
+   
+      <screen name="CleanupWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+   </screen>
+
+   <screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="mid">
+      <panel name="WizardTemplate" />
+   </screen>
+
+   
+   <screen name="LanguageWizard" position="fill" flags="wfNoBorder" backgroundColor="mid">
+      <panel name="template1" />
+      <panel name="h-separator-tr" />
+      <panel name="title2" />
+      <widget name="text" position="351,21" size="628,154" font="Regular;19" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+      <widget name="config" textOffset="10,0" position="351,214" size="628,430" font="Regular;21" secondfont="Regular;21" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="48" enableWrapAround="1" valign="center" scrollbarMode="showNever" transparent="1" />
+      <widget source="languages" render="Listbox" position="351,214" size="628,430" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="48" enableWrapAround="1" valign="center" scrollbarMode="showNever" transparent="1" >
+         <convert type="TemplatedMultiContent">{"template": [
+                               	MultiContentEntryText(pos = (100,10), size = (508,28), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+				MultiContentEntryPixmapAlphaTest(pos = (20,4), size = (60,40), png = 2), # index 2 is the pixmap
+				],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 48
+				}</convert>
+      </widget>
+      <panel name="New-Buttons" />
+      <ePixmap pixmap="o-backgrounds/menu-gradient.png" position="351,600" size="636,50" alphatest="blend" zPosition="2" />
+      <panel name="RemoteControlTemplate" />
+   </screen>
+   
+
+</skin>
+
+

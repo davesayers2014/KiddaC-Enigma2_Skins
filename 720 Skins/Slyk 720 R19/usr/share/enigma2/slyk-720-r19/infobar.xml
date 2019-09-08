@@ -1,0 +1,578 @@
+
+<skin>
+	<!-- InfoBar's -->
+	<!-- First Info Bar (ok button)-->
+	<screen name="ServiceIcons">
+		<widget text="S" render="FixedLabel" source="session.CurrentService" position="113,0" size="15,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget text="W" render="FixedLabel" source="session.CurrentService" position="84,0" size="22,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<widget text="4K" render="FixedLabel" source="session.CurrentService" position="44,0" size="33,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<widget text="HD" render="FixedLabel" source="session.CurrentService" position="44,0" size="33,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<widget text="SD" render="FixedLabel" source="session.CurrentService" position="44,0" size="33,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		
+		<widget text="DD" render="FixedLabel" source="session.CurrentService" position="3,0" size="34,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	
+	<screen name="infobar-background1">
+		<ePixmap position="108,518" size="1064,156" pixmap="2018-backgrounds/infobar-1.png" alphatest="blend" zPosition="-1" />
+	</screen>
+	
+	<screen name="infobar-background2">
+		<ePixmap position="108,518" size="1064,156" pixmap="2018-backgrounds/infobar-2.png" alphatest="blend" zPosition="-1" />
+	</screen>
+	
+	<screen name="infobar-background3">
+		<ePixmap position="108,518" size="1064,156" pixmap="2018-backgrounds/infobar-3.png" alphatest="blend" zPosition="-1" />
+	</screen>
+	
+	<screen name="infobar-background4">
+		<ePixmap position="108,518" size="1064,156" pixmap="2018-backgrounds/infobar-4.png" alphatest="blend" zPosition="-1" />
+	</screen>
+	
+	<screen name="infobar-channel">
+		<widget source="session.CurrentService" render="Label" position="123,523" size="794,36" font="Bold;28" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-time">
+		<widget source="global.CurrentTime" render="Label" position="917,523" size="240,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" transparent="1" zPosition="2">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat2</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-started">
+		<widget source="session.Event_Now" render="Label" position="142,562" size="280,36" font="Regular;26" halign="left" valign="center" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1">
+			<convert type="EventTime">Elapsed</convert>
+			<convert type="Slyk18RemainingToText">OnlyMinute</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-started-picon">
+		<widget source="session.Event_Now" render="Label" position="256,562" size="280,36" font="Regular;26" halign="left" valign="center" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1">
+			<convert type="EventTime">Elapsed</convert>
+			<convert type="Slyk18RemainingToText">OnlyMinute</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-picon">
+		<widget source="session.CurrentService" render="PiconBg" position="132,572" size="104,64" transparent="0" alphatest="blend" zPosition="5" />
+		<widget source="session.CurrentService" render="Slyk18Picon" position="134,574" size="100,60" alphatest="blend" transparent="0" zPosition="10">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-progress-top">
+		<ePixmap pixmap="2018-progress/1360-12-bg.png" position="422,578" size="132,6" alphatest="blend" zPosition="2" />
+		<widget source="session.Event_Now" render="Progress" position="422,578" pixmap="2018-progress/278-9.png" size="132,6" transparent="1" borderWidth="0" zPosition="5">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="562,562" size="74,38" font="Regular;14" noWrap="1" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center" halign="left" zPosition="2">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText" />
+		</widget>
+	</screen>
+	
+	<screen name="infobar-progress-bottom">
+		<ePixmap pixmap="2018-progress/1360-12-bg.png" position="422,652" size="132,6" alphatest="blend" zPosition="2" />
+		<widget source="session.Event_Now" render="Progress" position="422,652" pixmap="2018-progress/278-9.png" size="132,6" transparent="1" borderWidth="0" zPosition="5">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="562,636" size="74,38" font="Regular;14" noWrap="1" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center" halign="left" zPosition="2">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText" />
+		</widget>
+	</screen>
+	
+	<screen name="infobar-record1">
+		<widget alphatest="blend" pixmap="icons/icon_rec_sm.png" position="967,573" render="Pixmap" size="20,20" source="session.RecordState" zPosition="5">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	
+	<screen name="infobar-record2">
+		<widget alphatest="blend" pixmap="icons/icon_rec_sm.png" position="1107,573" render="Pixmap" size="20,20" source="session.RecordState" zPosition="5">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	
+	<screen name="infobar-crypt1">
+		<widget pixmap="myicons/locked.png" render="Pixmap" source="session.CurrentService" position="993,573" size="13,16" alphatest="blend" zPosition="5">
+			<convert type="SlykServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget pixmap="myicons/unlocked.png" render="Pixmap" source="session.CurrentService" position="993,573" size="13,16" alphatest="blend" zPosition="5">
+			<convert type="SlykServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-crypt2">
+		<widget pixmap="myicons/locked.png" render="Pixmap" source="session.CurrentService" position="1133,573" size="13,16" alphatest="blend" zPosition="5">
+			<convert type="SlykServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget pixmap="myicons/unlocked.png" render="Pixmap" source="session.CurrentService" position="1133,573" size="13,16" alphatest="blend" zPosition="5">
+			<convert type="SlykServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-snr">
+		<widget source="session.FrontendStatus" render="Label" position="1100,598" size="38,36" font="Regular;14" valign="center" noWrap="1" backgroundColor="skydarkblue" foregroundColor="white" transparent="1" halign="right">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+	</screen>
+	
+	<screen name="infobar-buttons">
+		<ePixmap pixmap="myicons/up-down.png" position="133,646" size="36,20" alphatest="blend" backgroundColor="transparent" zPosition="4" />
+		<eLabel text="Channels" position="175,636" size="114,38" font="Regular;26" halign="left" valign="center" backgroundColor="skydarkblue" foregroundColor="skylightblue" transparent="1" />
+		<ePixmap pixmap="myicons/prev-next.png" position="291,646" size="40,20" alphatest="blend" backgroundColor="transparent" zPosition="4" />
+		<eLabel text="EPG" position="338,636" size="114,38" font="Regular;26" halign="left" valign="center" backgroundColor="skydarkblue" foregroundColor="skylightblue" transparent="1" />
+		<ePixmap pixmap="myicons/info.png" position="1082,642" size="24,24" alphatest="blend" zPosition="2" />
+		<eLabel text="Info" position="1111,636" size="46,38" font="Regular;26" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="skylightblue" backgroundColor="backgroundbot" zPosition="2" />
+	</screen>
+	
+	<screen name="infobar-tuners">
+		<widget source="session.TunerInfo" render="Pixmap" position="1076,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_a.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1079,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1058,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_b.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1061,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1040,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_c.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1043,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1022,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_d.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1025,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+	
+	<screen name="Infobar-layout1">
+		<panel name="infobar-background1" />
+		<panel name="infobar-channel" />
+		<panel name="infobar-time" />
+		<panel name="infobar-started" />
+		<panel name="infobar-progress-top" />
+		<panel name="infobar-record1" />
+		<panel name="infobar-crypt1" />
+		<panel name="infobar-snr" />
+		<panel name="infobar-buttons" />
+		<panel name="infobar-tuners" />
+		<panel position="1012,562" size="128,36">
+			<panel name="ServiceIcons" />
+		</panel>
+		
+		<!-- now event -->
+		<widget source="session.Event_Now" render="Label" position="142,598" size="477,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+		<!-- next start time -->
+		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		
+		<!-- next event -->
+		<widget source="session.Event_Next" render="Label" position="642,598" size="356,36" font="Regular;26" noWrap="1" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+	
+	<screen name="Infobar-layout2">
+		<panel name="infobar-background2" />
+		<panel name="infobar-picon"/>
+		<panel name="infobar-channel" />
+		<panel name="infobar-time" />
+		<panel name="infobar-started-picon" />
+		<panel name="infobar-progress-bottom" />
+		<panel name="infobar-record1" />
+		<panel name="infobar-crypt1" />
+		<panel name="infobar-snr" />
+		<panel name="infobar-buttons" />
+		<panel name="infobar-tuners" />
+		<panel position="1012,562" size="128,36">
+			<panel name="ServiceIcons" />
+		</panel>
+		
+		<!-- now event -->
+		<widget source="session.Event_Now" render="Label" position="256,598" size="363,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+		<!-- next start time -->
+		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		
+		<!-- next event -->
+		<widget source="session.Event_Next" render="Label" position="642,598" size="356,36" font="Regular;26" noWrap="1" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+	
+	<screen name="Infobar-layout3">
+		<panel name="infobar-background3" />
+		<panel name="infobar-channel" />
+		<panel name="infobar-time" />
+		<panel name="infobar-started" />
+		<panel name="infobar-progress-top" />
+		<panel name="infobar-record2" />
+		<panel name="infobar-crypt2" />
+		<panel name="infobar-buttons" />
+		
+		<!-- now event -->
+		<widget source="session.Event_Now" render="Label" position="142,598" size="477,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+		<!-- next start time -->
+		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		
+		<!-- next event -->
+		<widget source="session.CurrentService" render="SlykNextEvents" position="642,601" size="236,36" font="Regular;26" noWrap="1" number="2" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		
+		<!-- third event time -->
+		<widget source="session.CurrentService" render="SlykNextEventsTime" position="902,562" size="120,36" font="Regular;26" noWrap="1" number="3" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" transparent="1" zPosition="6">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		
+		<!-- third event -->
+		<widget source="session.CurrentService" render="SlykNextEvents" position="902,601" size="236,36" font="Regular;26" noWrap="1" number="3" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	
+	<screen name="Infobar-layout4">
+		<panel name="infobar-background4" />
+		<panel name="infobar-picon"/>
+		<panel name="infobar-channel" />
+		<panel name="infobar-time" />
+		<panel name="infobar-started-picon" />
+		<panel name="infobar-progress-bottom" />
+		<panel name="infobar-record2" />
+		<panel name="infobar-crypt2" />
+		<panel name="infobar-buttons" />
+		
+		<!-- now event -->
+		<widget source="session.Event_Now" render="Label" position="256,598" size="363,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+		<!-- next start time -->
+		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+		
+		<!-- next event -->
+		<widget source="session.CurrentService" render="SlykNextEvents" position="642,601" size="236,36" font="Regular;26" noWrap="1" number="2" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		
+		<!-- third event time -->
+		<widget source="session.CurrentService" render="SlykNextEventsTime" position="902,562" size="120,36" font="Regular;26" noWrap="1" number="3" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" transparent="1" zPosition="6">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		
+		<!-- third event -->
+		<widget source="session.CurrentService" render="SlykNextEvents" position="902,601" size="236,36" font="Regular;26" noWrap="1" number="3" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	
+	<!-- second info bar (ok long)-->
+	<screen name="ExtraInfo">
+		<eLabel position="0,0" size="1064,32" backgroundColor="#1a000000" transparent="0" zPosition="-1" />
+		<widget source="session.CurrentService" render="Label" font="Regular;12" position="15,2" size="310,52" halign="left" foregroundColor="white" backgroundColor="#0c000000" noWrap="1" transparent="1" zPosition="1">
+			<convert type="PliExtraInfo">TransponderInfo2line</convert>
+		</widget>
+		<eLabel text="Tuner:" position="382,2" size="70,16" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" zPosition="1" />
+		<widget source="session.TunerInfo" render="Pixmap" position="432,5" size="8,8" alphatest="blend" pixmap="icons/icon_tuner_a_sm.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="432,14" size="8,1" backgroundColor="#3ab7fe" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="453,5" size="8,8" alphatest="blend" pixmap="icons/icon_tuner_b_sm.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="453,14" size="8,1" backgroundColor="#3ab7fe" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="474,5" size="8,8" alphatest="blend" pixmap="icons/icon_tuner_c_sm.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="474,14" size="8,1" backgroundColor="#3ab7fe" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="495,5" size="8,8" alphatest="blend" pixmap="icons/icon_tuner_d_sm.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="495,14" size="8,1" backgroundColor="#3ab7fe" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">4,4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="740,2" size="310,32" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" halign="right">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<eLabel text="Res:" position="382,16" size="47,16" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" zPosition="1" />
+		<widget source="session.CurrentService" render="Label" position="432,16" size="130,32" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" halign="left" valign="top">
+			<convert type="PliExtraInfo">ResolutionString</convert>
+		</widget>
+		<eLabel text="SNR:" position="588,2" size="55,16" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" halign="right" noWrap="1" />
+		<widget source="session.FrontendStatus" render="Label" position="647,2" size="70,16" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" noWrap="1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="AGC:" position="588,16" size="55,16" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" halign="right" noWrap="1" />
+		<widget source="session.FrontendStatus" render="Label" position="647,16" size="70,16" font="Regular;12" foregroundColor="white" backgroundColor="#0c000000" transparent="1" noWrap="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+	</screen>
+	
+	<!-- 1 = infobar layout 1 - ECM-->
+	<screen name="SecondInfoBar1">
+		<panel name="InfoBar" />
+		<ePixmap position="108,367" size="1064,151" pixmap="2018-backgrounds/infobar-top.png" alphatest="blend" zPosition="-1" />
+		
+                 <widget source="session.Event_Now" render="Label" position="123,378" size="130,36" font="Bold;28" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="top">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+	        <widget name="channel" position="253,378" size="664,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+                <widget name="epg_description" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3"/>
+		
+		<panel position="1029,377" size="128,36">
+			<panel name="ServiceIcons" />
+		</panel>
+		<panel position="108,e-46" size="1064,32">
+			<panel name="ExtraInfo" />
+		</panel>
+	</screen>
+	
+	<!-- 2 = infobar layout 1 - No ECM-->
+	<screen name="SecondInfoBar2">
+		<panel name="InfoBar" />
+		<ePixmap position="108,367" size="1064,151" pixmap="2018-backgrounds/infobar-top.png" alphatest="blend" zPosition="-1" />
+		
+                <widget source="session.Event_Now" render="Label" position="123,378" size="130,36" font="Bold;28" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="top">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18Time</convert>
+		</widget>
+	        <widget name="channel" position="253,378" size="664,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		
+                <widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<panel position="1029,377" size="128,36">
+			<panel name="ServiceIcons" />
+		</panel>
+	</screen>
+	
+	<!-- not used in this skin so hidden -->
+	<screen name="RadioInfoBar" position="0,0" size="0,0" backgroundColor="backgroundmid" transparent="0" flags="wfNoBorder" />
+	
+	<!-- quick epg info bar - Infobar Menu option single epg < > -->
+	<screen name="QuickEPGTemplate">
+		<ePixmap position="108,518" size="1064,156" pixmap="2018-backgrounds/quickepg.png" alphatest="blend" zPosition="-1" />
+		<widget source="Service" render="Label" position="123,523" size="794,36" font="Bold;28" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center" halign="left" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="917,523" size="240,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" halign="right" transparent="1" zPosition="2">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat2</convert>
+		</widget>
+		<widget source="Service" render="Slyk18Picon" position="134,572" size="100,60" alphatest="blend" backgroundColor="transparent" transparent="0" zPosition="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget name="list" position="261,568" size="727,66" EventFontInfobar="Regular;22" selectionPixmap="2018-selectbars/bar-54.png" backgroundColor="messageboxbg" transparent="1" />
+		<widget alphatest="blend" pixmap="icons/icon_rec_sm.png" position="900,534" render="Pixmap" size="16,16" source="session.RecordState" zPosition="5">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<panel position="1012,562" size="128,36">
+			<panel name="ServiceIcons" />
+		</panel>
+		<!-- tuner a,b,c,d icons -->
+		<widget source="session.TunerInfo" render="Pixmap" position="1076,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_a.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1079,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1058,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_b.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1061,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1040,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_c.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1043,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="1022,608" size="16,16" alphatest="blend" pixmap="icons/icon_tuner_d.png" zPosition="3" transparent="1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" position="1025,621" size="10,1" backgroundColor="skyblue" zPosition="5" transparent="0">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">4,4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="1100,598" size="38,36" font="Regular;14" valign="center" noWrap="1" backgroundColor="skydarkblue" foregroundColor="white" transparent="1" halign="right">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<ePixmap pixmap="mybuttons/key-epg.png" position="955,643" size="50,24" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="mybuttons/key-menu.png" position="1015,643" size="50,24" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="myicons/info.png" position="1082,642" size="24,24" alphatest="blend" zPosition="2" />
+		<eLabel text="Info" position="1111,636" size="46,38" font="Regular;26" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="skylightblue" backgroundColor="backgroundbot" zPosition="2" />
+	</screen>
+	
+	<!-- 1 = Original - No programme description - coloured buttons at bottom -->
+	<screen name="QuickEPG1">
+		<panel name="QuickEPGTemplate" />
+		<ePixmap pixmap="buttons/key_red.png" position="133,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_red" position="162,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="331,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_green" position="360,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+		<ePixmap pixmap="buttons/key_yellow.png" position="529,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_yellow" position="558,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+		<ePixmap pixmap="buttons/key_blue.png" position="727,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_blue" position="756,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+	</screen>
+	
+	<!-- 2 = Programme description - coloured buttons at bottom -->
+	<screen name="QuickEPG2">
+		<panel name="QuickEPGTemplate" />
+		<ePixmap position="108,367" size="1064,151" pixmap="2018-backgrounds/infobar-top.png" alphatest="blend" zPosition="-1" />
+		<widget source="Event" render="Label" position="123,377" size="794,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<ePixmap pixmap="buttons/key_red.png" position="133,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_red" position="162,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+		<ePixmap pixmap="buttons/key_green.png" position="331,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_green" position="360,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+		<ePixmap pixmap="buttons/key_yellow.png" position="529,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_yellow" position="558,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+		<ePixmap pixmap="buttons/key_blue.png" position="727,643" size="24,24" alphatest="blend" zPosition="1" />
+		<widget name="key_blue" position="756,636" size="205,38" font="Regular;26" valign="center" halign="left" transparent="1" noWrap="1" foregroundColor="skyblue" backgroundColor="skydarkblue" zPosition="1" />
+	</screen>
+	
+	<!-- 3 = No programme description - No coloured buttons - Channel/Time text at bottom. (default) -->
+	<screen name="QuickEPG3">
+		<panel name="QuickEPGTemplate" />
+		<ePixmap pixmap="myicons/prev-next.png" position="133,646" size="40,20" alphatest="blend" backgroundColor="transparent" zPosition="4" />
+		<eLabel text="Channels" position="178,636" size="114,38" font="Regular;26" halign="left" valign="center" backgroundColor="skydarkblue" foregroundColor="skylightblue" transparent="1" />
+		<ePixmap pixmap="myicons/up-down.png" position="294,646" size="36,20" alphatest="blend" backgroundColor="transparent" zPosition="4" />
+		<eLabel text="Time" position="335,636" size="114,38" font="Regular;26" halign="left" valign="center" backgroundColor="skydarkblue" foregroundColor="skylightblue" transparent="1" />
+	</screen>
+	
+	<!-- 4 = Programme description -  No coloured buttons - Channel/Time text at bottom. -->
+	<screen name="QuickEPG4">
+		<panel name="QuickEPGTemplate" />
+		<ePixmap position="108,367" size="1064,151" pixmap="2018-backgrounds/infobar-top.png" alphatest="blend" zPosition="-1" />
+		<widget source="Event" render="Label" position="123,377" size="794,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<ePixmap pixmap="myicons/prev-next.png" position="133,646" size="40,20" alphatest="blend" backgroundColor="transparent" zPosition="4" />
+		<eLabel text="Channels" position="178,636" size="114,38" font="Regular;26" halign="left" valign="center" backgroundColor="skydarkblue" foregroundColor="skylightblue" transparent="1" />
+		<ePixmap pixmap="myicons/up-down.png" position="294,646" size="36,20" alphatest="blend" backgroundColor="transparent" zPosition="4" />
+		<eLabel text="Time" position="335,636" size="114,38" font="Regular;26" halign="left" valign="center" backgroundColor="skydarkblue" foregroundColor="skylightblue" transparent="1" />
+	</screen>
+</skin>
+
+

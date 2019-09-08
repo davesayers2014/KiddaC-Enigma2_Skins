@@ -1,0 +1,267 @@
+<skin>
+	<!-- Skin: Vskin Bolt 720 (2018) by kiddac : linuxsat-support.com -->
+	
+        <!-- All graphics, icons, buttons, screens are my own hard work-->
+	<!-- If using any elements/graphics from this skin in your own work please reference me correctly -->
+	
+        <!-- ****************************************************************************************************** -->
+	<!-- If you would like to buy me a beer for my efforts https://paypal.me/kiddac -->
+	<!-- ****************************************************************************************************** -->
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32" />
+	</output>
+	
+	<!-- includes -->
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-button-templates.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-main-templates.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-menu-templates.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-wizards.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-general.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-CCcamInfo.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-ChannelSelection.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-epg.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-eventview.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-infobar.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-infopanel.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-information.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-movies.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-network.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-plugins.xml" />
+	<include filename="/usr/share/enigma2/vskin-bolt-720/v-timers.xml" />
+        <include filename="/usr/share/enigma2/vskin-bolt-720/v-non-common.xml" />
+        <!-- <include filename="/usr/share/enigma2/vskin-bolt-720/v-vix.xml" /> -->
+        <include filename="/usr/share/enigma2/vskin-bolt-720/extras.xml" />
+        
+        <!-- fonts -->
+	<fonts>
+		<!-- default skin fonts -->
+		<font name="Subtitlefont" filename="/usr/share/fonts/nmsbd.ttf" scale="100" />
+		<font name="LCD"          filename="/usr/share/fonts/lcd.ttf" scale="100" />
+		<font name="Replacement"  filename="/usr/share/fonts/ae_AlMateen.ttf" scale="100" replacement="1" />
+		
+                <!-- vskin fonts -->
+		<font name="Regular" filename="/usr/share/enigma2/vskin-bolt-720/fonts/VSkin-Light.ttf" scale="100" />
+		<font name="Bold" filename="/usr/share/enigma2/vskin-bolt-720/fonts/VSkin-Light.ttf" scale="100" />
+		<font name="Console" filename="/usr/share/enigma2/vskin-bolt-720/fonts/Inconsolata-Regular.ttf" scale="100" />
+		<font name="Heading" filename="/usr/share/enigma2/vskin-bolt-720/fonts/VSkin-Light.ttf" scale="100" />
+		
+		
+                <!-- font sizes -->
+                <alias name="Body" font="Regular" size="20" height="30" />
+		<alias name="TextNormal" font="Regular" size="20" height="30" />
+		
+		<!-- context menu -->
+		<alias name="ChoiceList" font="Regular" size="22" height="50" />
+		
+                <!-- plugins -->
+		<alias name="PluginBrowser0" font="Regular" size="20" height="30" />        <!-- plugin name -->
+		<alias name="PluginBrowser1" font="Regular" size="16" height="20" />        <!-- plugin description -->
+		
+                <!-- help menus -->
+		<alias name="HelpMenuList" font="Regular" size="22" height="30" />
+
+
+                <!-- virtual keyboard -->
+                <alias name="VirtualKeyboard" font="Regular" size="18" height="45" />
+		<alias name="VirtualKeyBoard" font="Regular" size="18" height="45" />
+		
+                <!-- used on tuner config - positioner -->
+		<alias name="SelectionList" font="Regular" size="22" height="50" />
+		
+                <!-- locationbox i.e movie file location  -->
+		<alias name="FileList" font="Regular" size="22" height="50" />
+		<alias name="FileListMulti" font="Regular" size="22" height="50" />
+	</fonts>
+	
+        <!-- default colour list -->
+	<colors>
+		<color name="transparent" value="#ff000000" />
+		<color name="transpBlack" value="#80000000"/>
+		<color name="transpWhite" value="#80ffffff"/>
+		<color name="black" value="#00000000" />
+		<color name="red" value="#00ff0011" />
+		<color name="green" value="#307e13" />
+		<color name="blue" value="#000064c7"/>
+		<color name="yellow" value="#00bab329"/>
+		<color name="white" value="#00ffffff" />
+		<color name="zapgreen" value="#00007f0e" />
+		<color name="verydarkgrey" value="#00555555" />
+		<color name="darkgrey" value="#279e9fa4"/>
+		<color name="grey" value="#008c8c93" />
+		
+                <!-- legacy vskin colours -->
+		<color name="vred" value="#00ff0000" />
+		<color name="textCol1" value="#005bcbf5" />
+		<color name="textCol2" value="#00939393" />
+		<color name="bgDark" value="#00040a10" />
+		<color name="bgMid" value="#00071321" />
+		<color name="selectedBG" value="#00d9d9d9" />
+	
+		<color name="messageBG" value="#1a000000" />
+		<color name="epgBG" value="#0012273b" />
+                <color name="infobarBG" value="#0012273b" />	   <!-- dark blue -->
+		
+		<!-- new vskin colours -->
+		<color name="black50"                             value="#80000000" />
+		<color name="black70"                             value="#49000000" />
+		<color name="black80"                             value="#34000000" />
+		<color name="black90"                             value="#1a000000" />
+		
+		<color name="colour1"                             value="#ffffff" />        <!-- white -->
+		<color name="colour2"                             value="#003aa7e2" />    <!-- light blue -->
+		<color name="colour3"                             value="#00939393" />    <!-- grey -->
+
+		<color name="fg1"                                 value="#ffffff" />      <!-- white -->
+		<color name="fg2"                                 value="#003aa7e2" />      <!-- light blue -->
+		<color name="fg3"                                 value="#00939393" />      <!-- grey -->
+		
+                <color name="bg-tl"                               value="#0012273b" />
+		<color name="bg-tm"                               value="#000b1b2b" />
+		<color name="bg-tr"                               value="#00050e19" />
+		<color name="bg-ml"                               value="#000f2133" />
+		<color name="bg-mm"                               value="#000a1826" />
+		<color name="bg-mr"                               value="#00030b13" />
+		<color name="bg-bl"                               value="#00030b13" />
+		<color name="bg-bm"                               value="#00020810" />
+		<color name="bg-br"                               value="#0000060c" />
+		<color name="bg-mm-dark"                          value="#00040a10" />
+			
+		<color name="button-top"                          value="#ffffff" />      <!-- white -->
+		<color name="button-bot"                          value="#ffffff" />      <!-- white -->
+                <color name="button-bg"                           value="#00010206" />
+                <color name="button-top-bg"                       value="#000f2032" />
+                
+		<color name="title"                               value="#003aa7e2" />    <!-- light blue -->
+		<color name="tv-label"                            value="#00333333" />    <!--dark grey -->
+	
+		<color name="selected"                            value="#000000" />
+ 	        <color name="selected-text-bg"                    value="#00d6d6d6" />    <!-- very light grey -->
+ 	        <color name="selected-gfx-bg"                     value="#00d6d6d6" />    <!-- very light grey -->
+ 	        <color name="marked"                              value="#ff0000" />
+ 	        <color name="selected-marked"                     value="#ff0000" />     		
+
+                <color name="messagebox-bg"                       value="#1a000000" />
+                <color name="messagebox-title"                    value="#ffffff" />      <!-- white -->
+                <color name="messagebox-title-bg"                 value="#1a000000" />
+                <color name="messagebox-text"                     value="#ffffff" />      <!-- white -->
+                <color name="messagebox-list"                     value="#ffffff" />      <!-- white -->
+
+                <color name="progress"                            value="#00939393" />    <!-- light grey -->
+                <color name="progress-selected"                   value="#000000" />
+		<color name="progress-border"                     value="#00273848" />	  <!-- dark grey -->	
+		<color name="progress-border-selected"            value="#00273848" />	  <!-- dark grey -->	
+		<color name="tvguide"                             value="#003aa7e2" />    <!-- light blue -->
+                <color name="marked"                              value="#ff0000" />
+		<color name="marked-selected"                     value="#ff0000" />
+
+                <color name="timelineBG"                          value="#000000" />	
+                <color name="timelinetop"                         value="#ffffff" />	  <!-- white -->
+
+               	<color name="epgeventbg"                          value="#00122d4b" />
+		<color name="epgeventbgnow"                       value="#000d1f34" />
+		<color name="epgservicebg"                        value="#00001226" />
+		<color name="epgservicebgnow"                     value="#00000d1b" />
+		
+                <color name="infobarHead"                         value="#0012273b" />	   <!-- dark blue -->
+                <color name="infobarBlack"                        value="#1a000000"/>
+                
+                <color name="playbar"                             value="#000000" />
+                
+                <color name="reboot"                              value="#00020910" />
+                
+               	<color name="highlightBG"                         value="#00081825" />
+	</colors>	
+	
+        <windowstyle type="skinned" id="0">
+		<title offset="25,15" font="Regular;24" />
+		<color name="WindowTitleForeground"               color="messagebox-title" />        <!-- message box title -->
+		<color name="WindowTitleBackground"               color="messagebox-title-bg" />     <!-- message box title bg - same colour as graphic title border -->
+		<color name="Background"                          color="messagebox-bg" />           <!-- message box inner background - same colour as graphic borders - scrollbar background -->
+		<color name="LabelForeground"                     color="messagebox-text" />         <!-- message box text - Scrollbar slider -->
+		<color name="ListboxForeground"                   color="messagebox-list" />         <!-- message box list -->
+                <color name="ListboxBackground"                   color="messagebox-bg" />
+ 	        <color name="ListboxSelectedForeground"           color="selected" />                <!-- message box list selected -->
+		<color name="ListboxSelectedBackground"           color="selected-text-bg" />
+		<color name="ListboxMarkedForeground"             color="marked" />                  <!-- message box list marked -->
+		<color name="ListboxMarkedBackground"             color="selected-text-bg" />
+                <color name="ListboxMarkedAndSelectedForeground"  color="selected-marked" />         <!-- message box list marked and selected -->
+		<color name="ListboxMarkedAndSelectedBackground"  color="selected-text-bg" />
+		
+                <!-- menu border -->
+		<borderset name="bsWindow">
+			<pixmap pos="bpTopLeft" filename="screens/b_tl.png" />
+			<pixmap pos="bpTop" filename="screens/b_t.png" />
+			<pixmap pos="bpTopRight" filename="screens/b_tr.png" />
+			<pixmap pos="bpLeft" filename="screens/b_l.png" />
+			<pixmap pos="bpRight" filename="screens/b_r.png" />
+			<pixmap pos="bpBottomLeft" filename="screens/b_bl.png" />
+			<pixmap pos="bpBottom" filename="screens/b_b.png" />
+			<pixmap pos="bpBottomRight" filename="screens/b_br.png" />
+		</borderset>
+		
+	</windowstyle>
+	        <windowstyle type="skinned" id="1">
+		<color name="WindowTitleForeground"               color="messagebox-title" />        <!-- message box title -->
+		<color name="WindowTitleBackground"               color="messagebox-title-bg" />     <!-- message box title bg - same colour as graphic title border -->
+		<color name="Background"                          color="messagebox-bg" />           <!-- message box inner background - same colour as graphic borders - scrollbar background -->
+		<color name="LabelForeground"                     color="messagebox-text" />         <!-- message box text - Scrollbar slider -->
+		<color name="ListboxForeground"                   color="messagebox-list" />         <!-- message box list -->
+                <color name="ListboxBackground"                   color="messagebox-bg" />
+ 	        <color name="ListboxSelectedForeground"           color="selected" />                <!-- message box list selected -->
+		<color name="ListboxSelectedBackground"           color="selected-text-bg" />
+		<color name="ListboxMarkedForeground"             color="marked" />                  <!-- message box list marked -->
+		<color name="ListboxMarkedBackground"             color="selected-text-bg" />
+                <color name="ListboxMarkedAndSelectedForeground"  color="selected-marked" />         <!-- message box list marked and selected -->
+		<color name="ListboxMarkedAndSelectedBackground"  color="selected-text-bg" />
+	</windowstyle>
+	
+	<parameters>
+		<parameter name="AutotimerEnabledIcon" value="10,2,25,24" />        <!-- Autotimer tick box -->
+		<parameter name="AutotimerRecordIcon" value="40,5,20,20" />         <!-- Autotimer Record Icon -->
+		
+		<parameter name="ChoicelistDash" value="0,2,800,50"/>
+		<parameter name="ChoicelistName" value="54,10,736,50"/>
+		<parameter name="ChoicelistIcon" value="10,10,35,28" />              <!-- button dimensions -->
+		<parameter name="ConfigListSeperator" value="400"/>
+	
+                <!-- example is software management - backup list -->
+               	<parameter name="FileListIcon" value="10,14,25,24" />
+		<parameter name="FileListName" value="40,12,750,50" />
+		
+		<parameter name="FileListMultiLock" value="10,14,25,24" />
+ 	        <parameter name="FileListMultiIcon" value="45,14,25,24" />
+		<parameter name="FileListMultiName" value="75,12,715,52" />
+	
+		<parameter name="HelpMenuListHlp" value="10,2,795,50" />            <!-- help menu text -->
+                <parameter name="HelpMenuListExtHlp0" value="10,4,795,30"/>
+		<parameter name="HelpMenuListExtHlp1" value="0,33,795,26"/>
+		
+		<parameter name="PluginBrowserIcon" value="86,5,100,40" />          <!-- plugins main icon -->
+		<parameter name="PluginBrowserName" value="196,3,30" />             <!-- plugins name -->
+		<parameter name="PluginBrowserDescr" value="196,28,20" />           <!-- plugins description -->
+		<parameter name="PluginBrowserDownloadIcon" value="86,0,60,50" />   <!-- plugins + - boxed icon -->
+		<parameter name="PluginBrowserDownloadName" value="156,3,30" />     <!-- plugins download name - see font alias PluginBrowser0 -->
+		<parameter name="PluginBrowserDownloadDescr" value="156,28,20" />   <!-- plugins download description -see font alias PluginBrowser1 -->
+		
+	         <!-- information - services -->
+		<parameter name="ServiceInfo" value="0,0,300,30"/>
+		<parameter name="ServiceInfoLeft" value="0,0,300,30"/>
+		<parameter name="ServiceInfoRight" value="300,0,490,30"/>
+	
+                <!-- used on tuner config - positioner -->
+                <parameter name="SelectionListDescr" value="45,12,740,50" />
+		<parameter name="SelectionListLock" value="10,12,25,24" />
+		<parameter name="SelectionListLockOff" value="10,12,25,24" />
+
+                <parameter name="VirtualKeyboard" value="45,45"/>
+		<parameter name="VirtualKeyBoard" value="45,45"/>
+		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
+                <parameter name="VirtualKeyBoardPadding" value="4,4"/>
+		
+		<parameter name="EPGImportFilterListLockOn" value="10,2,25,24" />
+		<parameter name="EPGImportFilterListLockOff" value="10,2,25,24" />
+		<parameter name="EPGImportFilterListDescr" value="50,2,750,50" />
+	</parameters>
+</skin>
+
+

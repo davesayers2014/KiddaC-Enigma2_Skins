@@ -1,0 +1,87 @@
+
+
+<skin>
+	<!-- ##About## -->
+	<!-- /lib/python/Screens/About.py -->
+	<screen name="AboutOE" title="Image Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="lab1" render="Label" position="100,152" size="650,26" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
+		<widget source="lab2" render="Label" position="100,178" size="650,21" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
+		<widget source="lab3" render="Label" position="100,199" size="650,21" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
+		<widget name="AboutScrollLabel" position="216,241" size="456,320" font="Regular;18" foregroundColor="fg2" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<ePixmap pixmap="v-icons/vskin-logo.png" position="296,578" size="93,57" alphatest="blend" />
+		<eLabel text="V Skin 720 V2.04" position="419,587" size="291,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="1" />
+		<eLabel text="by Kidda C (2018/2019)" position="419,607" size="291,24" font="Regular;14" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="1" />
+		<panel name="New-Buttons-Bot" />
+		<ePixmap pixmap="v-buttons/key_info.png" position="1163,668" size="38,30" alphatest="blend" zPosition="3" />
+		<eLabel position="922,285" size="281,60" font="Regular;16" foregroundColor="fg1" backgroundColor="bg-mm-dark" zPosition="2" transparent="1" halign="left" text="For the latest version of my skins visit linuxsat-support.com\n\nif you would like to treat me to a beer, www.paypal.me/kiddac" />
+		<eLabel position="922,465" size="281,40" font="Regular;16" foregroundColor="fg1" backgroundColor="bg-mm-dark" zPosition="2" transparent="1" halign="left" text="Thank you and enjoy. Kidda C" />
+	</screen>
+	
+	<!-- legacy -->
+	<screen name="About" title="Image Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="AboutOE" />
+	</screen>	
+
+	
+	<screen name="Devices" title="Device Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="TunerHeader" render="Label" position="86,189" size="610,30" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="1" />
+		<widget source="nims" render="Label" position="86,219" size="610,116" font="Regular;21" foregroundColor="fg2" backgroundColor="bg-mm-dark" transparent="1" zPosition="1" />
+		<widget source="HDDHeader" render="Label" position="86,335" size="610,30" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="1" />
+		<widget source="hdd" render="Label" position="86,365" size="610,116" font="Regular;21" foregroundColor="fg2" backgroundColor="bg-mm-dark" transparent="1" zPosition="1" />
+		<widget source="MountsHeader" render="Label" position="86,481" size="610,30" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="1" />
+		<widget source="mounts" render="Label" position="86,511" size="610,116" font="Regular;21" foregroundColor="fg2" backgroundColor="bg-mm-dark" transparent="1" zPosition="1" />
+	</screen>
+	
+	<screen name="SystemMemoryInfo" title="Memory Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="lab1" render="Label" position="86,163" size="795,26" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
+		<widget source="lab2" render="Label" position="86,256" size="795,21" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
+		<widget source="lab3" render="Label" position="86,215" size="795,21" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
+		
+		<widget name="AboutScrollLabel" position="86,246" size="790,382" font="Regular; 21" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1"  />
+
+	</screen>
+	
+	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="AboutScrollLabel" position="86,163" size="790,373" font="Regular; 21" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<ePixmap position="86,559" size="790,2" pixmap="div-h.png" alphatest="blend" />
+		<widget source="IFtext" render="Label" position="86,569" size="120,30" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="left" transparent="1" zPosition="10" />
+		<widget source="IF" render="Label" position="246,569" size="375,30" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="left" transparent="1" zPosition="10" />
+		<widget source="Statustext" render="Label" position="86,600" size="115,30" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="left" transparent="1" zPosition="10"  />
+		<widget name="statuspic" position="246,607" size="15,16" pixmaps="buttons/button_green.png,buttons/button_green_off.png" alphatest="blend" zPosition="10" />
+ 	        <panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- viewgitlog -->
+	<screen name="SoftwareUpdateChanges" title="OE Changes" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="text" position="86,143" size="790,480" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+             <panel name="New-Buttons-Bot" />
+	</screen>
+	
+	 <!-- legacy -->
+	<screen name="ViewGitLog" title="OE Changes" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="SoftwareUpdateChanges" />
+	</screen>
+	
+	   <screen name="TranslationInfo" position="center,center" size="450,350" title="Translation Information">
+		<widget source="TranslatorName" render="Label" text="V Skin" position="10,30" size="380,30" font="Bold;23" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3"/>
+		<widget source="TranslationInfo" render="Label" text="KiddaC\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="10,70" size="380,250" font="Regular;20" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3"/>
+        </screen>
+	
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/ServiceInfo.py  -->
+	<screen name="ServiceInfoSimple" position="0,0" size="1280,720" title="Service Information" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="infolist" position="86,163" size="790,480" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" selectionDisabled="1" scrollbarMode="showOnDemand" itemHeight="25" transparent="1" />
+           <panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<screen name="ServiceInfo" position="0,0" size="1280,720" title="Service Information" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="ServiceInfoSimple" />
+	</screen>
+</skin>
+
+

@@ -1,0 +1,160 @@
+<skin>
+        <!-- checked -->
+      	<screen name="HistoryZapSelector" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<ePixmap pixmap="v-backgrounds/left-slim-bg.png" position="0,e-611" size="464,611" alphatest="blend" zPosition="-1" />
+		<widget source="Title" render="Label" position="40,143" size="340,38" valign="top" halign="left" font="Regular;26" zPosition="1" transparent="1" foregroundColor="fg2" backgroundColor="messagebox-bg" />
+		<widget source="menu" render="Listbox" position="0,188" size="455,550" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-455-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos = (20, 6), size = (10, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
+						MultiContentEntryText(pos = (40, 4), size = (260, 30), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x00ffffff, color_sel = 0x00ffffff), # Servicename
+						MultiContentEntryText(pos = (40, 27), size = (260, 26), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 3, color = 0x00c58d88, color_sel = 0x00ffffff), # Eventname
+						MultiContentEntryText(pos = (40, 47), size = (260, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = 0x00a0adae, color_sel = 0x00ffffff), # Eventtime
+						MultiContentEntryPixmapAlphaBlend(pos=(310, 5), size=(100, 60), png=6, flags = BT_SCALE) # picon
+					],
+				 "fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 18), gFont("Regular", 16)],
+				 "itemHeight": 70
+				}</convert>
+		</widget>
+		<ePixmap pixmap="v-backgrounds/slim-gradient.png" position="0,e-42" size="441,42" alphatest="blend" zPosition="5" />
+	</screen>
+	
+	<!-- checked -->
+	<!-- info panel SoftcamPanel Install-->
+	<screen name="ShowSoftcamPackages" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,510" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+					
+						MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = color = 0x00c58d88, color_sel = 0x00ffffff), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+                                                MultiContentEntryPixmapAlphaBlend(pos = (86, 51), size = (851, 1), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 51,
+				"scrollbarMode": "showOnDemand"
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- checked -->
+	<!-- ##SoftwarePanel## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/SoftwarePanel.py -->
+	<!-- software update -->
+	<screen name="SoftwarePanel" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="SoftwarePanel">
+		<panel name="v-template2-pig" />
+		<widget name="packagetext" position="922,285" size="200,30" font="Regular;24" valign="center" halign="left" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" zPosition="2" />
+		<widget name="packagenr" position="1122,285" size="50,30" font="Regular;24" valign="center" halign="left" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+					
+						MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00c58d88, color_sel = 0x00ffffff), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+                                                MultiContentEntryPixmapAlphaBlend(pos = (0, 52), size = (841, 2), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56,
+				"scrollbarMode": "showOnDemand"
+				}</convert>
+		</widget>
+		<eLabel text="Feed Status:" position="922,335" size="200,30" font="Regular;24" valign="center" halign="left" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" zPosition="2" />
+		<widget name="a_off" position="1117,335" size="24,32" pixmap="v-icons/feed-error.png" alphatest="blend" zPosition="2" />
+		<widget name="a_red" position="1117,335" size=" 24,32" pixmap="v-icons/feed-red.png" alphatest="blend" zPosition="2" />
+		<widget name="a_yellow" position="1117,335" size="24,32" pixmap="v-icons/feed-yellow.png" alphatest="blend" zPosition="2" />
+		<widget name="a_green" position="1117,335" size="24,32" pixmap="v-icons/feed-green.png" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="v-buttons/key_red.png" position="86,668" size="30,30" alphatest="blend" zPosition="2" />
+		<widget name="key_red" position="116,668" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="fg3" backgroundColor="button-bot" zPosition="2" />
+		<widget name="key_green_pic" pixmap="v-buttons/key_green.png" position="286,668" size="30,30" alphatest="blend" zPosition="2" />
+		<widget name="key_green" position="316,668" size="175,30" font="Regular;22" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="fg3" backgroundColor="button-bot" zPosition="2" />
+		<!-- <eLabel name="screenname" text="SoftwarePanel" position="0,0" size="1280,20" font="Regular;14" backgroundColor="red" zPosition="20" transparent="0"/> -->
+	</screen>
+	
+	<!-- software management - install extensions -->
+	<screen name="PluginManager" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showOnDemand" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"templates":
+					{"default": (56,[
+							MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+							MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00c58d88, color_sel = 0x00ffffff), # index 2 is the description
+							MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 5), # index 5 is the status pixmap
+						
+						]),
+					"category": (56,[
+							MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+							MultiContentEntryText(pos = (136, 28), size = (700, 18), font=2, flags = RT_HALIGN_LEFT, text = 1, color = 0x00c58d88, color_sel = 0x00ffffff), # index 1 is the description
+						
+						])
+					},
+					"fonts": [gFont("Regular", 22),gFont("Regular", 14),gFont("Regular", 14)],
+					"itemHeight": 56
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- software management - install extensions end screen -->
+	<screen name="PluginManagerInfo" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showOnDemand" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+		 	        MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+				MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1, color = color = 0x00c58d88, color_sel = 0x00ffffff), # index 1 is the description
+				MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 2), # index 2 is the status pixmap
+
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56
+				}</convert>
+		</widget>
+	        <widget source="status" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- software management - advanced options - ipkg manager -->
+	<screen name="PacketManager" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showOnDemand" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+					
+						MultiContentEntryText(pos = (136, 1), size = (700, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
+						MultiContentEntryText(pos = (136, 28), size = (700, 18), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00c58d88, color_sel = 0x00ffffff), # index 2 is the description
+						MultiContentEntryPixmapAlphaBlend(pos = (86, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+                                                MultiContentEntryPixmapAlphaBlend(pos = (0, 52), size = (841, 2), png = 5), # index 5 is the div pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",14)],
+				"itemHeight": 56
+				}</convert>
+		</widget>
+                <widget source="status" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<screen name="WlanScan" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="Select a wireless network">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,143" size="876,504" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showOnDemand" transparent="1" zPosition="5">
+	        	<convert type="TemplatedMultiContent">{"template": [
+ 							MultiContentEntryText(pos = (86, 3), size = (458, 30), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the essid
+			                                MultiContentEntryText(pos = (478, 8), size = (180, 20), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00c58d88, color_sel = 0x00ffffff), # index 2 is the signal
+
+ 							MultiContentEntryText(pos = (86, 26), size = (180, 20), font=1, flags = RT_HALIGN_LEFT, text = 5, color = 0x00c58d88, color_sel = 0x00ffffff), # index 5 is the interface
+						
+							MultiContentEntryText(pos = (274, 26), size = (180, 20), font=1, flags = RT_HALIGN_LEFT, text = 4, color = 0x00c58d88, color_sel = 0x00ffffff), # index 4 is the encryption
+ 							MultiContentEntryText(pos = (478, 26), size = (180, 20), font=1, flags = RT_HALIGN_LEFT, text = 3, color = 0x00c58d88, color_sel = 0x00ffffff), # index 3 is the maxrate
+						
+ 						],
+ 					"fonts": [gFont("Regular", 20),gFont("Regular", 16)],
+ 					"itemHeight": 56
+ 					}</convert>
+		</widget>
+		<widget source="info" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+</skin>
+
+	
+	
+	

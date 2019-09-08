@@ -1,0 +1,149 @@
+
+<skin>
+
+
+	<!-- /lib/python/Screens/MovieSelection.py -->
+	<screen name="MovieSelection" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="background" />
+		<panel name="logo" />
+	        <panel name="time" />
+		<panel name="tv" />
+		<eLabel text="Recordings" position="68,266" size="228,66" valign="top" halign="left" font="Regular;28" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="midleft" />
+		<eLabel text="Recordings" position="69,268" size="228,66" valign="top" halign="left" font="Regular;28" zPosition="1" transparent="1" foregroundColor="text-shadow" backgroundColor="midleft" />
+		<panel name="leftnav" />
+		<panel name="rightnav" />
+	
+                <widget name="waitingtext" position="345,256" size="916,416" font="Regular;23" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="mid" transparent="1" />
+                
+               	<widget source="Service" render="Label" position="345,48" size="606,32" halign="left" valign="top" foregroundColor="white" backgroundColor="topleft" noWrap="1" font="Bold;28" transparent="1">
+			<convert type="EventName">RecordServiceName</convert>
+		</widget>
+		
+		<widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="345,93" size="606,102" halign="left" valign="top" foregroundColor="white" backgroundColor="topmid" font="Regular;22" transparent="1">
+			<convert type="Slyk18MovieInfo">MetaDescription</convert>
+		</widget>
+		
+		<ePixmap pixmap="q-backgrounds/v-divider.png" position="969,54" size="1,140" alphatest="blend" />
+		
+		<widget source="Service" render="Slyk18Picon" position="983,25" size="100,60" alphatest="blend">
+			<convert type="MovieReference">Reference</convert>
+		</widget>
+		
+		<widget source="Service" render="Label" position="983,93" size="224,26" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;22" transparent="1">
+		        <convert type="ServiceTime">Duration</convert>
+			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+		</widget>
+		
+		<widget name="freeDiskSpace" position="983,118" size="241,23" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;22" transparent="1" />
+		
+		<widget source="Service" render="Label" position="983,144" size="241,23" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;22" transparent="1" >
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		
+		<panel position="360,210" size="640,440">
+			<widget name="chosenletter" position="center,center" size="60,60" foregroundColor="white" backgroundColor="select-darkblue-bg" font="Regular;50" halign="center" valign="center" transparent="0" zPosition="4" />
+		</panel>
+
+		<!-- icons -->
+
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="1090,97" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="1090,97" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="1090,97" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		
+		
+		
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="1124,97" size="21,20" alphatest="blend">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="1150,97" size="30,20" alphatest="blend">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="1186,97" size="21,20" alphatest="blend">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<widget alphatest="blend" pixmap="q-icons/record.png" render="Pixmap" position="1219,48" size="20,20" source="session.RecordState" zPosition="4">
+			<convert type="ConditionalShowHide" />
+		</widget>
+
+		<widget name="movie_sort" position="66,686" size="35,20" pixmaps="icons/az.png,icons/newtop.png,icons/shuffle.png,icons/za.png,icons/oldtop.png,icons/faz.png,icons/fza.png" zPosition="10" transparent="1" alphatest="blend" />
+		<widget name="movie_off" position="101,686" size="35,20" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png" zPosition="10" transparent="1" alphatest="blend" />
+	
+	
+	        <widget name="list" position="345,256" size="916,416" font="Regular;18"  foregroundColor="white" backgroundColor="mid" foregroundColorSelected="white"
+                backgroundColorSelected="select-darkblue-bg" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+
+		<panel name="New-Buttons-T1" />
+		<ePixmap pixmap="buttons/key_info.png" position="1160,686" size="25,25" transparent="1" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="buttons/key_menu.png" position="1195,686" size="25,25" transparent="1" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="buttons/key_help.png" position="1230,686" size="25,25" transparent="1" alphatest="blend" zPosition="3" />
+
+	</screen>
+	
+	<screen name="MovieSelectionSlim" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="MovieSelection" />
+	</screen>
+	
+	<!-- not used -->
+	<screen name="PVRState" position="0,0" size="0,0" backgroundColor="transparent" flags="wfNoBorder" />
+	
+	<screen name="MoviePlayer" flags="wfNoBorder" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent">
+	        <eLabel position="0,506" size="1280,226" backgroundColor="blackglass" transparent="0" zPosition="-2" />
+                <ePixmap position="0,482" size="1280,250" pixmap="q-infobars/infobar-blank.png" alphatest="blend" zPosition="-1" />
+                
+		<widget source="global.CurrentTime" render="Label" position="12,663" size="264,28" font="Regular;22" foregroundColor="infobargrey" backgroundColor="blackglass" valign="top" halign="right" transparent="1" zPosition="1">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="center,518" size="1280,30" font="Regular;22" foregroundColor="white" backgroundColor="blackglass" valign="top" halign="center" noWrap="1" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel text="0m" position="47,597" size="130,30" font="Regular;22" foregroundColor="white" backgroundColor="blackglass" valign="top" halign="right" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="1105,597" size="133,30" font="Regular;22" foregroundColor="white" backgroundColor="blackglass" transparent="1" halign="left">
+			<convert type="Slyk18ServicePosition">MovieLength</convert>
+		</widget>
+		<widget name="statusicon" position="center,585" size="54,54" alphatest="blend" zPosition="6" pixmaps="q-infobars/play.png,q-infobars/pause.png,q-infobars/stop.png,q-infobars/forward.png,q-infobars/backward.png,q-infobars/slow.png,q-infobars/blank.png" />
+		<widget name="speed" position="center,559" size="84,21" font="Regular;22" foregroundColor="white" backgroundColor="blackglass" valign="top" halign="center" transparent="1" zPosition="4" />
+		<widget source="session.CurrentService" render="Label" position="center,640" size="84,21" font="Bold;22" foregroundColor="bluetext" backgroundColor="blackglass" valign="top" halign="center" transparent="1">
+			<convert type="Slyk18ServicePosition">MoviePosition</convert>
+		</widget>
+	
+		<widget source="session.CurrentService" render="Progress" position="205,609" size="870,6" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="3" transparent="0"  >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<panel name="InfoButton" />
+	</screen>
+	
+	<screen name="Seekbar" position="center,36" size="560,75" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="55,0" size="450,75" backgroundColor="blackglass" transparent="0" zPosition="-2" />
+		<ePixmap pixmap="q-backgrounds/seekbar-bg.png" position="0,0" size="560,75" alphatest="blend" zPosition="-1" />
+		<!-- cursor starts at 145px from the left. and 15 pixels down. Progress bar must be 270 pixels long. Cannot be overwritten. Resize outer box and graphics accordingly. -->
+		<widget name="cursor" position="0,15" size="6,36" pixmap="q-icons/position-pointer.png" alphatest="blend" zPosition="2" />
+		<widget name="time" position="60,0" size="75,75" font="Regular;24" valign="center" halign="right" foregroundColor="white" backgroundColor="blackglass" transparent="1" zPosition="2" />
+		<widget source="session.CurrentService" render="Progress" position="145,33" size="270,8" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="3" transparent="0" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="145,33" size="270,8" transparent="1" zPosition="3">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="e-135,0" size="75,75" font="Regular;24" valign="center" halign="left" foregroundColor="white" backgroundColor="blackglass" transparent="1" zPosition="2">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+	</screen>
+</skin>
+
+

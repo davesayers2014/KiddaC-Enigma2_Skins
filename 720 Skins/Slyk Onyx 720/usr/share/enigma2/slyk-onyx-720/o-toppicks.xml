@@ -1,0 +1,18 @@
+<skin>
+	<screen name="whatson-top">
+	         <ePixmap pixmap="whatson-gfx/whatson1.jpg" position="325,0" size="134,180" zPosition="2" />
+             <ePixmap pixmap="whatson-gfx/whatson2.jpg" position="462,0" size="134,180"   zPosition="2"/>
+	         <ePixmap pixmap="whatson-gfx/whatson3.jpg" position="598,0" size="134,180"   zPosition="2"/>
+	         <ePixmap pixmap="whatson-gfx/whatson4.jpg" position="735,0" size="134,180"   zPosition="2"/>
+	         <ePixmap pixmap="whatson-gfx/whatson5.jpg" position="872,0" size="134,180"   zPosition="2"/>
+	         <ePixmap pixmap="whatson-gfx/whatson6.jpg" position="1008,0" size="134,180"   zPosition="2"/>
+	         <ePixmap pixmap="whatson-gfx/whatson7.jpg" position="1145,0" size="134,180"  zPosition="2" />
+        </screen>
+
+       	<screen name="whatson-right">
+       	     <!-- artwork -->
+             <ePixmap pixmap="whatson-gfx/whatson8.jpg" position="1008,182" size="271,160"   zPosition="2"/>
+	         <ePixmap pixmap="whatson-gfx/whatson9.jpg" position="1008,344" size="271,160"   zPosition="2"/>
+	         <ePixmap pixmap="whatson-gfx/whatson10.jpg" position="1008,507" size="271,160"  zPosition="2" />
+        </screen>
+</skin>
