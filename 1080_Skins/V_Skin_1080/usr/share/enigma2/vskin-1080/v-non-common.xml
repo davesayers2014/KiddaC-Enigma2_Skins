@@ -1,6 +1,6 @@
+
 <skin>
-        
-      	<screen name="HistoryZapSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="HistoryZapSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="v-backgrounds/left-slim-bg.png" position="0,e-917" size="696,917" alphatest="blend" zPosition="-1" />
 		<widget source="Title" render="Label" position="60,215" size="510,57" valign="top" halign="left" font="Regular;39" zPosition="1" transparent="1" foregroundColor="fg2" backgroundColor="messagebox-bg" />
 		<widget source="menu" render="Listbox" position="0,282" size="683,825" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-455-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showNever" transparent="1">
@@ -17,7 +17,6 @@
 		</widget>
 		<ePixmap pixmap="v-backgrounds/slim-gradient.png" position="0,e-63" size="662,63" alphatest="blend" zPosition="5" />
 	</screen>
-	
 	
 	<!-- info panel SoftcamPanel Install-->
 	<screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
@@ -38,9 +37,8 @@
 		<panel name="New-Buttons-Bot" />
 	</screen>
 	
-	
 	<!-- ##SoftwarePanel## -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/SoftwarePanel.py -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/SoftwarePanel.py -->
 	<!-- software update -->
 	<screen name="SoftwarePanel" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="SoftwarePanel">
 		<panel name="v-template2-pig" />
@@ -79,12 +77,10 @@
 							MultiContentEntryText(pos = (204, 2), size = (1050, 42), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
 							MultiContentEntryText(pos = (204, 42), size = (1050, 27), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the description
 							MultiContentEntryPixmapAlphaBlend(pos = (129, 3), size = (72, 72), png = 5), # index 5 is the status pixmap
-						
 						]),
 					"category": (84,[
 							MultiContentEntryText(pos = (204, 2), size = (1050, 42), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
 							MultiContentEntryText(pos = (204, 42), size = (1050, 27), font=2, flags = RT_HALIGN_LEFT, text = 1, color = 0x00b58aa6, color_sel = 0x00966262), # index 1 is the description
-						
 						])
 					},
 					"fonts": [gFont("Regular", 33),gFont("Regular", 21),gFont("Regular", 21)],
@@ -102,13 +98,12 @@
 		 	        MultiContentEntryText(pos = (204, 2), size = (1050, 42), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
 				MultiContentEntryText(pos = (204, 42), size = (1050, 27), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1, color = 0x00b58aa6, color_sel = 0x00966262), # index 1 is the description
 				MultiContentEntryPixmapAlphaBlend(pos = (129, 3), size = (72, 72), png = 2), # index 2 is the status pixmap
-
 				],
 				"fonts": [gFont("Regular",33),gFont("Regular",21)],
 				"itemHeight": 84
 				}</convert>
 		</widget>
-	        <widget source="status" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="2" />
+		<widget source="status" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="2" />
 		<panel name="New-Buttons-Bot" />
 	</screen>
 	
@@ -117,7 +112,6 @@
 		<panel name="v-template2-pig" />
 		<widget source="list" render="Listbox" position="0,215" size="1314,756" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showOnDemand" transparent="1" zPosition="5">
 			<convert type="TemplatedMultiContent">{"template": [
-					
 						MultiContentEntryText(pos = (204, 2), size = (1050, 42), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0,  color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the name
 						MultiContentEntryText(pos = (204, 42), size = (1050, 27), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the description
 						MultiContentEntryPixmapAlphaBlend(pos = (129, 3), size = (72, 72), png = 4), # index 4 is the status pixmap
@@ -127,22 +121,19 @@
 				"itemHeight": 84
 				}</convert>
 		</widget>
-                <widget source="status" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="2" />
+		<widget source="status" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="2" />
 		<panel name="New-Buttons-Bot" />
 	</screen>
 	
 	<screen name="WlanScan" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="Select a wireless network">
 		<panel name="v-template2-pig" />
 		<widget source="list" render="Listbox" position="0,215" size="1314,756" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showOnDemand" transparent="1" zPosition="5">
-	        	<convert type="TemplatedMultiContent">{"template": [
+			<convert type="TemplatedMultiContent">{"template": [
                                                         MultiContentEntryText(pos = (129, 5), size = (687, 45), font=0, flags = RT_HALIGN_LEFT, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff), # index 0 is the essid
 			                                MultiContentEntryText(pos = (717, 12), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 2, color = 0x00b58aa6, color_sel = 0x00966262), # index 2 is the signal
-
  							MultiContentEntryText(pos = (129, 39), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 5, color = 0x00b58aa6, color_sel = 0x00966262), # index 5 is the interface
-						
 							MultiContentEntryText(pos = (412, 39), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 4, color = 0x00b58aa6, color_sel = 0x00966262), # index 4 is the encryption
  							MultiContentEntryText(pos = (717, 39), size = (270, 30), font=1, flags = RT_HALIGN_LEFT, text = 3, color = 0x00b58aa6, color_sel = 0x00966262), # index 3 is the maxrate
-						
  						],
  					"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
  					"itemHeight": 84
@@ -151,9 +142,5 @@
 		<widget source="info" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 		<panel name="New-Buttons-Bot" />
 	</screen>
-	
 </skin>
 
-	
-	
-	

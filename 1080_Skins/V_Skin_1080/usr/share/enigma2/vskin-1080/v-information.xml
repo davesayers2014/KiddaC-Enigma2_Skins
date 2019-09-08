@@ -1,8 +1,7 @@
 
-
 <skin>
 	<!-- ##About## -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/About.py -->
+	<!-- /lib/python/Screens/About.py -->
 	<screen name="AboutOE" title="Image Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
 		<widget source="lab1" render="Label" position="150,228" size="975,39" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
@@ -21,8 +20,7 @@
 	<!-- legacy -->
 	<screen name="About" title="Image Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="AboutOE" />
-	</screen>	
-
+	</screen>
 	
 	<screen name="Devices" title="Device Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
@@ -39,9 +37,7 @@
 		<widget source="lab1" render="Label" position="129,245" size="1193,39" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
 		<widget source="lab2" render="Label" position="129,384" size="1193,32" font="Regular;27" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
 		<widget source="lab3" render="Label" position="129,323" size="1193,32" font="Regular;27" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
-		
-		<widget name="AboutScrollLabel" position="129,369" size="1185,573" font="Regular; 32" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1"  />
-
+		<widget name="AboutScrollLabel" position="129,369" size="1185,573" font="Regular; 32" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 	</screen>
 	
 	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
@@ -50,38 +46,37 @@
 		<ePixmap position="129,839" size="1185,3" pixmap="div-h.png" alphatest="blend" />
 		<widget source="IFtext" render="Label" position="129,854" size="180,45" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="left" transparent="1" zPosition="10" />
 		<widget source="IF" render="Label" position="369,854" size="563,45" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="left" transparent="1" zPosition="10" />
-		<widget source="Statustext" render="Label" position="129,900" size="173,45" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="left" transparent="1" zPosition="10"  />
+		<widget source="Statustext" render="Label" position="129,900" size="173,45" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="left" transparent="1" zPosition="10" />
 		<widget name="statuspic" position="369,911" size="23,24" pixmaps="buttons/button_green.png,buttons/button_green_off.png" alphatest="blend" zPosition="10" />
- 	        <panel name="New-Buttons-Bot" />
+		<panel name="New-Buttons-Bot" />
 	</screen>
 	
 	<!-- viewgitlog -->
 	<screen name="SoftwareUpdateChanges" title="OE Changes" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
 		<widget name="text" position="129,215" size="1185,720" font="Regular;27" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-             <panel name="New-Buttons-Bot" />
+		<panel name="New-Buttons-Bot" />
 	</screen>
 	
-	 <!-- legacy -->
+	<!-- legacy -->
 	<screen name="ViewGitLog" title="OE Changes" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SoftwareUpdateChanges" />
 	</screen>
 	
-	   <screen name="TranslationInfo" position="center,center" size="675,525" title="Translation Information">
-		<widget source="TranslatorName" render="Label" text="V Skin" position="15,45" size="570,45" font="Bold;35" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3"/>
-		<widget source="TranslationInfo" render="Label" text="KiddaC\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="15,105" size="570,375" font="Regular;30" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3"/>
-        </screen>
+	<screen name="TranslationInfo" position="center,center" size="675,525" title="Translation Information">
+		<widget source="TranslatorName" render="Label" text="V Skin" position="15,45" size="570,45" font="Bold;35" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3" />
+		<widget source="TranslationInfo" render="Label" text="KiddaC\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="15,105" size="570,375" font="Regular;30" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3" />
+	</screen>
 	
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/ServiceInfo.py  -->
+	<!-- /lib/python/Screens/ServiceInfo.py  -->
 	<screen name="ServiceInfoSimple" position="0,0" size="1920,1080" title="Service Information" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
 		<widget name="infolist" position="129,245" size="1185,720" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" selectionDisabled="1" scrollbarMode="showOnDemand" itemHeight="38" transparent="1" />
-           <panel name="New-Buttons-Bot" />
+		<panel name="New-Buttons-Bot" />
 	</screen>
 	
 	<screen name="ServiceInfo" position="0,0" size="1920,1080" title="Service Information" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="ServiceInfoSimple" />
 	</screen>
 </skin>
-
 

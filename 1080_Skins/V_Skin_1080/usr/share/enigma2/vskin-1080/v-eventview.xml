@@ -1,6 +1,6 @@
 
 <skin>
-      	<screen name="EventViewContextMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="EventViewContextMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template1-des-pig" />
 		<ePixmap pixmap="v-backgrounds/main-menu-bg.png" position="150,377" size="828,704" alphatest="blend" />
 		<widget name="menu" textOffset="138,12" position="162,428" size="804,653" font="Regular;42" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-536-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="2" />
@@ -8,19 +8,19 @@
 	</screen>
 	
 	<!-- EventView -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/EventView.py -->
+	<!-- /lib/python/Screens/EventView.py -->
 	<!-- eventview menu button -->
 	<screen name="eventview-header">
 		<ePixmap pixmap="v-infobars/header.png" position="0,0" size="1701,158" alphatest="blend" zPosition="1" />
 		<panel position="12,42" size="135,83">
-	               <panel name="main-logo" zPosition="2"/>
+			<panel name="main-logo" zPosition="2" />
 		</panel>
 		<widget source="Title" render="Label" position="168,26" size="1200,60" font="Regular;48" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2" />
-                <widget source="Event" render="Label" position="168,92" size="135,53" font="Regular;39" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="left" transparent="1" zPosition="2">
+		<widget source="Event" render="Label" position="168,92" size="135,53" font="Regular;39" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="left" transparent="1" zPosition="2">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H.%M -</convert>
 		</widget>
-                <widget source="Event" render="Label" position="299,92" size="108,53" font="Regular;39" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="center" transparent="1" zPosition="2">
+		<widget source="Event" render="Label" position="299,92" size="108,53" font="Regular;39" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="center" transparent="1" zPosition="2">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
@@ -39,30 +39,24 @@
 	
 	<screen name="eventview-header2">
 		<ePixmap pixmap="v-infobars/header.png" position="0,0" size="1701,158" alphatest="blend" zPosition="1" />
-		
 		<panel position="12,42" size="135,83">
-	               <panel name="main-logo" zPosition="2"/>
+			<panel name="main-logo" zPosition="2" />
 		</panel>
-	
 		<widget source="Title" render="Label" position="168,26" size="1200,60" font="Regular;48" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2" />
 		<widget source="Event" render="Label" position="168,92" size="135,53" font="Regular;39" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="left" transparent="1" zPosition="2">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H.%M -</convert>
 		</widget>
-                <widget source="Event" render="Label" position="299,92" size="108,53" font="Regular;39" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="center" transparent="1" zPosition="2">
+		<widget source="Event" render="Label" position="299,92" size="108,53" font="Regular;39" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="center" transparent="1" zPosition="2">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1376,32" size="120,54" font="Regular;39" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2">
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<!--
-		<widget name="channel" position="446,92" size="1050,53" font="Regular;39" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1"  zPosition="2" />
-		-->
-		<widget source="Service" render="Label" position="446,92" size="1050,53" font="Regular;39" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1"  zPosition="2" >
-		     <convert type="MovieInfo">RecordServiceName</convert>
+		<widget source="Service" render="Label" position="446,92" size="1050,53" font="Regular;39" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2">
+			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		
 		<widget source="Service" render="Slyk18Picon" position="1532,41" size="150,90" alphatest="blend" zPosition="2">
 			<convert type="MovieReference">Reference</convert>
 		</widget>
@@ -75,22 +69,18 @@
 			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-
-		
-               	<panel position="168,308" size="0,45">
-	                <panel name="Red-New-Button" />
-                 </panel>
-	       <panel position="429,308" size="0,45">
-	           <panel name="Green-New-Button" />
-            	</panel>
-             	<panel position="690,308" size="0,45">
-	            <panel name="Yellow-New-Button" />
-             	</panel>
-              	<panel position="951,308" size="0,45">
-               	       <panel name="Blue-New-Button" />
-                 </panel>
-		
-		
+		<panel position="168,308" size="0,45">
+			<panel name="Red-New-Button" />
+		</panel>
+		<panel position="429,308" size="0,45">
+			<panel name="Green-New-Button" />
+		</panel>
+		<panel position="690,308" size="0,45">
+			<panel name="Yellow-New-Button" />
+		</panel>
+		<panel position="951,308" size="0,45">
+			<panel name="Blue-New-Button" />
+		</panel>
 		<eLabel text="Press up/down to scroll. &lt; &gt; for now/next description." position="168,216" size="1512,45" font="Regular;36" foregroundColor="fg3" backgroundColor="infobarBlack" transparent="1" zPosition="2" />
 		<ePixmap pixmap="v-buttons/key_menu.png" position="1346,308" size="57,45" alphatest="blend" zPosition="2" />
 		<eLabel text="more options" position="1413,308" size="225,45" font="Regular;36" foregroundColor="fg3" backgroundColor="infobarBlack" transparent="1" zPosition="2" />
@@ -191,6 +181,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
+	
 	<!-- Event View -->
 	<screen name="EventView" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
 		<panel position="110,476" size="1701,158">
@@ -216,8 +207,5 @@
 			<panel name="eventview-icons" />
 		</panel>
 	</screen>
-	
-
 </skin>
-
 
