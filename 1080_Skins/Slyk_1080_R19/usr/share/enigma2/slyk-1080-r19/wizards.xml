@@ -13,7 +13,7 @@
 		<panel name="v5-services" />
 		<panel name="t3-panel-bg" />
 		
-		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
 		<eLabel position="849,560" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
 		
 		<eLabel position="849,614" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
@@ -90,7 +90,7 @@
 		<panel name="v5-services" />
 		<panel name="t3-panel-bg" />
 
-		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="849,506" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>
 		<eLabel position="849,560" size="915,48" backgroundColor="skydarkrow" zPosition="-1"/>
 		
 		<eLabel position="849,614" size="915,48" backgroundColor="skylightrow" zPosition="-1"/>

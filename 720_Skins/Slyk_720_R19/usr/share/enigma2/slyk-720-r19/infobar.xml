@@ -1,4 +1,3 @@
-
 <skin>
 	<!-- InfoBar's -->
 	<!-- First Info Bar (ok button)-->
@@ -11,22 +10,18 @@
 			<convert type="SlykServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		
 		<widget text="4K" render="FixedLabel" source="session.CurrentService" position="44,0" size="33,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
 			<convert type="SlykServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		
 		<widget text="HD" render="FixedLabel" source="session.CurrentService" position="44,0" size="33,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
 			<convert type="SlykServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		
 		<widget text="SD" render="FixedLabel" source="session.CurrentService" position="44,0" size="33,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
 			<convert type="SlykServiceInfo">IsSD</convert>
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
-		
 		<widget text="DD" render="FixedLabel" source="session.CurrentService" position="3,0" size="34,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" halign="right" valign="center" noWrap="1" zPosition="3">
 			<convert type="SlykServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
@@ -210,18 +205,15 @@
 		<panel position="1012,562" size="128,36">
 			<panel name="ServiceIcons" />
 		</panel>
-		
 		<!-- now event -->
 		<widget source="session.Event_Now" render="Label" position="142,598" size="477,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
 		<!-- next start time -->
 		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="Slyk18ClockToText">Slyk18Time</convert>
 		</widget>
-		
 		<!-- next event -->
 		<widget source="session.Event_Next" render="Label" position="642,598" size="356,36" font="Regular;26" noWrap="1" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center">
 			<convert type="EventName">Name</convert>
@@ -230,7 +222,7 @@
 	
 	<screen name="Infobar-layout2">
 		<panel name="infobar-background2" />
-		<panel name="infobar-picon"/>
+		<panel name="infobar-picon" />
 		<panel name="infobar-channel" />
 		<panel name="infobar-time" />
 		<panel name="infobar-started-picon" />
@@ -243,18 +235,15 @@
 		<panel position="1012,562" size="128,36">
 			<panel name="ServiceIcons" />
 		</panel>
-		
 		<!-- now event -->
 		<widget source="session.Event_Now" render="Label" position="256,598" size="363,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
 		<!-- next start time -->
 		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="Slyk18ClockToText">Slyk18Time</convert>
 		</widget>
-		
 		<!-- next event -->
 		<widget source="session.Event_Next" render="Label" position="642,598" size="356,36" font="Regular;26" noWrap="1" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="center">
 			<convert type="EventName">Name</convert>
@@ -270,28 +259,23 @@
 		<panel name="infobar-record2" />
 		<panel name="infobar-crypt2" />
 		<panel name="infobar-buttons" />
-		
 		<!-- now event -->
 		<widget source="session.Event_Now" render="Label" position="142,598" size="477,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
 		<!-- next start time -->
 		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="Slyk18ClockToText">Slyk18Time</convert>
 		</widget>
-		
 		<!-- next event -->
 		<widget source="session.CurrentService" render="SlykNextEvents" position="642,601" size="236,36" font="Regular;26" noWrap="1" number="2" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		
 		<!-- third event time -->
 		<widget source="session.CurrentService" render="SlykNextEventsTime" position="902,562" size="120,36" font="Regular;26" noWrap="1" number="3" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" transparent="1" zPosition="6">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		
 		<!-- third event -->
 		<widget source="session.CurrentService" render="SlykNextEvents" position="902,601" size="236,36" font="Regular;26" noWrap="1" number="3" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
 			<convert type="ServiceName">Reference</convert>
@@ -300,7 +284,7 @@
 	
 	<screen name="Infobar-layout4">
 		<panel name="infobar-background4" />
-		<panel name="infobar-picon"/>
+		<panel name="infobar-picon" />
 		<panel name="infobar-channel" />
 		<panel name="infobar-time" />
 		<panel name="infobar-started-picon" />
@@ -308,28 +292,23 @@
 		<panel name="infobar-record2" />
 		<panel name="infobar-crypt2" />
 		<panel name="infobar-buttons" />
-		
 		<!-- now event -->
 		<widget source="session.Event_Now" render="Label" position="256,598" size="363,36" font="Bold;28" noWrap="1" foregroundColor="skydarkblue" backgroundColor="skygoldbg" transparent="1" valign="center">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
 		<!-- next start time -->
 		<widget source="session.Event_Next" render="Label" position="642,562" size="120,36" font="Regular;26" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="center">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="Slyk18ClockToText">Slyk18Time</convert>
 		</widget>
-		
 		<!-- next event -->
 		<widget source="session.CurrentService" render="SlykNextEvents" position="642,601" size="236,36" font="Regular;26" noWrap="1" number="2" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		
 		<!-- third event time -->
 		<widget source="session.CurrentService" render="SlykNextEventsTime" position="902,562" size="120,36" font="Regular;26" noWrap="1" number="3" foregroundColor="skylightblue" backgroundColor="skydarkblue" valign="center" transparent="1" zPosition="6">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		
 		<!-- third event -->
 		<widget source="session.CurrentService" render="SlykNextEvents" position="902,601" size="236,36" font="Regular;26" noWrap="1" number="3" foregroundColor="white" backgroundColor="skydarkblue" valign="top" transparent="1" zPosition="6">
 			<convert type="ServiceName">Reference</convert>
@@ -404,17 +383,14 @@
 	<screen name="SecondInfoBar1">
 		<panel name="InfoBar" />
 		<ePixmap position="108,367" size="1064,151" pixmap="2018-backgrounds/infobar-top.png" alphatest="blend" zPosition="-1" />
-		
-                 <widget source="session.Event_Now" render="Label" position="123,378" size="130,36" font="Bold;28" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="top">
+		<widget source="session.Event_Now" render="Label" position="123,378" size="130,36" font="Bold;28" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="top">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="Slyk18ClockToText">Slyk18Time</convert>
 		</widget>
-	        <widget name="channel" position="253,378" size="664,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+		<widget name="channel" position="253,378" size="664,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
-                <widget name="epg_description" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3"/>
-		
+		<widget name="epg_description" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3" />
 		<panel position="1029,377" size="128,36">
 			<panel name="ServiceIcons" />
 		</panel>
@@ -427,16 +403,14 @@
 	<screen name="SecondInfoBar2">
 		<panel name="InfoBar" />
 		<ePixmap position="108,367" size="1064,151" pixmap="2018-backgrounds/infobar-top.png" alphatest="blend" zPosition="-1" />
-		
-                <widget source="session.Event_Now" render="Label" position="123,378" size="130,36" font="Bold;28" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="top">
+		<widget source="session.Event_Now" render="Label" position="123,378" size="130,36" font="Bold;28" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" noWrap="1" valign="top">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="Slyk18ClockToText">Slyk18Time</convert>
 		</widget>
-	        <widget name="channel" position="253,378" size="664,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+		<widget name="channel" position="253,378" size="664,36" font="Bold;28" noWrap="1" foregroundColor="skylightblue" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
-                <widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
+		<widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="123,413" size="1023,87" font="Regular;26" foregroundColor="white" backgroundColor="skydarkblue" transparent="1" valign="top" zPosition="3">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<panel position="1029,377" size="128,36">
@@ -574,5 +548,4 @@
 		<eLabel text="Time" position="335,636" size="114,38" font="Regular;26" halign="left" valign="center" backgroundColor="skydarkblue" foregroundColor="skylightblue" transparent="1" />
 	</screen>
 </skin>
-
 

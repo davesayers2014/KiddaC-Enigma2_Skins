@@ -1,16 +1,12 @@
-
 <skin>
-		<!-- CCcamInfo -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/CCcamInfo.py -->
+	<!-- CCcamInfo -->
+	<!-- /lib/python/Screens/CCcamInfo.py -->
 	<screen name="CCcamInfoMain" position="0,0" size="1280,720" backgroundColor="backgroundmid" flags="wfNoBorder">
 		<panel name="main-template-2" />
 		<panel name="v5-tv-guide" />
-		
-                <widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
-
-                <widget name="menu" position="70,126" size="780,500" font="Regular;26" foregroundColor="white" backgroundColor="bgdarkblue" foregroundColorSelected="skydarkblue" backgroundColorSelected="skygold" selectionPixmap="2018-selectbars/bar-54.png" itemHeight="36" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-
-                <eLabel text="Menu config" position="134,664" size="210,29" font="Regular;26" foregroundColor="skyblue" backgroundColor="backgroundbot" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
+		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
+		<widget name="menu" position="70,126" size="780,500" font="Regular;26" foregroundColor="white" backgroundColor="bgdarkblue" foregroundColorSelected="skydarkblue" backgroundColorSelected="skygold" selectionPixmap="2018-selectbars/bar-54.png" itemHeight="36" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<eLabel text="Menu config" position="134,664" size="210,29" font="Regular;26" foregroundColor="skyblue" backgroundColor="backgroundbot" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
 		<eLabel text="Local box" position="384,664" size="210,29" font="Regular;26" foregroundColor="skyblue" backgroundColor="backgroundbot" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
 		<eLabel text="Remote box" position="634,664" size="210,29" font="Regular;26" foregroundColor="skyblue" backgroundColor="backgroundbot" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
 		<eLabel text="Free memory" position="884,664" size="269,29" font="Regular;26" foregroundColor="skyblue" backgroundColor="backgroundbot" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
@@ -140,11 +136,9 @@ self["menu"].l.setFont(0, gFont("Regular", 26))</applet>
 		<ePixmap name="yellow" pixmap="buttons/key_yellow.png" position="602,667" size="24,24" alphatest="blend" />
 		<ePixmap name="blue" pixmap="buttons/key_blue.png" position="852,667" size="24,24" alphatest="blend" />
 		<panel name="t2-OKButton" />
-		<applet type="onLayoutFinish">
-from enigma import eListboxPythonMultiContent, gFont
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
 self["mainmenu"].instance.setItemHeight(36)
-self["mainmenu"].l.setFont(0, gFont("Regular", 26))
-</applet>
+self["mainmenu"].l.setFont(0, gFont("Regular", 26))</applet>
 	</screen>
 	
 	<screen name="oscECMInfo" position="0,0" size="1280,720" backgroundColor="backgroundmid" flags="wfNoBorder" title="Oscam ECM Info">
@@ -154,11 +148,9 @@ self["mainmenu"].l.setFont(0, gFont("Regular", 26))
 		<panel name="setup-panel-bars" />
 		<widget name="output" textOffset="19,13" position="center,335" size="906,288" font="Regular;26" secondfont="Regular;26" backgroundColor="skylightrow" itemHeight="36" transparent="1" zPosition="1" />
 		<panel name="New-Buttons-T1" />
-		<applet type="onLayoutFinish">
-from enigma import eListboxPythonMultiContent, gFont
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
 self["output"].instance.setItemHeight(36)
-self["output"].l.setFont(0, gFont("Regular", 26))
-</applet>
+self["output"].l.setFont(0, gFont("Regular", 26))</applet>
 	</screen>
 	
 	<screen name="oscInfo" position="0,0" size="1280,720" backgroundColor="backgroundmid" flags="wfNoBorder" title="Oscam Info">
@@ -170,16 +162,13 @@ self["output"].l.setFont(0, gFont("Regular", 26))
 		<widget source="Title" render="Label" position="90,124" size="500,35" font="Bold;26" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" noWrap="1" transparent="1" zPosition="1" />
 		<widget name="output" position="106,194" size="1066,430" font="Console;18" zPosition="3" transparent="1" backgroundColor="bgdarkblue" foregroundColor="white" />
 		<panel name="New-Buttons-T1" />
-		<applet type="onLayoutFinish">
-from enigma import eListboxPythonMultiContent, gFont
-self["output"].l.setFont(1, gFont("Regular", 18))
-</applet>
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
+self["output"].l.setFont(1, gFont("Regular", 18))</applet>
 	</screen>
 	
 	<screen name="OscamInfoConfigScreen" position="0,0" size="1280,720" backgroundColor="backgroundmid" flags="wfNoBorder" title="Oscam Setting">
 		<panel name="Setup-Small-Right" />
 	</screen>
-	
 	<screen name="oscReaderStats" position="0,0" size="1280,720" backgroundColor="backgroundmid" flags="wfNoBorder" title="Oscam Reader Stats">
 		<panel name="main-bg" />
 		<panel name="my-logo" />
@@ -189,8 +178,8 @@ self["output"].l.setFont(1, gFont("Regular", 18))
 		<widget source="Title" render="Label" position="90,124" size="500,35" font="Bold;26" foregroundColor="white" backgroundColor="bgdarkblue" valign="center" noWrap="1" transparent="1" zPosition="1" />
 		<widget source="output" render="Listbox" position="106,194" size="1066,430" zPosition="3" transparent="1" backgroundColor="bgdarkblue" foregroundColor="white">
 			<convert type="TemplatedMultiContent">{"template":[
-							MultiContentEntryText(pos = (0, 1), size = (167, 22), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
-							MultiContentEntryText(pos = (167, 1), size = (83, 22), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (0, 1), size = (166, 22), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (166, 1), size = (83, 22), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
 							MultiContentEntryText(pos = (250, 1), size = (250, 22), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
 							MultiContentEntryText(pos = (500, 1), size = (100, 22), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
 							MultiContentEntryText(pos = (600, 1), size = (100, 22), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
@@ -232,24 +221,22 @@ self["output"].l.setFont(1, gFont("Regular", 18))
 		<panel name="New-Buttons-T1" />
 	</screen>
 	
-        <screen name="SoftcamSetup" position="0,0" size="1280,720" title="Softcam Setup" flags="wfNoBorder" backgroundColor="backgroundmid">
-                <panel name="main-template" />
+	<screen name="SoftcamSetup" position="0,0" size="1280,720" title="Softcam Setup" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="main-template" />
 		<panel name="settings" />
 		<panel name="t3-panel-bg" />
-		<eLabel position="566,337" size="609,32" backgroundColor="skylightrow" zPosition="-1"/>
-		<eLabel position="566,373" size="609,32" backgroundColor="skydarkrow" zPosition="-1"/>
-		<eLabel position="566,409" size="609,32" backgroundColor="skylightrow" zPosition="-1"/>
-		<eLabel position="566,445" size="609,32" backgroundColor="skydarkrow" zPosition="-1"/>
-		<eLabel position="566,481" size="609,32" backgroundColor="skylightrow" zPosition="-1"/>
-		<eLabel position="566,517" size="609,32" backgroundColor="skydarkrow" zPosition="-1"/>
-		<eLabel position="566,553" size="609,32" backgroundColor="skylightrow" zPosition="-1"/>
-		<eLabel position="566,589" size="609,32" backgroundColor="skydarkrow" zPosition="-1"/>
+		<eLabel position="566,337" size="609,32" backgroundColor="skylightrow" zPosition="-1" />
+		<eLabel position="566,373" size="609,32" backgroundColor="skydarkrow" zPosition="-1" />
+		<eLabel position="566,409" size="609,32" backgroundColor="skylightrow" zPosition="-1" />
+		<eLabel position="566,445" size="609,32" backgroundColor="skydarkrow" zPosition="-1" />
+		<eLabel position="566,481" size="609,32" backgroundColor="skylightrow" zPosition="-1" />
+		<eLabel position="566,517" size="609,32" backgroundColor="skydarkrow" zPosition="-1" />
+		<eLabel position="566,553" size="609,32" backgroundColor="skylightrow" zPosition="-1" />
+		<eLabel position="566,589" size="609,32" backgroundColor="skydarkrow" zPosition="-1" />
 		<widget name="config" textOffset="10,0" position="566,335" size="609,288" font="Regular;26" secondfont="Regular;26" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="36" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" />
-                <panel name="New-Buttons-T2" />
-                <eLabel position="104,337" size="430,284" backgroundColor="panelblue" zPosition="-1"/>
-	        <widget name="info" position="114,347" size="410,264" font="Regular;20" foregroundColor="white" backgroundColor="panelblue" transparent="1" zPosition="2" />
-
-  </screen>
+		<panel name="New-Buttons-T2" />
+		<eLabel position="104,337" size="430,284" backgroundColor="panelblue" zPosition="-1" />
+		<widget name="info" position="114,347" size="410,264" font="Regular;20" foregroundColor="white" backgroundColor="panelblue" transparent="1" zPosition="2" />
+	</screen>
 </skin>
-
 

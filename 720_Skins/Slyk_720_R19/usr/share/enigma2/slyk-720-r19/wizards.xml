@@ -13,7 +13,7 @@
 		<panel name="v5-services" />
 		<panel name="t3-panel-bg" />
 		
-		<eLabel position="566,337" size="610,32" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="566,337" size="610,32" backgroundColor="skylightrow" zPosition="-1"/>
 		<eLabel position="566,373" size="610,32" backgroundColor="skydarkrow" zPosition="-1"/>
 		
 		<eLabel position="566,409" size="610,32" backgroundColor="skylightrow" zPosition="-1"/>
@@ -41,7 +41,7 @@
 	
 		<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="backgroundmid">
 		<panel name="main-template-2" />
-                
+
 		<panel name="v5-services" />
 		<widget source="Title" render="Label" position="60,82" size="800,34" valign="center" halign="center" font="Regular;26" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
 
@@ -90,7 +90,7 @@
 		<panel name="v5-services" />
 		<panel name="t3-panel-bg" />
 
-		<eLabel position="566,337" size="610,32" backgroundColor="skylightrow" zPosition="-1"/>                                         -
+		<eLabel position="566,337" size="610,32" backgroundColor="skylightrow" zPosition="-1"/>
 		<eLabel position="566,373" size="610,32" backgroundColor="skydarkrow" zPosition="-1"/>
 		
 		<eLabel position="566,409" size="610,32" backgroundColor="skylightrow" zPosition="-1"/>

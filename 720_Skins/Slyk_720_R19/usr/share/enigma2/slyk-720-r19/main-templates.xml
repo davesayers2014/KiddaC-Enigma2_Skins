@@ -1,6 +1,5 @@
 
 <skin>
-
 	<screen name="my-logo1">
 		<ePixmap pixmap="myicons/slyklogo.png" position="center,29" size="96,52" alphatest="blend" backgroundColor="transparent"  zPosition="2" />
 	</screen>
@@ -26,7 +25,6 @@
 	<screen name="main-bg">
 		<ePixmap pixmap="2018-backgrounds/main-bg.png" position="0,0" size="1280,720" zPosition="-1" />
 	</screen>
-	
 	
 	<screen name="title1">
 		<widget source="Title" render="Label" position="60,88" size="537,28" valign="top" halign="left" font="Regular;24" noWrap="0" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="backgroundtop" />
@@ -74,7 +72,6 @@
                 <widget name="footnote" position="center,321" size="900,14" font="Regular;12" foregroundColor="skyblue" backgroundColor="skydarkblue" valign="center" halign="right" transparent="1" zPosition="4" />
         </screen>
 
-
 	<screen name="main-template">
 	   <panel name="main-bg" />
 		<panel name="my-logo" />
@@ -96,7 +93,7 @@
         <screen name="t3-panel-bg">
                 <eLabel position="60,266" size="1160,34" backgroundColor="panelblue" zPosition="-1"/>
                 <eLabel position="60,266" size="580,34" backgroundColor="bgdarkblue" zPosition="-1"/>
-                <eLabel position="60,300" size="1160,394" backgroundColor="bgdarkblue" zPosition="-1"/>
+                <eLabel position="60,301" size="1160,394" backgroundColor="bgdarkblue" zPosition="-1"/>
 	</screen>
 	
         <screen name="t3-panel-top-bg">
@@ -104,5 +101,4 @@
                 <eLabel position="60,124" size="580,34" backgroundColor="bgdarkblue" zPosition="-1"/>
                 <eLabel position="60,158" size="1160,538" backgroundColor="bgdarkblue" zPosition="-1"/>
 	</screen>
-	
 </skin>

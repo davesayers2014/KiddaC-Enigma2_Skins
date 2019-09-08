@@ -24,8 +24,6 @@
 		<panel name="GraphicalInfoBarEPG1" />
 	</screen>	
 	
-	
-
 	#########################################################################################################
 	
         <!-- infobar layout -->
@@ -34,7 +32,6 @@
 	<!-- 3 = original sly style with 3 programmes, now, next, later -->
 	<!-- 4 = original sly style with 3 programmes, now, next, later with picon -->
 
-	
         <screen name="InfoBar" flags="wfNoBorder" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent">
 		<panel name="Infobar-layout3" />
 	</screen>
@@ -50,12 +47,12 @@
 		<panel name="SecondInfoBar2" />
 	</screen>
 	
-
-	
 	#########################################################################################################
+	
 	<!-- Event View (info button)-->
 	<!-- 1 = coloured buttons (default)-->
 	<!-- 2 = no buttons -->
+	
 	<screen name="EventView" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="EventView2" />
 	</screen>
@@ -67,6 +64,7 @@
 	<!-- 2 = Programme description - coloured buttons at bottom (default) -->
 	<!-- 3 = No programme description - No coloured buttons - Channel/Time text at bottom. -->
 	<!-- 4 = Programme description -  No coloured buttons - Channel/Time text at bottom. -->
+	
 	<screen name="QuickEPG" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
 		<panel name="QuickEPG4" />
 	</screen>
@@ -77,6 +75,7 @@
 	<!-- 1 = Enigma2 Layout -->
        	<!-- 2 = Sky Planner Mod Layout -Fake Tabs -->
        	<!-- 3 = Sky Planner Mod Layout - No Fake tabs -->
+       	
 	<screen name="MovieSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="backgroundmid" title="Movie Selection">
 		<panel name="MovieSelection1" />
 	</screen>
@@ -96,6 +95,7 @@
         <!-- epg timeline graphic -->
         <!-- 1 = subtle (default) -->
 	<!-- 2 = yellow -->
+	
         <screen name="GraphicalEPGPIG-timeline_now">
                	<panel name="GraphicalEPGPIG-timeline1" />
         </screen>
