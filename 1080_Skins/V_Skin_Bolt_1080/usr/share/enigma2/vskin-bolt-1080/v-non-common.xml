@@ -1,5 +1,4 @@
 <skin>
-        <!-- checked -->
 	<screen name="HistoryZapSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="v-backgrounds/left-slim-bg.png" position="0,e-917" size="696,917" alphatest="blend" zPosition="-1" />
 		<widget source="Title" render="Label" position="60,215" size="510,57" valign="top" halign="left" font="Regular;39" zPosition="1" transparent="1" foregroundColor="fg2" backgroundColor="messagebox-bg" />
@@ -18,7 +17,6 @@
 		<ePixmap pixmap="v-backgrounds/zap-gradient.png" position="0,e-63" size="662,63" alphatest="blend" zPosition="5" />
 	</screen>
 	
-	<!-- checked -->
 	<!-- info panel SoftcamPanel Install-->
 	<screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
@@ -38,9 +36,8 @@
 		<panel name="New-Buttons-Bot" />
 	</screen>
 	
-	<!-- checked -->
 	<!-- ##SoftwarePanel## -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/Infopanel/SoftwarePanel.py -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/SoftwarePanel.py -->
 	<!-- software update -->
 	<screen name="SoftwarePanel" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="SoftwarePanel">
 		<panel name="v-template2-pig" />
@@ -150,8 +147,7 @@
 		</widget>
 		<widget source="info" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 		<panel name="New-Buttons-Bot" />
-	</screen>
-	
+	</screen>	
 </skin>
 	
 	

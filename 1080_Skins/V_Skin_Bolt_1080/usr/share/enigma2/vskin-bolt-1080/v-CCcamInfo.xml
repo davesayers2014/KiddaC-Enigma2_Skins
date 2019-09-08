@@ -1,58 +1,48 @@
 
 <skin>
 	<!-- CCcamInfo -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/CCcamInfo.py -->
-	<!-- 08-19 -->
+	<!-- /lib/python/Screens/CCcamInfo.py -->
 	<screen name="CCcamInfoMain" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="menu" position="129,215" size="1185,765" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg"  selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
-		
-                <eLabel text="Menu config" position="181,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
+		<widget name="menu" position="129,215" size="1185,765" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
+		<eLabel text="Menu config" position="181,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
 		<eLabel text="Local box" position="481,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
 		<eLabel text="Remote box" position="781,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
 		<eLabel text="Free memory" position="1081,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
- 		
- 		<ePixmap name="red" pixmap="buttons/key_red.png" position="129,1002" size="53,42" alphatest="blend" />
+		<ePixmap name="red" pixmap="buttons/key_red.png" position="129,1002" size="53,42" alphatest="blend" />
 		<ePixmap name="green" pixmap="buttons/key_green.png" position="429,1002" size="53,42" alphatest="blend" />
 		<ePixmap name="yellow" pixmap="buttons/key_yellow.png" position="729,1002" size="53,42" alphatest="blend" />
 		<ePixmap name="blue" pixmap="buttons/key_blue.png" position="1029,1002" size="53,42" alphatest="blend" />
-		
 		<panel name="OKButton" />
-				<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
 self["menu"].l.setFont(0, gFont("Regular", 33))</applet>
 	</screen>
-
 	
 	<!-- general -->
-	<!-- 08-19 -->
 	<screen name="CCcamInfoInfoScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="text" font="Console;33" position="129,215" size="1185,750" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2"/>
+		<widget name="text" font="Console;33" position="129,215" size="1185,750" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2" />
 		<panel name="OKButton" />
 	</screen>
 	
-	<!-- 08-19 -->
 	<!-- clients / active clients -->
 	<screen name="CCcamInfoSubMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="list" textOffset="15,3" position="129,215" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2"  />
+		<widget name="list" textOffset="15,3" position="129,215" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<ePixmap position="129,590" size="1185,3" pixmap="div-h.png" alphatest="blend" zPosition="2" />
 		<widget name="info" position="129,605" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
 		<panel name="OKButton" />
 	</screen>
 	
-	<!-- 08-19 -->
 	<!-- servers -->
 	<screen name="CCcamInfoServerMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="list" textOffset="15,3" position="129,215" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2"  />
+		<widget name="list" textOffset="15,3" position="129,215" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<ePixmap position="129,590" size="1185,3" pixmap="div-h.png" alphatest="blend" zPosition="2" />
 		<widget name="info" position="129,605" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
 		<panel name="OKButton" />
-		
 	</screen>
 	
-	<!-- 08-19 -->
 	<screen name="CCcamInfoShareInfo" position="center,center" size="900,675" backgroundColor="messagebox-bg">
 		<widget name="list" position="0,0" size="900,630" font="Regular;33" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="105" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<panel position="0,e-45" size="0,45">
@@ -69,29 +59,24 @@ self["menu"].l.setFont(0, gFont("Regular", 33))</applet>
 		</panel>
 	</screen>
 	
-	<!-- 08-19 -->
 	<screen name="CCcamShareViewMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
 		<widget name="list" position="129,215" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
-         	<ePixmap position="129,590" size="1185,3" pixmap="div-h.png" alphatest="blend" />
-	
-                <widget name="title" font="Regular;33" position="129,605" size="1185,45" backgroundColor="bg-mm-dark" foregroundColor="fg1" transparent="1" />
+		<ePixmap position="129,590" size="1185,3" pixmap="div-h.png" alphatest="blend" />
+		<widget name="title" font="Regular;33" position="129,605" size="1185,45" backgroundColor="bg-mm-dark" foregroundColor="fg1" transparent="1" />
 		<widget name="uphops" font="Regular;27" position="129,650" size="1185,45" backgroundColor="bg-mm-dark" foregroundColor="fg1" transparent="1" />
 		<widget name="cards" font="Regular;27" position="129,695" size="1185,45" backgroundColor="bg-mm-dark" foregroundColor="fg1" transparent="1" />
 		<widget name="providers" font="Regular;27" position="129,740" size="1185,45" backgroundColor="bg-mm-dark" foregroundColor="fg1" transparent="1" />
 		<widget name="reshare" font="Regular;27" position="129,785" size="1185,45" backgroundColor="bg-mm-dark" foregroundColor="fg1" transparent="1" />
-		
-                <panel name="OKButton" />
+		<panel name="OKButton" />
 	</screen>
 	
-	<!-- 08-19 -->
 	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-	<widget name="list" textOffset="15,3" position="129,215" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
-	<panel name="OKButton" />
+		<widget name="list" textOffset="15,3" position="129,215" size="1185,360" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
+		<panel name="OKButton" />
 	</screen>
 	
-	<!-- 08-19 -->
 	<screen name="CCcamInfoMenuConfig" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
 		<widget name="list" textOffset="15,3" position="129,215" size="1185,765" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
@@ -99,74 +84,58 @@ self["menu"].l.setFont(0, gFont("Regular", 33))</applet>
 		<panel name="OKButton" />
 	</screen>
 	
-	<!-- 08-19 -->
 	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="list" textOffset="15,3" position="129,215" size="1185,765" font="Regular; 32" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2"/>
+		<widget name="list" textOffset="15,3" position="129,215" size="1185,765" font="Regular; 32" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<panel name="New-Buttons-Bot" />
 		<panel name="OKButton" />
 	</screen>
 	
-	<!-- 08-19 -->
 	<screen name="CCcamInfoConfigMenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="config" textOffset="15,0" position="129,215" size="1185,765" font="Regular;33" secondfont="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark"  foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg"  selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2"/>
+		<widget name="config" textOffset="15,0" position="129,215" size="1185,765" font="Regular;33" secondfont="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<panel name="OKButton" />
 	</screen>
 	
-        <!-- 08-19 -->
 	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-	      	<panel name="v-template2-pig" />
-	        <widget name="list" position="129,215" size="1185,765" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2"/>
+		<panel name="v-template2-pig" />
+		<widget name="list" position="129,215" size="1185,765" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<panel name="New-Buttons-Bot" />
 		<panel name="OKButton" />
 	</screen>
 	
-
-	
 	<!-- oscams -->
-	<!-- 08-19 -->
 	<screen name="OscamInfoMenu" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="mainmenu" position="129,215" size="1185,765" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg"  selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
-		
-                <eLabel text="ECM Info" position="181,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
+		<widget name="mainmenu" position="129,215" size="1185,765" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
+		<eLabel text="ECM Info" position="181,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
 		<eLabel text="Clients" position="481,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
 		<eLabel text="Readers/Proxies" position="781,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
 		<eLabel text="Show Log" position="1081,1002" size="263,45" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="button-bot" backgroundColor="button-bg" />
- 		
- 		<ePixmap name="red" pixmap="buttons/key_red.png" position="129,1002" size="53,42" alphatest="blend" />
+		<ePixmap name="red" pixmap="buttons/key_red.png" position="129,1002" size="53,42" alphatest="blend" />
 		<ePixmap name="green" pixmap="buttons/key_green.png" position="429,1002" size="53,42" alphatest="blend" />
 		<ePixmap name="yellow" pixmap="buttons/key_yellow.png" position="729,1002" size="53,42" alphatest="blend" />
 		<ePixmap name="blue" pixmap="buttons/key_blue.png" position="1029,1002" size="53,42" alphatest="blend" />
-		
 		<panel name="OKButton" />
-		
 	</screen>
 	
-
-	
-	
-	
-	<!-- 08-19 -->
 	<screen name="oscECMInfo" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="Oscam ECM Info">
 		<panel name="v-template2-pig" />
-		<widget name="output" font="Console;33" position="129,215" size="1185,750" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2"/>
+		<widget name="output" font="Console;33" position="129,215" size="1185,750" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2" />
 		<panel name="OKButton" />
 	</screen>
-		
- 	<screen name="oscInfo" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="Oscam Info">
+	
+	<screen name="oscInfo" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="Oscam Info">
 		<panel name="console-template" />
 		<widget name="output" position="160,291" size="1600,646" font="Console;27" zPosition="3" transparent="1" backgroundColor="black" foregroundColor="white" />
 		<panel name="New-Buttons-Bot" />
 		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
 self["output"].l.setFont(1, gFont("Regular", 27))</applet>
-	</screen>		
+	</screen>
 	
 	<screen name="OscamInfoConfigScreen" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
 	</screen>
-	
 	
 	<screen name="oscReaderStats" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="Oscam Reader Stats">
 		<panel name="console-template" />
@@ -186,7 +155,6 @@ self["output"].l.setFont(1, gFont("Regular", 27))</applet>
 				}</convert>
 		</widget>
 	</screen>
-	
 	
 	<screen name="oscEntitlements" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="Oscam Reader Stats">
 		<panel name="console-template" />
@@ -209,10 +177,9 @@ self["output"].l.setFont(1, gFont("Regular", 27))</applet>
 		</widget>
 	</screen>
 	
-        <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="Softcam Setup" flags="wfNoBorder" backgroundColor="transparent" >
-                <panel name="Setup-Default" />
-	        <widget name="info" position="1383,428" size="417,653" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
-        </screen>
+	<screen name="SoftcamSetup" position="0,0" size="1920,1080" title="Softcam Setup" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget name="info" position="1383,428" size="417,653" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+	</screen>
 </skin>
-
 
