@@ -10,7 +10,6 @@
 		<ePixmap pixmap="q-toppicks/tile-bg.png" position="1065,775" size="252,332" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/tile-bg.png" position="1329,775" size="252,332" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/tile-bg.png" position="1593,775" size="252,332" alphatest="blend" zPosition="2" />
-	
         	<ePixmap pixmap="q-toppicks/toppicks1.jpg" position="542,386" size="240,320" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks2.jpg" position="806,386" size="240,320" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks3.jpg" position="1070,386" size="240,320" backgroundColor="mid" transparent="0" zPosition="2" />
@@ -21,7 +20,6 @@
 		<ePixmap pixmap="q-toppicks/toppicks8.jpg" position="1070,780" size="240,320" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks9.jpg" position="1334,780" size="240,320" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks10.jpg" position="1598,780" size="240,320" backgroundColor="mid" transparent="0" zPosition="2" />
-		
 		<eLabel text="Sky Cinema" position="542,322" size="250,48" font="Regular;42" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2" />
 		<eLabel text="Top Picks" position="542,718" size="250,48" font="Regular;42" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2" />
         </screen>
@@ -34,7 +32,6 @@
 		<panel name="q-title" />
 		<panel name="leftnav" />
 		<panel name="rightnav" />
-		
 		<widget source="menu" render="Listbox" position="90,545" size="364,535" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
                 selectionPixmap="q-selectbars/q-menu.png"  itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="3" >
 			<convert type="TemplatedMultiContent">
@@ -80,7 +77,6 @@
 	</screen>
         
         <!-- settings screens -->
-	
 	<screen name="Setup-Default">
 		<panel name="template1" />
                 <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />

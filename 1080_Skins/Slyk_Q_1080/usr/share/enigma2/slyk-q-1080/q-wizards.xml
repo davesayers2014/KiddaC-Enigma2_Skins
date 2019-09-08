@@ -1,5 +1,6 @@
+
 <skin>
-		<screen name="RemoteControlTemplate">
+	<screen name="RemoteControlTemplate">
 		<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="1560,385" size="231,750" zPosition="10" alphatest="blend" />
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphatest="blend" />
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-150,-225" zPosition="11" size="56,105" alphatest="blend" />
@@ -7,7 +8,7 @@
 		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-150,-225" zPosition="11" size="56,105" alphatest="blend" />
 	</screen>
 	
-		<screen name="WizardTemplate">
+	<screen name="WizardTemplate">
 		<panel name="template1" />
 		<widget name="text" position="540,110" size="1002,264" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
@@ -23,7 +24,7 @@
 		<panel name="RemoteControlTemplate" />
 	</screen>
 	
-		<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
 		<widget name="list" position="540,385" size="1002,697" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
@@ -32,39 +33,39 @@
 		<panel name="nav-gradient-2" />
 	</screen>
 	
-		<screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="DefaultWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="DefaultWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="NetworkWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="NetworkWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="DefaultSatLists" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="DefaultSatLists" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="DreamPackageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="DreamPackageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="CleanupWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="CleanupWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="mid">
+	<screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="mid">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="LanguageWizard" position="fill" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="LanguageWizard" position="fill" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1" />
 		<widget name="text" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
