@@ -1,6 +1,6 @@
 
 <skin>
-		<screen name="TimerEditList" title="Timer editor" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="TimerEditList" title="Timer editor" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="main-template-2" />
 		<panel name="v5-tv-guide" />
 		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
@@ -11,12 +11,12 @@
 		<panel name="t2-OKButton" />
 	</screen>
 	
-		<!-- Timer entry -->
+	<!-- Timer entry -->
 	<screen name="TimerEntry" title="Timer entry" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup" />
 	</screen>
 	
-		<!-- Timer log / timer info button-->
+	<!-- Timer log / timer info button-->
 	<screen name="TimerLog" title="Timer log" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="main-template-2" />
 		<panel name="v5-tv-guide" />
@@ -25,7 +25,7 @@
 		<panel name="New-Buttons-T2" />
 	</screen>
 	
-		<!-- Timer sanity conflict -->
+	<!-- Timer sanity conflict -->
 	<screen name="TimerSanityConflict" title="Timer sanity error" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="main-template-2" />
 		<panel name="v5-tv-guide" />
@@ -36,14 +36,14 @@
 		<panel name="New-Buttons-T2" />
 	</screen>
 	
-		<!-- Timer Selection -->
+	<!-- Timer Selection -->
 	<screen name="TimerSelection" title="Timer selection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="main-template-2" />
 		<panel name="v5-tv-guide" />
 		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
 		<widget name="timerlist" position="105,190" size="1170,750" setFont="Regular;24" setEventNameFont="Regular; 30" setServiceNameFont="Regular; 30" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" itemHeight="75" rowSplit="39" iconMargin="15" satPosLeft="480" selectionPixmap="2018-selectbars/bar-75.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
 		<panel name="New-Buttons-T2" />
-                <panel name="t2-OKButton" />
+		<panel name="t2-OKButton" />
 	</screen>
 	
 	<!-- ## Autotimer ## -->
@@ -70,23 +70,23 @@
 		<widget source="help" render="Label" position="90,174" size="1200,165" font="Regular;36" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
 	</screen>
 	
-		<screen name="AutoTimerFilterEditor" position="0,0" size="1920,1080" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="AutoTimerFilterEditor" position="0,0" size="1920,1080" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
 		<widget source="help" render="Label" position="90,174" size="1200,165" font="Regular;36" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
 	</screen>
 	
-		<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
 	</screen>
 	
-		<screen name="AutoTimerSettings" position="0,0" size="1920,1080" title="AutoTimer Settings" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="AutoTimerSettings" position="0,0" size="1920,1080" title="AutoTimer Settings" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
 		<widget source="help" render="Label" position="90,174" size="1200,165" font="Regular;36" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
 		<panel name="HelpWindow" />
 		<panel name="VKeyIcon" />
 	</screen>
 	
-		<screen name="AutoTimerFAQ" position="0,0" size="1920,1080" title="AutoTimer FAQ" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="AutoTimerFAQ" position="0,0" size="1920,1080" title="AutoTimer FAQ" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="main-template-2" />
 		<panel name="v5-services" />
 		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
@@ -94,7 +94,7 @@
 		<panel name="New-Buttons-T2" />
 	</screen>
 	
-		<screen name="AutoTimerHelp" position="0,0" size="1920,1080" title="AutoTimer Help" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="AutoTimerHelp" position="0,0" size="1920,1080" title="AutoTimer Help" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="main-template-2" />
 		<panel name="v5-services" />
 		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
@@ -102,11 +102,11 @@
 		<panel name="New-Buttons-T2" />
 	</screen>
 	
-		<screen name="AutoTimerWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
+	<screen name="AutoTimerWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="black">
 		<panel name="WizardTemplate" />
 	</screen>
 	
-		<screen name="AutoTimerPreview" position="0,0" size="1920,1080" title="Preview AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="AutoTimerPreview" position="0,0" size="1920,1080" title="Preview AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="main-template-2" />
 		<panel name="v5-tv-guide" />
 		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
@@ -123,7 +123,7 @@
 		</widget>
 		<panel name="New-Buttons-T2" />
 	</screen>
-	
 	<!-- CronTimer -->
 	<!-- now in infopanel file -->
 </skin>
+

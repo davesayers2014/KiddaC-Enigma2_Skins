@@ -87,30 +87,24 @@
 		<color name="zapgreen" value="#007f0e" />
 		<color name="verydarkgrey" value="#555555" />
 		<color name="grey" value="#8c8c93" />
-		<!-- slyk1 Colours -->
 		
+		<!-- slyk1 Colours -->
 		<color name="skyblue" value="#5ea1e3" />
 		<color name="skylightblue" value="#7eaeef" />
-		
 		<color name="skydarkblue" value="#133171" />
 		<color name="skygold" value="#f2d320" />
 		<color name="skygoldbg" value="#f5c400" />
-
 		<color name="skydarkbluebg" value="#16356e" />
 		<color name="guidecolor" value="skyblue" /> <!-- value="skygold" -->
-
                	<color name="backgroundtop" value="#1d68ac" />
 		<color name="backgroundmid" value="#1c5791" />
 		<color name="backgroundbot" value="#1c4475" />
-
                 <color name="bgdarkblue" value="#082353" />
                 <color name="messageboxbg" value="#082353" />
-                
                	<color name="skydarkrow" value="#10326c" />
 		<color name="skylightrow" value="#204382" />
 		<color name="panelblue" value="#00417a" />
 		<color name="skytitlebackground" value="#00417a" />
-
 	</colors>
 	
 	<!-- default colours -->
@@ -140,7 +134,6 @@
 			<pixmap pos="bpBottomRight" filename="screens/b_br.png" />
 		</borderset>
 	</windowstyle>
-	
 
 	<windowstyle type="skinned" id="1">
 		<color name="Background" color="messageboxbg" />
@@ -184,7 +177,6 @@
 		<parameter name="PluginBrowserDownloadName" value="120,5,45" />     <!-- plugins download name - see font alias PluginBrowser0 -->
 		<parameter name="PluginBrowserDownloadDescr" value="120,42,30" />   <!-- plugins download description -see font alias PluginBrowser1 -->
 	
-
 		 <!-- information - services -->
 		<parameter name="ServiceInfo" value="0,0,345,45" />
                 <parameter name="ServiceInfoLeft" value="0,0,345,38" />

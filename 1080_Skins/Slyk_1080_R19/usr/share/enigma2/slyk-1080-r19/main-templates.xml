@@ -1,6 +1,5 @@
 
 <skin>
-
 	<screen name="my-logo1">
 		<ePixmap pixmap="myicons/slyklogo.png" position="center,44" size="144,78" alphatest="blend" backgroundColor="transparent"  zPosition="2" />
 	</screen>
@@ -26,7 +25,6 @@
 	<screen name="main-bg">
 		<ePixmap pixmap="2018-backgrounds/main-bg.png" position="0,0" size="1920,1080" zPosition="-1" />
 	</screen>
-	
 	
 	<screen name="title1">
 		<widget source="Title" render="Label" position="90,132" size="806,42" valign="top" halign="left" font="Regular;36" noWrap="0" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="backgroundtop" />
@@ -74,7 +72,6 @@
                 <widget name="footnote" position="center,482" size="1350,21" font="Regular;18" foregroundColor="skyblue" backgroundColor="skydarkblue" valign="center" halign="right" transparent="1" zPosition="4" />
         </screen>
 
-
 	<screen name="main-template">
 	   <panel name="main-bg" />
 		<panel name="my-logo" />
@@ -104,5 +101,4 @@
                 <eLabel position="90,186" size="870,52" backgroundColor="bgdarkblue" zPosition="-1"/>
                 <eLabel position="90,238" size="1740,807" backgroundColor="bgdarkblue" zPosition="-1"/>
 	</screen>
-	
 </skin>
