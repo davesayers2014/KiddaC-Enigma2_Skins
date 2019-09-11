@@ -1,5 +1,5 @@
 <skin>
-    <!-- https://github.com/openatv/enigma2/blob/6.1/lib/python/Screens/TimerEdit.py -->
+    <!-- /lib/python/Screens/TimerEdit.py -->
     <screen name="TimerEditList" title="Timer editor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
         <panel name="h-separator-tr" />
@@ -10,7 +10,7 @@
         <panel name="InfoButton-pos2" />
         <panel name="OKButton" />
     </screen>
-    
+
     <!-- Timer entry -->
     <screen name="TimerEntry" title="Timer entry" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
         <panel name="Setup-Default" />
@@ -18,7 +18,7 @@
         <panel name="HelpWindow" />
         <panel name="VKeyIcon" />
     </screen>
-    
+
     <!-- Timer log / timer info button-->
     <screen name="TimerLog" title="Timer log" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
@@ -29,7 +29,7 @@
 
         <panel name="New-Buttons" />
     </screen>
-    
+
     <!-- Timer sanity conflict -->
     <screen name="TimerSanityConflict" title="Timer sanity error" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
@@ -40,7 +40,7 @@
         <widget name="timer2" position="351,382" size="628,288" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected-text" itemHeight="48" rowSplit="25" iconMargin="20" setFont="Regular;16" setEventNameFont="Regular; 20" setServiceNameFont="Regular; 20" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
         <panel name="New-Buttons" />
     </screen>
-    
+
     <!-- Timer Selection -->
     <screen name="TimerSelection" title="Timer selection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
@@ -50,7 +50,7 @@
         <!--<panel name="button-bg" />  -->
         <panel name="OKButton" />
     </screen>
-    
+
     <!-- https://github.com/oe-alliance/enigma2-plugins/tree/master/autotimer -->
     <!-- ## Autotimer ## -->
     <screen name="AutoTimerOverview" position="0,0" size="1280,720" title="AutoTimer Overview" flags="wfNoBorder" backgroundColor="mid">
@@ -63,7 +63,7 @@
         <panel name="MenuButton-pos2" />
         <panel name="OKButton" />
     </screen>
-    
+
     <screen name="AutoTimerImporter" position="0,0" size="1280,720" title="Import AutoTimer" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
         <panel name="h-separator-tr" />
@@ -72,27 +72,27 @@
         <widget name="list" textOffset="10,0" position="351,230" size="628,440" foregroundColor="white" backgroundColor="mid" font="Regular;20" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-628-30.png" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
         <panel name="New-Buttons" />
     </screen>
-    
+
     <screen name="AutoTimerEditor" position="0,0" size="1280,720" title="Edit AutoTimer" flags="wfNoBorder" backgroundColor="mid">
         <panel name="Setup-Default" />
         <widget source="help" render="Label" position="1012,227" size="248,340" font="Regular;18" foregroundColor="colour2" backgroundColor="midright" transparent="1" />
     </screen>
-    
+
     <screen name="AutoTimerFilterEditor" position="0,0" size="1280,720" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="mid">
         <panel name="Setup-Default" />
         <widget source="help" render="Label" position="1012,227" size="248,340" font="Regular;18" foregroundColor="colour2" backgroundColor="midright" transparent="1" />
         <panel name="VKeyIcon" />
     </screen>
-    
+
     <screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
         <panel name="Setup-Default" />
     </screen>
-    
+
     <screen name="AutoTimerSettings" position="0,0" size="1280,720" title="AutoTimer Settings" flags="wfNoBorder" backgroundColor="mid">
         <panel name="Setup-Default" />
         <panel name="description" />
     </screen>
-    
+
     <screen name="AutoTimerFAQ" position="0,0" size="1280,720" title="AutoTimer FAQ" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
         <panel name="h-separator-tr" />
@@ -100,7 +100,7 @@
         <widget name="detailtext" position="351,230" size="628,440" font="Regular;20" foregroundColor="white" backgroundColor="mid" transparent="1" />
         <panel name="New-Buttons" />
     </screen>
-    
+
     <screen name="AutoTimerHelp" position="0,0" size="1280,720" title="AutoTimer Help" flags="wfNoBorder" backgroundColor="mid">
         <panel name="template1" />
         <panel name="h-separator-tr" />
@@ -108,11 +108,11 @@
         <widget name="detailtext" position="351,230" size="628,440" font="Regular;20" foregroundColor="white" backgroundColor="mid" transparent="1" />
         <panel name="New-Buttons" />
     </screen>
-    
+
     <screen name="AutoTimerWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="mid">
         <panel name="WizardTemplate" />
     </screen>
-    
+
     <screen name="AutoTimerPreview" title="Preview AutoTimer" position="center,center" size="600,450">
         <widget source="timerlist" render="Listbox" position="0,0" size="600,350" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-600-70.png" itemHeight="70" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1">
             <convert type="TemplatedMultiContent">{"template": [
@@ -131,7 +131,7 @@
         <ePixmap pixmap="buttons/key_yellow.png" position="300,e-30" size="25,25" alphatest="blend" zPosition="2" />
         <widget source="key_yellow" render="Label" position="330,e-32" size="250,25" font="Regular;20" foregroundColor="white" backgroundColor="messageboxbg" valign="center" noWrap="1" transparent="1" />
     </screen>
-    
+
     <!-- CronTimer -->
     <!-- now in infopanel file -->
 </skin>

@@ -1,3 +1,4 @@
+
 <skin>
 
 # Edit the number at the end of each of these 3 panels for your desired infobar picon size and set.
@@ -10,138 +11,114 @@
 # 5 = picon - 220 x 132 (/media/hdd/XPicons)
 # 6 = picon - 400 x 240 (/media/hdd/XPicons)
 
-
-<screen name="infobar-picons">
-        <panel name="infobar-picons-2"/>
-</screen>
-
-<screen name="eventview-picons">
-        <panel name="eventview-picons-2"/>
-</screen>
-
-<screen name="movie-eventview-picons">
-        <panel name="movie-eventview-picons-2"/>
-</screen>
-
+	<screen name="infobar-picons">
+		<panel name="infobar-picons-2" />
+	</screen>
+	<screen name="eventview-picons">
+		<panel name="eventview-picons-2" />
+	</screen>
+	<screen name="movie-eventview-picons">
+		<panel name="movie-eventview-picons-2" />
+	</screen>
+	
 #####################################################################################################################
 
 # do not edit any code past this line
 
 #####################################################################################################################
 
-<screen name="infobar-picons-1">
-        <widget source="session.CurrentService" render="Slyk18Picon" position="128,562" size="66,40" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>	
-</screen>
-
-<screen name="infobar-picons-2">
-        <widget source="session.CurrentService" render="Slyk18Picon" position="88,538" size="146,88" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>		
-</screen>
-
-<screen name="infobar-picons-3">
-        <widget source="session.CurrentService" render="Slyk18Picon" position="28,502" size="266,160" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>		
-</screen>
-
-
-<screen name="eventview-picons-1">	
-        <widget source="Service" render="Slyk18Picon" position="128,562" size="66,40" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>	
-</screen>
-
-<screen name="eventview-picons-2">
-        <widget source="Service" render="Slyk18Picon" position="88,538" size="146,88" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>
-</screen>
-
-
-<screen name="eventview-picons-3">
-        <widget source="Service" render="Slyk18Picon" position="28,502" size="266,160" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>
-</screen>
-
-
-<screen name="movie-eventview-picons-1">		
-	<widget source="Service" render="Slyk18Picon" position="128,562" size="66,40" alphatest="blend">
-	        <convert type="MovieReference">Reference</convert>
-	</widget>
-</screen>
-
-<screen name="movie-eventview-picons-2">
-	<widget source="Service" render="Slyk18Picon" position="88,538" size="146,88" alphatest="blend">
-	        <convert type="MovieReference">Reference</convert>
-	</widget>
-</screen>
-
-<screen name="movie-eventview-picons-3">
-	<widget source="Service" render="Slyk18Picon" position="28,502" size="266,160" alphatest="blend">
-	        <convert type="MovieReference">Reference</convert>
-	</widget>
-</screen>
+	<screen name="infobar-picons-1">
+		<widget source="session.CurrentService" render="Slyk18Picon" position="128,562" size="66,40" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="infobar-picons-2">
+		<widget source="session.CurrentService" render="Slyk18Picon" position="88,538" size="146,88" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="infobar-picons-3">
+		<widget source="session.CurrentService" render="Slyk18Picon" position="28,502" size="266,160" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="eventview-picons-1">
+		<widget source="Service" render="Slyk18Picon" position="128,562" size="66,40" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="eventview-picons-2">
+		<widget source="Service" render="Slyk18Picon" position="88,538" size="146,88" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="eventview-picons-3">
+		<widget source="Service" render="Slyk18Picon" position="28,502" size="266,160" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="movie-eventview-picons-1">
+		<widget source="Service" render="Slyk18Picon" position="128,562" size="66,40" alphatest="blend">
+			<convert type="MovieReference">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="movie-eventview-picons-2">
+		<widget source="Service" render="Slyk18Picon" position="88,538" size="146,88" alphatest="blend">
+			<convert type="MovieReference">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="movie-eventview-picons-3">
+		<widget source="Service" render="Slyk18Picon" position="28,502" size="266,160" alphatest="blend">
+			<convert type="MovieReference">Reference</convert>
+		</widget>
+	</screen>
 	
 #####################################################################################################################
-
-<screen name="infobar-picons-4">
-        <widget source="session.CurrentService" render="Slyk18XPicon" position="128,562" size="66,40" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>	
-</screen>
-
-<screen name="infobar-picons-5">
-        <widget source="session.CurrentService" render="Slyk18XPicon" position="88,538" size="146,88" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>		
-</screen>
-
-<screen name="infobar-picons-6">
-        <widget source="session.CurrentService" render="Slyk18XPicon" position="28,502" size="266,160" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>		
-</screen>
-
-
-<screen name="eventview-picons-4">	
-        <widget source="Service" render="Slyk18XPicon" position="128,562" size="66,40" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>	
-</screen>
-
-<screen name="eventview-picons-5">
-        <widget source="Service" render="Slyk18XPicon" position="88,538" size="146,88" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>
-</screen>
-
-
-<screen name="eventview-picons-6">
-        <widget source="Service" render="Slyk18XPicon" position="28,502" size="266,160" alphatest="blend">
-                <convert type="ServiceName">Reference</convert>
-        </widget>
-</screen>
-
-
-<screen name="movie-eventview-picons-4">		
-	<widget source="Service" render="Slyk18XPicon" position="128,562" size="66,40" alphatest="blend">
-	        <convert type="MovieReference">Reference</convert>
-	</widget>
-</screen>
-
-<screen name="movie-eventview-picons-5">
-	<widget source="Service" render="Slyk18XPicon" position="88,538" size="146,88" alphatest="blend">
-	        <convert type="MovieReference">Reference</convert>
-	</widget>
-</screen>
-
-<screen name="movie-eventview-picons-6">
-	<widget source="Service" render="Slyk18XPicon" position="28,502" size="266,160" alphatest="blend">
-	        <convert type="MovieReference">Reference</convert>
-	</widget>
-</screen>		
+	
+	<screen name="infobar-picons-4">
+		<widget source="session.CurrentService" render="Slyk18XPicon" position="128,562" size="66,40" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="infobar-picons-5">
+		<widget source="session.CurrentService" render="Slyk18XPicon" position="88,538" size="146,88" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="infobar-picons-6">
+		<widget source="session.CurrentService" render="Slyk18XPicon" position="28,502" size="266,160" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="eventview-picons-4">
+		<widget source="Service" render="Slyk18XPicon" position="128,562" size="66,40" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="eventview-picons-5">
+		<widget source="Service" render="Slyk18XPicon" position="88,538" size="146,88" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="eventview-picons-6">
+		<widget source="Service" render="Slyk18XPicon" position="28,502" size="266,160" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="movie-eventview-picons-4">
+		<widget source="Service" render="Slyk18XPicon" position="128,562" size="66,40" alphatest="blend">
+			<convert type="MovieReference">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="movie-eventview-picons-5">
+		<widget source="Service" render="Slyk18XPicon" position="88,538" size="146,88" alphatest="blend">
+			<convert type="MovieReference">Reference</convert>
+		</widget>
+	</screen>
+	<screen name="movie-eventview-picons-6">
+		<widget source="Service" render="Slyk18XPicon" position="28,502" size="266,160" alphatest="blend">
+			<convert type="MovieReference">Reference</convert>
+		</widget>
+	</screen>
 </skin>
+

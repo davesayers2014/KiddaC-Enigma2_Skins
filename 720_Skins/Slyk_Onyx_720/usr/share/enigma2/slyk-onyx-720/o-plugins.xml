@@ -136,7 +136,7 @@
 				
 				])
 				},
-				"fonts": [gFont("Regular",30),gFont("Regular",16),gFont("Regular",16)],
+				"fonts": [gFont("Regular",20),gFont("Regular",16),gFont("Regular",16)],
 				"itemHeight": 60,
 				"scrollbarMode": "showNever"
 				}</convert>

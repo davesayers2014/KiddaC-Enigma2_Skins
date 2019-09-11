@@ -86,7 +86,7 @@
                 EventNamePadding="10"
                 NumberOfRows="10"
                 transparent="1" />
-                
+
         <widget name="bouquetlist" position="0,216" size="320,454" font="Regular;20" itemHeight="44" foregroundColor="white" foregroundColorSelected="white" backgroundColor="#1a1a24" backgroundColorSelected="#006fce" transparent="1" borderColor="#33333d" borderWidth="1" scrollbarMode="showNever" zPosition="6" />
         <panel name="New-Buttons" />
         <panel name="MenuButton" />
@@ -96,7 +96,7 @@ self["bouquetlist"].bouquetNamePadding = 30
         </applet>
     </screen>
     -->
-    
+
         <screen name="GraphicalEPGPIG" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
 
         <panel name="background" />
@@ -203,9 +203,9 @@ self["bouquetlist"].bouquetNamePadding = 30
 self["bouquetlist"].bouquetNamePadding = 30
         </applet>
     </screen>
-    
-    
-    
+
+
+
     <screen name="GraphicalEPG" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
         <panel name="template2" />
         <!-- timeline background -->
@@ -264,14 +264,14 @@ self["bouquetlist"].bouquetNamePadding = 30
 self["bouquetlist"].bouquetNamePadding = 30
         </applet>
     </screen>
-    
+
     <screen name="GraphicalInfoBarEPG" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
         <!-- backgrounds -->
         <eLabel position="0,488" size="1280,232" backgroundColor="blackglass" transparent="0" zPosition="-2" />
         <ePixmap position="0,470" size="1280,250" pixmap="o-infobars/infobar1.png" alphatest="blend" zPosition="-1" />
-        
+
         <eLabel position="0,494" size="1280,176" backgroundColor="#22222e" transparent="0" zPosition="1" />
-        
+
         <!-- record icon -->
         <widget render="Pixmap" pixmap="o-icons/record.png" source="session.RecordState" position="630,478" size="20,20" alphatest="blend" zPosition="6">
             <convert type="ConditionalShowHide" />
@@ -323,7 +323,7 @@ self["bouquetlist"].bouquetNamePadding = 30
          NumberOfRows="4"
          zPosition="2"
          transparent="1" />
-         
+
         <widget name="bouquetlist" position="0,530" size="250,140" font="Regular;20" itemHeight="35" foregroundColor="white" foregroundColorSelected="white" backgroundColor="#1a1a24" backgroundColorSelected="#006fce" transparent="1" borderColor="#33333d" borderWidth="1" scrollbarMode="showNever" zPosition="6" />
         <panel name="date" />
         <panel name="New-Buttons" />
@@ -336,7 +336,7 @@ self["bouquetlist"].bouquetNamePadding = 30
 self["bouquetlist"].bouquetNamePadding = 20
         </applet>
     </screen>
-    
+
     <!-- graphical infobar - multi epg < > info -->
     <screen name="InfoBarEventView" position="0,0" size="1280,202" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
         <eLabel position="0,0" size="1280,182" backgroundColor="blackglass" transparent="0" zPosition="-2" />
@@ -373,15 +373,15 @@ self["bouquetlist"].bouquetNamePadding = 20
             <panel name="channel-icons" />
         </panel>
     </screen>
-    
-    
+
+
     <!-- epg - show bouquet on launch -->
     <screen name="BouquetSelector" title="Select a bouquet" position="0,0" size="348,720" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap pixmap="o-backgrounds/bouquet.png" position="0,0" size="348,720" alphatest="blend" zPosition="-1" />
         <widget source="Title" render="Label" position="0,0" size="323,160" font="Regular;32" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="center" transparent="1" />
         <widget name="menu" textOffset="10,9" position="20,161" size="283,480" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" foregroundColorSelected="white" backgroundColorSelected="blackglass" selectionPixmap="o-selectbars/select-283-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="48" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
     </screen>
-    
+
     <!-- EpgSelection -->
     <!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/EpgSelection.py -->
     <!-- epg single / EPGSearch-->
@@ -428,7 +428,7 @@ self["bouquetlist"].bouquetNamePadding = 20
 self["list"].instance.setItemHeight(44)
         </applet>
     </screen>
-    
+
     <screen name="EPGSelectionMulti" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
         <panel name="template1" />
         <ePixmap pixmap="epg/TimeLineBG.png" position="0,181" size="1280,55" alphatest="blend" zPosition="1" />
@@ -480,17 +480,17 @@ self["list"].instance.setItemHeight(44)
                 transparent="1"
                 enableWrapAround="1"
                 scrollbarMode="showOnDemand" />
-                
+
         <widget name="bouquetlist" position="0,216" size="320,454" font="Regular;20" itemHeight="44" foregroundColor="white" foregroundColorSelected="white" backgroundColor="#1a1a24" backgroundColorSelected="#006fce" transparent="1" borderColor="#33333d" borderWidth="1" scrollbarMode="showNever" zPosition="4" />
-        
+
 	<widget name="now_button_sel" position="326,181" size="218,36" pixmap="o-selectbars/multi-epg.png" zPosition="2" />
         <widget name="next_button_sel" position="544,181" size="218,36" pixmap="o-selectbars/multi-epg.png" zPosition="2" />
         <widget name="more_button_sel" position="762,181" size="218,36" pixmap="o-selectbars/multi-epg.png" zPosition="2" />
-        
+
         <widget name="now_text" position="326,186" size="218,36" text="Now" font="Bold;20" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="3" />
          <widget name="next_text" position="544,186" size="218,36" text="Next" font="Bold;20" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="3" />
         <widget name="more_text" position="762,186" size="218,36" text="More" font="Bold;20" halign="center" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="3" />
-        
+
 <widget name="date" position="10,186" size="300,194" halign="center" font="Regular;20" foregroundColor="white" backgroundColor="topleft" transparent="1" zPosition="3" />
 
         <panel name="New-Buttons" />
@@ -503,24 +503,24 @@ self["list"].l.setItemHeight(30)
 self["bouquetlist"].bouquetNamePadding = 20
         </applet>
     </screen>
-    
+
     <!-- epg tabs hack - red button popup -->
     <screen name="OptionDialog" position="center,center" size="240,130" backgroundColor="transparent" flags="wfNoBorder" zPosition="10">
         <ePixmap pixmap="o-backgrounds/optiondialog.png" position="0,0" size="240,130" alphatest="blend" zPosition="-1" />
         <widget name="text" position="0,0" size="0,0" font="Regular;22" />
         <widget name="list" position="5,5" size="230,120" font="Regular;21" foregroundColor="white" backgroundColor="bg-selected" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-230-30.png" itemHeight="30" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
     </screen>
-    
+
     <screen name="EPGvertical" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" title="Vertical Program Guide">
         <panel name="template1" />
         <ePixmap pixmap="epg/TimeLineBG.png" position="0,181" size="1280,36" alphatest="blend" zPosition="1" />
         <ePixmap pixmap="o-backgrounds/flare.png" position="197,172" size="250,19" alphatest="blend" zPosition="4" />
-        
+
         <panel name="h-separator-tr" />
         <panel name="v-separator-tr" />
-        
+
         <widget source="Title" render="Label" position="10,181" size="300,34" valign="center" halign="center" font="Regular;20" transparent="1" foregroundColor="white" backgroundColor="topleft" zPosition="3" />
-        
+
         <eLabel text="Vertical EPG" position="10,450" size="300,194" halign="center" font="Regular;23" transparent="1" foregroundColor="white" backgroundColor="topleft" />
 
 
@@ -569,7 +569,7 @@ self["bouquetlist"].bouquetNamePadding = 20
         <widget source="piconCh5" render="Slyk18Picon" position="1099,189" size="33,20" zPosition="3" alphatest="blend">
             <convert type="ServiceName">Reference</convert>
         </widget>
-        
+
         <widget name="currCh1" position="380,181" size="137,34" font="Regular;16" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" transparent="1" zPosition="3" />
         <widget name="currCh2" position="570,181" size="137,34" font="Regular;16" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" transparent="1" zPosition="3" />
         <widget name="currCh3" position="761,181" size="137,34" font="Regular;16" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" transparent="1" zPosition="3" />
@@ -608,7 +608,7 @@ self["bouquetlist"].bouquetNamePadding = 20
                 EntryBackgroundColorPast="#1a1a24"
                 EntryBackgroundColorPastSelected="#006fce"
                 transparent="1" />
-                
+
         <widget name="list2" position="517,216" size="190,454"
                 scrollbarMode="showNever"
                 TimeForegroundColor="colour2"
@@ -713,7 +713,7 @@ self["bouquetlist"].bouquetNamePadding = 20
 self["bouquetlist"].bouquetNamePadding = 30
         </applet>
     </screen>
-    
+
     <screen name="EPGverticalPIG" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" title="Vertical Program Guide">
       <panel name="EPGvertical" />
     </screen>

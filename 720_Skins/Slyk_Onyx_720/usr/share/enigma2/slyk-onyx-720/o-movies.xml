@@ -1,7 +1,7 @@
 
 <skin>
 	
-  <!-- https://github.com/openatv/enigma2/blob/6.1/lib/python/Screens/MovieSelection.py -->
+  <!-- /lib/python/Screens/MovieSelection.py -->
 	<screen name="MovieSelection" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="background" />
 		<panel name="logo" />

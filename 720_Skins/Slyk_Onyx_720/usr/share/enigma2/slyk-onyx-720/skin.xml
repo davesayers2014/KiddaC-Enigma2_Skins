@@ -99,9 +99,7 @@
       	 	<color name="colour2"                    value="#57c7ff" />
 	        <color name="notavailable"               value="#555555" />
         	<color name="messageboxbg"               value="#161620" />
-        	<color name="titlebackground"            value="#16161e" />
-
-        	
+        	<color name="titlebackground"            value="#16161e" />	
 	</colors>
 	
 	<!-- default colours -->
@@ -157,7 +155,7 @@
                 <parameter name="ChoicelistIcon" value="10,2,25,25"/>
 		<parameter name="ConfigListSeperator" value="350"/>
 	
-        <!-- example is software management - backup list -->
+		<!-- example is software management - backup list -->
                 <parameter name="FileListIcon" value="10,5,20,20" />
 		<parameter name="FileListName" value="45,0,582,30" />
 		<parameter name="FileListMultiLock" value="10,2,25,24" />
