@@ -46,44 +46,38 @@
 	</screen>
 	
 	<!-- ## Autotimer ## -->
-	<!-- -->
 	<screen name="AutoTimerOverview" position="0,0" size="1280,720" title="AutoTimer Overview" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="entries" position="86,144" size="795,504" EventNameFont="Regular;21" DayNameFont="Regular;18"  ServiceNameFont="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="70" rowSplit1="25" rowSplit2="43" rowHeight="28" iconMargin="10" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
+		<widget name="entries" position="86,144" size="795,504" EventNameFont="Regular;21" DayNameFont="Regular;18" ServiceNameFont="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="70" rowSplit1="25" rowSplit2="43" rowHeight="28" iconMargin="10" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<panel name="New-Buttons-Bot" />
 		<ePixmap pixmap="v-buttons/key_menu.png" position="1163,668" size="38,30" alphatest="blend" zPosition="3" />
 		<ePixmap pixmap="v-buttons/key_ok.png" position="922,668" size="38,30" alphatest="blend" zPosition="3" />
 		<eLabel text="Edit Timer" position="960,668" size="100,30" font="Regular;22" foregroundColor="fg3" backgroundColor="bg-br" valign="center" halign="left" transparent="1" zPosition="3" />
 	</screen>
 	
-	<!-- -->
 	<screen name="AutoTimerImporter" position="0,0" size="1280,720" title="Import AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
 		<widget name="list" textOffset="10,12" position="86,144" size="795,500" font="Regular;26" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="50" enableWrapAround="1" transparent="1" zPosition="2" />
 		<panel name="New-Buttons-Bot" />
 	</screen>
-	
-	<!-- -->
-	<screen name="AutoTimerEditor" position="0,0" size="1280,720" title="Edit AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
-	        <panel name="Setup-Default" />
-		<widget source="help" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" />
 
+	<screen name="AutoTimerEditor" position="0,0" size="1280,720" title="Edit AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" />
 	</screen>
 	
 	<screen name="AutoTimerFilterEditor" position="0,0" size="1280,720" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="transparent">
-                <panel name="Setup-Default" />
-                <widget source="help" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" />
-
-
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" />
 	</screen>
 	
 	<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                <panel name="Setup-Default" />
+		<panel name="Setup-Default" />
 	</screen>
 	
 	<screen name="AutoTimerSettings" position="0,0" size="1280,720" title="AutoTimer Settings" flags="wfNoBorder" backgroundColor="transparent">
-	        <panel name="Setup-Default" />
-	        <widget source="help" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 	</screen>
 	
 	<screen name="AutoTimerFAQ" position="0,0" size="1280,720" title="AutoTimer FAQ" flags="wfNoBorder" backgroundColor="transparent">
@@ -116,8 +110,8 @@
 		</widget>
 		<panel name="New-Buttons-Bot" />
 	</screen>
+	
 	<!-- CronTimer -->
 	<!-- now in infopanel file -->
 </skin>
-
 

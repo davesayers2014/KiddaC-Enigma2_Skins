@@ -1,7 +1,7 @@
 
 
 <skin>
-	<!-- /lib/python/Screens/ChannelSelection.py -->
+	<!--/lib/python/Screens/ChannelSelection.py -->
 	<!-- channel selection list -->
 	<screen name="ListTemplate">
 		<widget name="list"
@@ -45,13 +45,11 @@
 		<widget source="ServiceEvent" render="Label" position="190,40" size="579,42" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-tm" valign="top" halign="left" transparent="1" zPosition="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
 		<!-- event start time -->
 		<widget source="ServiceEvent" render="Label" position="190,93" size="75,40" font="Regular;26" foregroundColor="fg2" backgroundColor="bg-tm" noWrap="1" valign="top" halign="left" transparent="1" zPosition="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M -</convert>
 		</widget>
-		
 		<!-- event End time -->
 		<widget source="ServiceEvent" render="Label" position="275,93" size="75,40" font="Regular;26" foregroundColor="fg2" backgroundColor="bg-tm" noWrap="1" valign="top" halign="left" transparent="1" zPosition="1">
 			<convert type="EventTime">EndTime</convert>
@@ -62,30 +60,24 @@
 		        <convert type="EventTime">Duration</convert>
                         <convert type="ClockToText">AsLengthHours</convert>
 		</widget>
-		
 		<!-- description -->
 		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="86,133" size="795,124"
                 foregroundColor="fg1" backgroundColor="bg-tm" font="Regular;20" valign="top" transparent="1" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		
 		<!-- current picon -->
 		<widget source="Service" render="Slyk18Picon" position="781,50" size="100,60" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		
 		<panel name="ListTemplate" />
-		
 		<!-- progress bar -->
 		<widget source="ServiceEvent" render="Progress" position="500,105" size="200,10" foregroundColor="progress" backgroundColor="bg-tm" transparent="0" borderWidth="1" borderColor="progress-border" zPosition="5">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		
 		<!-- next program -->
 		<widget source="ServiceEvent" render="Label" position="914,285" size="345,30" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mr" valign="top" halign="left" transparent="1" zPosition="4">
 			<convert type="EventName">NextName</convert>
 		</widget>
-		
 		<widget source="ServiceEvent" render="Label" position="914,317" size="75,28" font="Regular;20" foregroundColor="fg2" backgroundColor="bg-mr" noWrap="1" valign="top" halign="left" transparent="1" zPosition="4">
 			<convert type="EventTime">NextStartTime</convert>
 			<convert type="ClockToText">Format:%H.%M -</convert>
@@ -129,18 +121,16 @@
 	
 	<screen name="ChannelSelectionRadio" position="0,0" size="1280,720" backgroundColor="#000000" flags="wfNoBorder">
 		<panel name="v-radio-template1" />
-	<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
+                <ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
 		<!-- event name -->
 		<widget source="ServiceEvent" render="Label" position="190,40" size="579,42" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-tm" valign="top" halign="left" transparent="1" zPosition="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		
 		<!-- event start time -->
 		<widget source="ServiceEvent" render="Label" position="190,93" size="75,40" font="Regular;26" foregroundColor="fg2" backgroundColor="bg-tm" noWrap="1" valign="top" halign="left" transparent="1" zPosition="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M -</convert>
 		</widget>
-		
 		<!-- event End time -->
 		<widget source="ServiceEvent" render="Label" position="275,93" size="75,40" font="Regular;26" foregroundColor="fg2" backgroundColor="bg-tm" noWrap="1" valign="top" halign="left" transparent="1" zPosition="1">
 			<convert type="EventTime">EndTime</convert>
@@ -151,30 +141,24 @@
 			<convert type="EventTime">Duration</convert>
                         <convert type="ClockToText">AsLengthHours</convert>
 		</widget>
-		
 		<!-- description -->
 		<widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="86,133" size="795,124"
                 foregroundColor="fg1" backgroundColor="bg-tm" font="Regular;20" valign="top" transparent="1" zPosition="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		
 		<!-- current picon -->
 		<widget source="Service" render="Slyk18Picon" position="781,50" size="100,60" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		
 		<panel name="ListTemplate" />
-		
 		<!-- progress bar -->
 		<widget source="ServiceEvent" render="Progress" position="500,105" size="200,10" foregroundColor="progress" backgroundColor="bg-tm" transparent="0" borderWidth="1" borderColor="progress-border" zPosition="5">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		
 		<!-- next program -->
 		<widget source="ServiceEvent" render="Label" position="922,285" size="281,25" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mr" valign="top" halign="left" transparent="1" zPosition="4">
 			<convert type="EventName">NextName</convert>
 		</widget>
-		
 		<widget source="ServiceEvent" render="Label" position="922,310" size="60,25" font="Regular;16" foregroundColor="fg2" backgroundColor="bg-mr" noWrap="1" valign="top" halign="left" transparent="1" zPosition="4">
 			<convert type="EventTime">NextStartTime</convert>
 			<convert type="ClockToText">Format:%H.%M -</convert>

@@ -22,8 +22,8 @@
 	
 	<!-- Nameserver settings -->
 	<screen name="NameserverSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Nameserver setup">
-                <panel name="Setup-Default"/>
-                <panel name="introduction" />
+		<panel name="Setup-Default" />
+		<panel name="introduction" />
 	</screen>
 	
 	<!-- Network Mac Settings -->
@@ -65,7 +65,6 @@
 		<widget source="IF" render="Label" position="291,240" size="190,30" font="Regular;22" foregroundColor="fg2" backgroundColor="bg-mm" valign="center" halign="left" noWrap="1" transparent="1" />
 		<widget source="Statustext" render="Label" position="550,240" size="60,30" font="Regular;22" foregroundColor="fg2" backgroundColor="bg-mm" valign="center" halign="left" noWrap="1" transparent="1" />
 		<widget name="statuspic" position="610,247" size="15,16" pixmaps="buttons/button_green.png,buttons/button_red.png" alphatest="blend" />
-		
 	</screen>
 	
 	<!-- system - network - device setup - network test -->
@@ -75,38 +74,28 @@
 		<widget name="Adapter" position="306,189" size="270,38" valign="center" halign="left" font="Regular;21" transparent="1" foregroundColors="fg3,red,green" backgroundColor="bg-mm-dark" />
 		<widget name="AdapterInfo_OK" position="516,193" size="38,31" pixmap="icons/lock_on.png" alphatest="blend" />
 		<widget name="AdapterInfo_Text" position="576,189" size="120,38" halign="left" valign="center" font="Regular;17" transparent="1" foregroundColors="fg3,fg2,fg1" backgroundColor="bg-mm-dark" />
-		
-                <ePixmap pixmap="div-h.png" position="86,249" size="790,2" alphatest="blend" />
-		
-                <widget name="Networktext" position="86,271" size="200,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
+		<ePixmap pixmap="div-h.png" position="86,249" size="790,2" alphatest="blend" />
+		<widget name="Networktext" position="86,271" size="200,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
 		<widget name="Network" position="306,271" size="240,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg3,red,green" backgroundColor="bg-mm-dark" />
 		<widget name="NetworkInfo_Check" position="516,275" size="38,31" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
 		<widget name="NetworkInfo_Text" position="576,271" size="120,38" halign="left" valign="center" font="Regular;18" transparent="1" foregroundColors="fg3,fg2,fg1" backgroundColor="bg-mm-dark" />
-		
-                <ePixmap pixmap="div-h.png" position="86,331" size="790,2" alphatest="blend" />
-		
-                <widget name="Dhcptext" position="86,353" size="200,38" valign="center" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
+		<ePixmap pixmap="div-h.png" position="86,331" size="790,2" alphatest="blend" />
+		<widget name="Dhcptext" position="86,353" size="200,38" valign="center" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
 		<widget name="Dhcp" position="306,353" size="240,38" valign="center" transparent="1" font="Regular;21" foregroundColors="fg3,red,green" backgroundColor="bg-mm-dark" />
 		<widget name="DhcpInfo_Check" position="516,357" size="38,31" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
 		<widget name="DhcpInfo_Text" position="576,353" size="120,38" halign="left" valign="center" font="Regular;18" transparent="1" foregroundColors="fg3,fg2,fg1" backgroundColor="bg-mm-dark" />
-		
-                <ePixmap pixmap="div-h.png" position="86,413" size="790,2" alphatest="blend" />
-		
-                <widget name="IPtext" position="86,435" size="200,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
+		<ePixmap pixmap="div-h.png" position="86,413" size="790,2" alphatest="blend" />
+		<widget name="IPtext" position="86,435" size="200,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
 		<widget name="IP" position="306,435" size="240,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg3,red,green" backgroundColor="bg-mm-dark" />
 		<widget name="IPInfo_Check" position="516,439" size="38,31" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
 		<widget name="IPInfo_Text" position="576,435" size="120,38" halign="left" valign="center" font="Regular;18" transparent="1" foregroundColors="fg1,fg2,fg3" backgroundColor="bg-mm-dark" />
-		
-                <ePixmap pixmap="div-h.png" position="86,495" size="790,2" alphatest="blend" />
-		
-                <widget name="DNStext" position="86,517" size="200,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
+		<ePixmap pixmap="div-h.png" position="86,495" size="790,2" alphatest="blend" />
+		<widget name="DNStext" position="86,517" size="200,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg1,fg1" backgroundColor="bg-mm-dark" />
 		<widget name="DNS" position="306,517" size="240,38" valign="center" halign="left" transparent="1" font="Regular;21" foregroundColors="fg3,red,green" backgroundColor="bg-mm-dark" />
 		<widget name="DNSInfo_Check" position="516,521" size="38,31" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
 		<widget name="DNSInfo_Text" position="576,517" size="120,38" halign="left" valign="center" font="Regular;18" transparent="1" foregroundColors="fg3,fg2,fg1" backgroundColor="bg-mm-dark" />
-		
-                <ePixmap pixmap="div-h.png" position="86,577" size="790,2" alphatest="blend" />
-		
-                <widget name="EditSettings_Text" position="576,599" size="120,38" halign="left" valign="center" font="Regular;18" transparent="1" foregroundColors="fg3,fg2,fg1" backgroundColor="bg-mm-dark" />
+		<ePixmap pixmap="div-h.png" position="86,577" size="790,2" alphatest="blend" />
+		<widget name="EditSettings_Text" position="576,599" size="120,38" halign="left" valign="center" font="Regular;18" transparent="1" foregroundColors="fg3,fg2,fg1" backgroundColor="bg-mm-dark" />
 		<widget name="InfoText" position="922,285" size="278,435" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 		<panel name="New-Buttons-Bot" />
 	</screen>
@@ -153,8 +142,6 @@
 		<panel name="v-template2-pig" />
 		<widget name="infotext" position="86,144" size="795,511" font="Console;16" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="3" />
 	</screen>
-
-
 	
 	<screen name="NetworkInadyn" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
@@ -367,41 +354,29 @@
 	</screen>
 	
 	<!-- wlanscan - see non-common -->
-	
 	<!-- #WirelessLan#-->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/WirelessLan/plugin.py -->
+	<!-- /lib/python/Plugins/SystemPlugins/WirelessLan/plugin.py -->
 	<!-- see SystemNetworkInfo - information -->
 	<screen name="WlanStatus" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		
-                <widget source="LabelBSSID" render="Label" position="86,189" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-                <widget source="BSSID" render="Label" position="246,189" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-	
-                <widget source="LabelESSID" render="Label" position="86,229" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-               	<widget source="ESSID" render="Label" position="246,229" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-
-                <widget source="LabelQuality" render="Label" position="86,269" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-                <widget source="quality" render="Label" position="246,269" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-	
-                <widget source="LabelSignal" render="Label" position="86,309" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="LabelBSSID" render="Label" position="86,189" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="BSSID" render="Label" position="246,189" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="LabelESSID" render="Label" position="86,229" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="ESSID" render="Label" position="246,229" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="LabelQuality" render="Label" position="86,269" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="quality" render="Label" position="246,269" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="LabelSignal" render="Label" position="86,309" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
 		<widget source="signal" render="Label" position="246,309" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-	
-                <widget source="LabelBitrate" render="Label" position="86,349" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-                <widget source="bitrate" render="Label" position="246,349" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-
-                <widget source="LabelEnc" render="Label" position="86,389" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-      		<widget source="enc" render="Label" position="246,389" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-		
-                <ePixmap position="86,559" size="790,2" pixmap="div-h.png" alphatest="blend" />
-		
-                <widget source="IFtext" render="Label" position="86,569" size="120,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="LabelBitrate" render="Label" position="86,349" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="bitrate" render="Label" position="246,349" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="LabelEnc" render="Label" position="86,389" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget source="enc" render="Label" position="246,389" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<ePixmap position="86,559" size="790,2" pixmap="div-h.png" alphatest="blend" />
+		<widget source="IFtext" render="Label" position="86,569" size="120,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
 		<widget source="IF" render="Label" position="246,569" size="375,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-		
-                <widget source="Statustext" render="Label" position="86,600" size="115,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-                <widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="246,607" zPosition="10" size="15,16" alphatest="blend" />
-                
-                <panel name="New-Buttons-Bot" />
-	</screen>	
+		<widget source="Statustext" render="Label" position="86,600" size="115,30" valign="center" halign="left" zPosition="10" font="Regular;21" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="246,607" zPosition="10" size="15,16" alphatest="blend" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
 </skin>
-
 

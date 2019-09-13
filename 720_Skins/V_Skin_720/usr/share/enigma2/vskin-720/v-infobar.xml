@@ -1,12 +1,12 @@
 
 <skin>
 	<!-- InfoBar -->
-	<!--  https://github.com/openatv/enigma2/blob/master/lib/python/Screens/InfoBar.py -->
+	<!-- /lib/python/Screens/InfoBar.py -->
 	<!-- First Info Bar (ok button)-->
 	<screen name="infobar-header">
 		<ePixmap pixmap="v-infobars/header.png" position="0,0" size="1134,105" alphatest="blend" zPosition="1" />
 		<panel position="8,28" size="90,55">
-	               <panel name="main-logo" zPosition="2"/>
+			<panel name="main-logo" zPosition="2" />
 		</panel>
 		<widget source="session.Event_Now" render="Label" position="112,61" size="90,35" font="Regular;26" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="left" transparent="1" zPosition="2">
 			<convert type="EventTime">StartTime</convert>
@@ -26,20 +26,19 @@
 		<widget source="session.CurrentService" render="Label" position="372,61" size="625,35" font="Regular;26" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<!-- current picon -->
 		<widget source="session.CurrentService" render="Slyk18Picon" position="1021,27" size="100,60" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-
 	</screen>
 	
 	<screen name="infobar-channel">
-		<widget source="session.Event_Now" render="Label"  position="112,17" size="800,40" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2" >
+		<widget source="session.Event_Now" render="Label" position="112,17" size="800,40" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
 	</screen>
+	
 	<screen name="secondinfobar-channel">
-		<widget name="channel" position="112,17" size="800,40" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2" >
+		<widget name="channel" position="112,17" size="800,40" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="left" noWrap="1" transparent="1" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
 	</screen>
@@ -53,12 +52,11 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
-
+	
 	<screen name="infobar-main">
-		<!-- <ePixmap pixmap="v-infobars/background.png" position="0,0" size="1134,55" alphatest="blend" zPosition="-1" /> -->
 		<eLabel position="0,0" size="1134,55" backgroundColor="infobarBlack" transparent="0" zPosition="1" />
 		<ePixmap pixmap="v-infobars/up-next.png" position="112,16" size="77,22" alphatest="blend" zPosition="2" />
-		<widget source="session.Event_Next" render="Label" position="199,0" size="794,55" font="Regular;25" foregroundColor="fg3" backgroundColor="infobarBlack" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" >
+		<widget source="session.Event_Next" render="Label" position="199,0" size="794,55" font="Regular;25" foregroundColor="fg3" backgroundColor="infobarBlack" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<ePixmap pixmap="v-buttons/key_info.png" position="1020,14" size="38,30" alphatest="blend" zPosition="2" />
@@ -75,11 +73,11 @@
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<ePixmap pixmap="v-infobars/up-next.png" position="112,207" size="77,22" alphatest="blend" zPosition="2" />
-		<widget source="session.Event_Next" render="Label" position="199,e-55" size="794,55" font="Regular;25" foregroundColor="fg3" backgroundColor="infobarBlack" valign="center" halign="left" noWrap="1" transparent="1" >
+		<widget source="session.Event_Next" render="Label" position="199,e-55" size="794,55" font="Regular;25" foregroundColor="fg3" backgroundColor="infobarBlack" valign="center" halign="left" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<eLabel text="SNR:" position="890,205" size="70,30" font="Regular;14" backgroundColor="infobarBlack" foregroundColor="fg1" valign="center" halign="left" transparent="1" zPosition="2" />
-		<widget source="session.FrontendStatus" render="Label" position="890,205" size="70,30" font="Regular;14" foregroundColor="fg1" backgroundColor="infobarBlack" valign="center" halign="right" noWrap="1" transparent="1" >
+		<widget source="session.FrontendStatus" render="Label" position="890,205" size="70,30" font="Regular;14" foregroundColor="fg1" backgroundColor="infobarBlack" valign="center" halign="right" noWrap="1" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<ePixmap pixmap="v-buttons/key_ok.png" position="1091,205" size="30,30" alphatest="blend" zPosition="2" />
@@ -183,7 +181,7 @@
 	</screen>
 	
 	<!-- infoBarGenerics -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/InfoBarGenerics.py -->
+	<!-- /lib/python/Screens/InfoBarGenerics.py -->
 	<screen name="SecondInfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 		<panel position="73,317" size="1134,105">
 			<panel name="infobar-header" />
@@ -204,11 +202,10 @@
 	<!-- quick epg info bar - Infobar Menu option single epg < > -->
 	<screen name="quickepg-header">
 		<ePixmap pixmap="v-infobars/header.png" position="0,0" size="1134,50" alphatest="blend" zPosition="1" />
-		
 		<panel position="8,10" size="48,30">
-		       <panel name="main-logo-sm" />
-                </panel>
-		<widget source="Service" render="Label" position="112,0" size="800,50" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="center" halign="left" noWrap="1" transparent="1"  zPosition="2">
+			<panel name="main-logo-sm" />
+		</panel>
+		<widget source="Service" render="Label" position="112,0" size="800,50" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="917,0" size="80,50" font="Regular;26" foregroundColor="white" backgroundColor="infobarHead" valign="center" halign="right" noWrap="1" transparent="1" zPosition="2">
@@ -218,7 +215,6 @@
 	
 	<screen name="quickepg-main">
 		<ePixmap pixmap="v-infobars/quickepg-bg.png" position="0,0" size="1134,160" alphatest="blend" zPosition="-1" />
-		
 		<widget name="list" position="112,19" size="885,90" selectionPixmap="v-selectbars/selectbar-42-1280-square.png" itemHeight="30" EventFontInfobar="Regular;22" foregroundColor="fg1" backgroundColor="infobarBlack" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" valign="center" halign="left" transparent="1" zPosition="2" />
 		<widget source="Service" render="Slyk18Picon" position="1021,19" size="100,60" alphatest="blend" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
@@ -281,8 +277,7 @@
 		<panel position="68,503" size="104,46">
 			<panel name="quickepg-icons1" />
 		</panel>
-		 <applet type="onLayoutFinish">self["list"].instance.setItemHeight(30)</applet>
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(30)</applet>
 	</screen>
 </skin>
-
 

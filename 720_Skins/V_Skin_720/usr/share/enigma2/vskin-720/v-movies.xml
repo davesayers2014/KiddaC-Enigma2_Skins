@@ -1,6 +1,5 @@
 
 <skin>
-	
 	<!-- /lib/python/Screens/MovieSelection.py -->
 	<screen name="MovieSelection" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="vbackground" />
@@ -29,8 +28,7 @@
 		<widget source="Service" render="Label" position="922,346" size="270,28" font="Regular;22" foregroundColor="fg2" backgroundColor="bg-mm-dark" noWrap="1" valign="top" halign="left" transparent="1" zPosition="3">
 			<convert type="EventName">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap"
-                 position="922,378" size="281,217" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="top" halign="left" transparent="1" zPosition="3">
+		<widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="922,378" size="281,217" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="top" halign="left" transparent="1" zPosition="3">
 			<convert type="Slyk18MovieInfo">MetaDescription</convert>
 		</widget>
 		<widget source="Service" render="Slyk18Picon" position="922,600" size="100,60" alphatest="blend" transparent="1" zPosition="2">
@@ -57,33 +55,29 @@
 	
 	<screen name="MoviePlayer" position="0,0" size="1280,720" backgroundColor="transparent" title="InfoBar" flags="wfNoBorder">
 		<panel position="73,432" size="1134,105">
-		        <ePixmap pixmap="v-infobars/header.png" position="0,0" size="1134,105" alphatest="blend" zPosition="1" />
-	                <panel position="8,28" size="90,55">
-	                         <panel name="main-logo" zPosition="2"/>
-	 	        </panel>
-	 	        
-	 	
+			<ePixmap pixmap="v-infobars/header.png" position="0,0" size="1134,105" alphatest="blend" zPosition="1" />
+			<panel position="8,28" size="90,55">
+				<panel name="main-logo" zPosition="2" />
+			</panel>
 			<widget source="session.CurrentService" render="Label" position="112,17" size="800,40" font="Regular;32" foregroundColor="fg1" backgroundColor="infobarHead" transparent="1" valign="top" halign="left" noWrap="1" zPosition="2">
 				<convert type="ServiceName">Name</convert>
 			</widget>
-			
 			<widget source="session.Event_Now" render="Label" position="112,61" size="90,35" font="Regular;26" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="left" transparent="1" zPosition="2">
-                                 <convert type="EventTime">StartTime</convert>
-			         <convert type="ClockToText">Format:%H.%M -</convert>
-	        	</widget>
-		         <widget source="session.Event_Now" render="Label" position="199,61" size="72,35" font="Regular;26" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="center" transparent="1" zPosition="2">
-		         	<convert type="EventTime">EndTime</convert>
-		          	<convert type="ClockToText">Format:%H:%M</convert>
-	            	</widget>
-	             	<widget source="global.CurrentTime" render="Label" position="917,21" size="80,36" font="Regular;26" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2">
-		        	<convert type="ClockToText">Format:%H:%M</convert>
-	          	</widget>
+				<convert type="EventTime">StartTime</convert>
+				<convert type="ClockToText">Format:%H.%M -</convert>
+			</widget>
+			<widget source="session.Event_Now" render="Label" position="199,61" size="72,35" font="Regular;26" foregroundColor="fg2" backgroundColor="infobarHead" noWrap="1" valign="top" halign="center" transparent="1" zPosition="2">
+				<convert type="EventTime">EndTime</convert>
+				<convert type="ClockToText">Format:%H:%M</convert>
+			</widget>
+			<widget source="global.CurrentTime" render="Label" position="917,21" size="80,36" font="Regular;26" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2">
+				<convert type="ClockToText">Format:%H:%M</convert>
+			</widget>
 			<eLabel text="Recording" position="372,61" size="625,35" font="Regular;26" foregroundColor="fg1" backgroundColor="infobarHead" valign="top" halign="right" noWrap="1" transparent="1" zPosition="2" />
-			 <!-- current picon -->
+			<!-- current picon -->
 			<widget source="session.CurrentService" render="Slyk18Picon" position="1021,27" size="100,60" alphatest="blend" zPosition="2">
 				<convert type="MovieReference">Reference</convert>
 			</widget>
-			
 			<panel name="infobar-extras" />
 		</panel>
 		<panel position="73,537" size="1135,55">
@@ -91,17 +85,15 @@
 			<eLabel text="Hold &lt; &gt; to Seek. 0 to Set Marker." position="112,0" size="794,55" font="Regular;25" foregroundColor="fg3" backgroundColor="infobarBlack" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
 			<ePixmap pixmap="v-buttons/key_info.png" position="1083,14" size="38,30" alphatest="blend" zPosition="2" />
 		</panel>
-		
-                <panel position="57,592" size="1166,75">
- 	                <ePixmap position="178,11" size="810,13" pixmap="v-icons/slider-bg.png" alphatest="blend" zPosition="1" />
-		        <ePixmap pixmap="v-backgrounds/playbar.png" position="0,0" size="1170,80" alphatest="blend" zPosition="2" />
- 	                <widget name="statusicon" position="644,44" size="31,24" pixmaps="v-icons/play.png,v-icons/pause.png,v-icons/stop.png,v-icons/forward.png,v-icons/backward.png,v-icons/slow.png" alphatest="blend" zPosition="5" />
+		<panel position="57,592" size="1166,75">
+			<ePixmap position="178,11" size="810,13" pixmap="v-icons/slider-bg.png" alphatest="blend" zPosition="1" />
+			<ePixmap pixmap="v-backgrounds/playbar.png" position="0,0" size="1170,80" alphatest="blend" zPosition="2" />
+			<widget name="statusicon" position="644,44" size="31,24" pixmaps="v-icons/play.png,v-icons/pause.png,v-icons/stop.png,v-icons/forward.png,v-icons/backward.png,v-icons/slow.png" alphatest="blend" zPosition="5" />
 			<widget name="speed" position="605,40" size="34,30" font="Regular;28" foregroundColor="fg1" backgroundColor="black" valign="top" halign="right" transparent="1" zPosition="6" />
-	
-		        <widget source="session.CurrentService" render="Label" position="1037,2" size="100,30" font="Regular;28" foregroundColor="white" backgroundColor="playbar" valign="center" halign="right" transparent="1" zPosition="6">
+			<widget source="session.CurrentService" render="Label" position="1037,2" size="100,30" font="Regular;28" foregroundColor="white" backgroundColor="playbar" valign="center" halign="right" transparent="1" zPosition="6">
 				<convert type="ServicePosition">Length</convert>
 			</widget>
-				<widget source="session.CurrentService" render="Label" position="500,40" size="100,30" font="Regular;28" foregroundColor="white" backgroundColor="black" valign="top" halign="left" transparent="1" zPosition="6">
+			<widget source="session.CurrentService" render="Label" position="500,40" size="100,30" font="Regular;28" foregroundColor="white" backgroundColor="black" valign="top" halign="left" transparent="1" zPosition="6">
 				<convert type="ServicePosition">Summary</convert>
 			</widget>
 			<widget source="session.CurrentService" render="Progress" position="178,11" size="810,13" zPosition="2" pixmap="v-icons/slider.png" transparent="1">
@@ -129,5 +121,4 @@
 		<ePixmap position="c-135,21" size="270,13" pixmap="v-icons/slider-bg.png" alphatest="blend" zPosition="-2" />
 	</screen>
 </skin>
-
 

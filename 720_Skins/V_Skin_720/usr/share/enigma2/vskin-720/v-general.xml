@@ -1,20 +1,17 @@
 
-
 <skin>
 	<!-- AudioSelection -->
 	<!--lib/python/Screens/AudioSelection.py -->
 	<!-- audio button -->
 	<screen name="AudioSelection" position="center,center" size="668,447">
-	        <ePixmap pixmap="div-h.png" position="0,49" size="668,2" alphatest="blend" />
+		<ePixmap pixmap="div-h.png" position="0,49" size="668,2" alphatest="blend" />
 		<ePixmap pixmap="div-h.png" position="0,99" size="668,2" alphatest="blend" />
 		<ePixmap pixmap="div-h.png" position="0,149" size="668,2" alphatest="blend" />
 		<ePixmap pixmap="div-h.png" position="0,199" size="668,2" alphatest="blend" />
 		<ePixmap pixmap="div-h.png" position="0,249" size="668,2" alphatest="blend" />
 		<ePixmap pixmap="div-h.png" position="0,299" size="668,2" alphatest="blend" />
 		<ePixmap pixmap="div-h.png" position="0,349" size="668,2" alphatest="blend" />
-		
 		<widget name="config" position="45,0" size="622,200" font="Regular;22" secondfont="Regular;22" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
-		
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="10,12" size="35,28" alphatest="blend" zPosition="2">
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -27,8 +24,7 @@
 		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="10,162" size="35,28" alphatest="blend" zPosition="2">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		
-		<widget source="streams" render="Listbox" position="0,200" size="668,200" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showNever" transparent="1" >
+		<widget source="streams" render="Listbox" position="0,200" size="668,200" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">{"templates":
 				{"default": (50, [
 			
@@ -51,10 +47,9 @@
 		</widget>
 	</screen>
 	
-	
 	<!-- subtitle long press - red button -->
 	<screen name="QuickSubtitlesConfigMenu" position="center,center" size="668,300" title="Subtitle settings">
-		<widget name="config" textOffset="10,0" position="0,0" size="668,300" font="Regular;22" secondfont="Regular;22" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" transparent="1" zPosition="1"  />
+		<widget name="config" textOffset="10,0" position="0,0" size="668,300" font="Regular;22" secondfont="Regular;22" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" transparent="1" zPosition="1" />
 	</screen>
 	
 	<!-- ButtonSetup -->
@@ -66,7 +61,7 @@
 		<ePixmap position="86,543" size="790,2" pixmap="div-h.png" alphatest="blend" />
 		<widget name="choosen" position="86,545" size="790,100" foregroundColor="fg1" backgroundColor="bb-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
 		<widget name="description" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
-        	<ePixmap pixmap="v-buttons/key_exit.png" position="1163,668" size="38,30" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="v-buttons/key_exit.png" position="1163,668" size="38,30" alphatest="blend" zPosition="3" />
 	</screen>
 	
 	<screen name="ButtonSetupSelect" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -121,7 +116,6 @@ self.instance.resize(eSize(*wsize))
 self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
-	
 	<!-- Console -->
 	<!-- /lib/python/Screens/Console.py -->
 	<screen name="Console" position="0,0" size="1280,720" title="Console" flags="wfNoBorder" backgroundColor="transparent">
@@ -129,23 +123,22 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="text" position="86,144" size="795,511" font="Console;16" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="3" />
 	</screen>
 	
-
 	<!-- /lib/python/Screens/HarddiskSetup.py  -->
 	<screen name="HarddiskSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template1-des-pig" />
 		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
 		<widget name="model" position="86,285" size="790,50" font="Regular;26" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" transparent="1" zPosition="2" />
-		<widget name="capacity" position="86,335" size="790,50" font="Regular;26" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" transparent="1" zPosition="2"  />
+		<widget name="capacity" position="86,335" size="790,50" font="Regular;26" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" transparent="1" zPosition="2" />
 		<widget name="bus" position="86,385" size="790,50" font="Regular;26" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" transparent="1" zPosition="2" />
-	        <panel name="New-Buttons-Bot" />
+		<panel name="New-Buttons-Bot" />
 	</screen>
 	
 	<!-- HarddiskSetup -->
 	<screen name="HarddiskSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template1-des-pig" />
 		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
-		<widget name="hddlist" textOffset="86,8" position="0,285" size="950,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="50" scrollbarMode="showNever" transparent="1"  zPosition="2" />
-                <ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-35" size="1280,35" alphatest="blend" zPosition="10" />
+		<widget name="hddlist" textOffset="86,8" position="0,285" size="950,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="50" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-35" size="1280,35" alphatest="blend" zPosition="10" />
 	</screen>
 	
 	<!-- infoBarGenerics -->
@@ -153,7 +146,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<screen name="BufferIndicator" title="Channel" position="c-160,45" size="320,35" backgroundColor="transparent" flags="wfNoBorder">
 		<widget name="status" position="0,0" size="320,35" font="Regular;26" foregroundColor="fg1" backgroundColor="transparent" borderColor="black" borderWidth="2" valign="center" halign="center" transparent="1" zPosition="100" />
 	</screen>
-	
 	
 	<screen name="NumberZap" position="108,593" size="240,81" backgroundColor="messagebox-bg" flags="wfNoBorder">
 		<widget name="number" position="15,5" size="210,38" font="Regular;25" foregroundColor="fg1" backgroundColor="messagebox-bg" borderWidth="0" valign="center" halign="center" transparent="1" zPosition="1" />
@@ -177,7 +169,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<screen name="InputDeviceSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template1-des-pig" />
 		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" />
-		
 		<widget source="list" render="Listbox" position="0,285" size="907,420" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-60-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">{"template": [
 			                                                   MultiContentEntryPixmapAlphaBlend(pos = (86, 1`), size = (48, 48), png = 2), # index 2 is the interface pixmap
@@ -203,8 +194,8 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<!-- /lib/python/Screens/Ipkg.py -->
 	<screen name="Ipkg" position="center,center" size="550,120">
 		<widget name="activityslider" position="0,0" size="550,5" pixmap="v-progressbars/progress-550-5.png" zPosition="3" />
-		<widget name="package" position="10,30" size="550,25" font="Regular;18" foregroundColor="fg1" backgroundColor="messagebox-bg" noWrap="1" transparent="1"  />
-		<widget name="status" position="10,60" size="550,45" font="Regular;18" foregroundColor="fg1" backgroundColor="messagebox-bg" noWrap="1" transparent="1"  />
+		<widget name="package" position="10,30" size="550,25" font="Regular;18" foregroundColor="fg1" backgroundColor="messagebox-bg" noWrap="1" transparent="1" />
+		<widget name="status" position="10,60" size="550,45" font="Regular;18" foregroundColor="fg1" backgroundColor="messagebox-bg" noWrap="1" transparent="1" />
 		<widget name="slider" position="10,100" size="530,15" pixmap="v-progressbars/progress-550-15.png" borderWidth="1" borderColor="white" zPosition="3" />
 	</screen>
 	
@@ -230,22 +221,14 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<!-- /lib/python/Screens/LocationBox.py -->
 	<screen name="LocationBox" position="0,0" size="1280,720" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		
 		<widget name="text" position="86,143" size="795,28" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
 		<ePixmap position="86,172" size="795,2" pixmap="div-h.png" alphatest="blend" />
-		
 		<widget name="target" position="86,180" size="595,28" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-		
 		<widget name="targetfreespace" position="681,180" size="195,28" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="right" transparent="1" />
-		
-		<widget name="filelist" position="86,220" size="790,300" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showOnDemand" selectionDisabled="1" enableWrapAround="1" transparent="1" zPosition="1"  />
-	
+		<widget name="filelist" position="86,220" size="790,300" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showOnDemand" selectionDisabled="1" enableWrapAround="1" transparent="1" zPosition="1" />
 		<ePixmap position="86,543" size="790,2" pixmap="div-h.png" alphatest="blend" />
-		
-		<widget name="booklist" textOffset="10,12" position="86,545" size="790,100" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2"  />
- 	
-                <panel name="New-Buttons-Bot" />
-                	
+		<widget name="booklist" textOffset="10,12" position="86,545" size="790,100" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
 		<ePixmap pixmap="v-buttons/key_plus.png" position="1083,668" size="30,30" alphatest="blend" zPosition="3" />
 		<ePixmap pixmap="v-buttons/key_minus.png" position="1113,668" size="30,30" alphatest="blend" zPosition="3" />
 		<ePixmap pixmap="v-buttons/key_menu.png" position="1163,668" size="38,30" alphatest="blend" zPosition="3" />
@@ -256,7 +239,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<!-- show in extensions -->
 	<screen name="LogManager" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Log Manager">
 		<panel name="v-template2-pig" />
-		<widget name="list" position="86,143" size="795,510" font="Regular; 22" iconMargin="5" foregroundColor="fg1"  backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="5" />
+		<widget name="list" position="86,143" size="795,510" font="Regular; 22" iconMargin="5" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="5" />
 		<panel name="New-Buttons-Bot" />
 		<panel name="OKButton" />
 		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(50)</applet>
@@ -264,18 +247,18 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	
 	<screen name="LogManagerViewLog" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Log Manager">
 		<panel name="v-template2-pig" />
-		<widget name="list" position="86,143" size="795,470" font="Console;12"  foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="3"/>
+		<widget name="list" position="86,143" size="795,470" font="Console;12" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="3" />
 		<panel name="New-Buttons-Bot" />
 	</screen>
 	
-		<!-- MessageBox -->
+	<!-- MessageBox -->
 	<!-- /lib/python/Screens/MessageBox.py -->
 	<screen name="MessageBox" position="center,center" size="668,10" title="Message" backgroundColor="messagebox-bg">
 		<widget name="text" position="66,6" size="602,0" font="Regular;22" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="5,5" size="50,50" alphatest="blend" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,5" size="50,50" alphatest="blend" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="5,5" size="50,50" alphatest="blend" />
-		<widget name="list" font="Regular;22" textOffset="10,2" position="100,100" backgroundColor="messagebox-bg" transparent="1" size="520,0" itemHeight="30"/>
+		<widget name="list" font="Regular;22" textOffset="10,2" position="100,100" backgroundColor="messagebox-bg" transparent="1" size="520,0" itemHeight="30" />
 		<applet type="onLayoutFinish">from enigma import getDesktop, eSize, ePoint
 import math
 desktop_w = getDesktop(0).size().width()
@@ -326,11 +309,10 @@ wsize = (wsizex, wsizey)
 self.instance.resize(eSize(*wsize))
 self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
-		
+	
 	<screen name="MessageBoxSimple" position="center,center" size="668,10" title="Message" backgroundColor="messagebox-bg">
 		<panel name="MessageBox" />
 	</screen>
-	
 	
 	<!-- MinuteInput -->
 	<!-- /lib/python/Screens/MinuteInput.py -->
@@ -338,7 +320,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="minutes" position="0,15" size="200,30" valign="center" halign="center" font="Regular;23" transparent="1" />
 	</screen>
 	
-		
 	<!-- Mute -->
 	<screen name="Mute" flags="wfNoBorder" position="e-95,20" size="75,75" zPosition="10" backgroundColor="transparent">
 		<ePixmap pixmap="v-icons/mute.png" position="0,0" size="75,75" alphatest="blend" />
@@ -346,14 +327,14 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	
 	<screen name="Multiboot" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
-                <widget source="labe14" render="Label" position="922,285" size="278,26" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
-                <widget source="labe15" render="Label" position="922,312" size="278,53" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+		<widget source="labe14" render="Label" position="922,285" size="278,26" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+		<widget source="labe15" render="Label" position="922,312" size="278,53" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 	</screen>
 	
 	<screen name="Multiboot Image Selector" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
-                <widget source="description" render="Label" position="922,285" size="278,26" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
-                <widget source="options"     render="Label" position="922,312" size="278,53" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+		<widget source="description" render="Label" position="922,285" size="278,26" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+		<widget source="options" render="Label" position="922,312" size="278,53" font="Regular;22" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 	</screen>
 	
 	<!-- NumericalTextInputHelpDialog -->
@@ -371,7 +352,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<ePixmap pixmap="buttons/key_9.png" position="830,6" size="35,28" zPosition="10" alphatest="blend" />
 		<ePixmap pixmap="buttons/key_0.png" position="930,6" size="35,28" zPosition="10" alphatest="blend" />
 		<ePixmap pixmap="buttons/key_text.png" position="1123,6" size="35,28" zPosition="10" alphatest="blend" />
-		
 		<widget name="key1" position="65,e-40" size="70,40" font="Regular;12" foregroundColor="fg1" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="12" />
 		<widget name="key2" position="165,e-40" size="70,40" font="Regular;12" foregroundColor="fg1" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="12" />
 		<widget name="key3" position="265,e-40" size="70,40" font="Regular;12" foregroundColor="fg1" backgroundColor="black" valign="center" halign="left" transparent="1" zPosition="12" />
@@ -390,7 +370,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<!-- timeshift PVR screens -->
 	<screen name="TimeshiftState" position="0,0" size="1280,720" backgroundColor="transparent" title="InfoBar" flags="wfNoBorder">
 		<panel position="55,592" size="1170,80">
-		       	<widget name="PTSSeekBack" position="178,11" size="810,13" pixmap="v-icons/slider-bg.png" alphatest="blend" zPosition="1" />
+			<widget name="PTSSeekBack" position="178,11" size="810,13" pixmap="v-icons/slider-bg.png" alphatest="blend" zPosition="1" />
 			<ePixmap pixmap="v-backgrounds/playbar.png" position="0,0" size="1170,80" alphatest="blend" zPosition="2" />
 			<widget name="statusicon" position="644,44" size="31,24" pixmaps="v-icons/play.png,v-icons/pause.png,v-icons/stop.png,v-icons/forward.png,v-icons/backward.png,v-icons/slow.png" alphatest="blend" zPosition="5" />
 			<widget name="speed" position="605,40" size="34,30" font="Regular;28" foregroundColor="fg1" backgroundColor="black" valign="top" halign="right" transparent="1" zPosition="6" />
@@ -400,7 +380,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 			<widget source="session.CurrentService" render="Label" position="500,40" size="100,30" font="Regular;28" foregroundColor="white" backgroundColor="black" valign="top" halign="left" transparent="1" zPosition="6">
 				<convert type="ServicePosition">Summary</convert>
 			</widget>
-		
 			<widget source="session.CurrentService" render="Progress" position="178,11" size="810,13" zPosition="2" pixmap="v-icons/slider.png" transparent="1">
 				<convert type="ServicePosition">Position</convert>
 			</widget>
@@ -430,27 +409,25 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
 	<screen name="ParentalControlChangePin" position="center,center" size="500,80">
-		<widget name="config" textOffset="5,0" position="10,10" size="480,60" font="Regular;22" secondfont="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" itemHeight="30" transparent="1"/>
+		<widget name="config" textOffset="5,0" position="10,10" size="480,60" font="Regular;22" secondfont="Regular;22" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" itemHeight="30" transparent="1" />
 	</screen>
-		
+	
 	<!-- PiPSetup -->
 	<!-- /lib/python/Screens/PiPSetup.py -->
-		<screen name="PiPSetup" position="center,center" size="800,200" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1" title="PiPSetup">
-		<widget name="text" position="0,0" size="800,200"  backgroundColor="transparent" transparent="1" font="Regular;22" valign="center" halign="center" />
+	<screen name="PiPSetup" position="center,center" size="800,200" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1" title="PiPSetup">
+		<widget name="text" position="0,0" size="800,200" backgroundColor="transparent" transparent="1" font="Regular;22" valign="center" halign="center" />
 	</screen>
-		
+	
 	<!-- Plugin Browser -->
 	<screen name="PluginBrowser" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="Plugin browser">
 		<panel name="v-template2-pig" />
 		<widget name="list" position="0,143" size="876,585" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-876-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="50" enableWrapAround="1" transparent="1" />
-
-               <panel position="458,100" size="0,30">
+		<panel position="458,100" size="0,30">
 			<panel name="Red-New-Button" />
 		</panel>
 		<panel position="682,100" size="0,30">
 			<panel name="Green-New-Button" />
 		</panel>
-                
 		<ePixmap pixmap="v-buttons/key_ok.png" position="1163,668" size="35,30" alphatest="blend" zPosition="3" />
 		<ePixmap pixmap="v-buttons/key_menu.png" position="1105,668" size="38,30" alphatest="blend" zPosition="3" />
 		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-35" size="1280,35" alphatest="blend" zPosition="10" />
@@ -462,15 +439,15 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="list" position="0,143" size="876,585" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-876-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="50" enableWrapAround="1" transparent="1" />
 		<ePixmap pixmap="v-buttons/key_ok.png" position="1163,668" size="35,30" alphatest="blend" zPosition="3" />
 		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-35" size="1280,35" alphatest="blend" zPosition="10" />
-                <panel name="OKButton" />
+		<panel name="OKButton" />
 	</screen>
 	
 	<!-- tuner configuration - selected -->
 	<screen name="NimSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-	        <panel name="Setup-Default" />
+		<panel name="Setup-Default" />
 		<panel name="description" />
 	</screen>
-		
+	
 	<!--  Satconfig -->
 	<!--/lib/python/Screens/Satconfig.py -->
 	<!-- tuner configuration -->
@@ -491,7 +468,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<!-- tuner configuration - Mode - Positioner (selecting satellites) -->
 	<screen name="SelectSatsEntryScreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="list" position="86,144" size="790,510"  font="Regular;22"  scrollbarMode="showOnDemand"  enableWrapAround="1" zPosition="2" itemHeight="50" />
+		<widget name="list" position="86,144" size="790,510" font="Regular;22" scrollbarMode="showOnDemand" enableWrapAround="1" zPosition="2" itemHeight="50" />
 		<widget name="hint" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 		<panel name="New-Buttons-Bot" />
 		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(50)</applet>
@@ -503,7 +480,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<panel name="Setup-Default" />
 		<widget name="introduction" position="922,285" size="278,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 	</screen>
-		
+	
 	<!-- automatic scan -->
 	<screen name="ScanSimple" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="Setup-Default" />
@@ -529,30 +506,29 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget name="network"       position="186,152" size="690,24" font="Regular;21" valign="center" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
-		<widget name="transponder"   position="186,184" size="690,24" font="Regular;21" foregroundColor="fg2" backgroundColor="bg-mm-dark" transparent="1" />
-		<widget name="scan_state"    position="86,226" size="795,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2" />
-		<widget name="pass"          position="86,250" size="795,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2"  />
+		<widget name="network" position="186,152" size="690,24" font="Regular;21" valign="center" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget name="transponder" position="186,184" size="690,24" font="Regular;21" foregroundColor="fg2" backgroundColor="bg-mm-dark" transparent="1" />
+		<widget name="scan_state" position="86,226" size="795,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2" />
+		<widget name="pass" position="86,250" size="795,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2" />
 		<widget name="scan_progress" position="86,274" size="790,20" pixmap="v-progressbars/progress-790-20.png" borderWidth="1" borderColor="white" />
-		<widget name="servicelist"   position="86,304" size="790,324" font="Regular;18" selectionDisabled="1" foregroundColor="fg1" backgroundColor="bg-mm-dark" itemHeight="25" transparent="1" />
+		<widget name="servicelist" position="86,304" size="790,324" font="Regular;18" selectionDisabled="1" foregroundColor="fg1" backgroundColor="bg-mm-dark" itemHeight="25" transparent="1" />
 		<panel name="New-Buttons-Bot" />
 	</screen>
 	
-		<screen name="CableScanScreen" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="CableScanScreen" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 		<panel name="Setup-Default" />
 		<panel name="OKButton" />
 		<panel name="introduction" />
 	</screen>
 	
 	<screen name="CableScanStatus" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-               	<panel name="v-template2-pig" />
-	        <widget name="frontend" position="86,144" size="64,64" pixmap="icons/scan-c.png"  transparent="1" alphatest="blend" zPosition="3" />
-                <widget name="scan_state" position="86,226" size="795,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2" />
-                <widget name="scan_progress" position="86,274" size="790,20" pixmap="v-progressbars/progress-790-20.png" borderWidth="1" borderColor="white" />
-	     	<panel name="New-Buttons-Bot" />
+		<panel name="v-template2-pig" />
+		<widget name="frontend" position="86,144" size="64,64" pixmap="icons/scan-c.png" transparent="1" alphatest="blend" zPosition="3" />
+		<widget name="scan_state" position="86,226" size="795,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" zPosition="2" />
+		<widget name="scan_progress" position="86,274" size="790,20" pixmap="v-progressbars/progress-790-20.png" borderWidth="1" borderColor="white" />
+		<panel name="New-Buttons-Bot" />
 	</screen>
 	
-		
 	<!-- Screensaver -->
 	<!-- /lib/python/Screens/ScreenSaver.py -->
 	<screen name="Screensaver" position="fill" flags="wfNoBorder">
@@ -560,20 +536,18 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="picture" pixmap="v-backgrounds/screensaver.png" position="0,0" size="300,165" alphatest="blend" zPosition="1" />
 	</screen>
 	
-
-       	<!-- ##SkinSelector## -->
+	<!-- ##SkinSelector## -->
 	<!-- /lib/python/Plugins/SystemPlugins/SkinSelector/plugin.py -->
 	<screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template1-des-pig" />
 		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,251" size="914,468" alphatest="blend" zPosition="1" />
-		<widget name="SkinList" textOffset="86,8" position="0,285" size="950,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="50" valign="center" enableWrapAround="1" scrollbarMode="showNever"  transparent="1" zPosition="2" />
+		<widget name="SkinList" textOffset="86,8" position="0,285" size="950,435" font="Regular;24" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="50" valign="center" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
 		<widget name="Preview" position="922,285" size="280,210" />
 		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-35" size="1280,35" alphatest="blend" zPosition="10" />
-                <panel name="New-Buttons-Top" />
-                <panel name="OKButton" />
-	
+		<panel name="New-Buttons-Top" />
+		<panel name="OKButton" />
 	</screen>
-
+	
 	<!-- SleepTimerEdit via standby menu -->
 	<!-- /lib/python/Screens/SleepTimerEdit.py -->
 	<screen name="SleepTimerEdit" position="center,center" size="500,140" title="Sleep Timer" backgroundColor="messagebox-bg">
@@ -588,22 +562,22 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
 	<screen name="Standby" flags="wfNoBorder" position="fill" title="Standby" backgroundColor="black" />
-
+	
 	<screen name="QuitMainloopScreen" flags="wfNoBorder" position="fill">
 		<ePixmap pixmap="v-backgrounds/reboot.jpg" position="0,0" size="1280,720" alphatest="blend" zPosition="10" />
-		<widget name="text" position="center,520" size="720,100" font="Regular;22" foregroundColor="fg1" backgroundColor="reboot"  halign="center" transparent="1" zPosition="11" />
+		<widget name="text" position="center,520" size="720,100" font="Regular;22" foregroundColor="fg1" backgroundColor="reboot" halign="center" transparent="1" zPosition="11" />
 	</screen>
 	
 	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-2" flags="wfNoBorder" backgroundColor="transparent" />
 	
-        <!-- TaskView -->
+	<!-- TaskView -->
 	<!--/lib/python/Screens/TaskView.py-->
 	<!-- shown on initialise hdd -->
 	<screen name="JobView" position="center,center" size="520,250">
 		<widget source="job_name" render="Label" position="20,0" size="480,60" font="Regular;26" foregroundColor="fg1" backgroundColor="messagebox-bg" />
 		<widget source="job_task" render="Label" position="20,30" size="480,50" font="Regular;21" foregroundColor="fg1" backgroundColor="messagebox-bg" />
 		<widget source="job_progress" render="Progress" position="20,62" size="480,36" borderWidth="2" backgroundColor="colour2" />
-		<widget source="job_progress" render="Label" position="20,62" size="480,36" font="Regular;28" foregroundColor="selected" backgroundColor="colour2" valign="center" halign="center" transparent="1" zPosition="2" >
+		<widget source="job_progress" render="Label" position="20,62" size="480,36" font="Regular;28" foregroundColor="selected" backgroundColor="colour2" valign="center" halign="center" transparent="1" zPosition="2">
 			<convert type="JobView" />
 		</widget>
 		<widget source="job_status" render="Label" position="20,112" size="480,26" font="Regular;21" foregroundColor="fg1" backgroundColor="messagebox-bg" />
@@ -653,7 +627,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="mode" position="594,312" size="40,22" font="Regular;14" halign="right" transparent="1" valign="center" />
 		<widget name="language" position="0,0" size="0,0" font="Regular;14" transparent="1" />
 	</screen>
-
 	
 	<!-- Volume -->
 	<screen name="Volume" position="center,20" zPosition="10" size="450,75" title="Volume" flags="wfNoBorder" backgroundColor="transparent">
@@ -661,10 +634,9 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="Volume" pixmap="v-icons/volume-bar.png" position="95,34" size="260,6" alphatest="blend" zPosition="12" />
 		<widget render="VolumeText" source="global.CurrentTime" position="375,0" size="75,75" font="Regular;24" foregroundColor="white" backgroundColor="black" halign="center" valign="center" zPosition="13" transparent="1" />
 	</screen>
-
+	
 	<screen name="Subtitles" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
 		<panel name="Setup-Default" />
 	</screen>
 </skin>
-
 

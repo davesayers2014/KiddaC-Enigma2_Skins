@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
 <skin>
 	<!--/lib/python/Screens/NetworkSetup.py -->
 	<!-- This screen appears only if you have multiple network adapters. LAN and a wireless -->

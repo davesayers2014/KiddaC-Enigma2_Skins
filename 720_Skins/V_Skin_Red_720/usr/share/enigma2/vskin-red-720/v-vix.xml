@@ -70,12 +70,12 @@
 	</screen>
 	
 	<screen name="VIXStartCam" position="center,center" size="484,150" title="Starting Softcam">
-		<widget name="connect" position="202,0" size="80,80" zPosition="2" pixmaps="/usr/share/enigma2/vskin-720/spinner/wait1.png,/usr/share/enigma2/vskin-720/spinner/wait2.png,/usr/share/enigma2/vskin-720/spinner/wait3.png,/usr/share/enigma2/vskin-720/spinner/wait4.png,/usr/share/enigma2/vskin-720/spinner/wait5.png,/usr/share/enigma2/vskin-720/spinner/wait6.png,/usr/share/enigma2/vskin-720/spinner/wait7.png,/usr/share/enigma2/vskin-720/spinner/wait8.png" transparent="1" alphatest="blend" />
+		<widget name="connect" position="202,0" size="80,80" zPosition="2" pixmaps="/usr/share/enigma2/vskin-red-720/spinner/wait1.png,/usr/share/enigma2/vskin-red-720/spinner/wait2.png,/usr/share/enigma2/vskin-red-720/spinner/wait3.png,/usr/share/enigma2/vskin-red-720/spinner/wait4.png,/usr/share/enigma2/vskin-red-720/spinner/wait5.png,/usr/share/enigma2/vskin-red-720/spinner/wait6.png,/usr/share/enigma2/vskin-red-720/spinner/wait7.png,/usr/share/enigma2/vskin-red-720/spinner/wait8.png" transparent="1" alphatest="blend" />
 		<widget name="lab1" position="10,90" halign="center" size="460,60" font="Regular;21" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="top" transparent="1"  zPosition="1"  />
 	</screen>
 	
 	<screen name="VIXStopCam" position="center,center" size="484,150" title="Starting Softcam">
-		<widget name="connect" position="202,10" size="80,80" zPosition="2" pixmaps="/usr/share/enigma2/vskin-720/spinner/wait1.png,/usr/share/enigma2/vskin-720/spinner/wait2.png,/usr/share/enigma2/vskin-720/spinner/wait3.png,/usr/share/enigma2/vskin-720/spinner/wait4.png,/usr/share/enigma2/vskin-720/spinner/wait5.png,/usr/share/enigma2/vskin-720/spinner/wait6.png,/usr/share/enigma2/vskin-720/spinner/wait7.png,/usr/share/enigma2/vskin-720/spinner/wait8.png" transparent="1" alphatest="blend" />
+		<widget name="connect" position="202,10" size="80,80" zPosition="2" pixmaps="/usr/share/enigma2/vskin-red-720/spinner/wait1.png,/usr/share/enigma2/vskin-red-720/spinner/wait2.png,/usr/share/enigma2/vskin-red-720/spinner/wait3.png,/usr/share/enigma2/vskin-red-720/spinner/wait4.png,/usr/share/enigma2/vskin-red-720/spinner/wait5.png,/usr/share/enigma2/vskin-red-720/spinner/wait6.png,/usr/share/enigma2/vskin-red-720/spinner/wait7.png,/usr/share/enigma2/vskin-red-720/spinner/wait8.png" transparent="1" alphatest="blend" />
 		<widget name="lab1" position="10,90" halign="center" size="460,60" font="Regular;21" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="top" transparent="1"  zPosition="1"  />
 	</screen>
 	
