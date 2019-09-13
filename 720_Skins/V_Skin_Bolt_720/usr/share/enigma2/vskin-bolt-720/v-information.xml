@@ -9,7 +9,7 @@
 		<widget source="lab3" render="Label" position="100,199" size="650,21" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="center" halign="center" transparent="1" zPosition="1" />
 		<widget name="AboutScrollLabel" position="216,241" size="456,320" font="Regular;18" foregroundColor="fg2" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 		<ePixmap pixmap="v-icons/vskin-logo.png" position="296,578" size="93,57" alphatest="blend" />
-		<eLabel text="V-Skin-720 V2.04" position="419,587" size="291,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="1" />
+		<eLabel text="V-Skin-720 V2.05" position="419,587" size="291,24" font="Regular;18" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="1" />
 		<eLabel text="by Kidda C (2018/2019)" position="419,607" size="291,24" font="Regular;14" foregroundColor="fg1" backgroundColor="bg-mm-dark" halign="left" transparent="1" zPosition="1" />
 		<panel name="New-Buttons-Bot" />
 		<ePixmap pixmap="v-buttons/key_info.png" position="1163,668" size="38,30" alphatest="blend" zPosition="3" />
