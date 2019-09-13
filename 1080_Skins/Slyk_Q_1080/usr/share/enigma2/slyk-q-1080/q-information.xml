@@ -12,7 +12,7 @@
 		<panel name="New-Buttons-T1" />
 		<panel name="InfoButton" />
 		<ePixmap pixmap="q-backgrounds/sidebar-246.png" alphatest="blend" position="1515,385" size="324,369" zPosition="1" />
-		<eLabel text="Slyk Q V1.26 \nby Kidda C (2019)\n\nFor the latest version of my skins visit linuxsat-support.com or if you would like to treat me to a beer, paypal.me/kiddac" font="Regular;27" position="1530,397" size="300,330" foregroundColor="white" backgroundColor="midright" halign="left" transparent="1" zPosition="2" />
+		<eLabel text="Slyk Q V1.27 \nby Kidda C (2019)\n\nFor the latest version of my skins visit linuxsat-support.com or if you would like to treat me to a beer, paypal.me/kiddac" font="Regular;27" position="1530,397" size="300,330" foregroundColor="white" backgroundColor="midright" halign="left" transparent="1" zPosition="2" />
 	</screen>
 	
 	<!-- legacy -->
