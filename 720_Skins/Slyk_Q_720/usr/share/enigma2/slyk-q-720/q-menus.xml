@@ -10,7 +10,6 @@
 		<ePixmap pixmap="q-toppicks/tile-bg.png" position="710,516" size="168,221" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/tile-bg.png" position="886,516" size="168,221" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/tile-bg.png" position="1062,516" size="168,221" alphatest="blend" zPosition="2" />
-	
         	<ePixmap pixmap="q-toppicks/toppicks1.jpg" position="361,257" size="160,213" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks2.jpg" position="537,257" size="160,213" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks3.jpg" position="713,257" size="160,213" backgroundColor="mid" transparent="0" zPosition="2" />
@@ -21,7 +20,6 @@
 		<ePixmap pixmap="q-toppicks/toppicks8.jpg" position="713,520" size="160,213" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks9.jpg" position="889,520" size="160,213" backgroundColor="mid" transparent="0" zPosition="2" />
 		<ePixmap pixmap="q-toppicks/toppicks10.jpg" position="1065,520" size="160,213" backgroundColor="mid" transparent="0" zPosition="2" />
-		
 		<eLabel text="Sky Cinema" position="361,214" size="166,32" font="Regular;28" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2" />
 		<eLabel text="Top Picks" position="361,478" size="166,32" font="Regular;28" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="2" />
         </screen>
@@ -34,7 +32,6 @@
 		<panel name="q-title" />
 		<panel name="leftnav" />
 		<panel name="rightnav" />
-		
 		<widget source="menu" render="Listbox" position="60,363" size="242,356" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
                 selectionPixmap="q-selectbars/q-menu.png"  itemHeight="52" font="Regular;22" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="3" >
 			<convert type="TemplatedMultiContent">
@@ -78,9 +75,8 @@
 	<screen name="menu_mainmenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
 	        <panel name="menu-1panel" />
 	</screen>
-        
+
         <!-- settings screens -->
-	
 	<screen name="Setup-Default">
 		<panel name="template1" />
                 <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="360,256" size="668,415" zPosition="1" />
@@ -88,7 +84,7 @@
                  itemHeight="52" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
 		<panel name="New-Buttons-T1" />
  	</screen>
-        
+
 	<screen name="Setup" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
                 <panel name="Setup-Default"/>
 		<panel name="description" />
@@ -137,7 +133,7 @@
 	        <panel name="HelpWindow" />
 		<panel name="VKeyIcon" />
         </screen>
-        
+
        	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
 	</screen>

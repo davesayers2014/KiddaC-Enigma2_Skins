@@ -13,8 +13,8 @@
 		<widget name="AboutScrollLabel" position="100,152" size="720,448" transparent="1" zPosition="1" foregroundColor="white" backgroundColor="bgdarkblue" font="Regular;24" />
 		<eLabel position="904,380" size="315,34" backgroundColor="bgdarkblue" zPosition="-1" />
 		<eLabel text="Slyk 720 V2.11" position="914,380" size="295,34" foregroundColor="white" backgroundColor="bgdarkblue" font="Regular;26" valign="center" halign="center" transparent="1" zPosition="1" />
-		<eLabel text="There are alternative layouts for some screens. These can be editted via extras.xml that lives in my skin folder /usr/share/enigma2/slyk-1080-r19" font="Regular;16" position="914,420" size="295,75" foregroundColor="white" backgroundColor="backgroundmid" zPosition="2" transparent="1" halign="center" />
-		<eLabel text="Slyk 1080 R19\nby Kidda C (2019)\n\nFor the latest version of my skins visit linuxsat-support.com or if you would like to treat me to a beer, paypal.me/kiddac" font="Regular;16" position="914,505" size="295,133" foregroundColor="white" backgroundColor="backgroundmid" zPosition="2" transparent="1" halign="center" />
+		<eLabel text="There are alternative layouts for some screens. These can be editted via extras.xml that lives in my skin folder /usr/share/enigma2/slyk-720-r19" font="Regular;16" position="914,420" size="295,75" foregroundColor="white" backgroundColor="backgroundmid" zPosition="2" transparent="1" halign="center" />
+		<eLabel text="Slyk 720 R19\nby Kidda C (2019)\n\nFor the latest version of my skins visit linuxsat-support.com or if you would like to treat me to a beer, paypal.me/kiddac" font="Regular;16" position="914,505" size="295,133" foregroundColor="white" backgroundColor="backgroundmid" zPosition="2" transparent="1" halign="center" />
 		<panel name="New-Buttons-T2" />
 		<panel name="t2-InfoButton" />
 	</screen>
@@ -85,7 +85,7 @@
 	</screen>
 	
 	<screen name="TranslationInfo" position="center,center" size="600,350" title="Translation Information">
-		<widget source="TranslatorName" render="Label" text="Slyk 1080" position="10,30" size="540,30" font="Bold;24" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3" />
+		<widget source="TranslatorName" render="Label" text="Slyk 720" position="10,30" size="540,30" font="Bold;24" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3" />
 		<widget source="TranslationInfo" render="Label" text="KiddaC\npaypal.me/kiddac\n\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="10,70" size="540,250" font="Regular;20" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3" />
 	</screen>
 	

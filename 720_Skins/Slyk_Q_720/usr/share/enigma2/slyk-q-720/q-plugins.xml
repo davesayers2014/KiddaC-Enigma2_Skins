@@ -2,7 +2,7 @@
 <skin>
 	<!-- DefaultServicesScanner -->
 	<!-- exact same screen as servicescan - (manual scan) -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/DefaultServicesScanner/plugin.py -->
+	<!-- /lib/python/Plugins/SystemPlugins/DefaultServicesScanner/plugin.py -->
 	<screen name="DefaultServiceScan" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="ServiceScan" />
 	</screen>
@@ -158,9 +158,8 @@
 	<!-- Backup Image-->
 	<screen name="ImageBackup" position="0,0" size="1280,720" title="Image Backup" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="Setup-Default" />
-               <widget source="description" render="Label" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
-
-       	</screen>
+		<widget source="description" render="Label" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+	</screen>
 	
 	<!-- software management - install local extension -->
 	<screen name="IpkgInstaller" position="0,0" size="1280,720" title="Install extensions" flags="wfNoBorder" backgroundColor="mid">
@@ -377,8 +376,7 @@
 	
 	<screen name="CrossEPG_Setup" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" zPosition="4">
 		<panel name="Setup-Default" />
-                <widget name="information" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
-
+		<widget name="information" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 	</screen>
 	
 	<!-- AutoBouquetsMaker -->
@@ -596,7 +594,7 @@
 	</screen>
 	
 	<!-- ##CutListEditor## -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/Extensions/CutListEditor/ui.py -->
+	<!-- /lib/python/Plugins/Extensions/CutListEditor/ui.py -->
 	<screen name="CutListEditor" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1" />
 		<eLabel position="344,92" size="653,368" backgroundColor="#000000" />
@@ -717,12 +715,10 @@
 		<panel name="template1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="360,256" size="668,467" zPosition="1" />
 		<widget source="list" render="Listbox" textOffset="10,12" position="360,256" size="668,416" font="Regular;22" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="52" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
-                        <convert type="StringList" />	
+			<convert type="StringList" />
 		</widget>
-		
-                <widget name="label1" position="360,93" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
-                <widget name="label2" position="360,120" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
-
+		<widget name="label1" position="360,93" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+		<widget name="label2" position="360,120" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 		<panel name="New-Buttons-T1" />
 	</screen>
 	
@@ -730,24 +726,20 @@
 		<panel name="template1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="360,256" size="668,467" zPosition="1" />
 		<widget source="list" render="Listbox" textOffset="10,12" position="360,256" size="668,416" font="Regular;22" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="52" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
-                        <convert type="StringList" />
+			<convert type="StringList" />
 		</widget>
-		
-                <widget name="info" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
-
+		<widget name="info" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 		<panel name="New-Buttons-T1" />
 	</screen>
 	
-        <screen name="OMBManagerPreferences" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
+	<screen name="OMBManagerPreferences" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="Setup-Default" />
 	</screen>
 	
-        <screen name="OMBManagerAbout" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+	<screen name="OMBManagerAbout" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1" />
 		<widget name="about" position="360,267" size="620,363" foregroundColor="white" backgroundColor="mid" font="Regular;22" transparent="1" zPosition="1" />
-               	<panel name="New-Buttons-T1" />
- 	</screen>
-	
+		<panel name="New-Buttons-T1" />
+	</screen>
 </skin>
-
 

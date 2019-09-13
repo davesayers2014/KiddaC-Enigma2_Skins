@@ -1,5 +1,4 @@
 
-
 <skin>
 	<!-- AudioSelection -->
 	<!-- /lib/python/Screens/AudioSelection.py -->
@@ -49,7 +48,7 @@
 	</screen>
 	
 	<!-- subtitle long press - red button -->
-	<screen name="QuickSubtitlesConfigMenu" position="center,center" size="668,312" title="Subtitles Settings" >
+	<screen name="QuickSubtitlesConfigMenu" position="center,center" size="668,312" title="Subtitles Settings">
 		<widget name="config" textOffset="10,0" position="0,0" size="668,312" font="Regular;22" secondfont="Regular;22" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="52" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 	</screen>
 	
@@ -71,7 +70,7 @@
 	</screen>
 	
 	<!-- ChoiceBox -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/ChoiceBox.py -->
+	<!-- /lib/python/Screens/ChoiceBox.py -->
 	<screen name="ChoiceBox" position="center,center" size="520,130">
 		<widget name="text" position="0,0" size="520,52" font="Regular;22" />
 		<widget name="list" position="100,100" size="520,0" font="Regular;22" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="52" />
@@ -123,7 +122,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="text" position="360,28" size="890,683" font="Console;16" foregroundColor="white" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 	
-	<!--  https://github.com/openatv/enigma2/blob/master/lib/python/Screens/HarddiskSetup.py  -->
+	<!--  /lib/python/Screens/HarddiskSetup.py  -->
 	<screen name="HarddiskSetup" title="Harddisk Setup" position="center,center" size="560,150" backgroundColor="messageboxbg">
 		<widget name="model" position="0,0" size="380,28" font="Regular;23" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" />
 		<widget name="capacity" position="0,30" size="380,28" font="Regular;23" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" />
@@ -167,13 +166,13 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	
 	<!-- InputBox -->
 	<!-- quick record - set duration -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/InputBox.py -->
+	<!-- /lib/python/Screens/InputBox.py -->
 	<screen name="InputBox" position="center,center" size=" 560, 70" backgroundColor="messageboxbg">
 		<widget name="text" position="10,10" size="540,30" font="Regular;22" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" />
 		<widget name="input" position="10,40" size="540,30" font="Regular;22" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" />
 	</screen>
-
-       	<!-- setup / usage & gui / extended gui /  input devices -->
+	
+	<!-- setup / usage & gui / extended gui /  input devices -->
 	<screen name="InputDeviceSelection" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="360,256" size="668,467" zPosition="1" />
@@ -242,7 +241,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="targetfreespace" position="814,210" size="188,52" font="Regular;22" backgroundColor="mid" foregroundColor="white" noWrap="1" valign="center" halign="right" transparent="1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="345,256" size="652,314" zPosition="1" />
 		<widget name="filelist" position="345,256" size="652,312" font="Regular;22" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="52" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
-		<!-- <widget name="textbook" position="350,531" size="640,30" font="Bold;23" foregroundColor="white" backgroundColor="mid" transparent="1" /> -->
 		<widget name="booklist" textOffset="10,13" position="345,568" size="652,104" offset="35,0" font="Regular;22" foregroundColor="bluetext" backgroundColor="botmid" backgroundColorSelected="select-darkblue-bg" foregroundColorSelected="bluetext" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="52" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
 		<ePixmap pixmap="q-backgrounds/side-1-box.png" alphatest="blend" position="1010,256" size="216,106" zPosition="1" />
 		<eLabel text="Use CH+/- to toggle between the lists.\n\nMenu for more options." position="1020,266" size="200,220" font="Regular;18" foregroundColor="white" backgroundColor="midright" transparent="1" />
@@ -251,7 +249,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
 	<!-- LogManager -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/LogManager.py -->
+	<!-- /lib/python/Screens/LogManager.py -->
 	<!-- show in extensions -->
 	<screen name="LogManager" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid" title="Log Manager">
 		<panel name="template1" />
@@ -332,7 +330,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
 	<!-- MinuteInput -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/MinuteInput.py -->
+	<!-- /lib/python/Screens/MinuteInput.py -->
 	<!-- as found on movies long ff press -->
 	<screen name="MinuteInput" position="center,center" size="200,60" title="Jump to...">
 		<widget name="minutes" position="0,15" size="200,30" valign="center" halign="center" font="Regular;23" transparent="1" />
@@ -340,24 +338,21 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	
 	<screen name="Multiboot" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
-                <widget source="labe14" render="Label" position="360,93" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
-                <widget source="labe15" render="Label" position="360,120" size="668,53" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+		<widget source="labe14" render="Label" position="360,93" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+		<widget source="labe15" render="Label" position="360,120" size="668,53" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 	</screen>
 	
 	<screen name="Multiboot Image Selector" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Setup-Default" />
-                <widget source="description" render="Label" position="360,93" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
-                <widget source="options"     render="Label" position="360,120" size="668,53" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+		<widget source="description" render="Label" position="360,93" size="668,26" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+		<widget source="options" render="Label" position="360,120" size="668,53" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 	</screen>
-
 	
 	<!-- mute -->
 	<screen name="Mute" position="36,36" zPosition="10" size="75,75" backgroundColor="transparent" flags="wfNoBorder">
 		<eLabel position="0,0" size="75,75" backgroundColor="blackglass" transparent="0" zPosition="-1" />
 		<ePixmap position="0,0" size="75,75" pixmap="q-icons/mute.png" transparent="1" alphatest="blend" />
 	</screen>
-	
-
 	
 	<!-- NumericalTextInputHelpDialog -->
 	<!-- input helper text -->
@@ -416,7 +411,6 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<panel name="InfoButton" />
 	</screen>
 	
-	
 	<!-- parental control pin -->
 	<screen name="PinInput" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1" />
@@ -446,38 +440,38 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
 	<!-- PiPSetup -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/PiPSetup.py -->
+	<!-- /lib/python/Screens/PiPSetup.py -->
 	<screen name="PiPSetup" position="center,center" size="800,200" flags="wfNoBorder" backgroundColor="transparent" zPosition="-1" title="PiPSetup">
 		<widget name="text" position="0,0" size="800,200" backgroundColor="transparent" transparent="1" font="Regular;22" valign="center" halign="center" />
 	</screen>
 	
-        <screen name="PluginBrowser" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" title="Plugin browser">
-                <panel name="template1" />
-                <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="360,256" size="668,415" zPosition="1" />
-                <widget name="list" position="360,256" size="668,416" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="52" font="Regular;22" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
-                <panel name="New-Buttons-T1" />
-                <panel name="MenuButton-pos2" />
-                <panel name="OKButton" />
-        </screen>
-
-        <screen name="PluginDownloadBrowser" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" title="Downloadable plugins">
-                <panel name="template1" />
-                <widget name="text" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1">
-                        <convert type="ConditionalShowHide" />
-                </widget>
-                <widget name="list" position="360,256" size="668,416" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="52" font="Regular;22" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
-                <panel name="button-bg" />
-                <panel name="OKButton" />
-        </screen>
-        
+	<screen name="PluginBrowser" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" title="Plugin browser">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="360,256" size="668,415" zPosition="1" />
+		<widget name="list" position="360,256" size="668,416" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="52" font="Regular;22" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
+		<panel name="New-Buttons-T1" />
+		<panel name="MenuButton-pos2" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="PluginDownloadBrowser" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" title="Downloadable plugins">
+		<panel name="template1" />
+		<widget name="text" position="360,93" size="668,130" font="Regular;22" foregroundColor="white" backgroundColor="topmid" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="list" position="360,256" size="668,416" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="52" font="Regular;22" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
+		<panel name="button-bg" />
+		<panel name="OKButton" />
+	</screen>
+	
 	<!-- tuner config - ok menu -->
 	<screen name="NimSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="Setup-Default" />
 		<panel name="description" />
 	</screen>
-        
-	<!--  Satconfig -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/Satconfig.py -->
+	
+	<!-- Satconfig -->
+	<!-- /lib/python/Screens/Satconfig.py -->
 	<!-- tuner configuration -->
 	<screen name="NimSelection" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="template1" />
@@ -510,7 +504,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
 	<!-- ScanSetup -->
-	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/ScanSetup.py -->
+	<!-- /lib/python/Screens/ScanSetup.py -->
 	<screen name="ScanSetup" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1" title="Manual Scan">
 		<panel name="Setup-Default" />
 		<panel name="introduction" />
@@ -523,7 +517,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	</screen>
 	
 	<!-- ServiceScan -->
-	<!--https://github.com/openatv/enigma2/blob/master/lib/python/Screens/ServiceScan.py-->
+	<!--/lib/python/Screens/ServiceScan.py-->
 	<screen name="ServiceScan" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="template1" />
 		<panel name="flare-panel-2" />
@@ -572,26 +566,24 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 		<widget name="picture" pixmap="q-backgrounds/screensaver.png" position="0,0" size="300,165" alphatest="blend" zPosition="1" />
 	</screen>
 	
+	<screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="345,256" size="652,415" zPosition="1" />
+		<widget name="SkinList" textOffset="10,12" position="345,256" size="652,416" font="Regular;22" secondfont="Regular;22" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="52" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<widget name="Preview" position="1010,256" size="213,160" alphatest="blend" transparent="1" />
+		<panel name="introduction" />
+		<panel name="New-Buttons-T1" />
+		<panel name="OKButton" />
+	</screen>
 	
-        <screen name="SkinSelector" position="0,0" size="1280,720" title="Skin Selector" flags="wfNoBorder" backgroundColor="mid">
-                <panel name="template1" />
-                <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="345,256" size="652,415" zPosition="1" />
-                <widget name="SkinList" textOffset="10,12" position="345,256" size="652,416" font="Regular;22" secondfont="Regular;22" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="52" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
-                <widget name="Preview" position="1010,256" size="213,160" alphatest="blend" transparent="1" />
-                <panel name="introduction" />
-                <panel name="New-Buttons-T1" />
-                <panel name="OKButton" />
-        </screen>
-        
-       	<!-- SleepTimerEdit via standby menu -->
+	<!-- SleepTimerEdit via standby menu -->
 	<!-- /lib/python/Screens/SleepTimerEdit.py -->
 	<screen name="SleepTimerEdit" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="4">
 		<panel name="Setup-Default" />
 	</screen>
 	
 	<screen name="Standby" flags="wfNoBorder" position="fill" title="Standby" backgroundColor="black" />
-	
-        <!-- shutdown screen -->
+	<!-- shutdown screen -->
 	<screen name="QuitMainloopScreen" flags="wfNoBorder" position="fill">
 		<ePixmap pixmap="q-backgrounds/reboot.png" position="0,0" size="1280,720" alphatest="blend" zPosition="10" />
 		<widget name="text" position="center,520" size="720,100" font="Regular;24" foregroundColor="bluetext" transparent="1" halign="center" zPosition="11" />
@@ -599,7 +591,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	
 	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-2" flags="wfNoBorder" backgroundColor="transparent" />
 	
- 	<!-- taskview.py -->
+	<!-- taskview.py -->
 	<!-- initialise storage device -->
 	<screen name="JobView" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<eLabel position="0,506" size="1280,226" backgroundColor="blackglass" transparent="0" zPosition="-2" />
@@ -631,7 +623,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
-
+	
 	<screen name="TimeDateInput" position="center,center" size="652,140">
 		<widget name="config" textOffset="10,0" position="0,0" size="652,104" font="Regular;22" secondfont="Regular;22" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png" itemHeight="52" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
 		<widget name="cancel" pixmap="buttons/key_red.png" position="10,116" size="25,25" alphatest="blend" />
@@ -670,7 +662,5 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	<screen name="Subtitles" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
 		<panel name="Setup-Default" />
 	</screen>
-
 </skin>
-
 

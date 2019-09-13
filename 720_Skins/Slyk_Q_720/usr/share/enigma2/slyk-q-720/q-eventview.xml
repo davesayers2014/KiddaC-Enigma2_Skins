@@ -87,11 +87,6 @@
 		<ePixmap position="241,554" size="23,14" pixmap="q-infobars/up-arrow.png" alphatest="blend" zPosition="1" />
 		<ePixmap position="241,627" size="23,14" pixmap="q-infobars/down-arrow.png" alphatest="blend" zPosition="1" />
 		<!-- channel -->
-		<!--
-		<widget source="session.CurrentService" render="Label" position="12,568" size="264,59" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="right" transparent="1" zPosition="1">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		 -->
 		<widget name="channel" position="12,568" size="264,54" font="Regular;22" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="right" transparent="1" />
 		<!-- picons / xpicons - see picons.xml -->
 		<panel name="eventview-picons" />
@@ -131,9 +126,6 @@
 		<!-- programme name -->
 		<widget source="Title" render="Label" position="537,519" size="400,28" font="Bold;22" foregroundColor="white" backgroundColor="blackglass" noWrap="1" valign="top" transparent="1" zPosition="1" />
 		<!-- programme description -->
-		<!--
-                <widget name="FullDescription" position="537,548" size="508,133" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="top" scrollbarMode="showNever" transparent="1" zPosition="1" />
-		-->
 		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="537,548" size="508,126" font="Regular;22" foregroundColor="white" backgroundColor="blackglass" valign="top" transparent="1" zPosition="1">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
