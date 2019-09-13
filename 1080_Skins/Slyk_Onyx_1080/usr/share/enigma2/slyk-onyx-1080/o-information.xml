@@ -13,7 +13,7 @@
                 <panel name="New-Buttons" />
 		<panel name="InfoButton" />
 		<ePixmap pixmap="o-backgrounds/sidebar-246.png" alphatest="blend" position="1515,329" size="324,369" />
-		<eLabel text="Slyk Onyx 1080 V2.23 \nby Kidda C (2019)\n\nFor the latest version of my skins linuxsat-support.com. if you would like to treat me to a beer, paypal.me/kiddac\n\nThank you and enjoy. Kidda C" font="Regular;24" position="1530,341" size="300,330" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1" />
+		<eLabel text="Slyk Onyx 1080 V2.24 \nby Kidda C (2019)\n\nFor the latest version of my skins linuxsat-support.com. if you would like to treat me to a beer, paypal.me/kiddac\n\nThank you and enjoy. Kidda C" font="Regular;24" position="1530,341" size="300,330" foregroundColor="white" backgroundColor="midright" transparent="1" zPosition="1" />
 	</screen>
 	
 	<!-- legacy -->
