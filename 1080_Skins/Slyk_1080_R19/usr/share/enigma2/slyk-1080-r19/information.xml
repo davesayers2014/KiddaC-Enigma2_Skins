@@ -12,7 +12,7 @@
 		<widget source="lab3" render="Label" position="1372,491" size="443,64" font="Regular;27" foregroundColor="white" backgroundColor="bgdarkblue" transparent="1" valign="top" halign="center" zPosition="1" />
 		<widget name="AboutScrollLabel" position="150,228" size="1080,672" transparent="1" zPosition="1" foregroundColor="white" backgroundColor="bgdarkblue" font="Regular;36" />
 		<eLabel position="1357,570" size="473,52" backgroundColor="bgdarkblue" zPosition="-1" />
-		<eLabel text="Slyk 1080 V2.12" position="1372,570" size="443,52" foregroundColor="white" backgroundColor="bgdarkblue" font="Regular;39" valign="center" halign="center" transparent="1" zPosition="1" />
+		<eLabel text="Slyk 1080 V2.13" position="1372,570" size="443,52" foregroundColor="white" backgroundColor="bgdarkblue" font="Regular;39" valign="center" halign="center" transparent="1" zPosition="1" />
 		<eLabel text="There are alternative layouts for some screens. These can be editted via extras.xml that lives in my skin folder /usr/share/enigma2/slyk-1080-r19" font="Regular;24" position="1372,630" size="443,113" foregroundColor="white" backgroundColor="backgroundmid" zPosition="2" transparent="1" halign="center" />
 		<eLabel text="Slyk 1080 R19\nby Kidda C (2019)\n\nFor the latest version of my skins visit linuxsat-support.com or if you would like to treat me to a beer, paypal.me/kiddac" font="Regular;24" position="1372,758" size="443,200" foregroundColor="white" backgroundColor="backgroundmid" zPosition="2" transparent="1" halign="center" />
 		<panel name="New-Buttons-T2" />

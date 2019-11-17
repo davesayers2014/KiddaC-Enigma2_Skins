@@ -90,7 +90,7 @@
 		<panel name="main-template-2" />
 		<panel name="v5-services" />
 		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
-		<widget name="detailtext" position="150,190" size="1080,756" font="Regular;33" backgroundColor="darkblue" foregroundColor="white" transparent="1" />
+		<widget name="detailtext" position="150,190" size="1080,756" font="Regular;33" backgroundColor="skydarkblue" foregroundColor="white" transparent="1" />
 		<panel name="New-Buttons-T2" />
 	</screen>
 	
@@ -98,7 +98,7 @@
 		<panel name="main-template-2" />
 		<panel name="v5-services" />
 		<widget source="Title" render="Label" position="90,123" size="1200,52" valign="center" halign="center" font="Regular;39" noWrap="1" zPosition="2" transparent="1" foregroundColor="white" backgroundColor="panelblue" />
-		<widget name="detailtext" position="150,190" size="1080,756" font="Regular;33" backgroundColor="darkblue" foregroundColor="white" transparent="1" />
+		<widget name="detailtext" position="150,190" size="1080,756" font="Regular;33" backgroundColor="skydarkblue" foregroundColor="white" transparent="1" />
 		<panel name="New-Buttons-T2" />
 	</screen>
 	

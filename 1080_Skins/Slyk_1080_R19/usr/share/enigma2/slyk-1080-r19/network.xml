@@ -197,7 +197,7 @@
 		<widget name="labactive" position="966,506" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skylightrow" valign="center" halign="center" transparent="1" />
 		<widget name="status" position="295,560" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skydarkrow" valign="center" halign="left" transparent="1" />
 		<widget name="labstop" position="966,560" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skydarkrow" valign="center" halign="center" transparent="1" />
-		<widget name="labrun" position="966,560" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skydakrrow" valign="center" halign="center" transparent="1" />
+		<widget name="labrun" position="966,560" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skydarkrow" valign="center" halign="center" transparent="1" />
 		<widget name="time" position="295,614" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skylightrow" valign="center" halign="left" transparent="1" />
 		<widget name="labtime" position="966,614" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skylightrow" valign="center" halign="center" transparent="1" />
 		<widget name="username" position="295,668" size="644,48" font="Regular;39" foregroundColor="white" backgroundColor="skydarkrow" valign="center" halign="left" transparent="1" />

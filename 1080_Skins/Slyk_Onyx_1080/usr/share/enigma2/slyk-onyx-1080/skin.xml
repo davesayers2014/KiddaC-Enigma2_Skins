@@ -13,25 +13,25 @@
 	</output>
 	
         <!-- includes -->
-	        <include filename="/usr/share/enigma2/slyk-onyx-1080/o-main-templates.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-button-templates.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-general.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-wizards.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-menus.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-infopanel.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-movies.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-epg.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-information.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-cccam.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-timers.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-channel-selection.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-infobar.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-eventview.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-plugins.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-network.xml" />
-                <!-- <include filename="/usr/share/enigma2/slyk-onyx-1080/o-vix.xml" /> -->
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-toppicks.xml" />
-                <include filename="/usr/share/enigma2/slyk-onyx-1080/o-picons.xml" />
+	        <include filename="o-main-templates.xml" />
+                <include filename="o-button-templates.xml" />
+                <include filename="o-general.xml" />
+                <include filename="o-wizards.xml" />
+                <include filename="o-menus.xml" />
+                <include filename="o-infopanel.xml" />
+                <include filename="o-movies.xml" />
+                <include filename="o-epg.xml" />
+                <include filename="o-information.xml" />
+                <include filename="o-cccam.xml" />
+                <include filename="o-timers.xml" />
+                <include filename="o-channel-selection.xml" />
+                <include filename="o-infobar.xml" />
+                <include filename="o-eventview.xml" />
+                <include filename="o-plugins.xml" />
+                <include filename="o-network.xml" />
+                <!-- <include filename="o-vix.xml" /> -->
+                <include filename="o-toppicks.xml" />
+                <include filename="o-picons.xml" />
 
 	<!-- fonts -->
 	<fonts>
@@ -41,9 +41,9 @@
 		<font name="Replacement"   filename="/usr/share/fonts/ae_AlMateen.ttf"  scale="90" replacement="1"/>
 
 		<!-- slyk1hd fonts -->
-	        <font name="Regular" filename="/usr/share/enigma2/slyk-onyx-1080/fonts/MavenPro-Regular.ttf" scale="100" />
- 	        <font name="Bold" filename="/usr/share/enigma2/slyk-onyx-1080/fonts/MavenPro-Medium.ttf" scale="100" />
-		<font name="Console" filename="/usr/share/enigma2/slyk-onyx-1080/fonts/Inconsolata-Regular.ttf" scale="100" />
+	        <font name="Regular" filename="fonts/MavenPro-Regular.ttf" scale="100" />
+ 	        <font name="Bold" filename="fonts/MavenPro-Medium.ttf" scale="100" />
+		<font name="Console" filename="fonts/Inconsolata-Regular.ttf" scale="100" />
 	
 	        <!-- alias -->
 		<alias name="Body" font="Regular" size="30" height="45" />

@@ -13,24 +13,24 @@
 	</output>
 	
         <!-- includes -->
-	        <include filename="/usr/share/enigma2/slyk-q-720/q-main-templates.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-button-templates.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-general.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-wizards.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-menus.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-infopanel.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-movies.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-epg.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-information.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-cccam.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-timers.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-channel-selection.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-infobar.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-eventview.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-plugins.xml" />
-                <include filename="/usr/share/enigma2/slyk-q-720/q-network.xml" />
-                <!-- <include filename="/usr/share/enigma2/slyk-q-720/q-vix.xml" /> -->
-                <include filename="/usr/share/enigma2/slyk-q-720/q-picons.xml" />
+	        <include filename="q-main-templates.xml" />
+                <include filename="q-button-templates.xml" />
+                <include filename="q-general.xml" />
+                <include filename="q-wizards.xml" />
+                <include filename="q-menus.xml" />
+                <include filename="q-infopanel.xml" />
+                <include filename="q-movies.xml" />
+                <include filename="q-epg.xml" />
+                <include filename="q-information.xml" />
+                <include filename="q-cccam.xml" />
+                <include filename="q-timers.xml" />
+                <include filename="q-channel-selection.xml" />
+                <include filename="q-infobar.xml" />
+                <include filename="q-eventview.xml" />
+                <include filename="q-plugins.xml" />
+                <include filename="q-network.xml" />
+                <include filename="q-vix.xml" />
+                <include filename="q-picons.xml" />
 
 	<!-- fonts -->
 	<fonts>
@@ -40,9 +40,9 @@
 		<font name="Replacement"   filename="/usr/share/fonts/ae_AlMateen.ttf"  scale="100" replacement="1"/>
 
 		<!-- slyk1hd fonts -->
-		<font name="Regular" filename="/usr/share/enigma2/slyk-q-720/fonts/slyk-regular.ttf" scale="100" />
-		<font name="Bold" filename="/usr/share/enigma2/slyk-q-720/fonts/slyk-medium.ttf" scale="100" />
-		<font name="Console" filename="/usr/share/enigma2/slyk-q-720/fonts/Inconsolata-Regular.ttf" scale="100" />
+		<font name="Regular" filename="fonts/slyk-regular.ttf" scale="100" />
+		<font name="Bold" filename="fonts/slyk-medium.ttf" scale="100" />
+		<font name="Console" filename="fonts/Inconsolata-Regular.ttf" scale="100" />
 	
 	        <!-- alias -->
 		<alias name="Body" font="Regular" size="22" height="30" />

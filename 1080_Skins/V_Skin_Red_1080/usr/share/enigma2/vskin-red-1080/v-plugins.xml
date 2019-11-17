@@ -152,7 +152,7 @@
 	
 	<!-- software management - advanced options - select ipkg source  - edit -->
 	<screen name="IPKGSource" position="center,center" size="1620,150">
-		<widget name="text" position="15,15" size="1590,45" font="Regular;38" foregroundColor="fg1" backgroundColor="bg-mm-darkk" transparent="1" />
+		<widget name="text" position="15,15" size="1590,45" font="Regular;38" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
 		<ePixmap pixmap="v-buttons/key_red.png" position="0,108" size="45,45" alphatest="blend" zPosition="2" />
 		<widget source="key_red" render="Label" position="45,108" size="263,45" font="Regular;33" foregroundColor="fg3" backgroundColor="messagebox-bg" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
 		<ePixmap pixmap="v-buttons/key_green.png" position="225,108" size="45,45" alphatest="blend" zPosition="2" />

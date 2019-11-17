@@ -346,7 +346,7 @@
 	<!-- remove recording on channel select - 2nd popup-->
 	<screen name="RemoveTimerQuestion" position="center,center" size="503,130" zPosition="10" backgroundColor="messageboxbg">
 		<widget name="text" position="0,0" size="0,0" font="Regular;22" backgroundColor="messageboxbg" transparent="1" />
-		<widget name="list" textOffset="10,0" font="Regular;22" position="10,10" size="220,50" foregroundColor="white" backgroundColor="bg-selected-text" enableWrapAround="1" transparent="1" itemHeight="25" />
+		<widget name="list" textOffset="10,0" font="Regular;22" position="10,10" size="220,50" foregroundColor="white" backgroundColor="select-darkblue-bg" enableWrapAround="1" transparent="1" itemHeight="25" />
 		<applet type="onLayoutFinish">from enigma import getDesktop, eSize, ePoint
 import math
 desktop_w = getDesktop(0).size().width()

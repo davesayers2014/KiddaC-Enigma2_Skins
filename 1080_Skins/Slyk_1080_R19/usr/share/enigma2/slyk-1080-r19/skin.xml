@@ -13,25 +13,25 @@
 	</output>
 	
         <!-- includes -->
-	<include filename="/usr/share/enigma2/slyk-1080-r19/button-templates.xml" />
-       	<include filename="/usr/share/enigma2/slyk-1080-r19/main-templates.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/menu-templates.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/wizards.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/general.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/CCcamInfo.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/ChannelSelection.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/epg.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/eventview.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/infobar.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/infopanel.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/information.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/movies.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/network.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/plugins.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/timers.xml" />
-	<include filename="/usr/share/enigma2/slyk-1080-r19/extras.xml" />
-        <!-- <include filename="/usr/share/enigma2/slyk-1080-r19/vix.xml" /> -->
-        <include filename="/usr/share/enigma2/slyk-1080-r19/toppicks3.xml" />
+	<include filename="button-templates.xml" />
+       	<include filename="main-templates.xml" />
+	<include filename="menu-templates.xml" />
+	<include filename="wizards.xml" />
+	<include filename="general.xml" />
+	<include filename="CCcamInfo.xml" />
+	<include filename="ChannelSelection.xml" />
+	<include filename="epg.xml" />
+	<include filename="eventview.xml" />
+	<include filename="infobar.xml" />
+	<include filename="infopanel.xml" />
+	<include filename="information.xml" />
+	<include filename="movies.xml" />
+	<include filename="network.xml" />
+	<include filename="plugins.xml" />
+	<include filename="timers.xml" />
+	<include filename="extras.xml" />
+        <!-- <include filename="vix.xml" /> -->
+        <include filename="toppicks3.xml" />
 
 	
 	<!-- fonts -->
@@ -45,9 +45,9 @@
 		<font name="Replacement"   filename="/usr/share/fonts/ae_AlMateen.ttf"  scale="90" replacement="1"/>
 		
 		<!-- slyk1hd fonts -->
-		<font name="Bold"    filename="/usr/share/enigma2/slyk-1080-r19/fonts/slyk-bold.ttf"   scale="100" />
-		<font name="Regular" filename="/usr/share/enigma2/slyk-1080-r19/fonts/slyk-medium.ttf" scale="100" />
-		<font name="Console" filename="/usr/share/enigma2/slyk-1080-r19/fonts/Inconsolata-Regular.ttf"       scale="100" />
+		<font name="Bold"    filename="fonts/slyk-bold.ttf"   scale="100" />
+		<font name="Regular" filename="fonts/slyk-medium.ttf" scale="100" />
+		<font name="Console" filename="fonts/Inconsolata-Regular.ttf"       scale="100" />
 	
 	        <!-- alias -->
 		<alias name="Body" font="Regular" size="39" height="54" />

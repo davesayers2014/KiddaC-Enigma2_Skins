@@ -211,7 +211,7 @@
 			<panel name="main-logo" />
 		</panel>
 		<panel name="mini-tv" />
-		<widget source="Title" render="Label" position="66,124" size="1146,30" font="Regular;22" foregroundColor="white" backgroundColor="mid" valign="center" noWrap="1" transparent="1" zPosition="1" />
+		<widget source="Title" render="Label" position="66,124" size="1146,30" font="Regular;22" foregroundColor="white" backgroundColor="bgMid" valign="center" noWrap="1" transparent="1" zPosition="1" />
 		<eLabel position="66,158" size="1146,486" backgroundColor="black" transparent="0" zPosition="-1" />
 	</screen>
 </skin>

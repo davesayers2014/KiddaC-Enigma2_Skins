@@ -423,7 +423,7 @@ self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
 	
 	<screen name="PinInputPopup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<ePixmap pixmap="q-backgrounds/pin-protected.png" position="0,0" size="1920,1080" alphatest="blend" zPosition="-1" />
-		<widget name="service" position="center,56" size="1920,48" font="Bold;39" foregroundColor="white" backgroundColor="'00005e9f" valign="top" halign="center" transparent="1" />
+		<widget name="service" position="center,56" size="1920,48" font="Bold;39" foregroundColor="white" backgroundColor="#00005e9f" valign="top" halign="center" transparent="1" />
 		<widget name="text" position="center,95" size="1920,48" font="Regular;39" foregroundColor="white" backgroundColor="#00005e9f" valign="top" halign="center" transparent="1" />
 		<eLabel text="Please enter your PIN" position="0,842" size="1920,48" font="Regular;39" foregroundColor="white" backgroundColor="mid" valign="top" halign="center" transparent="1" />
 		<widget name="input" position="center,921" size="330,53" font="Regular;72" foregroundColor="white" valign="center" backgroundColor="select-darkblue-bg" halign="center" transparent="1" />

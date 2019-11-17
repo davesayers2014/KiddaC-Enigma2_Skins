@@ -12,25 +12,25 @@
 	</output>
 	
 	<!-- includes -->
-	<include filename="/usr/share/enigma2/vskin-1080/v-button-templates.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-main-templates.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-menu-templates.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-wizards.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-general.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-CCcamInfo.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-ChannelSelection.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-epg.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-eventview.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-infobar.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-infopanel.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-information.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-movies.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-network.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-plugins.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-timers.xml" />
-	<include filename="/usr/share/enigma2/vskin-1080/v-non-common.xml" />
-	<!-- <include filename="/usr/share/enigma2/vskin-1080/v-vix.xml" />  -->
-	<include filename="/usr/share/enigma2/vskin-1080/extras.xml" />
+	<include filename="v-button-templates.xml" />
+	<include filename="v-main-templates.xml" />
+	<include filename="v-menu-templates.xml" />
+	<include filename="v-wizards.xml" />
+	<include filename="v-general.xml" />
+	<include filename="v-CCcamInfo.xml" />
+	<include filename="v-ChannelSelection.xml" />
+	<include filename="v-epg.xml" />
+	<include filename="v-eventview.xml" />
+	<include filename="v-infobar.xml" />
+	<include filename="v-infopanel.xml" />
+	<include filename="v-information.xml" />
+	<include filename="v-movies.xml" />
+	<include filename="v-network.xml" />
+	<include filename="v-plugins.xml" />
+	<include filename="v-timers.xml" />
+	<include filename="v-non-common.xml" />
+	<!-- <include filename="v-vix.xml" />  -->
+	<include filename="extras.xml" />
 	
         <!-- fonts -->
 	<fonts>
@@ -40,10 +40,10 @@
 		<font name="Replacement"  filename="/usr/share/fonts/ae_AlMateen.ttf" scale="100" replacement="1" />
 		
                 <!-- vskin fonts -->
-		<font name="Regular" filename="/usr/share/enigma2/vskin-1080/fonts/VSkin-Light.ttf" scale="100" />
-		<font name="Bold" filename="/usr/share/enigma2/vskin-1080/fonts/VSkin-Light.ttf" scale="100" />
-		<font name="Console" filename="/usr/share/enigma2/vskin-1080/fonts/Inconsolata-Regular.ttf" scale="100" />
-		<font name="Heading" filename="/usr/share/enigma2/vskin-1080/fonts/VSkin-Light.ttf" scale="100" />
+		<font name="Regular" filename="fonts/VSkin-Light.ttf" scale="100" />
+		<font name="Bold" filename="fonts/VSkin-Light.ttf" scale="100" />
+		<font name="Console" filename="fonts/Inconsolata-Regular.ttf" scale="100" />
+		<font name="Heading" filename="fonts/VSkin-Light.ttf" scale="100" />
 		
                 <!-- font sizes -->
                 <alias name="Body" font="Regular" size="30" height="45" />

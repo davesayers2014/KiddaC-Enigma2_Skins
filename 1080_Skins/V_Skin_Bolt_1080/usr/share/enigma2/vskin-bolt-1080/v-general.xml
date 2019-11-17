@@ -57,9 +57,9 @@
 	<!-- hotkey buttons -->
 	<screen name="ButtonSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="v-template2-pig" />
-		<widget name="list" position="129,215" size="1185,600" font="Regular;33" foregroundColor="fg1" backgroundColor="bb-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+		<widget name="list" position="129,215" size="1185,600" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
 		<ePixmap position="129,815" size="1185,3" pixmap="div-h.png" alphatest="blend" />
-		<widget name="choosen" position="129,818" size="1185,150" foregroundColor="fg1" backgroundColor="bb-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+		<widget name="choosen" position="129,818" size="1185,150" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
 		<widget name="description" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 		<ePixmap pixmap="v-buttons/key_exit.png" position="1745,1002" size="57,45" alphatest="blend" zPosition="3" />
 	</screen>
@@ -73,7 +73,7 @@
 	<!-- /lib/python/Screens/ChoiceBox.py -->
 	<screen name="ChoiceBox" position="center,center" size="780,195" zPosition="5">
 		<widget name="text" position="0,0" size="780,0" font="Regular;33" />
-		<widget name="list" position="150,150" size="780,0" font="Regular;33" foregroundColor="fg1" foregroundColorSelected="selected" backgroundColor="bb-mm" backgroundColorSelected="selected-gfx-bg" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="75" />
+		<widget name="list" position="150,150" size="780,0" font="Regular;33" foregroundColor="fg1" foregroundColorSelected="selected" backgroundColor="bg-mm" backgroundColorSelected="selected-gfx-bg" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="75" />
 		<applet type="onLayoutFinish">from enigma import getDesktop, eSize, ePoint
 desktop_w = getDesktop(0).size().width()
 desktop_h = getDesktop(0).size().height()
