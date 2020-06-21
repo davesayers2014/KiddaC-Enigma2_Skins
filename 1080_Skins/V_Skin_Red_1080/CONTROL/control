@@ -1,0 +1,9 @@
+Package: enigma2-plugin-skins-vskin-red-1080
+Version: 2.07_20200621
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: kiddac
+Description: Vskin Red 1080
+Depends: enigma2-plugin-skins-kiddac-shared-components
+Source: https://www.linuxsat-support.com

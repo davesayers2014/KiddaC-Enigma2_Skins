@@ -1,0 +1,10 @@
+Package: enigma2-plugin-skins-slyk-onyx-1080
+Version: 2.26_20200621
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: kiddac
+Description: Slyk Onyx 1080
+Depends: enigma2-plugin-skins-kiddac-shared-components
+Source: https://www.linuxsat-support.com
+

@@ -1,0 +1,9 @@
+Package: enigma2-plugin-skins-kiddac_shared_components
+Version: 1.00
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: kiddac
+Description: Shared skin components for KiddaC skins
+Depends: 
+Source: https://www.linuxsat-support.com

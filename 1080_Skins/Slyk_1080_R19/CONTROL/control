@@ -1,0 +1,9 @@
+Package: enigma2-plugin-skins-slyk1080r19
+Version: 2.14_20200621
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: kiddac
+Description: Slyk 1080 R19
+Depends: enigma2-plugin-skins-kiddac-shared-components
+Source: https://www.linuxsat-support.com
