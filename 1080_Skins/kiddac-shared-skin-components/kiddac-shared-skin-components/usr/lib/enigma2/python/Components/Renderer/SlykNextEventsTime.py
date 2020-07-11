@@ -1,6 +1,6 @@
+from __future__ import absolute_import
 from Components.VariableText import VariableText
-from Components.Element import cached
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import eLabel, eEPGCache
 from time import localtime, strftime
 import os.path
@@ -11,12 +11,11 @@ filename = '/usr/share/enigma2/slyk-common/timeformat.txt'
 
 
 if os.path.exists(filename):
-	with open(filename, "r") as myfile:
-		if 'Time = 24' in myfile.read():
-			hours24 = True
-		else:
-			hours24 = False
-
+    with open(filename, "r") as myfile:
+        if 'Time = 24' in myfile.read():
+            hours24 = True
+        else:
+            hours24 = False
 
 
 class SlykNextEventsTime(VariableText, Renderer):
@@ -24,6 +23,7 @@ class SlykNextEventsTime(VariableText, Renderer):
         Renderer.__init__(self)
         VariableText.__init__(self)
         self.epgcache = eEPGCache.getInstance()
+
 
     def applySkin(self, desktop, parent):
         self.number = 3
@@ -38,9 +38,11 @@ class SlykNextEventsTime(VariableText, Renderer):
 
     GUI_WIDGET = eLabel
 
+
     def connect(self, source):
         Renderer.connect(self, source)
         self.changed((self.CHANGED_DEFAULT,))
+
 
     def changed(self, what):
         if what[0] == self.CHANGED_CLEAR:
@@ -59,9 +61,9 @@ class SlykNextEventsTime(VariableText, Renderer):
                         else:
                             timesuffix = _('am')
                         if hours24:
-							text = strftime("%H", t) + "." + strftime("%M", t)
+                            text = strftime("%H", t) + "." + strftime("%M", t)
                         else:
-							text = strftime("%l", t) + "." + strftime("%M", t) + timesuffix
+                            text = strftime("%l", t) + "." + strftime("%M", t) + timesuffix
 
                         break
                     i = i + 1
