@@ -1,5 +1,74 @@
 
 <skin>
+
+	<!-- EpgSelection -->
+	<!-- /lib/python/Screens/EpgSelection.py -->
+	<!-- epg single / EPGSearch-->
+	<screen name="EPGSelection" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<!-- event name -->
+		<widget source="Event" render="Label" position="518,73" size="909,48" halign="left" valign="top" foregroundColor="white" backgroundColor="topleft" noWrap="1" font="Bold;42" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- description -->
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="518,140" size="909,153" halign="left" valign="top" foregroundColor="white" backgroundColor="topmid" font="Regular;33" transparent="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<!-- dividers -->
+		<ePixmap pixmap="q-backgrounds/v-divider.png" position="1454,82" size="2,211" alphatest="blend" />
+		<!-- current picon -->
+		<widget source="Service" render="Slyk18Picon" position="1475,38" size="150,90" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<!-- event Duration -->
+		<widget source="Event" render="Label" position="1475,140" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+		</widget>
+		<!-- event start time -->
+		<widget source="Event" render="Label" position="1475,177" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
+		</widget>
+		<!-- recording icon -->
+		<widget position="1821,146" size="30,30" source="session.RecordState" render="Pixmap" pixmap="q-icons/record.png" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="1687,146" size="32,30" alphatest="blend">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="1726,146" size="45,30" alphatest="blend">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="1779,146" size="32,30" alphatest="blend">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="list" position="518,385" size="1374,633" EventFontSingle="Regular;33" foregroundColor="white" foregroundColorSelected="white" backgroundColor="mid" backgroundColorSelected="select-middle" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" />
+		<panel name="New-Buttons-T1" />
+		<panel name="MenuButton" />
+		<panel name="InfoButton-pos2" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(45)</applet>
+	</screen>
+	
+	
+	
+	
 	<screen name="GraphicalEPGPIG" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="background" />
 		<widget source="session.VideoPicture" render="Pig" position="0,0" size="500,285" backgroundColor="transparent" transparent="1" zPosition="-2" />
@@ -115,7 +184,7 @@
 		<widget name="timeline_now" position="1,54" size="23,1080" pixmap="epg/timeline-now.png" alphatest="blend" zPosition="4" />
 		<widget name="lab1" position="0,53" size="1920,1028" font="Regular;33" halign="center" valign="center" zPosition="2" foregroundColor="white" backgroundColor="mid" transparent="1" />
 		
-                <widget name="list" position="0,53" size="1920,1028"
+                <widget name="list" position="0,53" size="1920,966"
                 backgroundColor="mid"
                 ServiceFontGraphical="Regular;33"
                 EntryFontGraphical="Regular;33"
@@ -146,10 +215,79 @@
                 EventBorderWidth="1"
                 EventNamePadding="15"
                 NumberOfRows="18"
-                transparent="1" />
+                transparent="1"/>
 		
-                <widget name="bouquetlist" position="0,53" size="1920,1028" font="Regular;33" itemHeight="63" foregroundColor="white" foregroundColorSelected="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" transparent="0" borderColor="#003473" borderWidth="0" scrollbarMode="showNever" zPosition="6" />
+                <widget name="bouquetlist" position="0,53" size="1920,966" font="Regular;33" itemHeight="63" foregroundColor="white" foregroundColorSelected="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" transparent="0" borderColor="#003473" borderWidth="0" scrollbarMode="showNever" zPosition="6" />
 		<applet type="onLayoutFinish">self["bouquetlist"].bouquetNamePadding = 18</applet>
+		
+			<ePixmap pixmap="q-backgrounds/button-bg.png" position="0,1018" size="491,62" alphatest="blend" />
+		<widget source="global.CurrentTime" render="Label" position="0,1030" size="490,38" font="Regular;33" foregroundColor="white" backgroundColor="topleft" valign="center" halign="center" transparent="1" zPosition="2">
+			<convert type="Slyk18ClockToText">Slyk18DateFormat1</convert>
+		</widget>
+		
+		<panel name="New-Buttons-T1" />
+		<ePixmap pixmap="buttons/key_menu.png" position="1793,1030" size="38,38" transparent="1" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="buttons/key_info.png" position="1845,1030" size="38,38" transparent="1" alphatest="blend" zPosition="3" />
+	</screen>
+	
+	
+		<screen name="InfoBarEventView" position="0,0" size="1920,303" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
+		<eLabel position="0,0" size="1920,273" backgroundColor="blackglass" transparent="0" zPosition="-2" />
+		<ePixmap position="0,0" size="1920,273" pixmap="q-infobars/infobar-top.png" alphatest="blend" zPosition="-1" />
+		<ePixmap position="0,273" size="1920,30" pixmap="q-infobars/infobar-shadow-top.png" alphatest="blend" zPosition="-1" />
+		<!-- event name -->
+		<widget source="Event" render="Label" position="518,38" size="909,48" halign="left" valign="top" foregroundColor="white" backgroundColor="topleft" noWrap="1" font="Bold;42" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- description -->
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="518,102" size="909,153" halign="left" valign="top" foregroundColor="white" backgroundColor="topmid" font="Regular;33" transparent="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<!-- dividers -->
+		<ePixmap pixmap="q-backgrounds/v-divider.png" position="1454,38" size="2,211" alphatest="blend" />
+		<!-- current picon -->
+		<widget source="Service" render="Slyk18Picon" position="1475,38" size="150,90" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<!-- event Duration -->
+		<widget source="Event" render="Label" position="1475,140" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
+		</widget>
+		<!-- event start time -->
+		<widget source="Event" render="Label" position="1475,177" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
+		</widget>
+		<!-- recording icon -->
+		<widget position="1821,146" size="30,30" source="session.RecordState" render="Pixmap" pixmap="q-icons/record.png" alphatest="blend" zPosition="4">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
+			<convert type="SlykServiceInfo">IsSD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="1687,146" size="32,30" alphatest="blend">
+			<convert type="SlykServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="1726,146" size="45,30" alphatest="blend">
+			<convert type="SlykServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="1779,146" size="32,30" alphatest="blend">
+			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 	</screen>
 	
 	<screen name="GraphicalInfoBarEPG" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
@@ -220,143 +358,8 @@
 		<applet type="onLayoutFinish">self["bouquetlist"].bouquetNamePadding = 18</applet>
 	</screen>
 	
-	<screen name="InfoBarEventView" position="0,0" size="1920,303" backgroundColor="transparent" flags="wfNoBorder" zPosition="1">
-		<eLabel position="0,0" size="1920,273" backgroundColor="blackglass" transparent="0" zPosition="-2" />
-		<ePixmap position="0,0" size="1920,273" pixmap="q-infobars/infobar-top.png" alphatest="blend" zPosition="-1" />
-		<ePixmap position="0,273" size="1920,30" pixmap="q-infobars/infobar-shadow-top.png" alphatest="blend" zPosition="-1" />
-		<!-- event name -->
-		<widget source="Event" render="Label" position="518,38" size="909,48" halign="left" valign="top" foregroundColor="white" backgroundColor="topleft" noWrap="1" font="Bold;42" transparent="1">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<!-- description -->
-		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="518,102" size="909,153" halign="left" valign="top" foregroundColor="white" backgroundColor="topmid" font="Regular;33" transparent="1">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<!-- dividers -->
-		<ePixmap pixmap="q-backgrounds/v-divider.png" position="1454,38" size="2,211" alphatest="blend" />
-		<!-- current picon -->
-		<widget source="Service" render="Slyk18Picon" position="1475,38" size="150,90" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
-		</widget>
-		<!-- event Duration -->
-		<widget source="Event" render="Label" position="1475,140" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
-			<convert type="EventTime">Duration</convert>
-			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
-		</widget>
-		<!-- event start time -->
-		<widget source="Event" render="Label" position="1475,177" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
-		</widget>
-		<!-- recording icon -->
-		<widget position="1821,146" size="30,30" source="session.RecordState" render="Pixmap" pixmap="q-icons/record.png" alphatest="blend" zPosition="4">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<!-- icons -->
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
-			<convert type="SlykServiceInfo">Is4K</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
-			<convert type="SlykServiceInfo">IsHD</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
-			<convert type="SlykServiceInfo">IsSD</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="1687,146" size="32,30" alphatest="blend">
-			<convert type="SlykServiceInfo">IsWidescreen</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="1726,146" size="45,30" alphatest="blend">
-			<convert type="SlykServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="1779,146" size="32,30" alphatest="blend">
-			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-	</screen>
-	
-	<!-- epg - show bouquet on launch -->
-	<screen name="BouquetSelector" title="Select a bouquet" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
-		<ePixmap pixmap="q-toppicks/hero.jpg" position="0,0" size="1920,1080" zPosition="-1" />
-		<panel name="logo" />
-		<panel name="time" />
-		<panel name="tv" />
-		<panel name="q-title" />
-		<panel name="leftnav" />
-		<panel name="rightnav" />
-		<widget name="menu" textOffset="15,18" position="90,545" size="364,535" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
-		<panel name="nav-gradient" />
-		<panel name="toppicks" />
-	</screen>
-	
-	<!-- EpgSelection -->
-	<!-- /lib/python/Screens/EpgSelection.py -->
-	<!-- epg single / EPGSearch-->
-	<screen name="EPGSelection" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
-		<panel name="template1" />
-		<!-- event name -->
-		<widget source="Event" render="Label" position="518,73" size="909,48" halign="left" valign="top" foregroundColor="white" backgroundColor="topleft" noWrap="1" font="Bold;42" transparent="1">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<!-- description -->
-		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="518,140" size="909,153" halign="left" valign="top" foregroundColor="white" backgroundColor="topmid" font="Regular;33" transparent="1">
-			<convert type="EventName">FullDescription</convert>
-		</widget>
-		<!-- dividers -->
-		<ePixmap pixmap="q-backgrounds/v-divider.png" position="1454,82" size="2,211" alphatest="blend" />
-		<!-- current picon -->
-		<widget source="Service" render="Slyk18Picon" position="1475,38" size="150,90" alphatest="blend">
-			<convert type="ServiceName">Reference</convert>
-		</widget>
-		<!-- event Duration -->
-		<widget source="Event" render="Label" position="1475,140" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
-			<convert type="EventTime">Duration</convert>
-			<convert type="Slyk18ClockToText">Slyk18AsLength</convert>
-		</widget>
-		<!-- event start time -->
-		<widget source="Event" render="Label" position="1475,177" size="336,39" halign="left" valign="top" foregroundColor="white" backgroundColor="topright" font="Regular;33" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="Slyk18ClockToText">Slyk18StartedAt</convert>
-		</widget>
-		<!-- recording icon -->
-		<widget position="1821,146" size="30,30" source="session.RecordState" render="Pixmap" pixmap="q-icons/record.png" alphatest="blend" zPosition="4">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<!-- icons -->
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/4k.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
-			<convert type="SlykServiceInfo">Is4K</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
-			<convert type="SlykServiceInfo">IsHD</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="1635,146" size="45,30" zPosition="1" alphatest="blend">
-			<convert type="SlykServiceInfo">IsSD</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="1687,146" size="32,30" alphatest="blend">
-			<convert type="SlykServiceInfo">IsWidescreen</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="1726,146" size="45,30" alphatest="blend">
-			<convert type="SlykServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="1779,146" size="32,30" alphatest="blend">
-			<convert type="SlykServiceInfo">SubtitlesAvailable</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget name="list" position="518,385" size="1374,633" EventFontSingle="Regular;33" foregroundColor="white" foregroundColorSelected="white" backgroundColor="mid" backgroundColorSelected="select-middle" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" />
-		<panel name="New-Buttons-T1" />
-		<panel name="MenuButton" />
-		<panel name="InfoButton-pos2" />
-		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(45)</applet>
-	</screen>
+
+
 	
 	<screen name="EPGSelectionMulti" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
 		<panel name="template1" />

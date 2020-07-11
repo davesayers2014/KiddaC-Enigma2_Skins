@@ -270,6 +270,13 @@
 		<widget name="slider" position="308,949" size="1305,9" foregroundColor="#44c1fb" backgroundColor="progress-bg" borderWidth="1" borderColor="#555555" zPosition="3" transparent="0" />
 	</screen>
 	
+	<!-- openvix only - about - software update  -->
+	<screen name="SoftwareUpdateChoices" position="center,center" size="900,720" flags="wfNoBorder" backgroundColor="messageboxbg">
+		<widget name="list" position="0,0" size="900,468" itemHeight="78" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" />
+		<widget name="text" position="0,500" size="900,156" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
+	</screen>
+	
 	<!-- crossepg -->
 	<screen name="downloader-template">
 		<eLabel position="0,760" size="1920,339" backgroundColor="blackglass" transparent="0" zPosition="-2" />

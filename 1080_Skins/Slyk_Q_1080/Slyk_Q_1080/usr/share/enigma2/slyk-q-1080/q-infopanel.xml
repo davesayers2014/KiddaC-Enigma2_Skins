@@ -34,8 +34,9 @@
 		<widget name="Linconn" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1" />
 	</screen>
 	
-	<!-- CronManager (info panel ->  plugins -> cron manager, is different to timer menu -> cron timers) -->
+
 	<!-- /lib/python/Plugins/Extensions/Infopanel/CronManager.py -->
+	<!-- /lib/python/Screens/CronTimer.py -->
 	<screen name="CronTimers" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
 		<panel name="template1" />
 		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="518,384" size="978,623" zPosition="1" />

@@ -68,7 +68,30 @@
                 scrollbarMode="showOnDemand" />
 	</screen>
 		
-        <screen name="ChannelSelection" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="mid">
+	<!-- epg - show bouquet on launch -->
+	<screen name="BouquetSelector" title="Select a bouquet" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<ePixmap pixmap="q-toppicks/hero.jpg" position="0,0" size="1920,1080" zPosition="-1" />
+		<panel name="logo" />
+		<panel name="time" />
+		<panel name="tv" />
+		<panel name="q-title" />
+		<panel name="leftnav" />
+		<panel name="rightnav" />
+		<widget name="menu" textOffset="15,18" position="90,545" size="364,535" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
+		<panel name="nav-gradient" />
+		<panel name="toppicks" />
+	</screen>
+  
+ 	<!-- channel select menu -->
+	<screen name="ChannelContextMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+	        <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
+                <widget name="menu" position="540,385" size="1002,697" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
+                <panel name="nav-gradient-2"/>
+	</screen>
+	
+	<screen name="ChannelSelection" flags="wfNoBorder" position="0,0" size="1920,1080" backgroundColor="mid">
 		<panel name="background" />
 		<panel name="logo" />
 	        <panel name="time" />
@@ -308,15 +331,6 @@
 	
 	<!-- not used in this skin so hidden -->
 	<screen name="RadioInfoBar" position="0,0" size="0,0" backgroundColor="mid" transparent="0" flags="wfNoBorder" />
-	
-	<!-- channel select menu -->
-	<screen name="ChannelContextMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
-		<panel name="template1" />
-	        <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,701" zPosition="1" />
-                <widget name="menu" position="540,385" size="1002,697" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
-                selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" font="Regular;33" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2"/>
-                <panel name="nav-gradient-2"/>
-	</screen>
 	
 	<!-- prev / next button -->
 	<screen name="HistoryZapSelector" position="0,0" size="522,1080" backgroundColor="transparent" flags="wfNoBorder">

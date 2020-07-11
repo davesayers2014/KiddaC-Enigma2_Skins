@@ -400,9 +400,12 @@
 		<panel name="New-Buttons-T1" />
 	</screen>
 	
+	
+	
 	<screen name="WlanStatus" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid" title="Wireless network state">
 		<panel name="template1" />
 		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="507,373" size="999,602" zPosition="1" />
+		
 		<ePixmap position="525,850" size="960,3" pixmap="div-h.png" alphatest="blend" transparent="1" />
 		<widget source="LabelBSSID" render="Label" position="540,430" size="480,45" font="Regular;33" foregroundColor="white" backgroundColor="mid" valign="center" transparent="1" zPosition="1" />
 		<widget source="BSSID" render="Label" position="990,430" size="480,45" font="Regular;33" foregroundColor="white" backgroundColor="mid" valign="center" halign="right" transparent="1" zPosition="1" />
