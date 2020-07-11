@@ -1,9 +1,10 @@
+from __future__ import absolute_import
 from Components.Converter.Converter import Converter
-from time import time as getTime, localtime, strftime
-from Poll import Poll
+#from time import time as getTime, localtime, strftime
+from Components.Converter.Poll import Poll
 from Components.Element import cached
 from Components.config import config
-
+from gettext import ngettext
 
 # OnlyMinute = Started %d min ago / Started %d mins ago
 class Slyk18RemainingToText(Poll, Converter, object):
@@ -60,7 +61,7 @@ class Slyk18RemainingToText(Poll, Converter, object):
             r = remaining
 
         l = duration   # Length
-        p = elapsed   # Position
+        #p = elapsed   # Position
 
         if self.type == self.ONLY_MINUTE:
             if remaining is not None:
