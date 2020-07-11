@@ -1,5 +1,5 @@
-Package: enigma2-plugin-skins-kiddac_shared_components
-Version: 1.00
+Package: enigma2-plugin-skins-kiddac-shared-components
+Version: 1.01
 Section: misc
 Priority: optional
 Architecture: all
