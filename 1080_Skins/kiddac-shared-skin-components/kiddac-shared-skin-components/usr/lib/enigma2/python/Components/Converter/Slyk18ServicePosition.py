@@ -1,10 +1,12 @@
-from Components.config import *
-from Converter import Converter
+from __future__ import absolute_import, division
+from Components.Converter.Converter import Converter
 from Components.Sources.Clock import Clock
 from time import time as getTime, localtime, strftime
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from enigma import iPlayableService
 from Components.Element import cached, ElementError
+from Components.config import config
+
 import os.path
 
 
@@ -21,13 +23,13 @@ filename = '/usr/share/enigma2/slyk-common/timeformat.txt'
 
 if config.osd.language.value == "en_GB" or config.osd.language.value == "en_US" or config.osd.language.value == "en_AU":
     hours24 = False
-    
+
 if os.path.exists(filename):
-	with open(filename, "r") as myfile:
-		if 'Time = 24' in myfile.read():
-			hours24 = True
-			
-			
+    with open(filename, "r") as myfile:
+        if 'Time = 24' in myfile.read():
+            hours24 = True
+
+
 class Slyk18ServicePosition(Poll, Converter, object):
     TYPE_LENGTH = 0
     TYPE_POSITION = 1
@@ -114,9 +116,9 @@ class Slyk18ServicePosition(Poll, Converter, object):
             else:
                 timesuffix = _('am')
             if hours24:
-				d = _("%H.%M")
+                d = _("%H.%M")
             else:
-				d = _("%l.%M") + _(timesuffix)
+                d = _("%l.%M") + _(timesuffix)
             timetext = strftime(d, t)
             return timetext.lstrip(' ')
 
@@ -130,9 +132,9 @@ class Slyk18ServicePosition(Poll, Converter, object):
             else:
                 timesuffix = _('am')
             if hours24:
-				d = _("%H.%M")
+                d = _("%H.%M")
             else:
-				d = _("%l.%M") + _(timesuffix)
+                d = _("%l.%M") + _(timesuffix)
             timetext = strftime(d, t)
             return timetext.lstrip(' ')
 
@@ -205,7 +207,7 @@ class Slyk18ServicePosition(Poll, Converter, object):
         len = self.length
         if pos is None or len is None or len <= 0:
             return None
-        return pos * 10000 / len
+        return pos * 10000 // len
 
     position = property(getPosition)
     length = property(getLength)
