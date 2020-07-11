@@ -133,16 +133,13 @@
 		<panel name="Swap" />
 	</screen>
 	
-	<screen name="SoftwareUpdateChoices" position="center,center" size="900,720" flags="wfNoBorder" backgroundColor="messageboxbg">
-		<widget name="list" position="0,0" size="900,468" itemHeight="78" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" />
-		<widget name="text" position="0,500" size="900,156" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" />
-		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
-	</screen>
-	
+
+	<!--
 	<screen name="ChoiceBox" position="center,center" size="900,720" flags="wfNoBorder" backgroundColor="messageboxbg">
 		<widget name="list" position="0,0" size="900,468" itemHeight="78" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1" />
 		<widget name="text" position="0,500" size="900,156" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" />
 		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(78)</applet>
 	</screen>
+	-->
 </skin>
 

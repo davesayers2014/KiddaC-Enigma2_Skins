@@ -94,6 +94,18 @@
 	<screen name="VIXSwap" position="0,0" size="1920,1080" title="Swap File Manager" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="Swap" />
 	</screen>
+	
+	<screen name="SoftwareUpdateChoices" position="center,center" size="900,720" zPosition="5">
+		<widget name="list" position="0,0" size="900,600" font="Regular;33" foregroundColor="fg1" foregroundColorSelected="selected" backgroundColor="bg-mm" backgroundColorSelected="selected-gfx-bg" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="75" />
+		<widget name="text" position="0,400" size="900,108" font="Regular;33" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(75)</applet>
+	</screen>
+	
+	<screen name="ChoiceBox" position="center,center" size="900,720" zPosition="5">
+		<widget name="list" position="0,0" size="900,600" font="Regular;33" foregroundColor="fg1" foregroundColorSelected="selected" backgroundColor="bg-mm" backgroundColorSelected="selected-gfx-bg" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="75" />
+		<widget name="text" position="0,400" size="900,108" font="Regular;33" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(75)</applet>
+	</screen>
 </skin>
 
 

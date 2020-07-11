@@ -167,5 +167,11 @@
 		<widget name="text" position="0,400" size="900,108" font="Regular;39" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" />
 		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(54)</applet>
 	</screen>
+	
+	<screen name="ChoiceBox" position="center,center" size="900,720" backgroundColor="messageboxbg">
+		<widget name="list" position="0,0" size="900,324" itemHeight="54" font="Regular;39" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="skydarkblue" backgroundColorSelected="skygold" selectionPixmap="2018-selectbars/bar-54.png" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" />
+		<widget name="text" position="0,400" size="900,108" font="Regular;39" foregroundColor="white" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(54)</applet>
+	</screen>
 </skin>
 
