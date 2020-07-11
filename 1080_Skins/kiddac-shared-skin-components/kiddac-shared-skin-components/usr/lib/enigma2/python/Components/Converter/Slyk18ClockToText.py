@@ -1,11 +1,11 @@
-from Components.config import *
-from Converter import Converter
-from Components.Sources.Clock import Clock
-from time import time as getTime, localtime, strftime
-from Poll import Poll
+from __future__ import absolute_import
+from Components.Converter.Converter import Converter
+from time import localtime, strftime, time as getTime
 from Components.Element import cached
-import os.path
+from Components.config import config
 
+import os.path
+from gettext import ngettext
 
 # Slyk18ClockToText
 
@@ -21,13 +21,13 @@ filename = '/usr/share/enigma2/slyk-common/timeformat.txt'
 
 if config.osd.language.value == "en_GB" or config.osd.language.value == "en_US" or config.osd.language.value == "en_AU":
     hours24 = False
-    
-if os.path.exists(filename):
-	with open(filename, "r") as myfile:
-		if 'Time = 24' in myfile.read():
-			hours24 = True
 
-		
+if os.path.exists(filename):
+    with open(filename, "r") as myfile:
+        if 'Time = 24' in myfile.read():
+            hours24 = True
+
+
 class Slyk18ClockToText(Converter, object):
     DEFAULT = 0
     FORMAT = 1
@@ -95,51 +95,51 @@ class Slyk18ClockToText(Converter, object):
             timesuffix = _('pm')
         else:
             timesuffix = _('am')
-			
-		
+
+
 
         if self.type == self.DEFAULT:
             return fix_space(_("%2d:%02d") % (t.tm_hour, t.tm_min))
-        
+
         elif self.type == self.SLYK18_DATE_FORMAT1:
-			if hours24:
-				d = _("%A, %H.%M")
-			else:
-				d = _("%A, %l.%M") + _(timesuffix)
+            if hours24:
+                d = _("%A, %H.%M")
+            else:
+                d = _("%A, %l.%M") + _(timesuffix)
 
         elif self.type == self.SLYK18_DATE_FORMAT2:
-			if hours24:
-				d = _("%H.%M") + _(" %a %d/%m")
-			else:
-				d = _("%l.%M") + _(timesuffix) + _(" %a %d/%m")
+            if hours24:
+                d = _("%H.%M") + _(" %a %d/%m")
+            else:
+                d = _("%l.%M") + _(timesuffix) + _(" %a %d/%m")
 
-			
+
         elif self.type == self.SLYK18_TIME:
-			if hours24:
-				d = _("%H.%M")
-			else:
-				d = _("%l.%M") + _(timesuffix)
-          
-           
+            if hours24:
+                d = _("%H.%M")
+            else:
+                d = _("%l.%M") + _(timesuffix)
+
+
         elif self.type == self.SLYK18_STARTEDATE:
-			if hours24:   
-				if time < tnow:
-					d = _('Started at') + ' ' + _("%H.%M").lstrip()
-				else:
-					d = _('Starts at') + ' ' + _("%H.%M").lstrip()
-			else:
-				if time < tnow:
-					d = _('Started at') + ' ' + _("%l.%M").lstrip() + _(timesuffix)
-				else:
-					d = _('Starts at') + ' ' + _("%l.%M").lstrip() + _(timesuffix)
-				
-        
+            if hours24:
+                if time < tnow:
+                    d = _('Started at') + ' ' + _("%H.%M").lstrip()
+                else:
+                    d = _('Starts at') + ' ' + _("%H.%M").lstrip()
+            else:
+                if time < tnow:
+                    d = _('Started at') + ' ' + _("%l.%M").lstrip() + _(timesuffix)
+                else:
+                    d = _('Starts at') + ' ' + _("%l.%M").lstrip() + _(timesuffix)
+
+
         elif self.type == self.FULL:
             d = _("%a %e/%m  %-H:%M")
-        
+
         elif self.type == self.FORMAT:
             d = self.fmt_string
-        
+
         else:
             return "???"
 
