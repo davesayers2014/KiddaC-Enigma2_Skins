@@ -1,15 +1,18 @@
+from __future__ import absolute_import
 from Components.VariableText import VariableText
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import eLabel, eEPGCache
 from time import localtime
 
 
 class OnyxNextEvents(VariableText, Renderer):
+
     def __init__(self):
         self.lines = False
         Renderer.__init__(self)
         VariableText.__init__(self)
         self.epgcache = eEPGCache.getInstance()
+
 
     def applySkin(self, desktop, parent):
         self.number = 0
@@ -32,9 +35,11 @@ class OnyxNextEvents(VariableText, Renderer):
 
     GUI_WIDGET = eLabel
 
+
     def connect(self, source):
         Renderer.connect(self, source)
         self.changed((self.CHANGED_DEFAULT,))
+
 
     def changed(self, what):
         if what[0] == self.CHANGED_CLEAR:
@@ -66,6 +71,7 @@ class OnyxNextEvents(VariableText, Renderer):
                         if i > 7:
                             break
             self.text = text
+
 
     def build_eventstr(self, event):
         begin = localtime(event[0])
