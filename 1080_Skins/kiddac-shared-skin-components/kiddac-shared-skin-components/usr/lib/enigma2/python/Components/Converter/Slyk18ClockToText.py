@@ -15,7 +15,7 @@ from gettext import ngettext
 # Slyk18Time = (0-12)hour - (00-59)min - am/pm : 4.28pm
 # Slyk18StartedAt = Started at/Starts at - (0-12)hour - (00-59)min - am/pm : Started at 4.28pm
 
-#config.osd = ConfigSubsection()
+# config.osd = ConfigSubsection()
 hours24 = True
 filename = '/usr/share/enigma2/slyk-common/timeformat.txt'
 
@@ -96,8 +96,6 @@ class Slyk18ClockToText(Converter, object):
         else:
             timesuffix = _('am')
 
-
-
         if self.type == self.DEFAULT:
             return fix_space(_("%2d:%02d") % (t.tm_hour, t.tm_min))
 
@@ -113,13 +111,11 @@ class Slyk18ClockToText(Converter, object):
             else:
                 d = _("%l.%M") + _(timesuffix) + _(" %a %d/%m")
 
-
         elif self.type == self.SLYK18_TIME:
             if hours24:
                 d = _("%H.%M")
             else:
                 d = _("%l.%M") + _(timesuffix)
-
 
         elif self.type == self.SLYK18_STARTEDATE:
             if hours24:
@@ -132,7 +128,6 @@ class Slyk18ClockToText(Converter, object):
                     d = _('Started at') + ' ' + _("%l.%M").lstrip() + _(timesuffix)
                 else:
                     d = _('Starts at') + ' ' + _("%l.%M").lstrip() + _(timesuffix)
-
 
         elif self.type == self.FULL:
             d = _("%a %e/%m  %-H:%M")

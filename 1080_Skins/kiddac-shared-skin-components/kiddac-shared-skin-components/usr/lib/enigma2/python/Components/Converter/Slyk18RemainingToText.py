@@ -62,13 +62,13 @@ class Slyk18RemainingToText(Poll, Converter, object):
             (duration, remaining) = self.source.time
             r = remaining
 
-        l = duration   # Length
+        length = duration   # Length
         # p = elapsed   # Position
 
         if self.type == self.ONLY_MINUTE:
             if remaining is not None:
-                return ngettext(_("Started %d min ago"), _("Started %d mins ago"), (r/60)) % (r/60)
+                return ngettext(_("Started %d min ago"), _("Started %d mins ago"), (r / 60)) % (r / 60)
         else:
-            return "%d" % l
+            return "%d" % length
 
     text = property(getText)

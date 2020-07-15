@@ -109,8 +109,8 @@ class Slyk18ServicePosition(Poll, Converter, object):
 
         if self.type == self.TYPE_TIMESHIFTSTART:
             time = getTime()
-            l = (self.length / 90000)
-            t = localtime(time-l)
+            length = (self.length / 90000)
+            t = localtime(time - length)
             if int(strftime("%H", t)) >= 12:
                 timesuffix = _('pm')
             else:
@@ -124,9 +124,9 @@ class Slyk18ServicePosition(Poll, Converter, object):
 
         if self.type == self.TYPE_TIMESHIFTPOSITION:
             time = getTime()
-            l = (self.length / 90000)
+            length = (self.length / 90000)
             s = self.position / 90000
-            t = localtime(time-l+s)
+            t = localtime(time - length + s)
             if int(strftime("%H", t)) >= 12:
                 timesuffix = _('pm')
             else:
@@ -142,9 +142,9 @@ class Slyk18ServicePosition(Poll, Converter, object):
             s = self.position / 90000
             e = (self.length / 90000) - s
             sign_n = ""
-            if (e/60) > 0:
+            if (e / 60) > 0:
                 sign_n = "-"
-            return sign_n + ngettext(_("%d Min"), _("%d Mins"), (e/60)) % (e/60)
+            return sign_n + ngettext(_("%d Min"), _("%d Mins"), (e / 60)) % (e / 60)
 
         if self.type == self.TYPE_REMAINING2:
             s = self.position / 90000
@@ -152,7 +152,7 @@ class Slyk18ServicePosition(Poll, Converter, object):
             sign_n = ''
             if e % 60 > 0:
                 sign_n = '-'
-            if e / 60 < 1:
+            if e / 60 < length:
                 return sign_n + _('%d Secs') % (e % 60)
             else:
                 return sign_n + ngettext(_('%d Min'), _('%d Mins'), e / 60) % (e / 60)
@@ -167,24 +167,24 @@ class Slyk18ServicePosition(Poll, Converter, object):
             e = (self.length / 90000) - s
             return ngettext(_("%d Min"), _("%d Mins"), (e / 60)) % (e / 60)
 
-        l = self.length
+        length = self.length
 
-        if l < 0:
-                return ""
+        if length < 0:
+            return ""
 
         if not self.detailed:
-            l /= 90000
+            length /= 90000
 
         if self.type == self.TYPE_MOVIELENGTH:
-                if l/3600 < 1:
-                    if l / 60 < 1:
-                        return _("%ds") % (l % 60)
-                    else:
-                        return _("%dm") % (l / 60)
-                elif l / 60 % 60 == 0:
-                    return _("%dh") % (l / 3600)
+            if length / 3600 < 1:
+                if length / 60 < 1:
+                    return _("%ds") % (length % 60)
                 else:
-                    return _("%dh %2dm") % (l / 3600, l / 60 % 60)
+                    return _("%dm") % (length / 60)
+            elif length / 60 % 60 == 0:
+                return _("%dh") % (length / 3600)
+            else:
+                return _("%dh %2dm") % (length / 3600, length / 60 % 60)
 
         if self.type == self.TYPE_MOVIEPOSITION:
             p = self.position / 90000
