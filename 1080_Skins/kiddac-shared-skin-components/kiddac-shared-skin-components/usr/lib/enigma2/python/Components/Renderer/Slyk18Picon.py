@@ -1,21 +1,18 @@
-from __future__ import print_function
 from __future__ import absolute_import
+
 import os
 import re
 import unicodedata
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, ePicLoad
 from Tools.Alternatives import GetWithAlternative
-from Tools.Directories import pathExists, SCOPE_SKIN_IMAGE, SCOPE_ACTIVE_SKIN, resolveFilename
+from Tools.Directories import pathExists, SCOPE_ACTIVE_SKIN, resolveFilename
 from Components.Harddisk import harddiskmanager
 from ServiceReference import ServiceReference
-from Components.config import config
-import sys
-
 from PIL import Image, ImageFile, PngImagePlugin
 import string
 import glob
-
+import sys
 
 pythonVer = 2
 if sys.version_info.major == 3:
@@ -35,12 +32,15 @@ def patched_chunk_tRNS(self, pos, len):
     i16 = PngImagePlugin.i16
     s = ImageFile._safe_read(self.fp, len)
     if self.im_mode == "P":
-        self.im_info["transparency"] = list(map(ord, s))
+
+        self.im_info["transparency"] = [ord(x) for x in [s]]
     elif self.im_mode == "L":
         self.im_info["transparency"] = i16(s)
     elif self.im_mode == "RGB":
         self.im_info["transparency"] = i16(s), i16(s[2:]), i16(s[4:])
     return s
+
+
 PngImagePlugin.PngStream.chunk_tRNS = patched_chunk_tRNS
 
 
@@ -63,6 +63,8 @@ def patched_load(self):
             self.palette.mode = "RGBA"
     if self.im:
         return self.im.pixel_access(self.readonly)
+
+
 Image.Image.load = patched_load
 
 
@@ -169,7 +171,6 @@ def getPiconName(serviceName):
 
 
 class Slyk18Picon(Renderer):
-
     def __init__(self):
         Renderer.__init__(self)
         self.PicLoad = ePicLoad()
@@ -180,7 +181,6 @@ class Slyk18Picon(Renderer):
         pngname = findPicon("picon_default")
         self.defaultpngname = resolveFilename(SCOPE_ACTIVE_SKIN, "picon_default.png")
 
-
     def addPath(self, value):
         if pathExists(value):
             global searchPaths
@@ -188,7 +188,6 @@ class Slyk18Picon(Renderer):
                 value += '/'
             if value not in searchPaths:
                 searchPaths.append(value)
-
 
     def applySkin(self, desktop, parent):
         attribs = self.skinAttributes[:]
@@ -203,17 +202,14 @@ class Slyk18Picon(Renderer):
 
     GUI_WIDGET = ePixmap
 
-
     def postWidgetCreate(self, instance):
         self.changed((self.CHANGED_DEFAULT,))
-
 
     def updatePicon(self, picInfo=None):
         ptr = self.PicLoad.getData()
         if ptr is not None:
             self.instance.setPixmap(ptr.__deref__())
             self.instance.show()
-
 
     def changed(self, what):
         if self.instance:
@@ -242,6 +238,7 @@ class Slyk18Picon(Renderer):
                     if os.path.exists('/tmp/temppicons'):
                         for filename in glob.glob('/tmp/temppicons/*.png'):
                             os.remove(filename)
+
 
 harddiskmanager.on_partition_list_change.append(onPartitionChange)
 initPiconPaths()
