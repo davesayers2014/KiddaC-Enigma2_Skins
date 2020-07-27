@@ -67,7 +67,7 @@ class SlykServiceInfo(Converter, object):
             "TsId": (self.TSID, (iPlayableService.evUpdatedInfo,)),
             "OnId": (self.ONID, (iPlayableService.evUpdatedInfo,)),
             "Sid": (self.SID, (iPlayableService.evUpdatedInfo,)),
-			"Framerate": (self.FRAMERATE, (iPlayableService.evVideoFramerateChanged, iPlayableService.evUpdatedInfo,)),
+            "Framerate": (self.FRAMERATE, (iPlayableService.evVideoFramerateChanged, iPlayableService.evUpdatedInfo,)),
             "Progressive": (self.PROGRESSIVE, (iPlayableService.evVideoProgressiveChanged, iPlayableService.evUpdatedInfo,)),
             "VideoInfo": (self.VIDEO_INFO, (iPlayableService.evVideoSizeChanged, iPlayableService.evVideoFramerateChanged, iPlayableService.evVideoProgressiveChanged, iPlayableService.evUpdatedInfo,)),
             "TransferBPS": (self.TRANSFERBPS, (iPlayableService.evUpdatedInfo,)),
@@ -306,7 +306,6 @@ class SlykServiceInfo(Converter, object):
             return str(self._getVideoHeight(info))
         elif self.type == self.FRAMERATE:
             return str(self._getFrameRate(self, info))
-
 
         return -1
 

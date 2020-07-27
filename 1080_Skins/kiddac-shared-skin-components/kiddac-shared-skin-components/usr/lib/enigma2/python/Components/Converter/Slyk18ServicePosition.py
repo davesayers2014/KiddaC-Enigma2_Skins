@@ -147,6 +147,7 @@ class Slyk18ServicePosition(Poll, Converter, object):
             return sign_n + ngettext(_("%d Min"), _("%d Mins"), (e / 60)) % (e / 60)
 
         if self.type == self.TYPE_REMAINING2:
+            length = (self.length / 90000)
             s = self.position / 90000
             e = self.length / 90000 - s
             sign_n = ''
@@ -188,13 +189,13 @@ class Slyk18ServicePosition(Poll, Converter, object):
 
         if self.type == self.TYPE_MOVIEPOSITION:
             p = self.position / 90000
-            if p/3600 < 1:
-                if p/60 < 1:
+            if p / 3600 < 1:
+                if p / 60 < 1:
                     return _("%ds") % (p % 60)
                 else:
                     return _("%dm") % (p / 60)
             elif p / 60 % 60 == 0:
-                return _("%dh") % (p/3600)
+                return _("%dh") % (p / 3600)
             else:
                 return _("%dh %2dm") % (p / 3600, p / 60 % 60)
 

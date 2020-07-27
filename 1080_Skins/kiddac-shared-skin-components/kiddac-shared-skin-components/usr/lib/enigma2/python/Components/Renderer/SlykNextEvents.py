@@ -12,7 +12,6 @@ class SlykNextEvents(VariableText, Renderer):
         VariableText.__init__(self)
         self.epgcache = eEPGCache.getInstance()
 
-
     def applySkin(self, desktop, parent):
         self.number = 0
         attribs = []
@@ -26,11 +25,9 @@ class SlykNextEvents(VariableText, Renderer):
 
     GUI_WIDGET = eLabel
 
-
     def connect(self, source):
         Renderer.connect(self, source)
         self.changed((self.CHANGED_DEFAULT,))
-
 
     def changed(self, what):
         if what[0] == self.CHANGED_CLEAR:
@@ -43,7 +40,7 @@ class SlykNextEvents(VariableText, Renderer):
                 for event in list:
                     if len(event) == 3 and i == int(self.number):
                         begin = localtime(event[0])
-                        end = localtime(event[0]+event[1])
+                        end = localtime(event[0] + event[1])
                         event_str = "%s" % (event[2])
                         if len(event_str) > 18:
                             text = (event_str[:18] + '..')
