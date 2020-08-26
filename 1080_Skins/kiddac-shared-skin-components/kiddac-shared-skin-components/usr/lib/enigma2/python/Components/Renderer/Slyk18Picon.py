@@ -31,13 +31,14 @@ if not os.path.exists("/tmp/temppicons"):
 def patched_chunk_tRNS(self, pos, len):
     i16 = PngImagePlugin.i16
     s = ImageFile._safe_read(self.fp, len)
-    if self.im_mode == "P":
-
-        self.im_info["transparency"] = [ord(x) for x in [s]]
-    elif self.im_mode == "L":
-        self.im_info["transparency"] = i16(s)
-    elif self.im_mode == "RGB":
-        self.im_info["transparency"] = i16(s), i16(s[2:]), i16(s[4:])
+    if self.im_mode == 'P':
+        i = string.find(s, chr(0))
+        if i >= 0:
+            self.im_info["transparency"] = map(ord, s)
+    elif self.im_mode == 'L':
+        self.im_info['transparency'] = i16(s)
+    elif self.im_mode == 'RGB':
+        self.im_info['transparency'] = (i16(s), i16(s[2:]), i16(s[4:]))
     return s
 
 
