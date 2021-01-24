@@ -221,19 +221,26 @@ class Slyk18Picon(Renderer):
                     tempname = pngname.replace(lastPiconPath, "")
                 if not pathExists(pngname):  # no picon for service found
                     pngname = self.defaultpngname
+                    
                 if self.pngname != pngname:
-                    if pngname != self.defaultpngname:
-                        im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + str(tempname), "PNG")
-                        self.instance.setScale(1)
-                        self.instance.setPixmapFromFile("/tmp/temppicons/" + str(tempname))
-                        self.instance.show()
-                    elif pngname == self.defaultpngname:
-                        im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + "picon_default.png", "PNG")
-                        self.instance.setScale(1)
-                        self.instance.setPixmapFromFile("/tmp/temppicons/picon_default.png")
-                        self.instance.show()
-                    else:
-                        self.instance.hide()
+                    try:
+                        if pngname != self.defaultpngname:
+                            im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + str(tempname), "PNG")
+                            self.instance.setScale(1)
+                            self.instance.setPixmapFromFile("/tmp/temppicons/" + str(tempname))
+                            self.instance.show()
+                        elif pngname == self.defaultpngname:
+                            im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + "picon_default.png", "PNG")
+                            self.instance.setScale(1)
+                            self.instance.setPixmapFromFile("/tmp/temppicons/picon_default.png")
+                            self.instance.show()
+                        else:
+                            self.instance.hide()
+                    except Exception as e:
+                        print(e)
+                        print("[Picon] Bad picon file?: %s" % pngname)                 
+                        return
+                        
                     self.pngname = pngname
                     # delete any existing pngs
                     if os.path.exists('/tmp/temppicons'):
