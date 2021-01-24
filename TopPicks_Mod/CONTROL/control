@@ -1,0 +1,9 @@
+Package: enigma2-plugin-skins-slyk-toppicks
+Version: 6.0_20200711
+Section: misc
+Priority: optional
+Architecture: all
+Maintainer: kiddac
+Description: Slyk Top Picks
+Source: https://www.linuxsat-support.com
+
