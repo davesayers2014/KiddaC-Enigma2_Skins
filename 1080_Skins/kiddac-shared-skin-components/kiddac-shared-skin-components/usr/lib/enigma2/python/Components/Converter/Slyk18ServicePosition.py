@@ -109,7 +109,7 @@ class Slyk18ServicePosition(Poll, Converter, object):
 
         if self.type == self.TYPE_TIMESHIFTSTART:
             time = getTime()
-            length = (self.length / 90000)
+            length = (self.length // 90000)
             t = localtime(time - length)
             if int(strftime("%H", t)) >= 12:
                 timesuffix = _('pm')
@@ -124,8 +124,8 @@ class Slyk18ServicePosition(Poll, Converter, object):
 
         if self.type == self.TYPE_TIMESHIFTPOSITION:
             time = getTime()
-            length = (self.length / 90000)
-            s = self.position / 90000
+            length = (self.length // 90000)
+            s = self.position // 90000
             t = localtime(time - length + s)
             if int(strftime("%H", t)) >= 12:
                 timesuffix = _('pm')
@@ -139,34 +139,34 @@ class Slyk18ServicePosition(Poll, Converter, object):
             return timetext.lstrip(' ')
 
         if self.type == self.TYPE_REMAINING:
-            s = self.position / 90000
-            e = (self.length / 90000) - s
+            s = self.position // 90000
+            e = (self.length // 90000) - s
             sign_n = ""
             if (e / 60) > 0:
                 sign_n = "-"
-            return sign_n + ngettext(_("%d Min"), _("%d Mins"), (e / 60)) % (e / 60)
+            return sign_n + ngettext(_("%d Min"), _("%d Mins"), (e // 60)) % (e // 60)
 
         if self.type == self.TYPE_REMAINING2:
-            length = (self.length / 90000)
-            s = self.position / 90000
-            e = self.length / 90000 - s
+            length = (self.length // 90000)
+            s = self.position // 90000
+            e = self.length // 90000 - s
             sign_n = ''
             if e % 60 > 0:
                 sign_n = '-'
-            if e / 60 < length:
+            if e // 60 < length:
                 return sign_n + _('%d Secs') % (e % 60)
             else:
-                return sign_n + ngettext(_('%d Min'), _('%d Mins'), e / 60) % (e / 60)
+                return sign_n + ngettext(_('%d Min'), _('%d Mins'), e // 60) % (e // 60)
 
         if self.type == self.TYPE_POSITION:
-            p = self.position / 90000
+            p = self.position // 90000
             sign_p = "+"
-            return sign_p + ngettext(_("%d Min"), _("%d Mins"), (p / 60)) % (p / 60)
+            return sign_p + ngettext(_("%d Min"), _("%d Mins"), (p // 60)) % (p // 60)
 
         if self.type == self.TYPE_MOVIEREMAINING:
-            s = self.position / 90000
-            e = (self.length / 90000) - s
-            return ngettext(_("%d Min"), _("%d Mins"), (e / 60)) % (e / 60)
+            s = self.position // 90000
+            e = (self.length // 90000) - s
+            return ngettext(_("%d Min"), _("%d Mins"), (e // 60)) % (e // 60)
 
         length = self.length
 
@@ -177,27 +177,27 @@ class Slyk18ServicePosition(Poll, Converter, object):
             length /= 90000
 
         if self.type == self.TYPE_MOVIELENGTH:
-            if length / 3600 < 1:
-                if length / 60 < 1:
+            if length // 3600 < 1:
+                if length // 60 < 1:
                     return _("%ds") % (length % 60)
                 else:
-                    return _("%dm") % (length / 60)
-            elif length / 60 % 60 == 0:
-                return _("%dh") % (length / 3600)
+                    return _("%dm") % (length // 60)
+            elif length // 60 % 60 == 0:
+                return _("%dh") % (length // 3600)
             else:
-                return _("%dh %2dm") % (length / 3600, length / 60 % 60)
+                return _("%dh %2dm") % (length // 3600, length // 60 % 60)
 
         if self.type == self.TYPE_MOVIEPOSITION:
-            p = self.position / 90000
-            if p / 3600 < 1:
-                if p / 60 < 1:
+            p = self.position // 90000
+            if p // 3600 < 1:
+                if p // 60 < 1:
                     return _("%ds") % (p % 60)
                 else:
-                    return _("%dm") % (p / 60)
-            elif p / 60 % 60 == 0:
-                return _("%dh") % (p / 3600)
+                    return _("%dm") % (p // 60)
+            elif p // 60 % 60 == 0:
+                return _("%dh") % (p // 3600)
             else:
-                return _("%dh %2dm") % (p / 3600, p / 60 % 60)
+                return _("%dh %2dm") % (p // 3600, p // 60 % 60)
 
     # range/value are for the Progress renderer
     range = 10000

@@ -67,7 +67,7 @@ class Slyk18RemainingToText(Poll, Converter, object):
 
         if self.type == self.ONLY_MINUTE:
             if remaining is not None:
-                return ngettext(_("Started %d min ago"), _("Started %d mins ago"), (r / 60)) % (r / 60)
+                return ngettext(_("Started %d min ago"), _("Started %d mins ago"), (r // 60)) % (r // 60)
         else:
             return "%d" % length
 

@@ -247,11 +247,11 @@ class SlykServiceInfo(Converter, object):
         elif self.type == self.SID:
             return self.getServiceInfoString(info, iServiceInformation.sSID)
         elif self.type == self.FRAMERATE:
-            return self._getFrameRateStr(info, convert=lambda x: "%d fps" % ((x + 500) / 1000))
+            return self._getFrameRateStr(info, convert=lambda x: "%d fps" % ((x + 500) // 1000))
         elif self.type == self.PROGRESSIVE:
             return self._getProgressiveStr(info)
         elif self.type == self.TRANSFERBPS:
-            return self.getServiceInfoString(info, iServiceInformation.sTransferBPS, lambda x: "%d kB/s" % (x / 1024))
+            return self.getServiceInfoString(info, iServiceInformation.sTransferBPS, lambda x: "%d kB/s" % (x // 1024))
         elif self.type == self.HAS_HBBTV:
             return info.getInfoString(iServiceInformation.sHBBTVUrl)
         elif self.type == self.FREQ_INFO:
@@ -285,7 +285,7 @@ class SlykServiceInfo(Converter, object):
             if fieldrate > 0:
                 if progressive == 'i':
                     fieldrate *= 2
-                fieldrate = "%dHz" % ((fieldrate + 500) / 1000,)
+                fieldrate = "%dHz" % ((fieldrate + 500) // 1000,)
             else:
                 fieldrate = ""
             return "%sx%s%s %s" % (self._getVideoWidthStr(info), self._getVideoHeightStr(info), progressive, fieldrate)

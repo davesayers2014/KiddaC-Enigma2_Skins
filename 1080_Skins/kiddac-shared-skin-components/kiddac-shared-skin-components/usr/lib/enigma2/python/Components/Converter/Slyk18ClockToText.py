@@ -85,11 +85,11 @@ class Slyk18ClockToText(Converter, object):
                 return ""
             else:
                 if time / 3600 < 1:
-                    return ngettext(_("%d Min"), _("%d Mins"), (time / 60)) % (time / 60)
+                    return ngettext(_("%d Min"), _("%d Mins"), (time // 60)) % (time // 60)
                 elif time / 60 % 60 == 0:
-                    return ngettext(_("%d Hour"), _("%d Hours"), (time / 3600)) % (time / 3600)
+                    return ngettext(_("%d Hour"), _("%d Hours"), (time // 3600)) % (time // 3600)
                 else:
-                    return "%dh %2dm" % (time / 3600, time / 60 % 60)
+                    return "%dh %2dm" % (time // 3600, time // 60 % 60)
 
         if int(strftime("%H", t)) >= 12:
             timesuffix = _('pm')
