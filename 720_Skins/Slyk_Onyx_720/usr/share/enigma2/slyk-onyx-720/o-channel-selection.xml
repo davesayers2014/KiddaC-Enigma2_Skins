@@ -370,7 +370,7 @@ else:
 wsizey = textsize[1]+listsize[1]
 wsize = (wsizex, wsizey)
 self.instance.resize(eSize(*wsize))
-self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))
+self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))
                 </applet>
 	</screen>
 </skin>

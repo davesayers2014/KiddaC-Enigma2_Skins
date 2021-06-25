@@ -113,7 +113,7 @@ wsize = (wsizex, wsizey)
 self.instance.resize(eSize(*wsize))
 
 # center window
-self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
+self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet>
 	</screen>
 	
 	<!-- Console -->
@@ -307,7 +307,7 @@ else:
 wsizey = textsize[1]+listsize[1]
 wsize = (wsizex, wsizey)
 self.instance.resize(eSize(*wsize))
-self.instance.move(ePoint((desktop_w-wsizex)/2, (desktop_h-wsizey)/2))</applet>
+self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet>
 	</screen>
 	
 	<screen name="MessageBoxSimple" position="center,center" size="668,10" title="Message" backgroundColor="messagebox-bg">
