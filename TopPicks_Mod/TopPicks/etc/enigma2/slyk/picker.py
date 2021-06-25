@@ -1,7 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-
 from PIL import Image, ImageEnhance
 
 import io
@@ -57,23 +53,23 @@ def download_image(url):
 
 
 def crop_image(im, width, height):
-    ratio = float(im.size[0]) / im.size[1]
+    ratio = float(im.size[0]) // im.size[1]
 
-    if width / height < ratio:
+    if width // height < ratio:
         crop_width = int(height * ratio)
         crop_height = height
-    elif width / height > ratio:
+    elif width // height > ratio:
         crop_width = width
-        crop_height = int(width / ratio)
+        crop_height = int(width // ratio)
     else:
         crop_width = width
         crop_height = height
 
     size = crop_width, crop_height
-    tl_w = (crop_width - width) / 2
-    tl_h = (crop_height - height) / 2
-    br_w = crop_width - ((crop_width - width) / 2)
-    br_h = crop_height - ((crop_height - height) / 2)
+    tl_w = (crop_width - width) // 2
+    tl_h = (crop_height - height) // 2
+    br_w = crop_width - ((crop_width - width) // 2)
+    br_h = crop_height - ((crop_height - height) // 2)
 
     area = (tl_w, tl_h, br_w, br_h)
     im = im.resize((size), Image.ANTIALIAS).crop(area)
@@ -114,7 +110,7 @@ def add_logo(im, channel, logo_height):
         posx = img_w - logo_w - padding
 
     if logo_halign == "center":
-        posx = ((img_w - logo_w) / 2)
+        posx = ((img_w - logo_w) // 2)
 
     if logo_valign == "top":
         posy = 0 + padding
