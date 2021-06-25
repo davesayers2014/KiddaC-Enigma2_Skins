@@ -4,7 +4,7 @@ import random
 
 from enigma import eListboxPythonMultiContent, eListbox, gFont, iServiceInformation, eSize, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_VALIGN_CENTER, eServiceReference, eServiceCenter, eTimer, getDesktop, loadPNG, BT_SCALE, BT_KEEP_ASPECT_RATIO
 
-from GUIComponent import GUIComponent
+from Components.GUIComponent import GUIComponent
 from Tools.FuzzyDate import FuzzyTime
 from Components.MultiContent import MultiContentEntryText, MultiContentEntryPixmapAlphaTest, MultiContentEntryPixmapAlphaBlend, MultiContentEntryProgress
 from Components.config import config
@@ -80,7 +80,7 @@ def moviePlayState(cutsFileName, ref, length):
         f = open(cutsFileName, 'rb')
         lastCut = None
         cutPTS = None
-        while 1:
+        while True:
             data = f.read(cutsParser.size)
             if len(data) < cutsParser.size:
                 break
@@ -132,7 +132,7 @@ def resetMoviePlayState(cutsFileName, ref=None):
             delResumePoint(ref)
         f = open(cutsFileName, 'rb')
         cutlist = []
-        while 1:
+        while True:
             data = f.read(cutsParser.size)
             if len(data) < cutsParser.size:
                 break
@@ -274,8 +274,8 @@ class MovieList(GUIComponent):
             self.reloadDelayTimer.start(5000, 1)
 
     def connectSelChanged(self, fnc):
-		if not fnc in self.onSelectionChanged:
-			self.onSelectionChanged.append(fnc)
+        if not fnc in self.onSelectionChanged:
+            self.onSelectionChanged.append(fnc)
 
     def disconnectSelChanged(self, fnc):
         if fnc in self.onSelectionChanged:
@@ -294,12 +294,12 @@ class MovieList(GUIComponent):
     def setItemsPerPage(self):
         if self.listHeight > 0:
             ext = config.movielist.useextlist.value
-            itemHeight = self.listHeight / config.movielist.itemsperpage.value
+            itemHeight = self.listHeight // config.movielist.itemsperpage.value
         else:
             itemHeight = 30  # some default (270/5)
         self.itemHeight = itemHeight
         self.l.setItemHeight(itemHeight)
-        self.instance.resize(eSize(self.listWidth, self.listHeight / itemHeight * itemHeight))
+        self.instance.resize(eSize(self.listWidth, self.listHeight // itemHeight * itemHeight))
 
     def setFontsize(self):
         self.l.setFont(0, gFont(self.fontName, self.fontSize + config.movielist.fontsize.value))
@@ -323,35 +323,35 @@ class MovieList(GUIComponent):
         ih = self.itemHeight
 
         if self.screenwidth and self.screenwidth == 1920:
-			listBeginX = 3
-			listEndX = 3
-			listMarginX = 12
-			pathIconSize = 38
-			trashIconSizeH = 36
-			trashIconSizeW = 33
-			folderIconSizeH = 42
-			folderIconSizeW = 36
-			seenIconSize = 30
-			dataIconSize = 32
-			progressIconSize = 32
-			progressBarSize = 72
-			textPosY = 1
-			seenIconPosY = ih/2-seenIconSize/2
+            listBeginX = 3
+            listEndX = 3
+            listMarginX = 12
+            pathIconSize = 38
+            trashIconSizeH = 36
+            trashIconSizeW = 33
+            folderIconSizeH = 42
+            folderIconSizeW = 36
+            seenIconSize = 30
+            dataIconSize = 32
+            progressIconSize = 32
+            progressBarSize = 72
+            textPosY = 1
+            seenIconPosY = ih//2-seenIconSize//2
         else:
-			listBeginX = 2
-			listEndX = 2
-			listMarginX = 8
-			pathIconSize = 25
-			trashIconSizeH = 24
-			trashIconSizeW = 22
-			folderIconSizeH = 28
-			folderIconSizeW = 24
-			seenIconSize = 20
-			dataIconSize = 21
-			progressIconSize = 21
-			progressBarSize = 48
-			textPosY = 1
-			seenIconPosY = ih/2-seenIconSize/2
+            listBeginX = 2
+            listEndX = 2
+            listMarginX = 8
+            pathIconSize = 25
+            trashIconSizeH = 24
+            trashIconSizeW = 22
+            folderIconSizeH = 28
+            folderIconSizeW = 24
+            seenIconSize = 20
+            dataIconSize = 21
+            progressIconSize = 21
+            progressBarSize = 48
+            textPosY = 1
+            seenIconPosY = ih//2-seenIconSize//2
 
         textPosX = listBeginX + dataIconSize + listMarginX
 
@@ -360,8 +360,8 @@ class MovieList(GUIComponent):
             iconSize = pathIconSize
             iconPosX = listBeginX-1
             iconPosY = ih/2-iconSize/2
-            trashIconPosY = ih/2-trashIconSizeH/2
-            folderIconPosY = ih/2-folderIconSizeH/2
+            trashIconPosY = ih//2-trashIconSizeH//2
+            folderIconPosY = ih//2-folderIconSizeH//2
             if iconPosY < iconPosX:
                 iconPosY = iconPosX
             # Name is full path name
@@ -382,43 +382,43 @@ class MovieList(GUIComponent):
                         res.append(MultiContentEntryText(pos=(width-dateSize-listEndX, textPosY), size=(dateSize, self.itemHeight), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=_("Trashcan")))
                         return res
                     if self.screenwidth and self.screenwidth == 1920:
-						if ext == "1":
-							res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(705, 0), size=(327, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
-							return res
-						if ext == "2":
-							res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
-							return res
-						if ext == "3":
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
-							return res
-						if ext == "4":
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
-							return res
+                        if ext == "1":
+                            res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(705, 0), size=(327, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
+                            return res
+                        if ext == "2":
+                            res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
+                            return res
+                        if ext == "3":
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
+                            return res
+                        if ext == "4":
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
+                            return res
                     else:
-						if ext == "1":
-							res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(470, 0), size=(218, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
-							return res
-						if ext == "2":
-							res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
-							return res
-						if ext == "3":
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
-							return res
-						if ext == "4":
-							res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
-							res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
-							return res
+                        if ext == "1":
+                            res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(470, 0), size=(218, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
+                            return res
+                        if ext == "2":
+                            res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted items")))
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Trashcan")))
+                            return res
+                        if ext == "3":
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
+                            return res
+                        if ext == "4":
+                            res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, trashIconPosY), size=(trashIconSizeW, trashIconSizeH), png=self.iconTrash))
+                            res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Deleted Recordings")))
+                            return res
             if ext == "0":
                 dateSize = getTextBoundarySize(self.instance, self.dateFont, self.l.getItemSize(), _("Directory")).width()
                 res.append(MultiContentEntryPixmapAlphaBlend(pos=(iconPosX, iconPosY), size=(iconSize, iconSize), png=self.iconFolder))
@@ -426,43 +426,43 @@ class MovieList(GUIComponent):
                 res.append(MultiContentEntryText(pos=(width-dateSize-listEndX, textPosY), size=(dateSize, self.itemHeight), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=_("Directory")))
                 return res
             if self.screenwidth and self.screenwidth == 1920:
-				if ext == "1":
-					res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
-					res.append(MultiContentEntryText(pos=(705, 0), size=(327, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
-					return res
-				if ext == "2":
-					res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
-					res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
-					return res
-				if ext == "3":
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
-					res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					return res
-				if ext == "4":
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
-					res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					return res
+                if ext == "1":
+                    res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
+                    res.append(MultiContentEntryText(pos=(705, 0), size=(327, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
+                    return res
+                if ext == "2":
+                    res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
+                    res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
+                    return res
+                if ext == "3":
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
+                    res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    return res
+                if ext == "4":
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
+                    res.append(MultiContentEntryText(pos=(68, 0), size=(705, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    return res
             else:
-				if ext == "1":
-					res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
-					res.append(MultiContentEntryText(pos=(470, 0), size=(218, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
-					return res
-				if ext == "2":
-					res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
-					res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
-					return res
-				if ext == "3":
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
-					res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					return res
-				if ext == "4":
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
-					res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
-					return res
+                if ext == "1":
+                    res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
+                    res.append(MultiContentEntryText(pos=(470, 0), size=(218, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
+                    return res
+                if ext == "2":
+                    res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconSeries))
+                    res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=_("Directory")))
+                    return res
+                if ext == "3":
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
+                    res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    return res
+                if ext == "4":
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, folderIconPosY), size=(folderIconSizeW, folderIconSizeH), png=self.iconFolder))
+                    res.append(MultiContentEntryText(pos=(45, 0), size=(470, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=txt))
+                    return res
 
         if (data == -1) or (data is None):
             data = MovieListData()
@@ -514,7 +514,7 @@ class MovieList(GUIComponent):
                             data.partcol = 0x206333
         len = data.len
         if len > 0:
-            len = "%d:%02d" % (len / 60, len % 60)
+            len = "%d:%02d" % (len // 60, len % 60)
         else:
             len = ""
 
@@ -523,28 +523,28 @@ class MovieList(GUIComponent):
         if switch == 'i':
             iconSize = dataIconSize
             iconPosX = listBeginX
-            iconPosY = ih/2-iconSize/2
+            iconPosY = ih//2-iconSize//2
             if iconPosY < iconPosX:
                 iconPosY = iconPosX
         elif switch == 'p':
             if data.part is not None and data.part > 0:
                 iconSize = progressBarSize
                 iconPosX = listBeginX
-                iconPosY = ih/2-iconSize/8
+                iconPosY = ih//2-iconSize//8
                 if iconPosY < iconPosX:
                     iconPosY = iconPosX
-                res.append(MultiContentEntryProgress(pos=(iconPosX, iconPosY), size=(iconSize, iconSize/4), percent=data.part, borderWidth=2, foreColor=data.partcol, foreColorSelected=None, backColor=None, backColorSelected=None))
+                res.append(MultiContentEntryProgress(pos=(iconPosX, iconPosY), size=(iconSize, iconSize//4), percent=data.part, borderWidth=2, foreColor=data.partcol, foreColorSelected=None, backColor=None, backColorSelected=None))
             else:
                 iconSize = dataIconSize
                 iconPosX = listBeginX
-                iconPosY = ih/2-iconSize/2
+                iconPosY = ih//2-iconSize//2
                 if iconPosY < iconPosX:
                     iconPosY = iconPosX
                 res.append(MultiContentEntryPixmapAlphaBlend(pos=(iconPosX, iconPosY), size=(iconSize, iconSize), png=data.icon))
         elif switch == 's':
             iconSize = progressIconSize
             iconPosX = listBeginX
-            iconPosY = ih/2-iconSize/2
+            iconPosY = ih//2-iconSize//2
             if iconPosY < iconPosX:
                 iconPosY = iconPosX
             if data.part is not None and data.part > 0:
@@ -567,7 +567,7 @@ class MovieList(GUIComponent):
             textPosX = listBeginX + iconSize + listMarginX
         else:
             textPosX = listBeginX
-	    
+
         if ext == '1':
             getrec = info.getName(serviceref)
             fileName, fileExtension = os.path.splitext(getrec)
@@ -581,51 +581,51 @@ class MovieList(GUIComponent):
                 ref = info.getInfoString(serviceref, iServiceInformation.sServiceref)        # get reference
                 service = ServiceReference(ref).getServiceName()                            # get service name
                 serviceSize = getTextBoundarySize(self.instance, self.dateFont, self.l.getItemSize(), service).width()
-            except Exception, e:
+            except Exception as e:
                 print('[MovieList] load extended infos get failed: ', e)
 
             if self.screenwidth and self.screenwidth == 1920:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(909, ih/2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-					res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(705, 0), size=(203, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(1068, 0), size=(309, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(1413, 0), size=(189, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(909, ih/2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-						res.append(MultiContentEntryText(pos=(705, 0), size=(203, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					else:
-						data.viewed = 'Downloaded'
-						res.append(MultiContentEntryText(pos=(705, 0), size=(327, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(1413, 0), size=(189, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(909, ih//2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                    res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(705, 0), size=(203, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(1068, 0), size=(309, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(1413, 0), size=(189, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(909, ih//2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                        res.append(MultiContentEntryText(pos=(705, 0), size=(203, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    else:
+                        data.viewed = 'Downloaded'
+                        res.append(MultiContentEntryText(pos=(705, 0), size=(327, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(12, 0), size=(573, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(629, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(1413, 0), size=(189, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
             else:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(606, ih/2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-					res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(470, 0), size=(135, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(712, 0), size=(206, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(942, 0), size=(126, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(606, ih/2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-						res.append(MultiContentEntryText(pos=(470, 0), size=(135, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					else:
-						data.viewed = 'Downloaded'
-						res.append(MultiContentEntryText(pos=(470, 0), size=(218, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(942, 0), size=(126, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(606, ih//2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                    res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(470, 0), size=(135, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(712, 0), size=(206, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(942, 0), size=(126, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(606, ih//2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                        res.append(MultiContentEntryText(pos=(470, 0), size=(135, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    else:
+                        data.viewed = 'Downloaded'
+                        res.append(MultiContentEntryText(pos=(470, 0), size=(218, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(8, 0), size=(382, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(419, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(942, 0), size=(126, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
 
         if ext == '2':
             getrec = info.getName(serviceref)
@@ -640,51 +640,51 @@ class MovieList(GUIComponent):
                 ref = info.getInfoString(serviceref, iServiceInformation.sServiceref)        # get reference
                 service = ServiceReference(ref).getServiceName()                            # get service name
                 serviceSize = getTextBoundarySize(self.instance, self.dateFont, self.l.getItemSize(), service).width()
-            except Exception, e:
+            except Exception as e:
                 print('[MovieList] load extended infos get failed: ', e)
 
             if self.screenwidth and self.screenwidth == 1920:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(726, ih/2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-					res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(864, 0), size=(240, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(1119, 0), size=(135, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(726, ih/2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-						res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					else:
-						data.viewed = 'Downloaded'
-						res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(1119, 0), size=(135, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(726, ih//2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                    res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(864, 0), size=(240, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(1119, 0), size=(135, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(726, ih//2-3), size=(123, 9), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                        res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    else:
+                        data.viewed = 'Downloaded'
+                        res.append(MultiContentEntryText(pos=(561, 0), size=(150, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(12, 0), size=(483, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(510, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(1119, 0), size=(135, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
             else:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(484, ih/2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-					res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(576, 0), size=(160, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(746, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(484, ih/2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
-						res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					else:
-						data.viewed = 'Downloaded'
-						res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(746, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(484, ih//2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                    res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(576, 0), size=(160, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(746, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(484, ih//2-3), size=(82, 6), percent=data.part, borderWidth=1, foreColor=0x207be1, foreColorSelected=0x207be1, backColor=0x0b1e40, backColorSelected=None))
+                        res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    else:
+                        data.viewed = 'Downloaded'
+                        res.append(MultiContentEntryText(pos=(374, 0), size=(100, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(8, 0), size=(322, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(340, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(746, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=slyk_date_string))
+                    return res
 
         if ext == '3':
             getrec = info.getName(serviceref)
@@ -699,51 +699,51 @@ class MovieList(GUIComponent):
                 ref = info.getInfoString(serviceref, iServiceInformation.sServiceref)        # get reference
                 service = ServiceReference(ref).getServiceName()                            # get service name
                 serviceSize = getTextBoundarySize(self.instance, self.dateFont, self.l.getItemSize(), service).width()
-            except Exception, e:
+            except Exception as e:
                 print('[MovieList] load extended infos get failed: ', e)
 
             if self.screenwidth and self.screenwidth == 1920:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(1230, ih/2-3), size=(90, 9), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
-					res.append(MultiContentEntryText(pos=(15, 0), size=(447, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryText(pos=(477, 0), size=(242, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(734, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(1013, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(1058, 0), size=(165, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(1230, ih/2-3), size=(90, 9), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
-						res.append(MultiContentEntryText(pos=(1058, 0), size=(165, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					else:
-						data.viewed = 'Downloaded'
-						res.append(MultiContentEntryText(pos=(1058, 0), size=(165, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(15, 0), size=(447, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(1013, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(734, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(1230, ih//2-3), size=(90, 9), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
+                    res.append(MultiContentEntryText(pos=(15, 0), size=(447, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryText(pos=(477, 0), size=(242, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(734, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(1013, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(1058, 0), size=(165, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(1230, ih//2-3), size=(90, 9), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
+                        res.append(MultiContentEntryText(pos=(1058, 0), size=(165, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    else:
+                        data.viewed = 'Downloaded'
+                        res.append(MultiContentEntryText(pos=(1058, 0), size=(165, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(15, 0), size=(447, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(1013, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(734, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
+                    return res
             else:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(820, ih/2-3), size=(60, 6), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
-					res.append(MultiContentEntryText(pos=(10, 0), size=(298, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryText(pos=(318, 0), size=(161, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(489, 0), size=(180, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(675, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(705, 0), size=(110, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(820, ih/2-3), size=(60, 6), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
-						res.append(MultiContentEntryText(pos=(705, 0), size=(110, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					else:
-						data.viewed = 'Downloaded'
-						res.append(MultiContentEntryText(pos=(705, 0), size=(110, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
-					res.append(MultiContentEntryText(pos=(10, 0), size=(298, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(675, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(489, 0), size=(180, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(820, ih//2-3), size=(60, 6), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
+                    res.append(MultiContentEntryText(pos=(10, 0), size=(298, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryText(pos=(318, 0), size=(161, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(489, 0), size=(180, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(675, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(705, 0), size=(110, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(820, ih//2-3), size=(60, 6), percent=data.part, borderWidth=1, foreColor=0x006fce, foreColorSelected=0xffffff, backColor=0x000000, backColorSelected=None))
+                        res.append(MultiContentEntryText(pos=(705, 0), size=(110, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    else:
+                        data.viewed = 'Downloaded'
+                        res.append(MultiContentEntryText(pos=(705, 0), size=(110, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.viewed))
+                    res.append(MultiContentEntryText(pos=(10, 0), size=(298, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(675, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(489, 0), size=(180, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=slyk_date_time_string))
+                    return res
 
         if ext == '4':
             getrec = info.getName(serviceref)
@@ -758,53 +758,53 @@ class MovieList(GUIComponent):
                 ref = info.getInfoString(serviceref, iServiceInformation.sServiceref)        # get reference
                 service = ServiceReference(ref).getServiceName()                            # get service name
                 serviceSize = getTextBoundarySize(self.instance, self.dateFont, self.l.getItemSize(), service).width()
-            except Exception, e:
+            except Exception as e:
                 print('[MovieList] load extended infos get failed: ', e)
-			
+
             if self.screenwidth and self.screenwidth == 1920:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(776, ih/2-3), size=(98, 9), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(68, 0), size=(405, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryText(pos=(486, 0), size=(257, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(923, 0), size=(75, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
-					res.append(MultiContentEntryText(pos=(983, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
-					res.append(MultiContentEntryText(pos=(1073, 0), size=(83, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(776, ih/2-3), size=(98, 9), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
-					else:
-						data.viewed = 'Downloaded'
-					res.append(MultiContentEntryText(pos=(68, 0), size=(405, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(923, 0), size=(75, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
-					res.append(MultiContentEntryText(pos=(983, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
-					res.append(MultiContentEntryText(pos=(1073, 0), size=(83, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(776, ih//2-3), size=(98, 9), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(68, 0), size=(405, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryText(pos=(486, 0), size=(257, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(923, 0), size=(75, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
+                    res.append(MultiContentEntryText(pos=(983, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
+                    res.append(MultiContentEntryText(pos=(1073, 0), size=(83, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(776, ih//2-3), size=(98, 9), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
+                    else:
+                        data.viewed = 'Downloaded'
+                    res.append(MultiContentEntryText(pos=(68, 0), size=(405, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(15, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(923, 0), size=(75, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
+                    res.append(MultiContentEntryText(pos=(983, 0), size=(90, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
+                    res.append(MultiContentEntryText(pos=(1073, 0), size=(83, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
+                    return res
             else:
-				if fileExtension in RECORD_EXTENSIONS:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(517, ih/2-3), size=(65, 6), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
-					res.append(MultiContentEntryText(pos=(45, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryText(pos=(324, 0), size=(171, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
-					res.append(MultiContentEntryText(pos=(615, 0), size=(50, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
-					res.append(MultiContentEntryText(pos=(655, 0), size=(60, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
-					res.append(MultiContentEntryText(pos=(715, 0), size=(55, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
-					return res
-				else:
-					if data.part is not None and data.part > 0:
-						res.append(MultiContentEntryProgress(pos=(517, ih/2-3), size=(65, 6), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
-					else:
-						data.viewed = 'Downloaded'
-					res.append(MultiContentEntryText(pos=(45, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
-					res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
-					res.append(MultiContentEntryText(pos=(615, 0), size=(50, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
-					res.append(MultiContentEntryText(pos=(655, 0), size=(60, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
-					res.append(MultiContentEntryText(pos=(715, 0), size=(55, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
-					return res
+                if fileExtension in RECORD_EXTENSIONS:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(517, ih//2-3), size=(65, 6), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, seenIconPosY), size=(seenIconSize, seenIconSize), png=data.icon))
+                    res.append(MultiContentEntryText(pos=(45, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryText(pos=(324, 0), size=(171, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=service))
+                    res.append(MultiContentEntryText(pos=(615, 0), size=(50, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
+                    res.append(MultiContentEntryText(pos=(655, 0), size=(60, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
+                    res.append(MultiContentEntryText(pos=(715, 0), size=(55, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
+                    return res
+                else:
+                    if data.part is not None and data.part > 0:
+                        res.append(MultiContentEntryProgress(pos=(517, ih//2-3), size=(65, 6), percent=data.part, borderWidth=1, foreColor=0xffffff, foreColorSelected=0xffffff, backColor=0x14020e, backColorSelected=None))
+                    else:
+                        data.viewed = 'Downloaded'
+                    res.append(MultiContentEntryText(pos=(45, 0), size=(270, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
+                    res.append(MultiContentEntryPixmapAlphaBlend(pos=(10, seenIconPosY), size=(seenIconSize, seenIconSize), png=self.iconDownloaded))
+                    res.append(MultiContentEntryText(pos=(615, 0), size=(50, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=vskin_date_day))
+                    res.append(MultiContentEntryText(pos=(655, 0), size=(60, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_date))
+                    res.append(MultiContentEntryText(pos=(715, 0), size=(55, ih), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=vskin_date_time))
+                    return res
         else:
             res.append(MultiContentEntryText(pos=(textPosX, 0), size=(width-textPosX-dateSize-listMarginX-listEndX, ih), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=data.txt))
             res.append(MultiContentEntryText(pos=(width-dateSize-listEndX, textPosY), size=(dateSize, ih), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=begin_string))
@@ -903,7 +903,7 @@ class MovieList(GUIComponent):
 
         reflist = root and serviceHandler.list(root)
         if reflist is None:
-            print "listing of movies failed"
+            print("listing of movies failed")
             return
         realtags = set()
         tags = {}
@@ -921,7 +921,7 @@ class MovieList(GUIComponent):
                 ref.flags = eServiceReference.flagDirectory
                 self.list.append((ref, None, 0, -1))
                 numberOfDirs += 1
-        while 1:
+        while True:
             serviceref = reflist.getNext()
             if not serviceref.valid():
                 break
@@ -950,7 +950,7 @@ class MovieList(GUIComponent):
                 realtags.update(this_tags)
             for tag in this_tags:
                 if len(tag) >= 4:
-                    if tags.has_key(tag):
+                    if tag in tags:
                         tags[tag].append(name)
                     else:
                         tags[tag] = [name]
