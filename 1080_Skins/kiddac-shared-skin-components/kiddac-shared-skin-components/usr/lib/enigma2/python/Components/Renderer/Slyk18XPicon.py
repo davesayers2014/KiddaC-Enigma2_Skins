@@ -1,18 +1,21 @@
 from __future__ import absolute_import
-import os
-import re
-import unicodedata
+
+from Components.Harddisk import harddiskmanager
 from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, ePicLoad
+from ServiceReference import ServiceReference
+from PIL import Image, ImageFile, PngImagePlugin
 from Tools.Alternatives import GetWithAlternative
 from Tools.Directories import pathExists, SCOPE_ACTIVE_SKIN, resolveFilename
-from Components.Harddisk import harddiskmanager
-from ServiceReference import ServiceReference
 
-from PIL import Image, ImageFile, PngImagePlugin
 import string
 import glob
 import sys
+import os
+import re
+import unicodedata
+
+_simple_palette = re.compile(b"^\xff*\x00\xff*$")
 
 pythonVer = 2
 if sys.version_info.major == 3:
@@ -42,9 +45,6 @@ def patched_chunk_tRNS(self, pos, len):
     return s
 
 
-PngImagePlugin.PngStream.chunk_tRNS = patched_chunk_tRNS
-
-
 # png code courtest of adw on stackoverflow
 def patched_load(self):
     if self.im and self.palette and self.palette.dirty:
@@ -66,7 +66,35 @@ def patched_load(self):
         return self.im.pixel_access(self.readonly)
 
 
-Image.Image.load = patched_load
+def mycall(self, cid, pos, length):
+    if cid.decode("ascii") == "tRNS":
+        return self.chunk_TRNS(pos, length)
+    else:
+        return getattr(self, "chunk_" + cid.decode("ascii"))(pos, length)
+
+
+def mychunk_TRNS(self, pos, length):
+    s = ImageFile._safe_read(self.fp, length)
+    if self.im_mode == "P":
+        if _simple_palette.match(s):
+            i = s.find(b"\0")
+            if i >= 0:
+                self.im_info["transparency"] = i
+        else:
+            self.im_info["transparency"] = s
+    elif self.im_mode in ("1", "L", "I"):
+        self.im_info["transparency"] = i16(s)
+    elif self.im_mode == "RGB":
+        self.im_info["transparency"] = i16(s), i16(s, 2), i16(s, 4)
+    return s
+
+
+if pythonVer == 2:
+    Image.Image.load = patched_load
+    PngImagePlugin.PngStream.chunk_tRNS = patched_chunk_tRNS
+else:
+    PngImagePlugin.ChunkStream.call = mycall
+    PngImagePlugin.PngStream.chunk_TRNS = mychunk_TRNS
 
 
 def initPiconPaths():
@@ -236,7 +264,7 @@ class Slyk18XPicon(Renderer):
                             self.instance.hide()
                     except Exception as e:
                         print(e)
-                        print("[Picon] Bad picon file?: %s" % pngname)                 
+                        print("[Picon] Bad picon file?: %s" % pngname)
                         return
                     self.pngname = pngname
                     # delete any existing pngs
