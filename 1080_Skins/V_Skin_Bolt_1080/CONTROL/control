@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-vskin-bolt-1080
-Version: 2.10_20210620
+Version: 2.11_20220314
 Section: misc
 Priority: optional
 Architecture: all
 Maintainer: kiddac
 Description: Vskin Bolt 1080
-Depends: enigma2-plugin-skins-kiddac-shared-components
+Depends: enigma2-plugin-skincomponents-kiddac-shared-skin
 Source: https://www.linuxsat-support.com
