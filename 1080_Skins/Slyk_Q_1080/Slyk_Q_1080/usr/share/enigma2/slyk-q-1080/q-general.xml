@@ -159,7 +159,9 @@
 desktop_w = getDesktop(0).size().width()
 desktop_h = getDesktop(0).size().height()
 itemheight = self["list"].getItemHeight()
-count = len(self.list)
+count = 0
+if self.list:
+	count = len(self.list)
 
 if count &gt; 10:
 	count = 10
@@ -379,7 +381,9 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 import math
 desktop_w = getDesktop(0).size().width()
 desktop_h = getDesktop(0).size().height()
-count = len(self.list)
+count = 0
+if self.list:
+	count = len(self.list)
 width = int(0.40625 * desktop_w)
 itemheight = 30	
 if desktop_w == 1920:
