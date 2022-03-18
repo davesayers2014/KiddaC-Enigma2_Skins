@@ -215,10 +215,10 @@
 import math
 desktop_w = getDesktop(0).size().width()
 desktop_h = getDesktop(0).size().height()
+
+count = 0
 if self.list:
 	count = len(self.list)
-else:
-	count: 0
 
 width = int(0.40625 * desktop_w)
 itemheight = 36
