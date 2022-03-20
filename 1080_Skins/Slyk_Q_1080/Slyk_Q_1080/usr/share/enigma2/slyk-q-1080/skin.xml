@@ -60,8 +60,7 @@
 		<alias name="HelpMenuList" font="Regular" size="33" height="45" />
 
                 <!-- virtual keyboard -->
-                <alias name="VirtualKeyboard" font="Regular" size="27" height="68" />       <!-- legacy -->
-		<alias name="VirtualKeyBoard" font="Regular" size="27" height="68" />
+		<alias name="VirtualKeyBoard" font="Regular" size="27" height="67" />
 		
                  <!-- used on tuner config - positioner -->
 		<alias name="SelectionList" font="Regular" size="33" height="78" />	
@@ -198,10 +197,10 @@
 		<parameter name="SelectionListLock" value="15,11,38,36" />
 		<parameter name="SelectionListLockOff" value="15,11,38,36" />
 
-                <parameter name="VirtualKeyboard" value="68,68"/>                    <!-- legacy -->
-               	<parameter name="VirtualKeyBoard" value="68,68"/>
+
+               	<parameter name="VirtualKeyBoard" value="67,67"/>
 		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
-                <parameter name="VirtualKeyBoardPadding" value="7,7"/>
+                <parameter name="VirtualKeyBoardPadding" value="0,0"/>
 
                 <parameter name="EPGImportFilterListLockOn" value="15,21,38,36" />
 		<parameter name="EPGImportFilterListLockOff" value="15,21,38,36" />

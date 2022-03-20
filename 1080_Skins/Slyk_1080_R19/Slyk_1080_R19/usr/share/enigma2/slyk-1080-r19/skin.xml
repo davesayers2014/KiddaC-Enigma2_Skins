@@ -71,8 +71,7 @@
 		<alias name="SelectionList" font="Regular" size="39" height="54" />
 
 		<!-- virtual keyboard -->
-		<alias name="VirtualKeyboard" font="Regular" size="27" height="68" />
-		<alias name="VirtualKeyBoard" font="Regular" size="27" height="68" />
+		<alias name="VirtualKeyBoard" font="Regular" size="27" height="67" />
 	</fonts>
 
 	<!-- default colour list -->
@@ -187,10 +186,9 @@
 		<parameter name="SelectionListLock" value="15,3,38,36" />
 		<parameter name="SelectionListLockOff" value="15,3,38,36" />
 
-		<parameter name="VirtualKeyboard" value="68,68"/>
-		<parameter name="VirtualKeyBoard" value="68,68"/>
+		<parameter name="VirtualKeyBoard" value="67,67"/>
 		<parameter name="VirtualKeyBoardAlignment" value="0,0"/>
-		<parameter name="VirtualKeyBoardPadding" value="7,7"/>
+		<parameter name="VirtualKeyBoardPadding" value="0,0"/>
 			   	
 		<parameter name="EPGImportFilterListDescr" value="75,3,1125,45" />
 		<parameter name="EPGImportFilterListLockOn" value="15,3,38,36" />
