@@ -357,7 +357,7 @@
 	<screen name="GraphicalInfoBarEPG" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
                 <!-- bouquet name -->
                 <ePixmap pixmap="epg/bouquet-background.png" position="110,545" size="431,83" alphatest="blend" zPosition="0" />
-		<widget source="Title" render="Label" position="125,545" size="407,54" font="Regular;33" valign="center" transparent="1" noWrap="1" foregroundColor="fg3" backgroundColor="messagebox-bg" zPosition="1" />
+		<widget source="Title" render="Label" position="125,545" size="407,54" font="Regular;33" valign="center" transparent="1" noWrap="1" foregroundColor="fg3" backgroundColor="messageboxbg" zPosition="1" />
                 <ePixmap pixmap="v-infobars/header.png" position="110,602" size="1701,158" alphatest="blend" zPosition="1" />
 		<!-- <ePixmap pixmap="epg/epg-multi-background.png" position="110,816" size="1701,234" zPosition="1" /> -->
 		<eLabel position="110,816" size="1701,234" backgroundColor="infobarBlack" transparent="0" zPosition="1" />
@@ -476,8 +476,8 @@
 	<!-- epg - show bouquet on launch -->
 	<screen name="BouquetSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="v-backgrounds/left-slim-bg.png" position="0,e-917" size="696,917" alphatest="blend" zPosition="-1" />
-		<widget source="Title" render="Label" position="60,215" size="510,57" font="Regular;39" foregroundColor="fg2" backgroundColor="messagebox-bg" valign="top" halign="left" transparent="1" zPosition="1"  />
-		<widget name="menu" textOffset="60,12" position="0,282" size="696,818" font="Regular;33" foregroundColor="fg1" backgroundColor="messagebox-bg" backgroundColorSelected="selected-gfx-bg" foregroundColorSelected="selected" selectionPixmap="v-selectbars/selectbar-42-455-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showNever" itemHeight="63" enableWrapAround="1" transparent="1" />
+		<widget source="Title" render="Label" position="60,215" size="510,57" font="Regular;39" foregroundColor="fg2" backgroundColor="messageboxbg" valign="top" halign="left" transparent="1" zPosition="1"  />
+		<widget name="menu" textOffset="60,12" position="0,282" size="696,818" font="Regular;33" foregroundColor="fg1" backgroundColor="messageboxbg" backgroundColorSelected="selected-gfx-bg" foregroundColorSelected="selected" selectionPixmap="v-selectbars/selectbar-42-455-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showNever" itemHeight="63" enableWrapAround="1" transparent="1" />
 		<ePixmap pixmap="v-backgrounds/bouquet-gradient.png" position="0,e-42" size="662,42" alphatest="blend" zPosition="10" />
 	</screen>
 
@@ -547,9 +547,9 @@ self["list"].l.setItemHeight(45)
 	<!-- epg tabs hack - red button popup -->
 	<screen name="OptionDialog" position="center,center" size="360,336" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
 		<eLabel position="0,0" size="360,336" backgroundColor="epgeventbg" zPosition="-2" transparent="0" />
-		<eLabel position="3,3" size="354,330" backgroundColor="messagebox-bg" zPosition="-1" transparent="0" />
-		<widget name="text" position="0,0" size="0,0" font="Regular;33" foregroundColor="fg1" backgroundColor="messagebox-bg" />
-		<widget name="list" position="15,15" size="330,300" font="Regular;27" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-text-bg" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+		<eLabel position="3,3" size="354,330" backgroundColor="messageboxbg" zPosition="-1" transparent="0" />
+		<widget name="text" position="0,0" size="0,0" font="Regular;33" foregroundColor="fg1" backgroundColor="messageboxbg" />
+		<widget name="list" position="15,15" size="330,300" font="Regular;27" foregroundColor="fg1" backgroundColor="messageboxbg" foregroundColorSelected="selected" backgroundColorSelected="selected-text-bg" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
 	</screen>
 </skin>
 

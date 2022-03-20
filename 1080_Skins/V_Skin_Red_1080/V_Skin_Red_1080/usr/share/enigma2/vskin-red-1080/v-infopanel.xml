@@ -105,7 +105,7 @@
 	<!-- ##RestartNetwork## -->
 	<!-- /lib/python/Plugins/Extensions/Infopanel/RestartNetwork.py -->
 	<screen name="RestartNetwork" position="center,center" size="750,150" title="Restart Network Adapter">
-		<widget name="label" position="15,45" size="750,75" font="Regular;30" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="center" halign="center" transparent="1" />
+		<widget name="label" position="15,45" size="750,75" font="Regular;30" foregroundColor="fg1" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" />
 	</screen>
 	
 	<!-- ##SoftcamPanel## -->

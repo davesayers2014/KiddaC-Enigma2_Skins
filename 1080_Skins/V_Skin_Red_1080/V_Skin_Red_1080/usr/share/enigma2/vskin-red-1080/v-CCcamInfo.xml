@@ -43,8 +43,8 @@ self["menu"].l.setFont(0, gFont("Regular", 33))</applet>
 		<panel name="OKButton" />
 	</screen>
 	
-	<screen name="CCcamInfoShareInfo" position="center,center" size="900,675" backgroundColor="messagebox-bg">
-		<widget name="list" position="0,0" size="900,630" font="Regular;33" foregroundColor="fg1" backgroundColor="messagebox-bg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="105" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
+	<screen name="CCcamInfoShareInfo" position="center,center" size="900,675" backgroundColor="messageboxbg">
+		<widget name="list" position="0,0" size="900,630" font="Regular;33" foregroundColor="fg1" backgroundColor="messageboxbg" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="105" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
 		<panel position="0,e-45" size="0,45">
 			<panel name="Red-New-Button" />
 		</panel>

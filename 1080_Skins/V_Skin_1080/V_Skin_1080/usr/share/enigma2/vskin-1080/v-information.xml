@@ -64,8 +64,8 @@
 	</screen>
 	
 	<screen name="TranslationInfo" position="center,center" size="675,525" title="Translation Information">
-		<widget source="TranslatorName" render="Label" text="V Skin" position="15,45" size="570,45" font="Bold;35" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3" />
-		<widget source="TranslationInfo" render="Label" text="KiddaC\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="15,105" size="570,375" font="Regular;30" foregroundColor="white" backgroundColor="messagebox-bg" transparent="1" zPosition="3" />
+		<widget source="TranslatorName" render="Label" text="V Skin" position="15,45" size="570,45" font="Bold;35" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3" />
+		<widget source="TranslationInfo" render="Label" text="KiddaC\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="15,105" size="570,375" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3" />
 	</screen>
 	
 	<!-- /lib/python/Screens/ServiceInfo.py  -->

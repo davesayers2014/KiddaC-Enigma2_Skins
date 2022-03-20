@@ -68,7 +68,7 @@
 		<widget source="key_green" render="Label" position="210,0" zPosition="1" size="210,60" font="Regular;30" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 		<widget name="config" textOffset="15,0" position="8,75" size="825,120" scrollbarMode="showOnDemand" />
 		<ePixmap pixmap="skin_default/div-h.png" alphatest="blend" position="0,195" zPosition="1" size="840,3" />
-		<widget source="introduction" render="Label" position="0,210" size="825,38" zPosition="10" font="Regular;32" halign="center" valign="center" backgroundColor="messagebox-bg" transparent="1" />
+		<widget source="introduction" render="Label" position="0,210" size="825,38" zPosition="10" font="Regular;32" halign="center" valign="center" backgroundColor="messageboxbg" transparent="1" />
 	</screen>
 	
 	<!-- software management -->
@@ -154,9 +154,9 @@
 	<screen name="IPKGSource" position="center,center" size="1620,150">
 		<widget name="text" position="15,15" size="1590,45" font="Regular;38" foregroundColor="fg1" backgroundColor="bg-mm-dark" transparent="1" />
 		<ePixmap pixmap="v-buttons/key_red.png" position="0,108" size="45,45" alphatest="blend" zPosition="2" />
-		<widget source="key_red" render="Label" position="45,108" size="263,45" font="Regular;33" foregroundColor="fg3" backgroundColor="messagebox-bg" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
+		<widget source="key_red" render="Label" position="45,108" size="263,45" font="Regular;33" foregroundColor="fg3" backgroundColor="messageboxbg" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
 		<ePixmap pixmap="v-buttons/key_green.png" position="225,108" size="45,45" alphatest="blend" zPosition="2" />
-		<widget source="key_green" render="Label" position="270,108" size="263,45" font="Regular;33" foregroundColor="fg3" backgroundColor="messagebox-bg" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
+		<widget source="key_green" render="Label" position="270,108" size="263,45" font="Regular;33" foregroundColor="fg3" backgroundColor="messageboxbg" valign="center" halign="left" noWrap="1" transparent="1" zPosition="2" />
 	</screen>
 	
 	<!-- software manager - system backup- info button -->
@@ -188,17 +188,17 @@
 	<!-- infopanel - software manager - software update - progress -->
 	<screen name="UpdatePlugin" position="center,center" size="825,225">
 		<widget name="activityslider" position="0,0" size="825,8" />
-		<widget source="package" render="Label" position="15,45" size="810,45" font="Regular;32" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="center" halign="center" transparent="1" zPosition="2" />
+		<widget source="package" render="Label" position="15,45" size="810,45" font="Regular;32" foregroundColor="fg1" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" zPosition="2" />
 		<widget name="slider" position="0,105" size="825,45" />
-		<widget source="status" render="Label" position="15,165" size="810,45" font="Regular;32" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="center" halign="center" transparent="1" zPosition="2" />
+		<widget source="status" render="Label" position="15,165" size="810,45" font="Regular;32" foregroundColor="fg1" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" zPosition="2" />
 	</screen>
 	
 	<!-- crossepg -->
 	<!-- https://github.com/oe-alliance/e2openplugin-CrossEPG/tree/master/src/enigma2/python -->
 	<screen name="downloader-template">
-		<widget name="action" position="0,0" size="900,38" font="Regular;27" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="center" halign="center" transparent="1" zPosition="2" />
+		<widget name="action" position="0,0" size="900,38" font="Regular;27" foregroundColor="fg1" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" zPosition="2" />
 		<widget name="progress" position="0,53" size="900,8" borderWidth="2" backgroundColor="progress" zPosition="2" />
-		<widget name="status" position="0,75" size="900,38" font="Regular;27" foregroundColor="fg2" backgroundColor="messagebox-bg" valign="center" halign="center" transparent="1" zPosition="2" />
+		<widget name="status" position="0,75" size="900,38" font="Regular;27" foregroundColor="fg2" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" zPosition="2" />
 	</screen>
 	
 	<screen name="CrossEPG_About" position="0,0" size="1920,1080" title="CrossEPG - About" flags="wfNoBorder" backgroundColor="transparent">
@@ -397,8 +397,8 @@
 		<panel name="New-Buttons-Top" />
 	</screen>
 	
-	<screen name="CacheFlushAutoScreen" position="1620,75" zPosition="10" size="300,45" title="CacheFlush" backgroundColor="messagebox-bg">
-		<widget name="message_label" font="Regular;36" position="0,0" size="300,45" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="center" halign="center" transparent="1" zPosition="20" />
+	<screen name="CacheFlushAutoScreen" position="1620,75" zPosition="10" size="300,45" title="CacheFlush" backgroundColor="messageboxbg">
+		<widget name="message_label" font="Regular;36" position="0,0" size="300,45" foregroundColor="fg1" backgroundColor="messageboxbg" valign="center" halign="center" transparent="1" zPosition="20" />
 	</screen>
 	
 	<screen name="CacheFlushInfoScreen" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">

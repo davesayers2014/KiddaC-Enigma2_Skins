@@ -1,7 +1,7 @@
 <skin>
 	<screen name="HistoryZapSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
 		<ePixmap pixmap="v-backgrounds/left-slim-bg.png" position="0,e-917" size="696,917" alphatest="blend" zPosition="-1" />
-		<widget source="Title" render="Label" position="60,215" size="510,57" valign="top" halign="left" font="Regular;39" zPosition="1" transparent="1" foregroundColor="fg2" backgroundColor="messagebox-bg" />
+		<widget source="Title" render="Label" position="60,215" size="510,57" valign="top" halign="left" font="Regular;39" zPosition="1" transparent="1" foregroundColor="fg2" backgroundColor="messageboxbg" />
 		<widget source="menu" render="Listbox" position="0,282" size="683,825" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-455-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showNever" transparent="1">
 			<convert type="TemplatedMultiContent">{"template": [
 						MultiContentEntryText(pos = (30, 9), size = (15, 90), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service

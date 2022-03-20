@@ -71,12 +71,12 @@
 	
 	<screen name="VIXStartCam" position="center,center" size="726,225" title="Starting Softcam">
 		<widget name="connect" position="303,0" size="120,120" zPosition="2" pixmaps="/usr/share/enigma2/vskin-1080/spinner/wait1.png,/usr/share/enigma2/vskin-1080/spinner/wait2.png,/usr/share/enigma2/vskin-1080/spinner/wait3.png,/usr/share/enigma2/vskin-1080/spinner/wait4.png,/usr/share/enigma2/vskin-1080/spinner/wait5.png,/usr/share/enigma2/vskin-1080/spinner/wait6.png,/usr/share/enigma2/vskin-1080/spinner/wait7.png,/usr/share/enigma2/vskin-1080/spinner/wait8.png" transparent="1" alphatest="blend" />
-		<widget name="lab1" position="15,135" halign="center" size="690,90" font="Regular;32" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="top" transparent="1"  zPosition="1"  />
+		<widget name="lab1" position="15,135" halign="center" size="690,90" font="Regular;32" foregroundColor="fg1" backgroundColor="messageboxbg" valign="top" transparent="1"  zPosition="1"  />
 	</screen>
 	
 	<screen name="VIXStopCam" position="center,center" size="726,225" title="Starting Softcam">
 		<widget name="connect" position="303,15" size="120,120" zPosition="2" pixmaps="/usr/share/enigma2/vskin-1080/spinner/wait1.png,/usr/share/enigma2/vskin-1080/spinner/wait2.png,/usr/share/enigma2/vskin-1080/spinner/wait3.png,/usr/share/enigma2/vskin-1080/spinner/wait4.png,/usr/share/enigma2/vskin-1080/spinner/wait5.png,/usr/share/enigma2/vskin-1080/spinner/wait6.png,/usr/share/enigma2/vskin-1080/spinner/wait7.png,/usr/share/enigma2/vskin-1080/spinner/wait8.png" transparent="1" alphatest="blend" />
-		<widget name="lab1" position="15,135" halign="center" size="690,90" font="Regular;32" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="top" transparent="1"  zPosition="1"  />
+		<widget name="lab1" position="15,135" halign="center" size="690,90" font="Regular;32" foregroundColor="fg1" backgroundColor="messageboxbg" valign="top" transparent="1"  zPosition="1"  />
 	</screen>
 	
 	<screen name="VIXSoftcamLog" position="center,center" size="840,600">
