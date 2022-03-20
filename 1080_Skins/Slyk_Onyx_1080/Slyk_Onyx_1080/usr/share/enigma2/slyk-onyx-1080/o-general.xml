@@ -71,46 +71,44 @@
 		<widget name="text" position="0,0" size="780,45" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" />
 		<widget name="list" position="150,150" size="780,0" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="bg-selected-text" enableWrapAround="1" transparent="1" itemHeight="45" />
 		<applet type="onLayoutFinish">from enigma import getDesktop, eSize, ePoint
+
 desktop_w = getDesktop(0).size().width()
 desktop_h = getDesktop(0).size().height()
-itemheight = self["list"].getItemHeight()
-count = 0
-if self.list:
-	count = len(self.list)
+listcount = 0
+itemheight = 45
+maxwidth = desktop_w - 120
+minwidth = desktop_w  // 2
 
-if count &gt; 12:
-	count = 12
-width = self["list"].instance.size().width()
-if width &lt; 0 or width &gt; desktop_w:
-	width = int(0.40625 * desktop_w)
+listwidth = self["list"].instance.size().width() + 120  # 120 for button width and padding
+if listwidth &gt; maxwidth:
+	listwidth = maxwidth
+	
+if listwidth &lt; minwidth:
+	listwidth = minwidth
+
+if self["list"] and self.list is not None:
+	listcount = self["list"].count()
+	
+	if listcount &gt; 10:
+		listcount = 10
+
 if not self["text"].text:
-	# move list
-	textsize = (width, 0)
-	listsize = (width, itemheight * count)
-	self["list"].instance.move(ePoint(0, 0))
-	self["list"].instance.resize(eSize(*listsize))
+	textsize = (listwidth, 0)
 else:
-	textsize = self["text"].getSize()
-	if textsize[0] &lt; textsize[1]:
-		textsize = (textsize[1], textsize[0] + 10)
-	if textsize[0] &gt; width:
-		textsize = (textsize[0], textsize[1] + itemheight)
-	else:
-		textsize = (width, textsize[1] + itemheight)
-	listsize = (textsize[0], itemheight * count)
-	# resize label
-	self["text"].instance.resize(eSize(*textsize))
-	self["text"].instance.move(ePoint(10, 10))
-	# move list
-	self["list"].instance.move(ePoint(0, textsize[1]))
-	self["list"].instance.resize(eSize(*listsize))
+	textsizeoriginal = self["text"].getSize()
+	textsize = (listwidth, textsizeoriginal[1])
+	
+listsize = (listwidth, itemheight*listcount)
 
-wsizex = textsize[0]
-wsizey = textsize[1]+listsize[1]
+self["text"].instance.resize(eSize(*textsize))
+self["list"].instance.resize(eSize(*listsize))
+self["text"].instance.move(ePoint(0, 0))
+self["list"].instance.move(ePoint(0, textsize[1] + 30))
+
+wsizex = listwidth
+wsizey = textsize[1] + listsize[1] + 60
 wsize = (wsizex, wsizey)
 self.instance.resize(eSize(*wsize))
-
-# center window
 self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet>
 	</screen>
 	
@@ -284,60 +282,55 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(45)</applet>
 	</screen>
 	
-	<screen name="MessageBox" position="center,center" size="1170,15" title="Message" backgroundColor="messageboxbg">
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="8,8" size="80,80" alphatest="blend" />
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="8,8" size="80,80" alphatest="blend" />
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="8,8" size="80,80" alphatest="blend" />
-		<widget name="text" position="98,8" size="1170,0" font="Regular;32" backgroundColor="messageboxbg" transparent="1" />
-		<widget name="list" textOffset="15,0" font="Regular;32" position="1170,150" backgroundColor="messageboxbg" transparent="1" size="780,0" itemHeight="38" />
+	<screen name="MessageBox" position="center,center" size="960,100" title="Message" backgroundColor="messageboxbg">
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="15,0" size="63,63" alphatest="blend" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="15,0" size="63,63" alphatest="blend" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="15,0" size="63,63" alphatest="blend" />
+		<widget name="text" position="0,0" size="870,0" font="Regular;32" backgroundColor="messageboxbg" transparent="1" />
+		<widget name="list" position="0,0" size="870,0" textOffset="15,0" font="Regular;32" backgroundColor="messageboxbg" transparent="1" itemHeight="38" />
 		<applet type="onLayoutFinish">from enigma import getDesktop, eSize, ePoint
-import math
 desktop_w = getDesktop(0).size().width()
 desktop_h = getDesktop(0).size().height()
-count = 0
-if self.list:
-	count = len(self.list)
-width = int(0.40625 * desktop_w)
-itemheight = 25	
-if desktop_w == 1920:
-	scale = 1.5
-else:
-    scale = 1
+listcount = 0
+iconsize = 63
+itemheight = 38
+padding = 45
+
+maxwidth = desktop_w - 120
+minwidth = desktop_w  // 2
+
+listwidth = self["list"].instance.size().width() + (iconsize + padding)
+if listwidth &gt; maxwidth:
+	listwidth = maxwidth
+	
+if listwidth &lt; minwidth:
+	listwidth = minwidth
+
+maxtextwidth = listwidth
+minheight = iconsize
+
+if self["list"] and self.list is not None:
+	listcount = self["list"].count()
+	if itemheight*listcount &gt; minheight:
+		minheight = itemheight*listcount
+
 if not self["text"].text:
-	textsize = (width, 0)
-	listsize = (width, int(math.ceil(itemheight*scale)*count))
-	if self["ErrorPixmap"].visible or self["QuestionPixmap"].visible or self["InfoPixmap"].visible:
-		self["list"].instance.move(ePoint(int(math.ceil(65*scale)), 0))
-		wsizex = textsize[0]+int(math.ceil(65*scale))
-	else:
-		self["list"].instance.move(ePoint(0, 0))
-		wsizex = textsize[0]
-	self["list"].instance.resize(eSize(*listsize))
+	textsize = (maxtextwidth, 0)
 else:
-	textsize = self["text"].getSize()
-	if textsize[0] &lt; textsize[1]:
-		textsize = (textsize[1],textsize[0]+10)
-	if textsize[0] &gt; width:
-		textsize = (textsize[0], textsize[1]+int(math.ceil(itemheight*scale)))
-	else:
-		textsize = (width, textsize[1]+int(math.ceil(itemheight*scale)))
-	listsize = (textsize[0], int(math.ceil(itemheight*scale)*count))
+	textsizeoriginal = self["text"].getSize()
+	textsize = (maxtextwidth, textsizeoriginal[1])
+	
+listsize = (maxtextwidth, itemheight*listcount)
 
-	self["text"].instance.resize(eSize(*textsize))
-	if self["ErrorPixmap"].visible or self["QuestionPixmap"].visible or self["InfoPixmap"].visible:
-		self["text"].instance.move(ePoint(int(math.ceil(65*scale)), 0))
-	else:
-		self["text"].instance.move(ePoint(10, 10))
+self["text"].instance.resize(eSize(*textsize))
+self["list"].instance.resize(eSize(*listsize))
+self["text"].instance.move(ePoint(iconsize + padding, 0))
+self["list"].instance.move(ePoint(iconsize + padding, textsize[1] + 30))
 
-	if self["ErrorPixmap"].visible or self["QuestionPixmap"].visible or self["InfoPixmap"].visible:
-		self["list"].instance.move(ePoint(int(math.ceil(65*scale)), textsize[1]))
-		wsizex = textsize[0]+int(math.ceil(65*scale))
-	else:
-		self["list"].instance.move(ePoint(0, textsize[1]))
-		wsizex = textsize[0]
-	self["list"].instance.resize(eSize(*listsize))
-
-wsizey = textsize[1]+listsize[1]
+wsizex = listwidth
+wsizey = textsize[1] + listsize[1] + 60
+if wsizey &lt; minheight:
+	wsizey = minheight
 wsize = (wsizex, wsizey)
 self.instance.resize(eSize(*wsize))
 self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet>
@@ -683,14 +676,17 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 	</screen>
 	
 
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="980,513" zPosition="99" backgroundColor="#000000">
-		<widget name="prompt" position="16,10" size="948,33" font="Regular;21" noWrap="1" transparent="1" />
-		<ePixmap pixmap="buttons/vkey_text.png" position="16,50" size="948,68" alphatest="blend" zPosition="-4" />
-		<widget name="text" position="34,69" size="912,36" font="Regular;24" halign="right" noWrap="1" transparent="1" />
-		<widget name="list" position="14,120" size="952,340" backgroundColor="#283138" foregroundColor="white" selectionDisabled="1" transparent="1" />
-		<widget name="locale" position="14,468" size="800,33" font="Regular;21" transparent="1" />
-		<widget name="mode" position="892,468" size="60,33" font="Regular;21" halign="right" transparent="1" valign="center" />
-		<widget name="language" position="0,0" size="0,0" font="Regular;21" transparent="1" />
+	<!-- VirtualKeyBoard --> 
+	<!-- lib/python/Screens/VirtualKeyBoard.py -->
+	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="999,504" zPosition="99">
+		<widget name="header" conditional="header" position="32,10" size="948,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1"  noWrap="1" />
+		<widget name="prompt" conditional="prompt" position="32,10" size="948,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1"  noWrap="1" />
+		<ePixmap pixmap="buttons/vkey_text.png" position="30,50" size="934,68" alphatest="blend" zPosition="-4" />
+		<widget name="text" position="30,69" size="904,36" font="Regular;24" halign="right" noWrap="1" transparent="1" backgroundColor="black" zPosition="3"/>
+		<widget name="list" position="30,120" size="938,340" selectionDisabled="1" backgroundColor="283138" />
+		<widget name="locale" conditional="locale" position="32,468" size="800,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" noWrap="1" />
+		<widget name="mode" conditional="mode" position="892,468" size="60,33" font="Regular;21" foregroundColor="white" backgroundColor="messageboxbg" halign="right" valign="center" transparent="1" noWrap="1"/>
+		<widget name="language" conditional="language" position="0,0" size="0,0" font="Regular;21" transparent="1 " />
 	</screen>
 	
 	<!-- volume slider -->
