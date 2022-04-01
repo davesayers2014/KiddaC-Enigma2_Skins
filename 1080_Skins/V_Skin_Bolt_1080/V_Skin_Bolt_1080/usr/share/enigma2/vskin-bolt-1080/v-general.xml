@@ -90,7 +90,7 @@ if listwidth &lt; minwidth:
 	listwidth = minwidth
 
 if self["list"] and self.list is not None:
-	listcount = self["list"].count()
+	listcount = len(self.list)
 	
 	if listcount &gt; 10:
 		listcount = 10
@@ -281,7 +281,7 @@ maxtextwidth = listwidth
 minheight = iconsize
 
 if self["list"] and self.list is not None:
-	listcount = self["list"].count()
+	listcount = len(self.list)
 	if itemheight*listcount &gt; minheight:
 		minheight = itemheight*listcount
 
