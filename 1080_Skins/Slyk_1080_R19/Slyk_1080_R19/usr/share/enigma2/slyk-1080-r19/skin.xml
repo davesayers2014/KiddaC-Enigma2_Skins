@@ -32,6 +32,8 @@
 	<include filename="s-extras.xml" />
 	<!-- <include filename="s-vix.xml" /> -->
 	<include filename="s-toppicks3.xml" />
+	
+	<include filename="default-openatv.xml" />
 
 	
 	<!-- fonts -->

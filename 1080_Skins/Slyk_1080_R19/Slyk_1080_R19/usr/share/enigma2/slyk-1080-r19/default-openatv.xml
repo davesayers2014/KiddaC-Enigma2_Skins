@@ -1,0 +1,61 @@
+<skin>
+	<!-- AudioSelection -->
+	<!-- /lib/python/Screens/AudioSelection.py -->
+	<!-- audio button -->
+	<screen name="AudioSelection" position="center,center" size="780,660">
+		<ePixmap pixmap="myicons/prev-next.png" position="0,6" size="60,30" alphatest="blend"/>
+		<eLabel text="Switch between Audio-, Subtitlepage" position="75,0" size="705,45" font="Regular;33" foregroundColor="white" backgroundColor="messageboxbg" valign="center" transparent="1"/>
+		<widget name="config" textOffset="15,0" position="60,90" size="705,360" font="Regular;33" secondfont="Regular;33" selectionPixmap="2018-selectbars/bar-45.png" foregroundColor="white" backgroundColor="messageboxbg" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" scrollbarMode="showOnDemand" itemHeight="45" transparent="1" zPosition="2"/>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="15,96" size="36,36" alphatest="blend" zPosition="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="15,141" size="36,36" alphatest="blend" zPosition="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="15,186" size="36,36" alphatest="blend" zPosition="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="15,231" size="36,36" alphatest="blend" zPosition="1">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<eLabel position="0,450" size="780,210" backgroundColor="#00112a57"/>
+		<widget source="streams" render="Listbox" position="15,465" size="750,180" selectionPixmap="2018-selectbars/bar-45.png" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" scrollbarMode="showOnDemand" itemHeight="45" transparent="1" zPosition="3">
+			<convert type="TemplatedMultiContent">{"templates":
+				{"default": (45, [
+				MultiContentEntryText(pos = (0, 2), size = (53, 45), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+				MultiContentEntryText(pos = (68, 2), size = (75, 45), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+				MultiContentEntryText(pos = (158, 2), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+				MultiContentEntryText(pos = (323, 2), size = (375, 45), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+				MultiContentEntryText(pos = (713, 2), size = (38, 45), font = 0, flags = RT_HALIGN_LEFT, text = 5), # selection,
+				], True, "showNever"),
+				"notselected": (45, [
+				MultiContentEntryText(pos = (0, 2), size = (53, 45), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+				MultiContentEntryText(pos = (68, 2), size = (75, 45), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+				MultiContentEntryText(pos = (158, 2), size = (150, 45), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+				MultiContentEntryText(pos = (323, 2), size = (375, 45), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+				MultiContentEntryText(pos = (713, 2), size = (38, 45), font = 0, flags = RT_HALIGN_LEFT, text = 5), # selection,
+				], False, "showNever")
+				},
+				"fonts": [gFont("Regular", 33)],
+				"itemHeight": 45
+				}</convert>
+		</widget>
+	</screen>
+	<!-- ButtonSetup -->
+	<!-- /lib/python/Screens/ButtonSetup.py -->
+	<!-- hotkey buttons -->
+	<screen name="ButtonSetup" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="main-template-2"/>
+		<panel name="v5-tv-guide"/>
+		<widget source="Title" render="Label" position="90,123" size="1200,52" font="Regular;39" foregroundColor="white" backgroundColor="panelblue" valign="center" halign="center" noWrap="1" transparent="1" zPosition="2"/>
+		<widget name="list" position="105,190" size="1170,540" itemHeight="54" font="Regular;33" selectionPixmap="2018-selectbars/bar-54.png" foregroundColor="white" backgroundColor="skydarkblue" backgroundColorSelected="skygold" foregroundColorSelected="skydarkblue" valign="center" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"/>
+		<ePixmap position="105,753" size="1170,3" pixmap="div-h.png" alphatest="blend" transparent="1"/>
+		<widget name="choosen" position="105,778" size="1170,162" selectionPixmap="2018-selectbars/bar-54.png" foregroundColor="skylightblue" backgroundColor="skydarkblue" foregroundColorSelected="skydarkblue" backgroundColorSelected="skygold" scrollbarMode="showOnDemand" enableWrapAround="1" itemHeight="54" transparent="1"/>
+		<widget name="description" position="1372,459" size="443,483" font="Regular;27" foregroundColor="white" backgroundColor="backgroundmid" valign="top" transparent="1" zPosition="4"/>
+		<panel name="t2-ExitButton"/>
+	</screen>
+	<screen name="ButtonSetupSelect" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="backgroundmid">
+		<panel name="ButtonSetup"/>
+		<panel name="New-Buttons-T2"/>
+	</screen>
+</skin>
