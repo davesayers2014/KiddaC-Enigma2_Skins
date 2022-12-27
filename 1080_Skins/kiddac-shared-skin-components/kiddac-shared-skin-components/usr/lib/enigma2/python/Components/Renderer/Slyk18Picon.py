@@ -253,12 +253,18 @@ class Slyk18Picon(Renderer):
                 if self.pngname != pngname:
                     try:
                         if pngname != self.defaultpngname:
-                            im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + str(tempname), "PNG")
+                            try:
+                                im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.Resampling.LANCZOS).save("/tmp/temppicons/" + str(tempname), "PNG")
+                            except:
+                                im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + str(tempname), "PNG")
                             self.instance.setScale(1)
                             self.instance.setPixmapFromFile("/tmp/temppicons/" + str(tempname))
                             self.instance.show()
                         elif pngname == self.defaultpngname:
-                            im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + "picon_default.png", "PNG")
+                            try:
+                                im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.Resampling.LANCZOS).save("/tmp/temppicons/" + "picon_default.png", "PNG")
+                            except:
+                                im = Image.open(pngname).convert('RGBA').resize((self.piconsize), Image.ANTIALIAS).save("/tmp/temppicons/" + "picon_default.png", "PNG")
                             self.instance.setScale(1)
                             self.instance.setPixmapFromFile("/tmp/temppicons/picon_default.png")
                             self.instance.show()
