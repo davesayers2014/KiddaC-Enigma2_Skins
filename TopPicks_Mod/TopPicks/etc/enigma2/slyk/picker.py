@@ -4,7 +4,6 @@ import io
 import json
 import random
 import sys
-import time
 
 
 pythonVer = 2
@@ -12,16 +11,22 @@ if sys.version_info.major == 3:
     pythonVer = 3
 
 if pythonVer == 2:
-    from urllib2 import urlopen, Request
+    from urllib2 import urlopen
 else:
-    from urllib.request import urlopen, Request
+    from urllib.request import urlopen
 
 
 def create_background(background):
     mask = Image.open('/etc/enigma2/slyk/images/mask.png').convert('RGBA')
-    mask = mask.resize((backgroundsize[0], backgroundsize[1]), Image.ANTIALIAS)
+    try:
+        mask = mask.resize((backgroundsize[0], backgroundsize[1]), Image.Resampling.LANCZOS)
+    except:
+        mask = mask.resize((backgroundsize[0], backgroundsize[1]), Image.ANTIALIAS)
     plainbg = Image.open(skin_folder + image_folder + "background.jpg").convert('RGBA')
-    background = background.resize((backgroundsize[0], backgroundsize[1]), Image.ANTIALIAS)
+    try:
+        background = background.resize((backgroundsize[0], backgroundsize[1]), Image.Resampling.LANCZOS)
+    except:
+        background = background.resize((backgroundsize[0], backgroundsize[1]), Image.ANTIALIAS)
     backgroundw, backgroundh = background.size
     plainsizew, plainsizeh = plainbg.size
     plainbg.paste(background, (plainsizew - backgroundw, 0), mask)
@@ -72,8 +77,12 @@ def crop_image(im, width, height):
     br_h = crop_height - ((crop_height - height) // 2)
 
     area = (tl_w, tl_h, br_w, br_h)
-    im = im.resize((size), Image.ANTIALIAS).crop(area)
-    im = im.resize((width, height), Image.ANTIALIAS)
+    try:
+        im = im.resize((size), Image.Resampling.LANCZOS).crop(area)
+        im = im.resize((width, height), Image.Resampling.LANCZOS)
+    except:
+        im = im.resize((size), Image.ANTIALIAS).crop(area)
+        im = im.resize((width, height), Image.ANTIALIAS)
 
     contrast = ImageEnhance.Sharpness(im)
     im = contrast.enhance(1.25)
@@ -98,7 +107,10 @@ def add_logo(im, channel, logo_height):
 
     hpercent = (logo_height / float(logo.size[1]))
     wsize = int((float(logo.size[0]) * float(hpercent)))
-    logo = logo.resize((wsize, logo_height), Image.ANTIALIAS)
+    try:
+        logo = logo.resize((wsize, logo_height), Image.Resampling.LANCZOS)
+    except:
+        logo = logo.resize((wsize, logo_height), Image.ANTIALIAS)
 
     img_w, img_h = im.size
     logo_w, logo_h = logo.size
