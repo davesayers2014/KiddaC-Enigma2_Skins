@@ -364,7 +364,41 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
                 <widget source="options" render="Label" position="1518,541" size="372,400" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1" />
 	</screen>
 	
+		<!-- Multiboot Manager openatv -->
+    <screen name="MultiBootManager" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="template1" />
+        <panel name="h-separator-tr" />
+        <panel name="whatson-top" />
+		<panel name="title2" />
+		<widget name="slotlist" textOffset="15,0" position="527,321" size="954,645" font="Regular;32" secondfont="Regular;32" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="bg-selected" selectionPixmap="o-selectbars/select-636-48.png" backgroundPixmap="o-selectbars/blank.png" itemHeight="72" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="New-Buttons" />
+        <ePixmap pixmap="o-backgrounds/menu-gradient.png" position="527,900" size="954,75"  alphatest="blend" zPosition="2" />
+		<widget source="description" render="Label" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1" />		
+		<ePixmap pixmap="buttons/key_help.png" position="1845,1025" size="38,38" alphatest="blend" />
+	</screen>
 	
+	<!-- Multiboot Selector openvix -->
+	<screen name="MultiBootSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="template1" />
+        <panel name="h-separator-tr" />
+        <panel name="whatson-top" />
+		<panel name="title2" />
+		<panel name="config" />
+     	<widget source="description" render="Label" position="1518,341" size="372,510" font="Regular;27" foregroundColor="colour2" backgroundColor="midright" transparent="1" />			
+
+		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="509,1028" size="38,38" alphatest="blend" transparent="1" objectTypes="key_red,StaticText" />
+        <widget source="key_red" render="Label" position="554,1025" size="270,38" font="Regular;30" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" halign="left" objectTypes="key_red,StaticText" />
+      
+		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="828,1028" size="38,38" alphatest="blend" transparent="1" objectTypes="key_green,StaticText" />
+		<widget source="key_green" render="Label" position="873,1025" size="270,38" font="Regular;30" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" halign="left" objectTypes="key_green,StaticText"/>
+
+        <widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="1148,1028" size="38,38" alphatest="blend" transparent="1" objectTypes="key_yellow,StaticText" />
+        <widget source="key_yellow" render="Label" position="1193,1025" size="270,38" font="Regular;30" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" halign="left" objectTypes="key_yellow,StaticText"/>
+
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="1467,1028" size="38,38" alphatest="blend" transparent="1" objectTypes="key_blue,StaticText" />
+        <widget source="key_blue" render="Label" position="1512,1025" size="270,38" font="Regular;30" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" halign="left" objectTypes="key_blue,StaticText"/>
+	</screen>
+
 	<!-- NumericalTextInputHelpDialog -->
 	<!-- input helper text -->
 	<screen name="NumericalTextInputHelpDialog" position="0,0" zPosition="10" size="1920,38" backgroundColor="transparent" flags="wfNoBorder">
