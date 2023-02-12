@@ -315,25 +315,14 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 	</screen>
 	
 	<!-- Multiboot Selector openvix -->
-	<screen name="MultiBootSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
-		<panel name="main-template" />
-		<panel name="settings" />
-		<panel name="t3-panel-bg" />
-		<panel name="setup-panel-bars" />
-		<widget name="config" textOffset="15,0" position="center,503" size="1360,432" font="Regular;39" secondfont="Regular;39" backgroundColor="skylightrow" selectionPixmap="2018-selectbars/menu-bar-54.png" backgroundPixmap="2018-selectbars/blank.png" itemHeight="54" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-        <widget source="description" render="Label" position="90,174" size="1200,165" font="Regular;36" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
-
-		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="153,946" size="36,36" alphatest="blend" transparent="1" objectTypes="key_red,StaticText" />
-		<widget source="key_red" render="Label" position="197, 941" size="327,48" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_red,StaticText" />
-
-		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="528,946" size="36,36" alphatest="blend" transparent="1" objectTypes="key_green,StaticText" />
-		<widget source="key_green" render="Label" position="576,941" size="327,44" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_green,StaticText" />
-		
-		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="903,946" size="36,36" alphatest="blend" transparent="1" objectTypes="key_yellow,StaticText" />
-		<widget source="key_yellow" render="Label" position="951,941" size="327,44" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_yellow,StaticText" />
-
-		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="1278,946" size="36,36" alphatest="blend" transparent="1" objectTypes="key_blue,StaticText" />
-		<widget source="key_blue" render="Label" position="1326,941" size="327,44" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_blue,StaticText" />
+	<screen name="MultiBootSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default2" />
+		<widget source="description" render="Label" position="90,174" size="1200,165" font="Regular;36" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
+		<widget source="key_red" render="Label" />
+		<widget source="key_green" render="Label" />
+		<widget source="key_yellow" render="Label" />
+		<widget source="key_blue" render="Label" />
+	</screen>
 	</screen>
 	
 	
