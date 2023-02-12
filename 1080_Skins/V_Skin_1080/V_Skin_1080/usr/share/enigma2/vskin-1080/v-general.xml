@@ -352,17 +352,11 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-53" size="1920,53" alphatest="blend" zPosition="10" />
 	  	<widget source="description" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
 		
-		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="300,362" size="53,42" alphatest="blend" transparent="1" objectTypes="key_red,StaticText" />
-		<widget source="key_red" render="Label" position="353, 360" size="255,45" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_red,StaticText" />
-
-		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="561,362" size="53,42" alphatest="blend" transparent="1" objectTypes="key_green,StaticText" />
-		<widget source="key_green" render="Label" position="614,360" size="255,45" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_green,StaticText" />
-		
-		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="822,362" size="53,42" alphatest="blend" transparent="1" objectTypes="key_yellow,StaticText" />
-		<widget source="key_yellow" render="Label" position="875,360" size="255,45" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_yellow,StaticText" />
-
-		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="1083,362" size="53,42" alphatest="blend" transparent="1" objectTypes="key_blue,StaticText" />
-		<widget source="key_blue" render="Label" position="1136,360" size="255,45" font="Regular;39" valign="center" halign="left" foregroundColor="skyblue" backgroundColor="backgroundbot" noWrap="1" transparent="1" objectTypes="key_blue,StaticText" />
+		<widget source="key_red" render="Label" />
+		<widget source="key_green" render="Label" />
+		<widget source="key_yellow" render="Label" />
+		<widget source="key_blue" render="Label" />
+		<panel name="New-Buttons-Bot" />
 	</screen>
 	
 	
