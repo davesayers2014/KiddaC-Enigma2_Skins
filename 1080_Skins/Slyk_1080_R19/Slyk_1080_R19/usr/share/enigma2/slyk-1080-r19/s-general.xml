@@ -315,7 +315,7 @@ self.instance.move(ePoint((desktop_w-wsizex)//2, (desktop_h-wsizey)//2))</applet
 	</screen>
 	
 	<!-- Multiboot Selector openvix -->
-	<screen name="MultiBootSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="MultiBootSelector" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="backgroundmid">
 		<panel name="Setup-Default2" />
 		<widget source="description" render="Label" position="90,174" size="1200,165" font="Regular;36" foregroundColor="white" backgroundColor="backgroundtop" valign="top" halign="left" transparent="1" zPosition="2" />
 		<widget source="key_red" render="Label" />
